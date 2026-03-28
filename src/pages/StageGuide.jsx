@@ -4,8 +4,8 @@ import PhaseCard from '../components/stageguide/PhaseCard'
 
 const TIER_COLORS = {
   S: 'text-drg-amber',
-  A: 'text-nitra-green',
-  B: 'text-cool-blue',
+  A: 'text-cool-blue',
+  B: 'text-nitra-green',
 }
 
 export default function StageGuide() {

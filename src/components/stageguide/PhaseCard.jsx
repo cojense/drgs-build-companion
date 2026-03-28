@@ -37,24 +37,27 @@ export default function PhaseCard({ phase }) {
           ))}
         </div>
 
-        <span className={`text-text-secondary text-xs transition-transform shrink-0 ${open ? 'rotate-180' : ''}`}>▼</span>
+        <span className={`text-text-secondary text-xs transition-transform duration-200 shrink-0 ${open ? 'rotate-180' : ''}`}>▼</span>
       </button>
 
-      {open && (
-        <div className="border-t border-border-subtle divide-y divide-border-subtle">
-          {phase.decisions.map(decision => {
-            const style = TYPE_STYLES[decision.type] ?? { label: decision.label, color: 'text-text-secondary' }
-            return (
-              <div key={decision.type} className="px-4 py-3">
-                <p className={`text-xs font-mono font-bold uppercase tracking-widest mb-1.5 ${style.color}`}>
-                  {style.label || decision.label}
-                </p>
-                <p className="text-sm text-text-primary leading-relaxed">{decision.content}</p>
-              </div>
-            )
-          })}
+      {/* Animated expanded content */}
+      <div className={`grid transition-all duration-200 ease-in-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+        <div className="min-h-0 overflow-hidden">
+          <div className="border-t border-border-subtle divide-y divide-border-subtle">
+            {phase.decisions.map(decision => {
+              const style = TYPE_STYLES[decision.type] ?? { label: decision.label, color: 'text-text-secondary' }
+              return (
+                <div key={decision.type} className="px-4 py-3">
+                  <p className={`text-xs font-mono font-bold uppercase tracking-widest mb-1.5 ${style.color}`}>
+                    {style.label || decision.label}
+                  </p>
+                  <p className="text-sm text-text-primary leading-relaxed">{decision.content}</p>
+                </div>
+              )
+            })}
+          </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }

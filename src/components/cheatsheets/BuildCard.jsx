@@ -5,8 +5,8 @@ import StatPriorityStrip from './StatPriorityStrip'
 
 const TIER_COLORS = {
   S: 'bg-drg-amber text-cave-black',
-  A: 'bg-nitra-green text-cave-black',
-  B: 'bg-cool-blue text-cave-black',
+  A: 'bg-cool-blue text-cave-black',
+  B: 'bg-nitra-green text-cave-black',
 }
 
 const DIFFICULTY_LABELS = ['', '★', '★★', '★★★', '★★★★', '★★★★★']
@@ -48,45 +48,47 @@ export default function BuildCard({ build }) {
         </div>
 
         {/* Chevron */}
-        <span className={`text-text-secondary mt-1 transition-transform ${open ? 'rotate-180' : ''}`}>
+        <span className={`text-text-secondary mt-1 transition-transform duration-200 ${open ? 'rotate-180' : ''}`}>
           ▼
         </span>
       </button>
 
-      {/* Expanded content */}
-      {open && (
-        <div className="border-t border-border-subtle">
-          {/* Synopsis */}
-          <div className="px-4 py-3 bg-elevated-panel">
-            <p className="text-xs text-text-secondary leading-relaxed">{build.synopsis}</p>
-            <p className="text-xs text-nitra-teal font-mono mt-1">{build.passive}</p>
-          </div>
+      {/* Animated expanded content */}
+      <div className={`grid transition-all duration-200 ease-in-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
+        <div className="min-h-0 overflow-hidden">
+          <div className="border-t border-border-subtle">
+            {/* Synopsis */}
+            <div className="px-4 py-3 bg-elevated-panel">
+              <p className="text-xs text-text-secondary leading-relaxed">{build.synopsis}</p>
+              <p className="text-xs text-nitra-teal font-mono mt-1">{build.passive}</p>
+            </div>
 
-          {/* Overclock table */}
-          <div className="px-4 py-3">
-            <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
-              Overclock Decision Tree
-            </h3>
-            <OverclockTable weapons={build.weapons} />
-          </div>
+            {/* Overclock table */}
+            <div className="px-4 py-3">
+              <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
+                Overclock Decision Tree
+              </h3>
+              <OverclockTable weapons={build.weapons} />
+            </div>
 
-          {/* Artifact priority */}
-          <div className="px-4 py-3 border-t border-border-subtle">
-            <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
-              Artifact Priority
-            </h3>
-            <ArtifactPriority artifacts={build.artifacts} />
-          </div>
+            {/* Artifact priority */}
+            <div className="px-4 py-3 border-t border-border-subtle">
+              <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
+                Artifact Priority
+              </h3>
+              <ArtifactPriority artifacts={build.artifacts} />
+            </div>
 
-          {/* Stat priority */}
-          <div className="px-4 py-3 border-t border-border-subtle">
-            <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
-              Stat Priority
-            </h3>
-            <StatPriorityStrip stats={build.stats} />
+            {/* Stat priority */}
+            <div className="px-4 py-3 border-t border-border-subtle">
+              <h3 className="text-xs font-mono text-text-secondary uppercase tracking-widest mb-2">
+                Stat Priority
+              </h3>
+              <StatPriorityStrip stats={build.stats} />
+            </div>
           </div>
         </div>
-      )}
+      </div>
     </div>
   )
 }
