@@ -1041,7 +1041,7 @@ export const BUILDS = [
       avoid: ['Movement Speed — Popup Tripod stacks require standing still', 'Crit'],
     },
     artifacts: {
-      always: ['Popup Tripod (mandatory)', 'Barley Bulb Juice'],
+      always: ['Popup Tripod', 'Barley Bulb Juice'],
       good: ['Gold-Tipped Bullets', 'Energy Bars'],
       never: [],
     },
@@ -1206,7 +1206,7 @@ export const BUILDS = [
       avoid: ['Crit — acid DoT cannot crit', 'Beam stats unrelated to DoT application'],
     },
     artifacts: {
-      always: ['Nitragenic Powder', 'Gold Scanner + Gold-Tipped Bullets'],
+      always: ['Nitragenic Powder', 'Gold Scanner', 'Gold-Tipped Bullets'],
       good: ['Energy Bars', 'BLT Ration Pack'],
       never: [],
     },
