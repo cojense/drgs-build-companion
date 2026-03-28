@@ -5,4 +5,8 @@ import tailwindcss from '@tailwindcss/vite'
 export default defineConfig({
   base: '/drgs-build-companion/',
   plugins: [react(), tailwindcss()],
+  test: {
+    environment: 'node',
+    globals: true,
+  },
 })
