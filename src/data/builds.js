@@ -1319,22 +1319,3 @@ export const BUILDS = [
     ],
   },
 ]
-
-export const ARTIFACT_TIERS = {
-  S: [
-    { name: 'The MoCap', effect: '+1% damage per 1% HP missing', note: 'Rewards aggressive low-HP play; scales to +100% at 1 HP' },
-    { name: 'Squint-EE5', effect: '-30% Damage, +30% Crit Chance, +100% Crit Damage', note: 'Net positive for any crit build; skip for DoT builds' },
-    { name: 'Pickled Nitra', effect: '-15% Move Speed, +50% Fire Rate', note: 'Strong for stationary or high-mobility builds; huge DPS increase' },
-  ],
-  A: [
-    { name: 'BLT Ration Pack', effect: '+70 Max HP, +2 HP Regen', note: 'Excellent for builds that take hits (Strong Armed, Foreman)' },
-    { name: 'Nitragenic Powder', effect: '+0.5% Crit Chance per Nitra held', note: 'Scales with mining; best for high-nitra builds (Foreman, Driller)' },
-    { name: 'Pay2Win Console', effect: '+2.5% Damage per reroll', note: 'Compounds with aggressive shop rerolling; permanent stacks' },
-    { name: 'Energy Bars', effect: '+1% Damage, -2 Max HP per level', note: 'Strong if not HP stacking; levels compound quickly' },
-  ],
-  B: [
-    { name: 'Popup Tripod', effect: '+2% Fire Rate & Reload per second stationary (max 15×)', note: 'Mandatory for Constructor; good for any stationary build' },
-    { name: 'Gold-Tipped Bullets', effect: '+1% Damage per 5 Gold held', note: 'Hold gold all run; dump on boss for peak damage' },
-    { name: 'Barley Bulb Juice', effect: 'HP regen when near constructs', note: 'Pairs with Constructor and turret builds' },
-  ],
-}
