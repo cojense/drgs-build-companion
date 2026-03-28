@@ -1,23 +1,7 @@
 import { useState, useMemo } from 'react'
 import { BUILDS } from '../data/builds'
 import { STAGE_ECONOMY, REROLL_COSTS } from '../data/economy'
-
-const ARTIFACT_OPTIONS = [
-  { id: 'squint',    name: 'Squint-EE5',        effect: '+30% Crit Chance, +100% Crit Dmg' },
-  { id: 'mocap',     name: 'The MoCap',          effect: '+1% dmg per 1% HP missing' },
-  { id: 'nitra',     name: 'Nitragenic Powder',  effect: '+0.5% Crit Chance per Nitra held' },
-  { id: 'pickled',   name: 'Pickled Nitra',      effect: '+50% Fire Rate, -15% Move Speed' },
-  { id: 'popup',     name: 'Popup Tripod',        effect: '+2% Fire Rate/Reload when stationary' },
-  { id: 'gold',      name: 'Gold-Tipped Bullets', effect: '+1% Dmg per 5 Gold held' },
-  { id: 'energy',    name: 'Energy Bars',         effect: '+1% Dmg per level, -2 Max HP' },
-  { id: 'blt',       name: 'BLT Ration Pack',     effect: '+70 Max HP, +2 HP Regen' },
-  { id: 'pay2win',   name: 'Pay2Win Console',      effect: '+2.5% Dmg per reroll' },
-]
-
-function getNextRerollCost(rerollCount) {
-  const costs = REROLL_COSTS.shop
-  return costs[Math.min(rerollCount, costs.length - 1)]
-}
+import { ARTIFACTS, ARTIFACT_BY_NAME, ARTIFACT_CATEGORIES } from '../data/artifacts'
 
 function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) {
   const economy = STAGE_ECONOMY[stage - 1]
@@ -28,7 +12,6 @@ function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) 
   const recs = []
 
   // Gold assessment
-  const goldMidpoint = (economy.goldMin + economy.goldMax) / 2
   if (gold < economy.goldMin) {
     recs.push({
       type: 'warn',
@@ -41,7 +24,7 @@ function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) 
       type: 'good',
       icon: '✓',
       title: 'Gold Surplus',
-      detail: `You have ${gold}g — well above benchmark. ${stage < 5 ? `Consider rerolling shop up to 2× for S-tier weapon upgrades.` : 'Spend aggressively — this is the final stage.'}`,
+      detail: `You have ${gold}g — well above benchmark. ${stage < 5 ? 'Consider rerolling shop up to 2× for S-tier weapon upgrades.' : 'Spend aggressively — this is the final stage.'}`,
     })
   }
 
@@ -51,44 +34,48 @@ function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) 
       type: 'warn',
       icon: '⚠',
       title: 'Low Nitra',
-      detail: `Expected ${economy.nitraMin}–${economy.nitraMax} nitra. Mine nitra veins before Stage ${stage + 1 <= 5 ? stage + 1 : 'end'}. Artifact rerolls cost 10 nitra each.`,
+      detail: `Expected ${economy.nitraMin}–${economy.nitraMax} nitra. Mine nitra veins before Stage ${stage + 1 <= 5 ? stage + 1 : 'end'}. Artifact rerolls cost ${REROLL_COSTS.artifact} nitra each.`,
     })
   }
 
   // Reroll affordability
-  const firstReroll = getNextRerollCost(0)
-  const secondReroll = getNextRerollCost(1)
   const goldAfterSave = gold - economy.saveTarget
-  if (goldAfterSave >= firstReroll) {
+  if (goldAfterSave >= REROLL_COSTS.shop[0]) {
     const maxRerolls = REROLL_COSTS.shop.filter((_, i) => {
       const spent = REROLL_COSTS.shop.slice(0, i + 1).reduce((a, b) => a + b, 0)
       return spent <= goldAfterSave
     }).length
+    const wantedNames = wantedArtifacts.map(name => name.split(' — ')[0].trim())
     recs.push({
       type: 'info',
       icon: '↺',
       title: `Afford ${maxRerolls} Shop Reroll${maxRerolls !== 1 ? 's' : ''}`,
-      detail: `After saving ${economy.saveTarget}g for next stage, you can reroll ${maxRerolls}× (costs: ${REROLL_COSTS.shop.slice(0, maxRerolls).join('→')}g). ${wantedArtifacts.length ? `Looking for: ${wantedArtifacts.join(', ')}.` : ''}`,
+      detail: `After saving ${economy.saveTarget}g, you can reroll ${maxRerolls}× (costs: ${REROLL_COSTS.shop.slice(0, maxRerolls).join('→')}g). ${wantedNames.length ? `Looking for: ${wantedNames.join(', ')}.` : ''}`,
     })
   }
 
-  // Artifact reroll affordability
+  // Artifact reroll affordability — FIXED: compare IDs to IDs
   if (nitra >= REROLL_COSTS.artifact) {
     const artifactRerolls = Math.floor(nitra / REROLL_COSTS.artifact)
-    const missingArtifacts = wantedArtifacts.filter(a => !heldArtifacts.includes(a))
-    if (missingArtifacts.length > 0) {
+    const wantedIds = wantedArtifacts
+      .map(name => ARTIFACT_BY_NAME[name.split(' — ')[0].trim()]?.id)
+      .filter(Boolean)
+    const missingIds = wantedIds.filter(id => !heldArtifacts.includes(id))
+    const missingNames = missingIds.map(id => ARTIFACTS.find(a => a.id === id)?.name ?? id)
+
+    if (missingNames.length > 0) {
       recs.push({
         type: 'info',
         icon: '◆',
-        title: `Reroll Artifacts for: ${missingArtifacts.join(', ')}`,
-        detail: `You have ${nitra} nitra — enough for ${artifactRerolls} artifact reroll${artifactRerolls !== 1 ? 's' : ''} (${REROLL_COSTS.artifact} nitra each). Missing S-tier artifact${missingArtifacts.length !== 1 ? 's' : ''} for this build.`,
+        title: `Reroll Artifacts for: ${missingNames.join(', ')}`,
+        detail: `You have ${nitra} nitra — enough for ${artifactRerolls} artifact reroll${artifactRerolls !== 1 ? 's' : ''} (${REROLL_COSTS.artifact} nitra each).`,
       })
     } else if (wantedArtifacts.length > 0) {
       recs.push({
         type: 'good',
         icon: '✓',
         title: 'Core Artifacts Secured',
-        detail: `${wantedArtifacts.join(', ')} are all held. Spend remaining nitra on upgrading or save for later stages.`,
+        detail: `${wantedArtifacts.map(n => n.split(' — ')[0].trim()).join(', ')} are all held. Spend remaining nitra on upgrades or save.`,
       })
     }
   }
@@ -101,19 +88,19 @@ function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) 
     detail: economy.advice,
   })
 
-  // Gold-Tipped Bullets advice
-  if (heldArtifacts.includes('Gold-Tipped Bullets') || heldArtifacts.includes('gold')) {
+  // Gold-Tipped Bullets — use kebab-case ID
+  if (heldArtifacts.includes('gold-tipped-bullets')) {
     const bonus = Math.floor(gold / 5)
     recs.push({
       type: 'info',
       icon: '⚡',
       title: `Gold-Tipped Bullets: +${bonus}% Damage`,
-      detail: `With ${gold}g held, you're getting +${bonus}% damage. ${stage < 5 ? 'Hold gold through Stage 5 for maximum boss damage.' : 'Don\'t spend gold on the boss — keep the buff active!'}`,
+      detail: `With ${gold}g held, you're getting +${bonus}% damage. ${stage < 5 ? 'Hold gold through Stage 5 for maximum boss damage.' : "Don't spend gold on the boss — keep the buff active!"}`,
     })
   }
 
-  // Nitragenic Powder advice
-  if (heldArtifacts.includes('Nitragenic Powder') || heldArtifacts.includes('nitra')) {
+  // Nitragenic Powder — use kebab-case ID
+  if (heldArtifacts.includes('nitragenic-powder')) {
     const critBonus = (nitra * 0.5).toFixed(1)
     recs.push({
       type: 'info',
@@ -123,15 +110,19 @@ function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) 
     })
   }
 
-  // Avoid artifact warning
+  // Avoid artifact warning — ID-based comparison
   if (build) {
-    const avoidHeld = avoidArtifacts.filter(a => heldArtifacts.some(h => h.toLowerCase().includes(a.toLowerCase().split(' ')[0])))
-    if (avoidHeld.length > 0) {
+    const avoidIds = avoidArtifacts
+      .map(entry => ARTIFACT_BY_NAME[entry.split(' — ')[0].trim()]?.id)
+      .filter(Boolean)
+    const avoidHeldIds = avoidIds.filter(id => heldArtifacts.includes(id))
+    const avoidHeldNames = avoidHeldIds.map(id => ARTIFACTS.find(a => a.id === id)?.name ?? id)
+    if (avoidHeldNames.length > 0) {
       recs.push({
         type: 'danger',
         icon: '✕',
-        title: `Avoid: ${avoidHeld.join(', ')}`,
-        detail: `This artifact actively hurts the ${build.name} build. ${build.id === 'interrogator-fire-dot' ? 'Squint-EE5\'s -30% Direct Damage stacks with Interrogator\'s -30% class passive.' : 'Replace at next artifact reroll opportunity.'}`,
+        title: `Avoid: ${avoidHeldNames.join(', ')}`,
+        detail: `This artifact actively hurts the ${build.name} build. Replace at next artifact reroll opportunity.`,
       })
     }
   }
@@ -219,7 +210,7 @@ export default function ShopOptimizer() {
             min={0}
             max={999}
             value={gold}
-            onChange={e => setGold(Math.max(0, parseInt(e.target.value) || 0))}
+            onChange={e => setGold(Math.max(0, parseInt(e.target.value, 10) || 0))}
             className="w-full bg-dark-steel border border-border-subtle text-text-primary rounded-lg px-3 py-3 text-base font-mono min-h-[44px] focus:outline-none focus:border-drg-gold"
           />
           <p className="text-xs text-text-secondary font-mono mt-1">
@@ -235,7 +226,7 @@ export default function ShopOptimizer() {
             min={0}
             max={999}
             value={nitra}
-            onChange={e => setNitra(Math.max(0, parseInt(e.target.value) || 0))}
+            onChange={e => setNitra(Math.max(0, parseInt(e.target.value, 10) || 0))}
             className="w-full bg-dark-steel border border-border-subtle text-text-primary rounded-lg px-3 py-3 text-base font-mono min-h-[44px] focus:outline-none focus:border-nitra-teal"
           />
           <p className="text-xs text-text-secondary font-mono mt-1">
@@ -244,27 +235,39 @@ export default function ShopOptimizer() {
         </div>
       </div>
 
-      {/* Artifact toggles */}
+      {/* Artifact toggles — grouped by category */}
       <div>
         <label className="text-xs font-mono text-text-secondary uppercase tracking-wide block mb-2">
           Held Artifacts
         </label>
-        <div className="flex flex-wrap gap-2">
-          {ARTIFACT_OPTIONS.map(art => (
-            <button
-              key={art.id}
-              onClick={() => toggleArtifact(art.id)}
-              title={art.effect}
-              className={[
-                'text-xs font-mono px-2.5 py-1.5 rounded border transition-colors min-h-[36px]',
-                heldArtifacts.includes(art.id)
-                  ? 'bg-drg-amber/20 text-drg-amber border-drg-amber/50'
-                  : 'bg-dark-steel text-text-secondary border-border-subtle hover:text-text-primary',
-              ].join(' ')}
-            >
-              {art.name}
-            </button>
-          ))}
+        <div className="space-y-3">
+          {ARTIFACT_CATEGORIES.map(cat => {
+            const arts = ARTIFACTS.filter(a => a.category === cat.id)
+            return (
+              <div key={cat.id}>
+                <p className="text-xs font-mono text-text-secondary/60 uppercase tracking-wide mb-1.5">
+                  {cat.label}
+                </p>
+                <div className="flex flex-wrap gap-2">
+                  {arts.map(art => (
+                    <button
+                      key={art.id}
+                      onClick={() => toggleArtifact(art.id)}
+                      title={`[${art.tier}] ${art.effect}`}
+                      className={[
+                        'text-xs font-mono px-2.5 py-1.5 rounded border transition-colors min-h-[36px]',
+                        heldArtifacts.includes(art.id)
+                          ? 'bg-drg-amber/20 text-drg-amber border-drg-amber/50'
+                          : 'bg-dark-steel text-text-secondary border-border-subtle hover:text-text-primary',
+                      ].join(' ')}
+                    >
+                      {art.name}
+                    </button>
+                  ))}
+                </div>
+              </div>
+            )
+          })}
         </div>
       </div>
 
@@ -292,10 +295,10 @@ export default function ShopOptimizer() {
           Recommendations
         </h2>
         <div className="space-y-2">
-          {recs.map((rec, i) => {
+          {recs.map((rec) => {
             const style = TYPE_STYLES[rec.type] ?? TYPE_STYLES.note
             return (
-              <div key={i} className={`rounded-lg border p-3 ${style.bg} ${style.border}`}>
+              <div key={rec.title} className={`rounded-lg border p-3 ${style.bg} ${style.border}`}>
                 <div className="flex items-start gap-2">
                   <span className={`font-mono font-bold text-sm shrink-0 ${style.icon}`}>{rec.icon}</span>
                   <div>
