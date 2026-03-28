@@ -19,12 +19,12 @@ export const BUILDS = [
         ],
       },
       {
-        name: 'Nishanka Boltshark X-80',
+        name: 'Drak-25 Plasma Carbine',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'Fire Bolt or Cryo Bolt', verdict: 'situational', note: 'Cryo Bolt for CC; Fire Bolt if no other DoT source' },
-          { level: 12, name: 'Gas Rerouting', verdict: 'take', note: '+reload, always useful' },
-          { level: 18, name: 'Bolt Volley', verdict: 'take', note: 'Fires 3 bolts — great AoE coverage for cleanup' },
+          { level: 6, name: 'Overcharged PCF', verdict: 'take', note: '+damage, no downsides — reliable supplemental damage throughout the run' },
+          { level: 12, name: 'Plasma Burst', verdict: 'take', note: 'AoE plasma shots — good for clearing packs between Thick Boy reloads' },
+          { level: 18, name: 'Volatile Impact Mixture', verdict: 'situational', note: 'Adds fire DoT — skip if already have DoT coverage; take for mixed swarms' },
         ],
       },
       {
@@ -37,12 +37,12 @@ export const BUILDS = [
         ],
       },
       {
-        name: 'Deepcore GK2',
+        name: 'Cryo Grenade',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: 'Simple damage boost' },
-          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage, slight recoil — worth it' },
-          { level: 18, name: 'Flex', verdict: 'situational', note: 'Take whatever is offered — this slot is a flex' },
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius on freeze — slows incoming clusters and sets up Thick Boy landing shots' },
+          { level: 12, name: 'Frost Nova', verdict: 'take', note: 'Bigger freeze burst; more CC coverage between Thick Boy reloads' },
+          { level: 18, name: 'Gravitational Core', verdict: 'situational', note: 'Pulls enemies to impact point before freezing — cluster setup for Thick Boy mega-shot' },
         ],
       },
     ],
@@ -63,7 +63,7 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Priority: M1000 Classic > Boomstick > GK2. Lock in M1000 as your carry immediately. If M1000 is not offered at lv5, take the strongest gun offered and wait — it will appear.',
+            content: 'Priority: M1000 Classic > Boomstick > Drak-25. Lock in M1000 as your carry immediately. If M1000 is not offered at lv5, take the strongest gun offered and wait — it will appear.',
           },
           {
             type: 'overclock',
@@ -84,7 +84,7 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Continue funneling XP into M1000. At character lv15, consider Boltshark as a CC/cleanup tool. Avoid splitting levels between M1000 and anything else.',
+            content: 'Continue funneling XP into M1000. At character lv15, consider Drak-25 Plasma Carbine as a supplemental damage tool, or Cryo Grenade for CC setup. Avoid splitting levels between M1000 and anything else.',
           },
           {
             type: 'overclock',
@@ -126,12 +126,12 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Level Boltshark now — Cryo Bolt for CC and Bolt Volley at lv18 clears trash packs. GK2 is a flex filler; treat it as a stat stick.',
+            content: 'Level Drak-25 Plasma Carbine — Plasma Burst AoE covers packs between Thick Boy reloads. Level Cryo Grenade toward lv18 Gravitational Core — pull then freeze then Thick Boy = highest possible per-shot damage.',
           },
           {
             type: 'overclock',
             label: 'Overclock Choice',
-            content: 'Boltshark lv12 Gas Rerouting → lv18 Bolt Volley. For GK2, take whatever drops — High Caliber Rounds if available. Focus artifact rerolls on Squint-EE5 if still missing.',
+            content: 'Drak-25 lv12: Plasma Burst for AoE. Cryo Grenade lv18: Gravitational Core — pull clusters into one spot, then land Thick Boy mega-shot for maximum overkill crit chains. Focus artifact rerolls on Squint-EE5 if still missing.',
           },
           {
             type: 'shop',
@@ -697,12 +697,12 @@ export const BUILDS = [
         ],
       },
       {
-        name: 'Plasma Burster',
+        name: 'Acid Grenade',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: '+damage on bounce shots' },
-          { level: 12, name: 'Ionized Plasma', verdict: 'take', note: 'Adds electric — useful on hard targets' },
-          { level: 18, name: 'More Bounce!', verdict: 'take', note: 'More ricochets = more hit coverage in tunnels' },
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius and damage; pairs with Demolitionist AoE passive — bigger splash' },
+          { level: 12, name: 'Cluster Grenades', verdict: 'take', note: 'More acid sub-grenades — wider DoT coverage on frozen clusters' },
+          { level: 18, name: 'Corrosive Burst', verdict: 'take', note: 'Massive acid AoE; melts armor and finishes frozen grouped enemies' },
         ],
       },
     ],
@@ -1174,36 +1174,36 @@ export const BUILDS = [
         ],
       },
       {
-        name: 'Krakatoa Sentinel',
+        name: 'Corrosive Sludge Pump',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'More beams = more burn applicators passively' },
-          { level: 12, name: 'Mining Directive', verdict: 'take', note: 'Turret mines nitra and gold — synergy with Foreman mining speed stacks' },
-          { level: 18, name: 'Tank Tracks', verdict: 'take', note: 'Turret follows you while you mine; never leave it behind' },
+          { level: 6, name: 'Extended Tank', verdict: 'take', note: '+range and ammo — spray acid while retreating; Foreman speed stacks keep you ahead of enemies' },
+          { level: 12, name: 'Acid Surge', verdict: 'take', note: 'More acid stacks per second — scales directly with Status Effect Damage priority' },
+          { level: 18, name: 'Corrosive Flood', verdict: 'take', note: 'Leaves persistent acid puddles — DoT field covers your retreat and mining zones' },
         ],
       },
       {
-        name: 'Cryo Cannon',
+        name: 'Neurotoxin Grenade',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'Wider freeze coverage' },
-          { level: 12, name: 'Frost Burn', verdict: 'take', note: 'Fire from cold — bonus DoT while retreating and mining' },
-          { level: 18, name: 'Even More Beams (+3)', verdict: 'take', note: 'Full-width freeze wall' },
+          { level: 6, name: 'Cluster Grenades', verdict: 'take', note: 'More toxin sub-grenades — wider DoT coverage on groups' },
+          { level: 12, name: 'Tape Some Nails To It', verdict: 'take', note: 'Shrapnel on detonation; AoE damage burst on top of DoT' },
+          { level: 18, name: 'Hallucinogenic', verdict: 'take', note: 'Confused enemies fight each other — passive damage while you mine undisturbed' },
         ],
       },
       {
-        name: 'Impact Axe',
+        name: 'K1-P Viper Drone',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'Corrosive Coating', verdict: 'take', note: 'Acid DoT from axes — synergizes with Status Effect Damage stat priority' },
-          { level: 12, name: 'A Little More Oomph!', verdict: 'take', note: '+damage per axe; good for elites while retreating' },
-          { level: 18, name: 'More Axes (+100% clip)', verdict: 'take', note: 'Double axes — maintain throw cadence while kiting backward' },
+          { level: 6, name: 'More Drones (+1)', verdict: 'take', note: 'Double drone count — more aerial acid applicators covering your back' },
+          { level: 12, name: 'Acid Tips', verdict: 'take', note: 'Drone attacks apply acid DoT — synergy with Status Effect Damage scaling' },
+          { level: 18, name: 'Swarm Protocol', verdict: 'take', note: 'Drones coordinate burst attacks — amplified DoT spike on prioritized targets' },
         ],
       },
     ],
     stats: {
-      priority: ['Status Effect Damage', 'Potency', 'Reload Speed', 'Mining Speed', 'Movement Speed'],
-      avoid: ['Crit', 'Beam stats unrelated to DoT application'],
+      priority: ['Status Effect Damage', 'Potency', 'Reload Speed', 'Damage'],
+      avoid: ['Crit — acid DoT cannot crit', 'Beam stats unrelated to DoT application'],
     },
     artifacts: {
       always: ['Nitragenic Powder', 'Gold Scanner + Gold-Tipped Bullets'],
@@ -1218,12 +1218,12 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Priority: Subata > Krakatoa > Cryo Cannon. Unique playstyle: mine forward, Subata fires backward. Use Krakatoa turret to cover your back while mining. Start stacking Foreman speed stacks immediately.',
+            content: 'Priority: Subata > Corrosive Sludge Pump > Neurotoxin Grenade. Unique playstyle: mine forward, Subata fires backward. Sludge Pump sprays acid behind you as you retreat. Start stacking Foreman speed stacks immediately.',
           },
           {
             type: 'overclock',
             label: 'Overclock Choice',
-            content: 'Subata lv6: If solo, skip Sidearm (-25% damage to you) and reroll. Wait for Acid Dipped Tips at lv12 — that\'s the real activation. Krakatoa lv6: More Beams for passive burn coverage.',
+            content: 'Subata lv6: If solo, skip Sidearm (-25% damage to you) and reroll. Wait for Acid Dipped Tips at lv12 — that\'s the real activation. Sludge Pump lv6: Extended Tank for longer acid spray range.',
           },
           {
             type: 'shop',
@@ -1239,7 +1239,7 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Push Subata to lv12 aggressively. Krakatoa lv12 Mining Directive lets your turret mine for you — deploy it on nitra veins. This build generates substantially more gold than average.',
+            content: 'Push Subata to lv12 aggressively. Sludge Pump lv12: Acid Surge increases stack generation — start buying Status Effect Damage upgrades in the shop. This build generates substantially more gold than average.',
           },
           {
             type: 'overclock',
@@ -1265,7 +1265,7 @@ export const BUILDS = [
           {
             type: 'overclock',
             label: 'Overclock Choice',
-            content: 'Cryo Cannon lv12: Frost Burn for fire DoT from cold while retreating. Krakatoa lv18: Tank Tracks — fire turret follows you as you mine forward, covering retreat automatically.',
+            content: 'Sludge Pump lv18: Corrosive Flood — acid puddles create persistent kill zones behind you. Neurotoxin Grenade lv6: Cluster Grenades for wider toxin coverage on incoming swarms.',
           },
           {
             type: 'shop',
@@ -1281,12 +1281,12 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Impact Axe with Corrosive Coating adds a second acid DoT source. Cryo Cannon lv18: Even More Beams — full-width freeze for defensive coverage while kiting backward.',
+            content: 'K1-P Viper Drone with Acid Tips adds aerial acid DoT — a third DoT source supplementing Subata and Sludge Pump. Neurotoxin Grenade lv18: Hallucinogenic for confused enemies fighting each other while you mine.',
           },
           {
             type: 'overclock',
             label: 'Overclock Choice',
-            content: 'Impact Axe lv18: More Axes for throw rate. Cryo Cannon lv18: Even More Beams. K1-P Viper Drone if obtained — deploy while mining for aerial DoT application.',
+            content: 'K1-P Viper Drone lv12: Acid Tips — drone attacks apply acid DoT synergizing with Status Effect scaling. Neurotoxin lv18: Hallucinogenic. Sludge Pump fully online.',
           },
           {
             type: 'shop',
@@ -1302,7 +1302,7 @@ export const BUILDS = [
           {
             type: 'weapon',
             label: 'Weapon Pick',
-            content: 'Unique boss strategy: keep mining nitra during the fight to maintain Foreman speed stacks and Nitragenic Powder scaling. Subata fires backward automatically while you face the rock face.',
+            content: 'Unique boss strategy: keep mining nitra during the fight to maintain Foreman speed stacks and Nitragenic Powder scaling. Subata fires backward automatically while you face the rock face. Deploy K1-P drones and toss Neurotoxin before disengaging to mine.',
           },
           {
             type: 'overclock',
@@ -1314,6 +1314,425 @@ export const BUILDS = [
             label: 'Shop Strategy',
             content: 'Spend everything. This build has the largest resource surplus of any kit — use it all. Gold-Tipped Bullets damage peaks here with maximum gold. Dump all nitra on artifact rerolls.',
           },
+        ],
+      },
+    ],
+  },
+  {
+    id: 'survivalist-smg-rush',
+    name: 'Survivalist SMG Rush',
+    class: 'Scout',
+    subclass: 'Survivalist',
+    tier: 'B',
+    difficulty: 2,
+    passive: '+20% Move Speed, +3 HP Regen/s when above 50% HP — stay mobile, stay alive',
+    synopsis: 'Zhukov SMG pair with high fire rate and Survivalist mobility. Stay above 50% HP for free regen. Use movement speed advantage to kite and outpace swarms. Cryo Grenade buys time to reposition.',
+    weapons: [
+      {
+        name: 'Zhukov Mk II',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Gas Rerouting', verdict: 'take', note: '+reload on dual SMGs; keeps the fire rate loop tight' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage per bullet; SMG fire rate makes this significant' },
+          { level: 18, name: 'Embedded Detonators', verdict: 'take', note: 'MUST-TAKE — bullets embed micro-explosives that detonate on reload; massive burst DPS' },
+        ],
+      },
+      {
+        name: 'Cryo Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius on freeze; wider CC coverage while you reposition' },
+          { level: 12, name: 'Frost Nova', verdict: 'take', note: 'Bigger freeze burst; stops chasing enemies so you can kite freely' },
+          { level: 18, name: 'Gravitational Core', verdict: 'situational', note: 'Pull enemies to one spot then freeze; setup for Embedded Detonator burst on clustered group' },
+        ],
+      },
+      {
+        name: 'Jury-Rigged Boomstick',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Bigger Mags', verdict: 'take', note: 'More shells between reloads; important for Survivalist who needs to keep moving' },
+          { level: 12, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on a point-blank finisher while kiting past enemies' },
+          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Massive single pellet — fires during movement as a burst panic button' },
+        ],
+      },
+      {
+        name: 'Deepcore GK2',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: 'Straightforward damage boost' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage, reliable mid-game flex weapon' },
+          { level: 18, name: 'Supercooling Chamber', verdict: 'situational', note: 'Cryo debuff on GK2 — extends freeze duration from Cryo Grenade' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Reload Speed', 'Movement Speed', 'Fire Rate', 'Crit Chance'],
+      avoid: ['HP/Armor stacking — you need to stay above 50% HP for regen, but stacking HP means you survive longer above threshold anyway; fine either way', 'Stationary buffs — Popup Tripod conflicts with mobility playstyle'],
+    },
+    artifacts: {
+      always: ['BLT Ration Pack', 'Energy Bars', 'Gold-Tipped Bullets'],
+      good: ['Pay2Win Console', 'Nitragenic Powder'],
+      never: ['Popup Tripod — movement is everything for Survivalist'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Lock In Zhukov, Stay Mobile',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Zhukov Mk II > Boomstick > GK2. Zhukov\'s dual-SMG fire rate is the highest in the Scout kit. Cryo Grenade early is a big defensive asset — freeze incoming swarms and kite freely.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Zhukov lv6: Gas Rerouting immediately. Dual SMGs reload fast, and this makes reload windows nearly zero. Keep moving; Survivalist passive gives free regen when above 50% HP.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy BLT Ration Pack early — +70 HP and regen means your 50% HP threshold is more forgiving. Save 100g. Mine aggressively using movement speed advantage to cover more ground per wave.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'High Caliber Breakpoint',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Zhukov to lv12 (High Caliber Rounds). Cryo Grenade lv12: Frost Nova for bigger freeze. Each freeze = time to reposition and proc the regen by staying above 50% HP.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Zhukov lv12: High Caliber Rounds — a damage spike that makes the mid-game feel much stronger. GK2 lv6: Quick flex investment for supplemental damage between reloads.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Energy Bars is excellent here — you\'re not HP-stacking, but +1% damage per level compounds. Spend ~30g on Damage upgrades. Save 120g for Stage 3.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Embedded Detonators Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Zhukov lv18: Embedded Detonators. Fire into a target, reload, watch micro-bombs explode. Against frozen clusters from Cryo Grenade, the detonation damage multiplies across every enemy.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Embedded Detonators is the build. Cryo Grenade lv18: Gravitational Core — pull cluster then freeze then Embedded Detonator burst is devastating. Boomstick lv12: High Velocity Bullets.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Gold-Tipped Bullets scales with accumulated gold — Survivalist mines quickly so this compounds well. Look for Crit Chance if Squint-EE5 is available (Zhukov shots crit).' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Fill Secondaries',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Boomstick to lv18: Thick Boy for burst panic shots. GK2 fills the flex role — take whatever OC is offered. All kits mostly complete by end of Stage 4.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Boomstick lv18: Thick Boy — mobile point-blank burst. GK2 lv12+ flex upgrades. Any Damage or Reload Speed global cards are priority across all weapons.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Complete BLT + Energy Bars artifact pairing. Pay2Win Console is worth buying — aggressive rerolling earns permanent damage stacks.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Keep Moving on the Boss',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Against Dreadnought: use Gravitational Core Cryo pull before supply pod to cluster escorts, then Embedded Detonator burst into the frozen pile. Stay mobile to outrange Dreadnought attacks.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take all Damage and Reload Speed upgrades. Movement Speed upgrades are tier-1 for Survivalist — faster you are, the less you get hit, and HP regen keeps you topped up between engagements.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Gold-Tipped Bullets: hold gold all run for max boss damage. Dump nitra on artifact rerolls. Survivalist generates good resources thanks to mobility — you cover more ground per stage.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'infiltrator-cryo-burst',
+    name: 'Infiltrator Cryo Burst',
+    class: 'Scout',
+    subclass: 'Infiltrator',
+    tier: 'A',
+    difficulty: 3,
+    passive: '+50% Damage for 3s after moving 15m without stopping — burst window rewards constant repositioning',
+    synopsis: 'Dash constantly to maintain the 15m movement burst window, then dump Boltshark bolts or a Thick Boy shot during the +50% burst. Cryo Grenade freezes targets so you can fire in the burst window without enemies closing gap.',
+    weapons: [
+      {
+        name: 'Nishanka Boltshark X-80',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Cryo Bolt', verdict: 'take', note: 'Cryo Bolt freezes targets — fire during your movement burst window into frozen enemies for double-dipping CC + burst damage' },
+          { level: 12, name: 'Gas Rerouting', verdict: 'take', note: '+reload; faster cycle between bolt volleys during the burst window' },
+          { level: 18, name: 'Bolt Volley', verdict: 'take', note: 'MUST-TAKE — fires 3 bolts simultaneously; during the +50% burst window this triples the damage spike' },
+        ],
+      },
+      {
+        name: 'M1000 Classic',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: '+damage; dump a charged shot during the burst window for a massive single-target spike' },
+          { level: 12, name: 'Bigger Mags', verdict: 'take', note: 'More shots in burst window before reload interrupts the flow' },
+          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Fire during burst window = one mega-shot at +50% damage; devastating on elites' },
+        ],
+      },
+      {
+        name: 'Cryo Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius; wider freeze so you can keep moving and still catch targets in the blast' },
+          { level: 12, name: 'Cluster Grenades', verdict: 'take', note: 'More freeze sub-grenades — wider area for burst window firing' },
+          { level: 18, name: 'Gravitational Core', verdict: 'take', note: 'Pull enemies together then freeze — then dash to trigger burst window, fire Bolt Volley into the cluster' },
+        ],
+      },
+      {
+        name: 'Deepcore GK2',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: 'Flex damage source' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: 'More damage per bullet; useful flex during burst windows' },
+          { level: 18, name: 'Supercooling Chamber', verdict: 'situational', note: 'Cryo debuff extends freeze durations — more time to exploit burst window' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Crit Chance', 'Crit Damage', 'Reload Speed', 'Movement Speed'],
+      avoid: ['HP/Armor — you want to be moving, not tanking', 'Potency — no DoT in this build'],
+    },
+    artifacts: {
+      always: ['Squint-EE5', 'Energy Bars', 'Pay2Win Console'],
+      good: ['Nitragenic Powder', "Diver's Manual"],
+      never: ['Popup Tripod — movement is the entire mechanic, never stop moving'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Learn the Burst Window',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Boltshark > M1000 > GK2. Boltshark with Cryo Bolt is the core — freeze targets, dash to trigger burst window, fire. Practice the movement pattern immediately.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Boltshark lv6: Cryo Bolt. The freeze is what makes this build work — it gives you a stationary target to fire at during the burst window. Without it, landing shots while dashing is inconsistent.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Squint-EE5 is the ideal first artifact — Boltshark shots crit, and +100% Crit Damage with the +50% burst window stacks multiplicatively. Save 100g. Prioritize Crit Chance stat cards.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Bigger Mags + Burst Rhythm',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Boltshark to lv12. M1000 lv12: Bigger Mags. The pattern is: dash 15m → burst window activates → Cryo Bolt freeze → dump shots → dash again to reset. Bigger Mags means more shots per burst window.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Boltshark lv12: Gas Rerouting. M1000 lv12: Bigger Mags — more shots fired during each burst window before reload interrupts. Cryo Grenade lv6: Compact Explosives.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Energy Bars is excellent — low HP threshold is easy at Infiltrator\'s mobility. Each level +1% damage compounds. Buy Pay2Win Console here if available — each reroll is +2.5% permanent damage.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Bolt Volley Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Boltshark lv18: Bolt Volley fires 3 bolts simultaneously — during the +50% burst window this triples the damage burst. One dash, one freeze, one triple-bolt volley = massive damage.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Bolt Volley at lv18 is the carry. M1000 lv18: Thick Boy for a massive single-shot alternative burst. Cryo lv12: Cluster Grenades for wider freeze coverage.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Stack Crit Chance and Damage. Squint-EE5 + burst window + Bolt Volley triple-crit is the highest per-second burst in Scout\'s kit. Reroll aggressively for Crit upgrades.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Full Burst Toolkit',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Cryo lv18: Gravitational Core — now the combo is: pull → freeze → dash to trigger burst → Bolt Volley triple shot into clustered frozen targets. GK2 handles anything that slips through.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Cryo Gravitational Core is the final piece. GK2 flex OCs. Any Crit Damage global upgrade is insta-buy — the burst window already multiplies it by 1.5×.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Complete Squint-EE5 + Energy Bars core. Movement Speed upgrades are directly worth buying — faster movement = faster 15m dash cycle = more burst windows per minute.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Constant Dash Cycle',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Dreadnought: dash constantly to maintain burst window. Cryo Gravitational Core pulls + freezes escorts and Dreadnought. Fire Bolt Volley during burst window, then M1000 Thick Boy during next burst cycle.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Damage, Crit Chance, and Movement Speed upgrade. Movement Speed upgrades are unusually valuable for Infiltrator — every extra speed shortens the 15m dash cycle.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Pay2Win Console: reroll aggressively for the permanent +2.5% damage stacks. Energy Bars at max levels becomes a significant damage multiplier. Never stop moving in Stage 5.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'enforcer-minigun',
+    name: 'Enforcer Minigun',
+    class: 'Gunner',
+    subclass: 'Enforcer',
+    tier: 'A',
+    difficulty: 2,
+    passive: '+15% Damage, -20% Move Speed — plant your feet and delete everything in front of you',
+    synopsis: 'Lead Storm Minigun with Bullet Hell OC turns you into a stationary damage engine. Enforcer\'s +15% damage is always-on and stacks with all upgrades. Pair with Seismic Repulsor for CC — enemies can\'t reach you before dying.',
+    weapons: [
+      {
+        name: 'Lead Storm Powered Minigun',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Magnetic Bearings', verdict: 'take', note: '+fire rate while spinning; combined with Enforcer passive damage this is already devastating at lv6' },
+          { level: 12, name: 'Burning Hell', verdict: 'take', note: 'Sustained fire builds heat; at max heat all shots deal bonus fire damage — pairs with passive damage boost' },
+          { level: 18, name: 'Bullet Hell', verdict: 'take', note: 'MUST-TAKE — bullets ricochet off terrain and enemies; a kill turns one bullet into a hundred — chain annihilation' },
+        ],
+      },
+      {
+        name: 'Seismic Repulsor',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Coolant Leak', verdict: 'take', note: 'Cryo on knockback; freeze anything that survived the minigun to clean up' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More charges; Enforcer can\'t move so CC uptime is critical for survival' },
+          { level: 18, name: 'Extra Capacity (+3)', verdict: 'take', note: 'Near-permanent knockback; enemies never reach you while minigun is spinning' },
+        ],
+      },
+      {
+        name: 'Cryo Cannon',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'Wider freeze coverage for incoming swarms before minigun warmup' },
+          { level: 12, name: 'Frost Burn', verdict: 'take', note: 'Fire from cold — bonus damage during minigun spin-up phase' },
+          { level: 18, name: 'Even More Beams (+3)', verdict: 'take', note: 'Full-width freeze wall; plant your feet and freeze an entire wave' },
+        ],
+      },
+      {
+        name: 'ArmsKore Coil Gun',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on a piercing single-target weapon for elites outside freeze range' },
+          { level: 12, name: 'Ferromagnetic Exta', verdict: 'take', note: 'More piercing targets; useful for cleaning up stragglers Bullet Hell ricochets miss' },
+          { level: 18, name: 'Lead Wrapped Ammo', verdict: 'take', note: '+damage per shot; strong on a high-penetration weapon' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Kinetic Damage', 'Fire Rate', 'Piercing', 'Reload Speed'],
+      avoid: ['Movement Speed — you don\'t move anyway', 'Potency — build is pure kinetic/explosive'],
+    },
+    artifacts: {
+      always: ['Gold-Tipped Bullets', 'Squint-EE5', 'Pickled Nitra'],
+      good: ['The MoCap', 'Energy Bars'],
+      never: ['Popup Tripod — Minigun already has spinup; standing still is fine but Popup is redundant'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Find a Good Spot and Spin',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Lead Storm Minigun > Cryo Cannon > Coil Gun. Enforcer\'s +15% damage is active from wave 1 — even a lv5 minigun with the passive is above-average. Find a chokepoint immediately.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Minigun lv6: Magnetic Bearings. Higher fire rate while spinning + Enforcer passive = massive sustained DPS before any upgrades. Plant your feet and let enemies run into you.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Gold-Tipped Bullets early — Enforcer accumulates gold passively from killing swarms without moving. Save 100g. Buy Kinetic Damage cards whenever offered.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Burning Hell Sustain',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Minigun to lv12. Cryo Cannon deployed to freeze incoming waves before the minigun spins up. Freeze → Spin → Kill is the core loop. Seismic Repulsor for any flankers.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Minigun lv12: Burning Hell. Sustained fire builds heat and adds fire damage bonus — combined with Enforcer passive you\'re outputting triple-damage at max heat. Don\'t let the barrel cool.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Squint-EE5 is excellent here — minigun\'s high fire rate converts crit chance into constant crits. Spend ~30g on Fire Rate upgrades. Pickled Nitra for +50% fire rate at a stationary cost you already pay.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Bullet Hell Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Minigun lv18: Bullet Hell. Ricocheting bullets means kills spawn bullets that kill more enemies. Enforcer passive applies to every ricochet. Dense swarms become chain reaction annihilation.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Bullet Hell is non-negotiable. Cryo Cannon lv12: Frost Burn for fire DoT during Minigun warmup. Seismic Repulsor lv12: Extra Capacity for CC uptime while stationary.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend saved gold. Complete Squint-EE5 + Gold-Tipped Bullets + Pickled Nitra core trio. Pickled Nitra\'s -15% move speed is already negated by Enforcer — pure upside.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'CC Grid Complete',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Seismic Repulsor to lv18: Extra Capacity (+3) for near-permanent knockback. Cryo Cannon to lv18: full beam width. Coil Gun for single-target elite cleanup.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Seismic Repulsor Extra Capacity (+3) — almost unlimited knockback charges for a stationary player. Coil Gun Lead Wrapped Ammo for elite pops. Cryo full beams.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. The MoCap at low HP triples your already-massive Bullet Hell damage — if you\'re tanking hits anyway, it\'s incredibly strong.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss Execution — Stay Put',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Find the best chokepoint in the boss arena. Cryo Cannon full-width freeze on supply pod drop, then immediately spin up minigun. Bullet Hell ricochets clear all escorts while you focus Dreadnought.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Kinetic Damage, Fire Rate, and Piercing upgrade. Piercing converts minigun\'s fire rate into multi-hit — effectively doubles DPS against any target in a line.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Gold-Tipped Bullets: hold gold all run, dump into boss stage at max stack. Pickled Nitra: +50% fire rate on a build whose passive already gives +15% damage — the math is excellent.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'devastator-repulsor',
+    name: 'Devastator Repulsor Chain',
+    class: 'Gunner',
+    subclass: 'Devastator',
+    tier: 'B',
+    difficulty: 3,
+    passive: '+30% Knockback Force, +15% Explosion Radius — all weapons push harder and blast wider',
+    synopsis: 'Seismic Repulsor with Devastating Shockwave becomes a CC engine. Extended range knockback into walls deals terrain damage. Autocannon or Thunderhead with high fire rate mops up knocked-back enemies. Rough early, excellent late.',
+    weapons: [
+      {
+        name: 'Seismic Repulsor',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Shockwave', verdict: 'take', note: 'Extended knockback pulse — combined with Devastator +30% Knockback, enemies fly into walls for terrain damage' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More charges; CC uptime is everything for Devastator\'s knockback-into-wall playstyle' },
+          { level: 18, name: 'Devastating Shockwave', verdict: 'take', note: 'MUST-TAKE — explosion follows the knockback pulse; +15% radius from passive = massive AoE' },
+        ],
+      },
+      {
+        name: '"Thunderhead" Heavy Autocannon',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Gas Rerouting', verdict: 'take', note: '+reload; fire autocannon into knocked-back enemies before they recover' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage per bullet; combined with Repulsor follow-up, groups die fast' },
+          { level: 18, name: 'Tightly Wound Springs', verdict: 'take', note: '+150% fire rate — mop up knocked-back groups before they regroup' },
+        ],
+      },
+      {
+        name: 'Cryo Cannon',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'Freeze survivors after knockback — double CC layer' },
+          { level: 12, name: 'Frost Burn', verdict: 'take', note: 'Fire from cold; bonus damage on frozen survivors' },
+          { level: 18, name: 'Even More Beams (+3)', verdict: 'take', note: 'Full-width freeze wall after knockback; ensures nothing survives getting pushed back' },
+        ],
+      },
+      {
+        name: 'High Explosive Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius; Devastator passive adds another +15% radius on top — big blast' },
+          { level: 12, name: 'A Little More Oomph!', verdict: 'take', note: '+damage on grenades; throw into knocked-back cluster for bonus burst' },
+          { level: 18, name: 'True TNT', verdict: 'take', note: 'Massive damage spike; throw at knocked-back cluster for finishing burst' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Explosion Radius', 'Reload Speed', 'Kinetic Damage', 'Fire Rate'],
+      avoid: ['Status Effect Damage — build is kinetic and explosive, not DoT', 'Movement Speed — you stand and repulse'],
+    },
+    artifacts: {
+      always: ['Gold-Tipped Bullets', 'Energy Bars', 'BLT Ration Pack'],
+      good: ['Pay2Win Console', 'The MoCap'],
+      never: ['Popup Tripod — conflicts with Repulsor timing; you need to be reactive, not stationary'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Survive the Ramp',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Seismic Repulsor > Thunderhead > Cryo Cannon. Warning: this build is slow to ramp. Repulsor + Shockwave at lv6 is decent but Devastating Shockwave at lv18 is the real power. Survive early with CC.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Repulsor lv6: Shockwave. Even before Devastating Shockwave, enemies pushed into walls take bonus terrain damage. Devastator\'s +30% knockback makes this consistent from lv6.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'BLT Ration Pack early — this build takes hits during ramp-up. Save 80g. Energy Bars is also excellent since you\'ll be standing and soaking. Mine aggressively to fund Stage 3 spend.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Extra Capacity',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Repulsor to lv12: Extra Capacity. More knockback charges mean more CC uptime. Thunderhead levels are important — you need it at lv18 by Stage 3 for Tightly Wound Springs as your cleanup tool.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Repulsor lv12: Extra Capacity (+1). Thunderhead lv6: Gas Rerouting. Cryo Cannon deployed as a secondary CC layer — freeze survivors of knockback that don\'t hit walls.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend ~30g on Explosion Radius upgrades — every explosive in the kit benefits, and Devastator passive stacks on top. Gold-Tipped Bullets compounds with combat passive gold generation.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Devastating Shockwave Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Repulsor lv18: Devastating Shockwave. Every repulse now detonates an explosion behind pushed enemies — enemies get knocked back AND bombed. Thunderhead lv18: Tightly Wound Springs follows up.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Devastating Shockwave is the build. Thunderhead lv18: Tightly Wound Springs — spray knocked-back enemies before they recover. HE Grenade lv12: A Little More Oomph! for burst cleanup.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Gold-Tipped Bullets + Energy Bars pair. Stack Damage and Explosion Radius — both passive and OC synergize. Cryo Cannon adds freeze layer after knockback.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Freeze + Boom + Spray',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Cryo Cannon to lv18: Even More Beams for full-width freeze. HE Grenade to lv18: True TNT for devastating cluster finishers. The loop: Repulsor push + explosion → freeze survivors → spray Thunderhead.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Cryo full beams, HE Grenade True TNT, Thunderhead Tightly Wound Springs all online. Take any Damage or Explosion Radius global upgrade immediately. Skip Movement Speed.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. The MoCap at low HP is strong with high-damage build — if BLT is pushing you above 50%, consider dropping it for MoCap when comfortable.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Repulse and Detonate',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Supply pod: immediately fire Devastating Shockwave into the Dreadnought + escorts — push them apart and detonate the explosion. Freeze stragglers, spray Thunderhead. Repeat Repulsor on cooldown.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Damage, Explosion Radius, and Kinetic Damage upgrade. Piercing on Thunderhead converts to multi-hit at high fire rate — excellent with Tightly Wound Springs.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Gold-Tipped Bullets: hold gold for max boss damage. Pay2Win Console: reroll aggressively — permanent +2.5% damage stacks. This build has excess gold from passive farming.' },
         ],
       },
     ],
