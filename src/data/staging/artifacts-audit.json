@@ -1,0 +1,198 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts"
+  ],
+  "totalArtifactsOnWiki": 36,
+  "totalInApp": 36,
+  "missing": [],
+  "corrections": [
+    {
+      "id": "divers-manual",
+      "field": "rarity",
+      "current": "epic",
+      "corrected": "rare",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki lists Diver's Manual as Rare, not Epic. The +15% Crit Damage component in our effect text also does not appear in the wiki listing — wiki shows '+10% Damage, +10% Reload Speed, +5% Critical Chance' with no Critical Damage bonus. This may be an outdated effect or fabricated field — needs in-game verification."
+    },
+    {
+      "id": "divers-manual",
+      "field": "effect",
+      "current": "+10% Damage, +10% Reload Speed, +5% Crit Chance, +15% Crit Damage",
+      "corrected": "+10% Damage, +10% Reload Speed, +5% Critical Chance",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "The +15% Crit Damage stat does not appear in the wiki's artifact listing. Flagged for in-game verification before removing — could be a wiki omission or a data error in our app."
+    },
+    {
+      "id": "divers-manual",
+      "field": "unlock",
+      "current": "Complete 10 dives",
+      "corrected": "Milestone: Die 3 times",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki unlock condition is 'Die 3 times', not 'Complete 10 dives'. These are completely different conditions."
+    },
+    {
+      "id": "gold-tipped-bullets",
+      "field": "rarity",
+      "current": "epic",
+      "corrected": "rare",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki lists Gold-Tipped Bullets as Rare, not Epic."
+    },
+    {
+      "id": "squint-ee5",
+      "field": "effect",
+      "current": "+30% Crit Chance, +100% Crit Damage, -30% Direct Damage",
+      "corrected": "+30% Critical Chance, +100% Critical Damage, -30% Damage",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki says '-30% Damage' not '-30% Direct Damage'. The word 'Direct' may imply the penalty only applies to non-crit hits, which could be an intentional framing in our app but diverges from wiki wording."
+    },
+    {
+      "id": "pay2win-console",
+      "field": "unlock",
+      "current": "Spend 100 Gold on rerolls",
+      "corrected": "Milestone: Spend 20,000 Gold",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Our app says 'Spend 100 Gold on rerolls' — wiki says the milestone is 'Spend 20,000 gold'. These are dramatically different values. Likely a stale or incorrect entry in our data."
+    },
+    {
+      "id": "5-leaf-clover",
+      "field": "unlock",
+      "current": "Added in Update 04",
+      "corrected": "Milestone: Select Luck upgrades 5 times",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "All four artifacts listed as 'Added in Update 04' in our data (5-leaf-clover, jet-boots, huuli-bait, pick-axtender, tactical-cookie) have real milestone unlock conditions on the wiki. 'Added in Update 04' is a release note, not an unlock condition."
+    },
+    {
+      "id": "jet-boots",
+      "field": "unlock",
+      "current": "Added in Update 04",
+      "corrected": "Milestone: Destroy 200 rock and stone by jumping",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts"
+    },
+    {
+      "id": "huuli-bait",
+      "field": "unlock",
+      "current": "Added in Update 04",
+      "corrected": "Milestone: Kill 3 Huuli Hoarders",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts"
+    },
+    {
+      "id": "pick-axtender",
+      "field": "unlock",
+      "current": "Added in Update 04",
+      "corrected": "Milestone: Clear ALL rock and stone in a stage",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts"
+    },
+    {
+      "id": "tactical-cookie",
+      "field": "unlock",
+      "current": "Added in Update 04",
+      "corrected": "Milestone: Heal 500 HP during a stage",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts"
+    },
+    {
+      "id": "chemist-kit",
+      "field": "unlock",
+      "current": "Apply 500 status effects",
+      "corrected": "Milestone: Deal 2,500,000 Status Effect Damage",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Our app tracks application count; wiki tracks total status effect damage dealt. These are different metrics entirely."
+    },
+    {
+      "id": "clipboard-of-grudges",
+      "field": "unlock",
+      "current": "Kill 1,000 aliens",
+      "corrected": "Default unlock (no milestone required)",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki shows Clipboard of Grudges as a default unlock, same as Red Sugar Cube, Vita-miner Pills, and XP Scanner. Our app incorrectly lists 'Kill 1,000 aliens' as the condition."
+    },
+    {
+      "id": "brn-shield-belt",
+      "field": "unlock",
+      "current": "Deal 250,000 Fire Damage",
+      "corrected": "Milestone: Deal 250,000 Fire Damage",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Unlock condition wording matches wiki — no change needed to the unlock text itself. However, our rarity listing ('rare') matches the wiki ('Rare'), so rarity is correct."
+    },
+    {
+      "id": "ancient-knowledge",
+      "field": "unlock",
+      "current": "Reach level 50 in a single dive",
+      "corrected": "Milestone: Reach level 50",
+      "source": "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+      "note": "Wiki says 'Reach level 50' without the 'in a single dive' qualifier. Minor wording clarification — likely correct in spirit but worth aligning to wiki phrasing."
+    }
+  ],
+  "raritySummary": {
+    "note": "Two high-visibility artifacts are listed as 'epic' in our app but 'Rare' on the wiki. This affects how they are displayed in rarity filters and visual styling. Full rarity cross-reference below.",
+    "discrepancies": [
+      { "id": "divers-manual", "appRarity": "epic", "wikiRarity": "rare" },
+      { "id": "gold-tipped-bullets", "appRarity": "epic", "wikiRarity": "rare" }
+    ],
+    "verified": [
+      { "id": "squint-ee5", "rarity": "epic" },
+      { "id": "energy-bars", "rarity": "epic" },
+      { "id": "pay2win-console", "rarity": "epic" },
+      { "id": "pickled-nitra", "rarity": "epic" },
+      { "id": "ammo-rig", "rarity": "epic" },
+      { "id": "5-leaf-clover", "rarity": "epic" },
+      { "id": "multi-tool", "rarity": "epic" },
+      { "id": "blt-ration-pack", "rarity": "epic" },
+      { "id": "the-mocap", "rarity": "epic" },
+      { "id": "turbo-encabulator", "rarity": "epic" },
+      { "id": "salty-pretzel", "rarity": "epic" },
+      { "id": "jet-boots", "rarity": "epic" },
+      { "id": "weapon-box", "rarity": "epic" },
+      { "id": "huuli-bait", "rarity": "epic" },
+      { "id": "pick-axtender", "rarity": "epic" },
+      { "id": "nitragenic-powder", "rarity": "rare" },
+      { "id": "chemist-kit", "rarity": "rare" },
+      { "id": "popup-tripod", "rarity": "rare" },
+      { "id": "ancient-knowledge", "rarity": "rare" },
+      { "id": "piercing-projectiles", "rarity": "rare" },
+      { "id": "drg-coupon", "rarity": "rare" },
+      { "id": "armor-grease", "rarity": "rare" },
+      { "id": "reflex-calibrator", "rarity": "rare" },
+      { "id": "tactical-cookie", "rarity": "rare" },
+      { "id": "barley-bulb-juice", "rarity": "rare" },
+      { "id": "brn-shield-belt", "rarity": "rare" },
+      { "id": "frz-shield-belt", "rarity": "rare" },
+      { "id": "clipboard-of-grudges", "rarity": "rare" },
+      { "id": "company-issued-magnet", "rarity": "rare" },
+      { "id": "gold-scanner", "rarity": "rare" },
+      { "id": "nitra-scanner", "rarity": "rare" },
+      { "id": "xp-scanner", "rarity": "rare" },
+      { "id": "red-sugar-cube", "rarity": "rare" },
+      { "id": "vita-miner-pills", "rarity": "rare" }
+    ]
+  },
+  "verifiedCorrect": [
+    "ammo-rig",
+    "nitragenic-powder",
+    "pickled-nitra",
+    "blt-ration-pack",
+    "popup-tripod",
+    "piercing-projectiles",
+    "salty-pretzel",
+    "drg-coupon",
+    "armor-grease",
+    "reflex-calibrator",
+    "turbo-encabulator",
+    "barley-bulb-juice",
+    "weapon-box",
+    "brn-shield-belt",
+    "frz-shield-belt",
+    "company-issued-magnet",
+    "the-mocap",
+    "multi-tool",
+    "gold-scanner",
+    "nitra-scanner",
+    "xp-scanner",
+    "red-sugar-cube",
+    "vita-miner-pills",
+    "energy-bars",
+    "huuli-bait"
+  ],
+  "notes": "The wiki and our app both list exactly 36 artifacts — no missing artifacts were found. All corrections are data-quality issues, not coverage gaps. The most impactful corrections are: (1) rarity fix for divers-manual and gold-tipped-bullets (epic → rare), which affects UI display; (2) the divers-manual effect text includes '+15% Crit Damage' which does not appear on the wiki — this field needs in-game verification before removal since the wiki summary tables are sometimes incomplete; (3) five artifacts have 'Added in Update 04' as their unlock condition — this is a release note not an unlock condition, and all five have real milestone unlock conditions on the wiki; (4) the Pay2Win Console unlock threshold differs dramatically (100 Gold vs 20,000 Gold); (5) Clipboard of Grudges is a default unlock on the wiki but our app lists 'Kill 1,000 aliens'. The wiki lists all artifacts as either 'Epic' (gold/orange border) or 'Rare' (blue/purple border) — there is no 'Common' rarity in the artifact pool. Our category taxonomy (damage, survivability, economy, movement, utility) does not appear on the wiki, which is our own organizational layer and appears reasonable as-is."
+}

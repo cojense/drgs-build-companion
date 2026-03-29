@@ -1,0 +1,1453 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Weapons",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Scout",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Gunner",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Engineer",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Driller",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Overclocks",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:M1000_Classic",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Deepcore_GK2",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Jury-Rigged_Boomstick",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Zhukov_NUK17",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Cryo_Grenade",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Voltaic_Stun_Sweeper",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:TH-0R_Bug_Taser",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Arc-Tek_Cryo_Guard",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Drak-25_Plasma_Carbine",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Nishanka_Boltshark_X-80",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Lead_Storm%22_Powered_Minigun",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Bulldog%22_Heavy_Revolver",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:BRT7_Burst_Fire_Gun",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Incendiary_Grenade",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Tactical_Leadburster",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Thunderhead%22_Heavy_Autocannon",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Firefly_Hunter_Drone",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Hurricane%22_Guided_Rocket_System",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Seismic_Repulsor",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:ArmsKore_Coil_Gun",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:LMG_Gun_Platform",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Warthog%22_Auto_210",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:%22Stubby%22_Voltaic_SMG",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Hi-Volt_Thunderbird",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:LOK-1_Smart_Rifle",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Voltaic_Shock_Fence",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Deepcore_PGL",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Breach_Cutter",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Shard_Diffractor",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Plasma_Burster",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Shredder_Swarm_Grenade",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:CRSPR_Flamethrower",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Corrosive_Sludge_Pump",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Subata_120",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Colette_Wave_Cooker",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:High_Explosive_Grenade",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Impact_Axe",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Neurotoxin_Grenade",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Cryo_Cannon",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:K1-P_Viper_Drone",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Experimental_Plasma_Charger",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Krakatoa_Sentinel"
+  ],
+  "totalWeaponsFound": 41,
+  "overclockSystem": {
+    "note": "Weapons gain overclocks at levels 6, 12 (Balanced), and 18 (Unstable). At each level the player chooses one overclock from the available options for that weapon. The wiki does not definitively assign which specific overclocks appear at level 6 vs 12 — both levels draw from the Balanced pool. Level 18 always offers Unstable overclocks.",
+    "levels": {
+      "6": "Balanced overclock — first overclock selection",
+      "12": "Balanced overclock — second overclock selection",
+      "18": "Unstable overclock — powerful with significant tradeoffs"
+    }
+  },
+  "weapons": [
+    {
+      "id": "m1000-classic",
+      "name": "M1000 Classic",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 03",
+      "tags": ["KINETIC", "MEDIUM", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 140,
+        "fireRate": 0.45,
+        "clipSize": 6,
+        "reloadTime": 4,
+        "range": 15,
+        "projectilesPerShot": 1,
+        "pierce": 30,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Pan Fried Shells", "effect": "Changes damage type to [FIRE]", "stats": { "damageType": "FIRE" } },
+          { "name": "Rubber Tip", "effect": "+15% Damage, adds Knockback", "stats": { "damage": "+15%", "knockback": true } },
+          { "name": "Sawn-Off", "effect": "-50% Range, -10 Accuracy", "stats": { "range": "-50%", "accuracy": "-10" } }
+        ],
+        "unstable": [
+          { "name": "Thick Boy", "effect": "Combines all clip rounds into 1 single mega-shot with greatly increased damage; effective fire rate becomes dependent on reload speed", "stats": { "specialMechanic": "fuses clip into one shot" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Targets highest HP enemy. Thick Boy is a signature build-defining OC that converts the clip into one mega-shot; with Bigger Mags (12 rounds) Thick Boy damage scales extremely high. Mastery in Crystalline Caverns (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "deepcore-gk2",
+      "name": "Deepcore GK2",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 01",
+      "tags": ["KINETIC", "MEDIUM", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 35,
+        "fireRate": 4.62,
+        "clipSize": 30,
+        "reloadTime": 4,
+        "range": 8,
+        "projectilesPerShot": 1,
+        "firingPattern": "burst (3 rounds per burst)",
+        "pierce": 4,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Battery Bullets", "effect": "Changes damage to [ELECTRICAL], +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Big Game Hunter", "effect": "+20% Critical Damage, +20% Critical Chance (targets highest HP enemy)", "stats": { "critDamage": "+20%", "critChance": "+20%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } },
+          { "name": "Refrigerated Gunpowder", "effect": "Changes damage to [COLD]", "stats": { "damageType": "COLD" } }
+        ],
+        "unstable": [
+          { "name": "Lead Wrapped Ammo", "effect": "+150% Damage, -20% Fire Rate, -20% Reload Speed", "stats": { "damage": "+150%", "fireRate": "-20%", "reloadSpeed": "-20%" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +100% Fire Rate; all other weapons -30% Damage, -30% Fire Rate", "stats": { "damage": "+100%", "fireRate": "+100%", "otherWeaponsDamage": "-30%", "otherWeaponsFireRate": "-30%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Targets closest enemy. Fairly straightforward burst-fire rifle. Mastery in Crystalline Caverns (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "jury-rigged-boomstick",
+      "name": "Jury-Rigged Boomstick",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 01",
+      "tags": ["KINETIC", "MEDIUM", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 60,
+        "fireRate": 2,
+        "clipSize": 2,
+        "reloadTime": 4,
+        "range": 7,
+        "projectilesPerShot": 7,
+        "firingPattern": "shotgun spread",
+        "pierce": 3,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Battery Bullets", "effect": "Changes damage to [ELECTRICAL], +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "High Velocity Bullets", "effect": "+50% Weapon Range, +10% Damage", "stats": { "range": "+50%", "damage": "+10%" } },
+          { "name": "Refrigerated Gunpowder", "effect": "Changes damage to [COLD]", "stats": { "damageType": "COLD" } },
+          { "name": "Mini Pellets", "effect": "Doubles pellet count with reduced per-pellet damage", "stats": { "projectilesPerShot": "x2", "perPelletDamage": "reduced" } }
+        ],
+        "unstable": [
+          { "name": "Thick Boy", "effect": "+200% Piercing, +200% Range; converts clip into single powerful round; fire rate becomes reload-speed-dependent", "stats": { "pierce": "+200%", "range": "+200%", "specialMechanic": "converts clip to single shot" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Close-range shotgun with knockback. Mastery in Azure Weald (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "zhukov-nuk17",
+      "name": "Zhukov NUK17",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 01",
+      "tags": ["KINETIC", "LIGHT", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 22,
+        "fireRate": 6.67,
+        "clipSize": 20,
+        "reloadTime": 1,
+        "range": null,
+        "projectilesPerShot": 4,
+        "firingPattern": "4 directions simultaneously (NE, NW, SE, SW)",
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Battery Bullets", "effect": "Changes damage to [ELECTRICAL], +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, +50% Piercing", "stats": { "clipSize": "+100%", "pierce": "+50%" } },
+          { "name": "Explosive Reload", "effect": "+25% Reload Speed; releases explosion on reload", "stats": { "reloadSpeed": "+25%", "specialMechanic": "explosion on reload" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Refrigerated Gunpowder", "effect": "Changes damage to [COLD]", "stats": { "damageType": "COLD" } }
+        ],
+        "unstable": [
+          { "name": "Death Spiral", "effect": "+200% Fire Rate, +100% Clip Size; bullets fire in spiral pattern", "stats": { "fireRate": "+200%", "clipSize": "+100%", "firingPattern": "spiral" } },
+          { "name": "Omni Barrel", "effect": "+100% Reload Speed, +50% Damage, +50% Piercing; fires in 8 directions", "stats": { "reloadSpeed": "+100%", "damage": "+50%", "pierce": "+50%", "directions": 8 } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires in 4 diagonal directions (45° angles) simultaneously. Starting weapon for Recon subclass. Mastery in Magma Core (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "cryo-grenade",
+      "name": "Cryo Grenade",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 01",
+      "tags": ["COLD", "THROWABLE", "EXPLOSIVE", "AREA"],
+      "baseStats": {
+        "damage": 100,
+        "fireRate": 0.2,
+        "clipSize": 1,
+        "reloadTime": 5,
+        "range": 10,
+        "explosionRadius": 4,
+        "fuseTime": 1,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cluster Grenades", "effect": "-20% Damage, -20% Potency; grenade splits into 3 weaker versions", "stats": { "damage": "-20%", "potency": "-20%", "specialMechanic": "splits into 3 grenades" } },
+          { "name": "Compact Explosives", "effect": "+30% Explosion Radius", "stats": { "explosionRadius": "+30%" } },
+          { "name": "True TNT", "effect": "Grenades now damage terrain", "stats": { "terrainDamage": true } }
+        ],
+        "unstable": [
+          { "name": "Gravitational Core", "effect": "+25% Explosion Radius; pulls enemies toward impact point before detonation", "stats": { "explosionRadius": "+25%", "specialMechanic": "gravitational pull before detonation" } },
+          { "name": "The Favourite", "effect": "+75% Damage, +75% Potency; other weapons -20% Potency, -20% Reload Speed", "stats": { "damage": "+75%", "potency": "+75%", "otherWeaponsPotency": "-20%", "otherWeaponsReloadSpeed": "-20%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deals moderate cold damage and slows enemies. Gravitational Core pairs powerfully with Thick Boy M1000 — enemies cluster at impact before freezing. Mastery in Crystalline Caverns (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "voltaic-stun-sweeper",
+      "name": "Voltaic Stun Sweeper",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 06",
+      "tags": ["ELECTRIC", "LIGHT", "THROWABLE"],
+      "baseStats": {
+        "damage": 55,
+        "fireRate": 5,
+        "clipSize": 1,
+        "reloadTime": 2,
+        "range": 12,
+        "pierce": 500,
+        "potency": 24,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Kinda Looks Like a Magnet", "effect": "Picks up XP and Materials within 3.0 radius", "stats": { "specialMechanic": "XP/material pickup radius 3.0" } },
+          { "name": "Knuckle Grip", "effect": "+350% Range, -25% Reload Speed; spirals outward before returning", "stats": { "range": "+350%", "reloadSpeed": "-25%", "firingPattern": "spiral" } },
+          { "name": "Lightweight Alloy", "effect": "+30% Range, +15% Reload Speed", "stats": { "range": "+30%", "reloadSpeed": "+15%" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } }
+        ],
+        "unstable": [
+          { "name": "Disposable Tech", "effect": "No longer returns; explodes in an electrical burst", "stats": { "specialMechanic": "one-way throw, electrical explosion" } },
+          { "name": "One-Handed", "effect": "Throws an additional sweeper in the opposite direction simultaneously", "stats": { "specialMechanic": "dual throw in opposite directions" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Boomerang that travels outward and returns, dealing electrical damage. Targets closest enemy. Applies Shock status. Range affected by Weapon Range stat. Mastery in Salt Pits (Hazard 3+) grants +12% Potency."
+    },
+    {
+      "id": "th0r-bug-taser",
+      "name": "TH-0R Bug Taser",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 12",
+      "tags": ["ELECTRIC", "LIGHT", "BEAM"],
+      "baseStats": {
+        "damage": 35,
+        "reloadTime": 2,
+        "range": 8,
+        "beams": 2,
+        "tickRate": 0.5,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Explosive Reload", "effect": "+25% Reload Speed; releases explosion on reload", "stats": { "reloadSpeed": "+25%", "specialMechanic": "explosion on reload" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } },
+          { "name": "Sidearm", "effect": "-20% Damage; all other weapons +25% Damage", "stats": { "damage": "-20%", "otherWeaponsDamage": "+25%" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Unlimited Power", "effect": "Splits into multiple beams that each chain independently", "stats": { "specialMechanic": "multi-chain beams" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Discharges electrical beams at random enemies. Each extra beam increases clip size and chain count. Secondary beams reach 50% of base weapon range. Mastery in Hollow Bough (Hazard 3+) grants +7% Damage, +7% Potency."
+    },
+    {
+      "id": "arc-tek-cryo-guard",
+      "name": "Arc-Tek Cryo Guard",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 15",
+      "tags": ["COLD", "CONSTRUCT", "LASTING", "DRONE"],
+      "baseStats": {
+        "damage": 90,
+        "reloadTime": 4,
+        "range": 4,
+        "drones": 4,
+        "droneLifetime": 12,
+        "potency": 24,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Behaviour Chip: Aggro", "effect": "Drones seek out enemies actively", "stats": { "behavior": "aggressive" } },
+          { "name": "Disposable Tech", "effect": "+100% Lifetime, +40% Reload Speed; drones explode at end of life dealing 200% damage with knockback, leaving cold damage pools; lifetime upgrades shorten duration", "stats": { "lifetime": "+100%", "reloadSpeed": "+40%", "specialMechanic": "explode on death with cold pools" } },
+          { "name": "More Drones", "effect": "+1 Extra Drone", "stats": { "drones": "+1" } },
+          { "name": "Personal Space Invaders", "effect": "-50% Range, +2 Extra Drones; drones patrol close to player", "stats": { "range": "-50%", "drones": "+2", "behavior": "close patrol" } }
+        ],
+        "unstable": [
+          { "name": "Crisis Protocol", "effect": "+25% Damage, +25% Potency; drones rush to protect you when you take damage", "stats": { "damage": "+25%", "potency": "+25%", "behavior": "defensive rush on damage" } },
+          { "name": "More Drones", "effect": "+3 Extra Drones", "stats": { "drones": "+3" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deploys defensive drones that damage and slow enemies on contact. Disposable Tech + Personal Space Invaders provides concentrated area control and Frozen status. Also accessible by Engineer (Maintenance Worker subclass)."
+    },
+    {
+      "id": "drak-25-plasma-carbine",
+      "name": "Drak-25 Plasma Carbine",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 21",
+      "tags": ["PLASMA", "MEDIUM", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 30,
+        "fireRate": 5,
+        "clipSize": 20,
+        "reloadTime": 4,
+        "range": 10,
+        "projectilesPerShot": 1,
+        "firingPattern": "burst (5 rounds per burst)",
+        "pierce": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Cold Plasma", "effect": "+15% Damage, adds Slow effect", "stats": { "damage": "+15%", "statusEffect": "SLOW" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Hot Plasma", "effect": "+15% Damage, adds Burn effect", "stats": { "damage": "+15%", "statusEffect": "BURN" } },
+          { "name": "Sawn-Off", "effect": "-50% Range, -10 Accuracy", "stats": { "range": "-50%", "accuracy": "-10" } },
+          { "name": "Storm E-Mag", "effect": "+10% Reload Speed, +10% Fire Rate", "stats": { "reloadSpeed": "+10%", "fireRate": "+10%" } }
+        ],
+        "unstable": [],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Balanced or Unstable overclock (wiki note: unstable OCs for this weapon not confirmed separately)"
+      },
+      "notes": "Shoots bursts of plasma that bounce on terrain. Targets closest enemy. Builds references 'Plasma Burst' as a level-12 OC — wiki lists it as 'Storm E-Mag' and 'Hot/Cold Plasma' variants. Mastery in Salt Pits (Hazard 4+) grants +12% Damage."
+    },
+    {
+      "id": "nishanka-boltshark-x80",
+      "name": "Nishanka Boltshark X-80",
+      "class": "Scout",
+      "unlockRank": "Scout Rank 24",
+      "tags": ["ACID", "ELECTRIC", "MEDIUM", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 68,
+        "fireRate": 1,
+        "clipSize": 6,
+        "reloadTime": 6,
+        "range": 12,
+        "projectilesPerShot": 1,
+        "pierce": 20,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Cryo Bolt", "effect": "Adds Cryo damage type to the rotation, enabling Slow status effect", "stats": { "additionalDamageType": "COLD", "statusEffect": "SLOW" } },
+          { "name": "Fire Bolt", "effect": "Adds Fire damage type to the rotation, enabling Burn status effect", "stats": { "additionalDamageType": "FIRE", "statusEffect": "BURN" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Rubber Tip", "effect": "+15% Damage, adds Knockback", "stats": { "damage": "+15%", "knockback": true } }
+        ],
+        "unstable": [
+          { "name": "Bolt Volley", "effect": "Converts to burst-fire mode; fires all bolt types simultaneously per burst", "stats": { "firingPattern": "burst, all types simultaneously" } },
+          { "name": "Payload", "effect": "Shots hitting large enemies or terrain create electrical fields dealing area damage", "stats": { "specialMechanic": "electrical field on impact" } },
+          { "name": "Storm E-Mag", "effect": "+10% Fire Rate, +10% Reload Speed; final bullet fires omnidirectionally", "stats": { "fireRate": "+10%", "reloadSpeed": "+10%", "specialMechanic": "last bullet omnidirectional" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Alternates between Acid and Electrical arrows; targets highest HP enemy. Adding bolt type OCs causes all bolt effects to trigger simultaneously. Applies both Shock and Corrode status by default. Mastery in Azure Weald (Hazard 4+) grants +12% Potency."
+    },
+    {
+      "id": "lead-storm-powered-minigun",
+      "name": "\"Lead Storm\" Powered Minigun",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 01",
+      "tags": ["KINETIC", "HEAVY", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 25,
+        "fireRate": 20,
+        "clipSize": 150,
+        "reloadTime": 6,
+        "range": 12,
+        "projectilesPerShot": 1,
+        "pierce": 4,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } },
+          { "name": "Pan Fried Shells", "effect": "Changes damage type to [FIRE]", "stats": { "damageType": "FIRE" } },
+          { "name": "Reload Shield", "effect": "-25% Reload Speed, +25% Fire Rate, +100% Armor while reloading", "stats": { "reloadSpeed": "-25%", "fireRate": "+25%", "armor": "+100% during reload" } }
+        ],
+        "unstable": [
+          { "name": "Lead Wrapped Ammo", "effect": "+150% Damage, -20% Fire Rate, -20% Reload Speed", "stats": { "damage": "+150%", "fireRate": "-20%", "reloadSpeed": "-20%" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +100% Fire Rate; all other weapons -30% Damage, -30% Fire Rate", "stats": { "damage": "+100%", "fireRate": "+100%", "otherWeaponsDamage": "-30%", "otherWeaponsFireRate": "-30%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Shoots a hail of bullets in movement direction. Starting weapon for Weapons Specialist subclass. Mastery grants +12% Damage."
+    },
+    {
+      "id": "bulldog-heavy-revolver",
+      "name": "\"Bulldog\" Heavy Revolver",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 01",
+      "tags": ["KINETIC", "MEDIUM", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 100,
+        "fireRate": 0.83,
+        "clipSize": 6,
+        "reloadTime": 3,
+        "range": 12,
+        "projectilesPerShot": 1,
+        "pierce": 20,
+        "potency": 40,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } },
+          { "name": "Pan Fried Shells", "effect": "Changes damage type to [FIRE]", "stats": { "damageType": "FIRE" } },
+          { "name": "Reload Shield", "effect": "-25% Reload Speed, +25% Fire Rate, +100% Armor while reloading", "stats": { "reloadSpeed": "-25%", "fireRate": "+25%", "armor": "+100% during reload" } }
+        ],
+        "unstable": [
+          { "name": "Double Barrel!", "effect": "Shoots two parallel bullets simultaneously", "stats": { "specialMechanic": "dual parallel bullets" } },
+          { "name": "Super Reload Shield", "effect": "+75% Damage, +50% Fire Rate, -25% Reload Speed, +100% Armor while reloading", "stats": { "damage": "+75%", "fireRate": "+50%", "reloadSpeed": "-25%", "armor": "+100% during reload" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Shoots big slugs that squish bugs. Targets closest enemy. Starting weapon for Juggernaut subclass. Mastery in Crystalline Caverns (Hazard 2+) grants +12% Damage."
+    },
+    {
+      "id": "brt7-burst-fire-gun",
+      "name": "BRT7 Burst Fire Gun",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 03",
+      "tags": ["KINETIC", "LIGHT", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 28,
+        "fireRate": 4.62,
+        "clipSize": 24,
+        "reloadTime": 2,
+        "range": 8,
+        "projectilesPerShot": 4,
+        "firingPattern": "burst (3 rounds), fires in 4 cardinal directions simultaneously",
+        "pierce": 4,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } },
+          { "name": "Pan Fried Shells", "effect": "Changes damage type to [FIRE]", "stats": { "damageType": "FIRE" } },
+          { "name": "Sidearm", "effect": "-20% Damage; all other weapons +25% Damage", "stats": { "damage": "-20%", "otherWeaponsDamage": "+25%" } }
+        ],
+        "unstable": [
+          { "name": "Bullet Helix", "effect": "+200% Fire Rate, +100% Clip Size; spiral firing pattern", "stats": { "fireRate": "+200%", "clipSize": "+100%", "firingPattern": "spiral" } },
+          { "name": "Omni Barrel", "effect": "+100% Reload Speed, +50% Damage, +50% Piercing; fires in 8 directions", "stats": { "reloadSpeed": "+100%", "damage": "+50%", "pierce": "+50%", "directions": 8 } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires in 4 cardinal directions (N/S/E/W) — distinct from Zhukov NUK17 which fires diagonally. Up to 93 DPS per direction per pierced bug. Mastery grants +12% Damage."
+    },
+    {
+      "id": "incendiary-grenade",
+      "name": "Incendiary Grenade",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 01",
+      "tags": ["FIRE", "THROWABLE", "LASTING", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 95,
+        "fireRate": 0.17,
+        "clipSize": 1,
+        "reloadTime": 6,
+        "range": 10,
+        "explosionRadius": 3,
+        "fuseTime": 2,
+        "burnPotency": 32,
+        "poolDuration": 5,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Cluster Grenades", "effect": "-20% Damage, -20% Potency; grenade splits into 3 weaker versions", "stats": { "damage": "-20%", "potency": "-20%", "specialMechanic": "splits into 3 grenades" } },
+          { "name": "Compact Explosives", "effect": "+30% Explosion Radius", "stats": { "explosionRadius": "+30%" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } },
+          { "name": "Tape Some Nails to It", "effect": "+10% Damage; adds kinetic damage explosion", "stats": { "damage": "+10%", "additionalDamageType": "KINETIC" } }
+        ],
+        "unstable": [
+          { "name": "Feedback Harness", "effect": "Throws grenades automatically when damage is taken (10 second cooldown)", "stats": { "specialMechanic": "auto-throw on damage received, 10s cooldown" } },
+          { "name": "Gravitational Core", "effect": "+25% Explosion Radius; pulls enemies before detonation", "stats": { "explosionRadius": "+25%", "specialMechanic": "gravitational pull before detonation" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Sets the ground on fire, leaving fire pools lasting 5 seconds. Also accessible by Driller (Interrogator subclass) and Engineer (Demolitionist subclass)."
+    },
+    {
+      "id": "tactical-leadburster",
+      "name": "Tactical Leadburster",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 06",
+      "tags": ["KINETIC", "THROWABLE", "LASTING", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 24,
+        "fireRate": 33.33,
+        "reloadTime": 6,
+        "range": 10,
+        "fuseTime": 2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Cluster Grenades", "effect": "-15% Damage, -15% Fire Rate, -15% Reload Speed; grenade splits into 3 weaker versions", "stats": { "damage": "-15%", "fireRate": "-15%", "reloadSpeed": "-15%", "specialMechanic": "splits into 3" } },
+          { "name": "Fire Bullets", "effect": "Changes damage type to [FIRE]", "stats": { "damageType": "FIRE" } },
+          { "name": "Fusion Turbines", "effect": "+20% Lifetime for grenades", "stats": { "lifetime": "+20%" } },
+          { "name": "Piercing Projectiles", "effect": "+200% Piercing, -30% Lifetime", "stats": { "pierce": "+200%", "lifetime": "-30%" } }
+        ],
+        "unstable": [
+          { "name": "Lead Wrapped Ammo", "effect": "+150% Damage, -20% Fire Rate, -20% Reload Speed", "stats": { "damage": "+150%", "fireRate": "-20%", "reloadSpeed": "-20%" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +100% Fire Rate; all other weapons -30% Damage, -30% Fire Rate", "stats": { "damage": "+100%", "fireRate": "+100%", "otherWeaponsDamage": "-30%", "otherWeaponsFireRate": "-30%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "A grenade packed with bullets that fires projectiles in a spiral pattern after detonation (2s fuse). Also accessible by Driller (Strong Armed subclass)."
+    },
+    {
+      "id": "thunderhead-heavy-autocannon",
+      "name": "\"Thunderhead\" Heavy Autocannon",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 12",
+      "tags": ["KINETIC", "HEAVY", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 140,
+        "fireRate": 2.86,
+        "clipSize": 20,
+        "reloadTime": 5,
+        "range": 12,
+        "projectilesPerShot": 1,
+        "pierce": 4,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } },
+          { "name": "Rubber Tip", "effect": "+15% Damage, adds Knockback", "stats": { "damage": "+15%", "knockback": true } }
+        ],
+        "unstable": [
+          { "name": "Storm E-Mag", "effect": "+10% Reload Speed, +10% Fire Rate; last bullet fires omnidirectionally", "stats": { "reloadSpeed": "+10%", "fireRate": "+10%", "specialMechanic": "last bullet omnidirectional" } },
+          { "name": "The Tightest of Springs", "effect": "+125% Fire Rate, -15 Accuracy", "stats": { "fireRate": "+125%", "accuracy": "-15" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires a volley locking firing angle at first shot for the rest of the clip — allows repositioning while unloading. Starting weapon for Heavy Gunner subclass. Targets highest HP enemies. Mastery in Azure Weald (Hazard 3+) grants +12% Damage."
+    },
+    {
+      "id": "firefly-hunter-drone",
+      "name": "Firefly Hunter Drone",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 15",
+      "tags": ["FIRE", "CONSTRUCT", "LASTING", "DRONE"],
+      "baseStats": {
+        "damage": 80,
+        "reloadTime": 4,
+        "range": 5,
+        "drones": 2,
+        "poolDuration": 2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Behaviour Chip: Defensive", "effect": "+2 Extra Drones, -10% Weapon Range; drones circle around the player", "stats": { "drones": "+2", "range": "-10%", "behavior": "defensive circle" } },
+          { "name": "Disposable Tech", "effect": "+100% Lifetime, +40% Reload Speed; drones explode instead of returning; lifetime upgrades shorten duration and extend ground zone duration", "stats": { "lifetime": "+100%", "reloadSpeed": "+40%", "specialMechanic": "explode on death with fire zones" } },
+          { "name": "Drone Mining Damage", "effect": "Drones now do damage to terrain", "stats": { "terrainDamage": true } },
+          { "name": "More Drones", "effect": "+1 Extra Drone", "stats": { "drones": "+1" } }
+        ],
+        "unstable": [
+          { "name": "Fuel Leak", "effect": "+20% Potency; fire drones leave a trail of fire", "stats": { "potency": "+20%", "specialMechanic": "fire trail" } },
+          { "name": "More Drones", "effect": "+3 Extra Drones", "stats": { "drones": "+3" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Attack drones dealing fire damage. Disposable Tech: lifetime upgrades increase ground zone duration. Also accessible by Engineer (Maintenance Worker subclass)."
+    },
+    {
+      "id": "hurricane-guided-rocket-system",
+      "name": "\"Hurricane\" Guided Rocket System",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 21",
+      "tags": ["KINETIC", "HEAVY", "SPRAY", "AREA", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 60,
+        "clipSize": 9,
+        "reloadTime": 6,
+        "range": 10,
+        "explosionRadius": 1.5,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Incendiary Payload", "effect": "Rockets ignite the ground with fire", "stats": { "specialMechanic": "fire ground zones" } },
+          { "name": "Runic Warhead", "effect": "+50% Explosion Radius", "stats": { "explosionRadius": "+50%" } },
+          { "name": "Spare Rockets", "effect": "+3 Clip Size", "stats": { "clipSize": "+3" } }
+        ],
+        "unstable": [
+          { "name": "Extra Rocket Drum", "effect": "Significantly increased rocket count", "stats": { "clipSize": "significantly increased" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +100% Fire Rate; other weapons -30% Damage, -30% Fire Rate", "stats": { "damage": "+100%", "fireRate": "+100%", "otherWeaponsDamage": "-30%", "otherWeaponsFireRate": "-30%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires 9 rockets into the sky, which fall down onto randomly targeted enemies. Rockets fly over terrain obstacles. Reloads immediately after firing. Mastery grants +7% Damage, +7% Explosion Radius."
+    },
+    {
+      "id": "seismic-repulsor",
+      "name": "Seismic Repulsor",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 24",
+      "tags": ["KINETIC", "CONSTRUCT", "AREA", "LASTING", "TURRET"],
+      "baseStats": {
+        "damage": 18,
+        "reloadTime": 6,
+        "range": 10,
+        "turrets": 2,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Coolant Leak", "effect": "Turrets slow nearby enemies", "stats": { "specialMechanic": "slow aura" } },
+          { "name": "Disposable Tech", "effect": "+100% Reload Speed, -50% Lifetime; turrets explode when removed", "stats": { "reloadSpeed": "+100%", "lifetime": "-50%", "specialMechanic": "explode on death" } },
+          { "name": "Extra Capacity", "effect": "+1 Turret, +15% Damage", "stats": { "turrets": "+1", "damage": "+15%" } },
+          { "name": "Tank Tracks", "effect": "Turrets follow player at 43% move speed", "stats": { "behavior": "follows player at 43% speed" } }
+        ],
+        "unstable": [
+          { "name": "Extra Capacity", "effect": "+3 Turrets", "stats": { "turrets": "+3" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +50% Lifetime; all other weapons -30% Damage, -25% Lifetime", "stats": { "damage": "+100%", "lifetime": "+50%", "otherWeaponsDamage": "-30%", "otherWeaponsLifetime": "-25%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deploys turrets that periodically emit knockback attacks. Explosion radius upgrades increase thump blast size. Elite Praetorian and Q'ronar Mini Elite are fully resistant to knockback. Also accessible by Engineer (Maintenance Worker subclass). Mastery in Azure Weald (Hazard 4+) grants +7% Damage, +7% Reload Speed."
+    },
+    {
+      "id": "armskore-coil-gun",
+      "name": "ArmsKore Coil Gun",
+      "class": "Gunner",
+      "unlockRank": "Gunner Rank 27",
+      "tags": ["PLASMA", "HEAVY", "PRECISE", "PROJECTILE", "BEAM"],
+      "baseStats": {
+        "damage": 80,
+        "clipSize": 1,
+        "reloadTime": 4,
+        "range": 10,
+        "beams": 1,
+        "tickRate": 0.5,
+        "explosionRadius": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Coilgun Mining Damage", "effect": "Shots damage terrain", "stats": { "terrainDamage": true } },
+          { "name": "Explosive Reload", "effect": "+25% Reload Speed, releases explosion on reload", "stats": { "reloadSpeed": "+25%", "specialMechanic": "explosion on reload" } },
+          { "name": "More Beams", "effect": "+1 additional beam", "stats": { "beams": "+1" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 additional beams", "stats": { "beams": "+3" } },
+          { "name": "Spliced Emitter", "effect": "+75% Lifetime, +75% Range, +75% Damage", "stats": { "lifetime": "+75%", "range": "+75%", "damage": "+75%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires a beam that pierces terrain and leaves a damaging trail."
+    },
+    {
+      "id": "lmg-gun-platform",
+      "name": "LMG Gun Platform",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 01",
+      "tags": ["KINETIC", "CONSTRUCT", "LASTING", "TURRET", "PROJECTILE"],
+      "baseStats": {
+        "damage": 18,
+        "fireRate": 3.33,
+        "clipSize": null,
+        "reloadTime": 6,
+        "range": 10,
+        "turrets": 2,
+        "knockback": false,
+        "note": "Unlimited ammunition; turrets fire continuously until lifetime expires"
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Battery Bullets", "effect": "Converts to electrical damage, +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Extra Capacity", "effect": "+1 Turret, +10% Damage", "stats": { "turrets": "+1", "damage": "+10%" } },
+          { "name": "Mining Directive", "effect": "Turrets mine nearby walls and minerals", "stats": { "specialMechanic": "terrain mining" } },
+          { "name": "Plasma Coating", "effect": "Converts to plasma damage", "stats": { "damageType": "PLASMA" } },
+          { "name": "Tank Tracks", "effect": "Turrets follow player at 43% move speed", "stats": { "behavior": "follows player at 43% speed" } }
+        ],
+        "unstable": [
+          { "name": "Extra Capacity", "effect": "+4 Turrets, +10% Damage", "stats": { "turrets": "+4", "damage": "+10%" } },
+          { "name": "LMG Overload", "effect": "+100% Fire Rate, -15 Accuracy", "stats": { "fireRate": "+100%", "accuracy": "-15" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deploys gun turrets that fire continuously until lifetime expires. No hard cap on active turrets beyond lifetime/reload constraints. Starting weapon for Maintenance Worker subclass. Fire Rate upgrades increase projectiles fired before turrets expire. Mastery in Crystalline Caverns (Hazard 2+) grants +7% Damage, +7% Reload Speed."
+    },
+    {
+      "id": "warthog-auto-210",
+      "name": "\"Warthog\" Auto 210",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 01",
+      "tags": ["KINETIC", "MEDIUM", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 80,
+        "fireRate": 1,
+        "clipSize": 4,
+        "reloadTime": 1,
+        "range": 8,
+        "projectilesPerShot": 5,
+        "firingPattern": "shotgun spread",
+        "pierce": 8,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Battery Bullets", "effect": "Converts to [ELECTRICAL] damage, +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "High Velocity Bullets", "effect": "+50% Range, +10% Damage", "stats": { "range": "+50%", "damage": "+10%" } },
+          { "name": "Plasma Coating", "effect": "Converts to [PLASMA] damage, -15% Fire Rate", "stats": { "damageType": "PLASMA", "fireRate": "-15%" } }
+        ],
+        "unstable": [
+          { "name": "Akimbo", "effect": "Shoots an additional time in the opposite direction", "stats": { "specialMechanic": "fires in both directions simultaneously" } },
+          { "name": "Mini Pellets", "effect": "Doubles pellet count with reduced individual pellet damage", "stats": { "projectilesPerShot": "x2", "perPelletDamage": "reduced" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Fires based on player facing direction rather than auto-targeting. Starting weapon for Tinkerer subclass. Fire rate synchronizes perfectly with reload speed. High single-shot damage potential (80 damage × 5 pellets). Cannot auto-target."
+    },
+    {
+      "id": "stubby-voltaic-smg",
+      "name": "\"Stubby\" Voltaic SMG",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 01",
+      "tags": ["ELECTRIC", "LIGHT", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 35,
+        "fireRate": 10,
+        "clipSize": 30,
+        "reloadTime": 2,
+        "range": 8,
+        "projectilesPerShot": 1,
+        "pierce": 4,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Explosive Reload", "effect": "+25% Reload Speed; releases explosion on reload", "stats": { "reloadSpeed": "+25%", "specialMechanic": "explosion on reload" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } },
+          { "name": "Sidearm", "effect": "-20% Damage; all other weapons +25% Damage", "stats": { "damage": "-20%", "otherWeaponsDamage": "+25%" } }
+        ],
+        "unstable": [
+          { "name": "EM Discharge", "effect": "Enables shooting friendly constructs for electrical effects", "stats": { "specialMechanic": "friendly fire for electrical AoE" } },
+          { "name": "MK 11", "effect": "+25% Fire Rate, +25% Reload Speed, +100% Potency, +30 Clip Size, -50 Accuracy", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%", "potency": "+100%", "clipSize": "+30", "accuracy": "-50" } },
+          { "name": "Storm E-Mag", "effect": "+10% Fire Rate, +10% Reload Speed; final bullet fires in all directions", "stats": { "fireRate": "+10%", "reloadSpeed": "+10%", "specialMechanic": "last bullet omnidirectional" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Targets closest enemy. Unique mechanic: hitting friendly constructs creates a 3-unit radius explosion at full damage and potency. Base DPS approximately 306 (35 × 10 × 30/(30+2))."
+    },
+    {
+      "id": "hi-volt-thunderbird",
+      "name": "Hi-Volt Thunderbird",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 01",
+      "tags": ["ELECTRIC", "CONSTRUCT", "LASTING", "DRONE"],
+      "baseStats": {
+        "damage": 26,
+        "reloadTime": 4,
+        "range": 5,
+        "drones": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Behaviour Chip: Aggro", "effect": "Drones seek out enemies actively", "stats": { "behavior": "aggressive" } },
+          { "name": "Disposable Tech", "effect": "+100% Lifetime, +40% Reload Speed; drones explode instead of returning, creating damaging ground zones", "stats": { "lifetime": "+100%", "reloadSpeed": "+40%", "specialMechanic": "explode on death with shock zones" } },
+          { "name": "More Drones", "effect": "+1 Extra Drone", "stats": { "drones": "+1" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } }
+        ],
+        "unstable": [
+          { "name": "Conduit", "effect": "Shoot electrical beams to all nearby constructs every 0.5s at half damage but full potency within 5-unit radius", "stats": { "specialMechanic": "beam arcing between friendly constructs" } },
+          { "name": "Electrical Tether", "effect": "Drones are tethered to player by an arc of electricity", "stats": { "specialMechanic": "electrical tether arc" } },
+          { "name": "More Drones", "effect": "+3 Extra Drones", "stats": { "drones": "+3" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Defensive electrical drones. Disposable Tech reversed lifetime mechanic — shorter lifetime enables more explosions while extending zone duration. Mastery in Hollow Bough (Hazard 2+) grants +12% Potency."
+    },
+    {
+      "id": "voltaic-shock-fence",
+      "name": "Voltaic Shock Fence",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 03",
+      "tags": ["ELECTRIC", "CONSTRUCT", "LASTING", "TURRET"],
+      "baseStats": {
+        "damage": 18,
+        "reloadTime": 6,
+        "range": 5,
+        "turrets": 3,
+        "potency": 10,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Coolant Leak", "effect": "Slows nearby enemies", "stats": { "specialMechanic": "slow aura" } },
+          { "name": "Disposable Tech", "effect": "+20% Reload Speed, -20% Lifetime; turrets explode on removal", "stats": { "reloadSpeed": "+20%", "lifetime": "-20%", "specialMechanic": "explode on death" } },
+          { "name": "Extra Capacity", "effect": "+1 Turret, -10% Range", "stats": { "turrets": "+1", "range": "-10%" } },
+          { "name": "Magnetic Alloy", "effect": "3.0 unit pickup radius for XP and materials", "stats": { "specialMechanic": "XP/material pickup radius 3.0" } }
+        ],
+        "unstable": [
+          { "name": "Conduit", "effect": "Beams arc to nearby constructs every 0.5s; half damage, full potency", "stats": { "specialMechanic": "beam arcing between friendly constructs" } },
+          { "name": "Extra Capacity", "effect": "+3 Turrets, -30% Range", "stats": { "turrets": "+3", "range": "-30%" } },
+          { "name": "Rapid Deployment", "effect": "+2 Turrets, -50% Reload Speed, -50% Lifetime; deploys all at once", "stats": { "turrets": "+2", "reloadSpeed": "-50%", "lifetime": "-50%", "specialMechanic": "simultaneous deployment" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deploys electrical turrets that arc beams between them. All charges replenish simultaneously after reloading. Placement requires minimum distance from previous turrets (influenced by range stat). Mastery in Magma Core (Hazard 3+) grants +7% Damage, +7% Reload Speed."
+    },
+    {
+      "id": "lok1-smart-rifle",
+      "name": "LOK-1 Smart Rifle",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 06",
+      "tags": ["KINETIC", "MEDIUM", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 44,
+        "fireRate": 6.67,
+        "clipSize": 8,
+        "reloadTime": 4,
+        "range": 8,
+        "projectilesPerShot": 1,
+        "pierce": 8,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Battery Bullets", "effect": "Changes damage to [ELECTRICAL], +10% Damage", "stats": { "damageType": "ELECTRICAL", "damage": "+10%" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, -10% Reload Speed", "stats": { "clipSize": "+100%", "reloadSpeed": "-10%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "High Caliber Rounds", "effect": "+100% Piercing, +30% Damage, -30% Fire Rate", "stats": { "pierce": "+100%", "damage": "+30%", "fireRate": "-30%" } }
+        ],
+        "unstable": [
+          { "name": "Lead Wrapped Ammo", "effect": "+150% Damage, -20% Fire Rate, -20% Reload Speed", "stats": { "damage": "+150%", "fireRate": "-20%", "reloadSpeed": "-20%" } },
+          { "name": "The Favourite", "effect": "+100% Damage, +100% Fire Rate; all other weapons -30% Damage, -30% Fire Rate", "stats": { "damage": "+100%", "fireRate": "+100%", "otherWeaponsDamage": "-30%", "otherWeaponsFireRate": "-30%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Homing bullets that lock onto and track targets. Targets closest enemy."
+    },
+    {
+      "id": "deepcore-pgl",
+      "name": "Deepcore PGL",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 12",
+      "tags": ["KINETIC", "MEDIUM", "PRECISE", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 140,
+        "fireRate": 0.8,
+        "clipSize": 2,
+        "reloadTime": 4,
+        "range": 10,
+        "projectilesPerShot": 1,
+        "explosionRadius": 3.2,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cluster Grenades", "effect": "-30% Damage; grenades split into 3 weaker versions", "stats": { "damage": "-30%", "specialMechanic": "splits into 3" } },
+          { "name": "Compact Explosives", "effect": "+30% Explosion Radius", "stats": { "explosionRadius": "+30%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } }
+        ],
+        "unstable": [
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, +100% Fire Rate", "stats": { "clipSize": "+100%", "fireRate": "+100%" } },
+          { "name": "The Favourite", "effect": "+75% Damage, +30% Explosion Radius; all other weapons -25% Damage, -20% Explosion Radius", "stats": { "damage": "+75%", "explosionRadius": "+30%", "otherWeaponsDamage": "-25%", "otherWeaponsExplosionRadius": "-20%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Rapid grenade launcher. Base fire rate 0.4/s; reload speed functions partially as fire rate since it fires instantly when reload completes. Starting weapon for Demolitionist subclass."
+    },
+    {
+      "id": "breach-cutter",
+      "name": "Breach Cutter",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 15",
+      "tags": ["PLASMA", "HEAVY", "BEAM", "LASTING"],
+      "baseStats": {
+        "damage": 35,
+        "fireRate": 5,
+        "clipSize": 1,
+        "reloadTime": 6,
+        "range": 10,
+        "pierce": 20,
+        "projectilesPerShot": 2,
+        "beams": 1,
+        "tickRate": 0.2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Hot Plasma", "effect": "+15% Damage, adds Burn effect", "stats": { "damage": "+15%", "statusEffect": "BURN" } },
+          { "name": "Ionized Plasma", "effect": "+15% Damage, +1.1 Shock Potency", "stats": { "damage": "+15%", "potency": "+1.1 Shock" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Experimental Cluster Projectiles", "effect": "Projectiles split into smaller projectiles on expiry", "stats": { "specialMechanic": "splits on expiry" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Shoots bouncing projectiles connected by a plasma beam. Mastery in Salt Pits (Hazard 3+) grants +7% Damage, +7% Reload Speed."
+    },
+    {
+      "id": "shard-diffractor",
+      "name": "Shard Diffractor",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 21",
+      "tags": ["PLASMA", "HEAVY", "BEAM", "LASTING"],
+      "baseStats": {
+        "damage": 28,
+        "reloadTime": 4,
+        "range": 20,
+        "beams": 1,
+        "tickRate": 0.5,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cold Plasma", "effect": "+15% Damage, adds Slow effect", "stats": { "damage": "+15%", "statusEffect": "SLOW" } },
+          { "name": "Hot Plasma", "effect": "+15% Damage, adds Burn effect", "stats": { "damage": "+15%", "statusEffect": "BURN" } },
+          { "name": "Ionized Plasma", "effect": "+15% Damage, adds Shock (1.1 Potency)", "stats": { "damage": "+15%", "potency": "+1.1 Shock" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } },
+          { "name": "Overheat", "effect": "+100% Damage, -35% Lifetime", "stats": { "damage": "+100%", "lifetime": "-35%" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Overcharged Fuelcells", "effect": "+175% Damage, -40% Lifetime", "stats": { "damage": "+175%", "lifetime": "-40%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Plasma beam that bounces on terrain. Intelligent targeting: overlays range circle to find enemy concentrations, placing pivot point for maximum coverage."
+    },
+    {
+      "id": "plasma-burster",
+      "name": "Plasma Burster",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 24",
+      "tags": ["PLASMA", "THROWABLE", "AREA", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 75,
+        "fireRate": 0.17,
+        "clipSize": 1,
+        "reloadTime": 6,
+        "range": 20,
+        "explosionRadius": 3,
+        "fuseTime": 2,
+        "knockback": false,
+        "triggerType": "impact (bounces before detonating)"
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cold Plasma", "effect": "+15% Damage, adds Slow effect", "stats": { "damage": "+15%", "statusEffect": "SLOW" } },
+          { "name": "Ionized Plasma", "effect": "+15% Damage, +1.1 Shock Potency", "stats": { "damage": "+15%", "potency": "+1.1 Shock" } },
+          { "name": "Tape Some Nails to It", "effect": "+10% Damage, adds [KINETIC] explosion", "stats": { "damage": "+10%", "additionalDamageType": "KINETIC" } }
+        ],
+        "unstable": [
+          { "name": "More Bounce!", "effect": "Extends bounce count before detonation", "stats": { "specialMechanic": "more bounces" } },
+          { "name": "The Favourite", "effect": "+75% Damage, +30% Explosion Radius; all other weapons -25% Damage, -20% Explosion Radius", "stats": { "damage": "+75%", "explosionRadius": "+30%", "otherWeaponsDamage": "-25%", "otherWeaponsExplosionRadius": "-20%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Bouncy grenade that explodes each time it bounces. Also accessible by Driller (Strong Armed subclass). Mastery in Salt Pits (Hazard 4+) grants +12% Damage."
+    },
+    {
+      "id": "shredder-swarm-grenade",
+      "name": "Shredder Swarm Grenade",
+      "class": "Engineer",
+      "unlockRank": "Engineer Rank 27",
+      "tags": ["KINETIC", "THROWABLE", "LASTING", "DRONE"],
+      "baseStats": {
+        "damage": 18,
+        "reloadTime": 6,
+        "range": 10,
+        "fuseTime": 2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cluster Grenades", "effect": "-30% Damage, -30% Potency; splits into 3 weaker grenades", "stats": { "damage": "-30%", "potency": "-30%", "specialMechanic": "splits into 3" } },
+          { "name": "More Drones", "effect": "+1 Extra Drone", "stats": { "drones": "+1" } },
+          { "name": "Tape Some Ice to It!", "effect": "Adds cryo explosion effect", "stats": { "additionalEffect": "COLD explosion" } }
+        ],
+        "unstable": [
+          { "name": "Electrified Dispenser", "effect": "Drones tether to grenade with electrical arc", "stats": { "specialMechanic": "electrical arc tether to grenade" } },
+          { "name": "More Drones", "effect": "+3 Extra Drones", "stats": { "drones": "+3" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Grenade that releases a swarm of small shredder drones on detonation (2s fuse). Also accessible by Driller (Strong Armed subclass)."
+    },
+    {
+      "id": "crspr-flamethrower",
+      "name": "CRSPR Flamethrower",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 01",
+      "tags": ["FIRE", "HEAVY", "BEAM", "SPRAY", "LASTING"],
+      "baseStats": {
+        "damage": 40,
+        "reloadTime": 6,
+        "range": 5,
+        "beams": 2,
+        "tickRate": 0.2,
+        "poolDuration": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Bigger Tanks", "effect": "+100% Lifetime, +10% Weapon Range", "stats": { "lifetime": "+100%", "range": "+10%" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } },
+          { "name": "Overheat", "effect": "+100% Damage, -35% Lifetime", "stats": { "damage": "+100%", "lifetime": "-35%" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Spliced Emitter", "effect": "+75% Weapon Range, +75% Damage, +75% Potency", "stats": { "range": "+75%", "damage": "+75%", "potency": "+75%" } },
+          { "name": "Sticky Fuel", "effect": "Adds burning zones to the ground", "stats": { "specialMechanic": "ground fire zones" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Rotating fire beam. Starting weapon for Interrogator subclass. Also accessible by Gunner (Heavy Gunner subclass). Mastery in Crystalline Caverns (Hazard 2+) grants +12% Weapon Range."
+    },
+    {
+      "id": "subata-120",
+      "name": "Subata 120",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 01",
+      "tags": ["KINETIC", "LIGHT", "SPRAY", "PROJECTILE"],
+      "baseStats": {
+        "damage": 42,
+        "fireRate": 5,
+        "clipSize": 24,
+        "reloadTime": 1,
+        "range": 10,
+        "projectilesPerShot": 1,
+        "pierce": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Acid Dipped Tips", "effect": "Changes damage to acid type", "stats": { "damageType": "ACID" } },
+          { "name": "Bigger Mags", "effect": "+100% Clip Size, +50% Piercing", "stats": { "clipSize": "+100%", "pierce": "+50%" } },
+          { "name": "Gas Rerouting", "effect": "+25% Fire Rate, +25% Reload Speed", "stats": { "fireRate": "+25%", "reloadSpeed": "+25%" } },
+          { "name": "Pan Fried Shells", "effect": "Changes damage to fire type", "stats": { "damageType": "FIRE" } },
+          { "name": "Sidearm", "effect": "-20% Damage; all other weapons +25% Damage", "stats": { "damage": "-20%", "otherWeaponsDamage": "+25%" } }
+        ],
+        "unstable": [
+          { "name": "Akimbo", "effect": "+25% Fire Rate, +25% Potency; shoots in the opposite direction", "stats": { "fireRate": "+25%", "potency": "+25%", "specialMechanic": "fires in opposite direction" } },
+          { "name": "Double Barrel!", "effect": "Fires two parallel bullets simultaneously", "stats": { "specialMechanic": "dual parallel bullets" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Shoots behind you — fires in the direction opposite to player movement/aim. Starting weapon for Foreman subclass. Base DPS approximately 174/s. Mastery grants +12% Damage."
+    },
+    {
+      "id": "high-explosive-grenade",
+      "name": "High Explosive Grenade",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 01",
+      "tags": ["KINETIC", "THROWABLE", "AREA", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 190,
+        "fireRate": 0.17,
+        "clipSize": 1,
+        "reloadTime": 5,
+        "range": 120,
+        "explosionRadius": 3.8,
+        "fuseTime": 1.5,
+        "knockback": false,
+        "terrainDamage": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cluster Grenades", "effect": "-30% Damage; grenade splits into 3 weaker versions", "stats": { "damage": "-30%", "specialMechanic": "splits into 3" } },
+          { "name": "Compact Explosives", "effect": "+30% Explosion Radius", "stats": { "explosionRadius": "+30%" } }
+        ],
+        "unstable": [
+          { "name": "Feedback Harness", "effect": "Throws grenades automatically when damage is taken (10 second cooldown)", "stats": { "specialMechanic": "auto-throw on damage received, 10s cooldown" } },
+          { "name": "Hallucinogenic", "effect": "+25% Reload Speed, +25% Explosion Radius; enemies run away in fear", "stats": { "reloadSpeed": "+25%", "explosionRadius": "+25%", "specialMechanic": "fear CC" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Large damage throwable. Destroys terrain. Also accessible by Engineer (Demolitionist subclass). Mastery in Salt Pits (Hazard 2+) grants +7% Damage, +7% Explosion Radius."
+    },
+    {
+      "id": "krakatoa-sentinel",
+      "name": "Krakatoa Sentinel",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 01",
+      "tags": ["FIRE", "CONSTRUCT", "BEAM", "SPRAY", "LASTING", "TURRET"],
+      "baseStats": {
+        "damage": 10,
+        "reloadTime": 6,
+        "range": 10,
+        "turrets": 2,
+        "beams": 1,
+        "burnPotency": 10,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Extra Capacity", "effect": "+1 Turret, +10% Range", "stats": { "turrets": "+1", "range": "+10%" } },
+          { "name": "Mining Directive", "effect": "Turrets mine nearby terrain and minerals", "stats": { "specialMechanic": "terrain mining" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } },
+          { "name": "Tank Tracks", "effect": "Turrets follow player at 43% movement speed", "stats": { "behavior": "follows player at 43% speed" } }
+        ],
+        "unstable": [
+          { "name": "Extra Capacity", "effect": "+3 Turrets, +10% Range", "stats": { "turrets": "+3", "range": "+10%" } },
+          { "name": "Krakatoa Protocol", "effect": "Turrets explode on death, leaving electrified fuel puddle", "stats": { "specialMechanic": "explosion on death with electrified fuel" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Deploys flamethrower turrets. No hard cap on active turrets (limited by construct lifetime and reload speed). Starting weapon for Foreman subclass. Also accessible by Engineer (Maintenance Worker subclass). Mastery in Azure Weald (Hazard 2+) grants +7% Damage, +7% Weapon Range."
+    },
+    {
+      "id": "corrosive-sludge-pump",
+      "name": "Corrosive Sludge Pump",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 03",
+      "tags": ["ACID", "HEAVY", "BEAM", "SPRAY", "LASTING"],
+      "baseStats": {
+        "damage": 20,
+        "reloadTime": 6,
+        "range": 5,
+        "beams": 1,
+        "beamLifetime": 3,
+        "tickRate": 0.2,
+        "potency": 12,
+        "poolDuration": 3,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Bigger Tanks", "effect": "+100% Lifetime, +10% Weapon Range", "stats": { "lifetime": "+100%", "range": "+10%" } },
+          { "name": "Impact Punch", "effect": "+60% Damage", "stats": { "damage": "+60%" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Top-Shelf Sludge", "effect": "Adds Burn and Shock status effects to ground zones", "stats": { "additionalStatusEffects": ["BURN", "SHOCK"] } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Acid beam creating corrosive puddles on the ground. Also accessible by Gunner (Heavy Gunner subclass). Mastery grants +12% Potency."
+    },
+    {
+      "id": "colette-wave-cooker",
+      "name": "Colette Wave Cooker",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 06",
+      "tags": ["FIRE", "MEDIUM", "BEAM", "SPRAY", "LASTING"],
+      "baseStats": {
+        "damage": 110,
+        "reloadTime": 5,
+        "range": 8,
+        "beams": 1,
+        "beamLifetime": 8,
+        "tickRate": 0.33,
+        "burnPotency": 28,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Better Ball Bearings", "effect": "Doubles rotation speed", "stats": { "rotationSpeed": "x2" } },
+          { "name": "Crowd Cooker", "effect": "Increases beam width", "stats": { "beamWidth": "increased" } },
+          { "name": "Focused Lens", "effect": "+100% Damage; narrower beam; targets largest enemy", "stats": { "damage": "+100%", "beamWidth": "narrower", "targeting": "largest enemy" } },
+          { "name": "Nano-Waves", "effect": "+100% Potency, -30% Damage", "stats": { "potency": "+100%", "damage": "-30%" } }
+        ],
+        "unstable": [
+          { "name": "Centralized Reflector", "effect": "Adds an opposite-direction beam", "stats": { "specialMechanic": "reverse beam" } },
+          { "name": "Thermal Oscillator", "effect": "+50% Damage; applies Slow debuff", "stats": { "damage": "+50%", "statusEffect": "SLOW" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Microwave emitter that splits damage between all enemies in its cone. Slowly rotates, immediately resetting angle to closest enemy after reload. Pierces unlimited targets, fires through terrain. Mastery grants +12% Potency."
+    },
+    {
+      "id": "impact-axe",
+      "name": "Impact Axe",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 12",
+      "tags": ["KINETIC", "THROWABLE", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 90,
+        "fireRate": 1,
+        "clipSize": 3,
+        "reloadTime": 4,
+        "range": 6,
+        "projectilesPerShot": 1,
+        "pierce": 100,
+        "explosionRadius": 3,
+        "knockback": true
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Corrosive Coating", "effect": "Applies [ACID] damage with Corrode status; leaves acid trail", "stats": { "additionalDamageType": "ACID", "statusEffect": "CORRODE", "specialMechanic": "acid trail" } },
+          { "name": "Diesel Soaked", "effect": "Applies [FIRE] damage with Burn status; leaves fire trail", "stats": { "additionalDamageType": "FIRE", "statusEffect": "BURN", "specialMechanic": "fire trail" } },
+          { "name": "Lightweight Alloy", "effect": "+50% Weapon Range", "stats": { "range": "+50%" } }
+        ],
+        "unstable": [
+          { "name": "Colossal Twinblade", "effect": "+125% Damage, +75% Explosion Radius", "stats": { "damage": "+125%", "explosionRadius": "+75%" } },
+          { "name": "Fan of Axes", "effect": "-50% Damage; throws smaller axes in arc pattern", "stats": { "damage": "-50%", "specialMechanic": "arc pattern multi-throw" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Returning throwing axes. Axes travel outward, detonate on impact, then return to player. Landing positions marked with ground indicators until retrieval. Starting weapon for Strong Armed subclass."
+    },
+    {
+      "id": "neurotoxin-grenade",
+      "name": "Neurotoxin Grenade",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 15",
+      "tags": ["ACID", "THROWABLE", "LASTING", "AREA", "EXPLOSIVE"],
+      "baseStats": {
+        "damage": 85,
+        "fireRate": 0.17,
+        "clipSize": 1,
+        "reloadTime": 6,
+        "range": 10,
+        "explosionRadius": 3,
+        "fuseTime": 2,
+        "potency": 32,
+        "poolDuration": 5,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Cluster Grenades", "effect": "-20% Damage, -20% Potency; grenade splits into 3 weaker versions", "stats": { "damage": "-20%", "potency": "-20%", "specialMechanic": "splits into 3" } },
+          { "name": "Compact Explosives", "effect": "+30% Explosion Radius", "stats": { "explosionRadius": "+30%" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } },
+          { "name": "Tape Some Nails to It", "effect": "+10% Damage; adds kinetic explosion", "stats": { "damage": "+10%", "additionalDamageType": "KINETIC" } }
+        ],
+        "unstable": [
+          { "name": "Feedback Harness", "effect": "Throws grenades automatically when damage is taken (10 second cooldown)", "stats": { "specialMechanic": "auto-throw on damage received, 10s cooldown" } },
+          { "name": "Hallucinogenic", "effect": "+25% Reload Speed, +25% Explosion Radius; enemies run away in fear", "stats": { "reloadSpeed": "+25%", "explosionRadius": "+25%", "specialMechanic": "fear CC" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Creates a cloud of neurotoxic acid. Leaves lingering acid pools for 5 seconds."
+    },
+    {
+      "id": "cryo-cannon",
+      "name": "Cryo Cannon",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 21",
+      "tags": ["COLD", "HEAVY", "BEAM", "PRECISE", "LASTING"],
+      "baseStats": {
+        "damage": 20,
+        "reloadTime": 6,
+        "range": 5,
+        "beams": 2,
+        "beamLifetime": 15,
+        "tickRate": 0.2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Bigger Tanks", "effect": "+100% Lifetime, +10% Range", "stats": { "lifetime": "+100%", "range": "+10%" } },
+          { "name": "Frostburn", "effect": "+15% Damage, adds Burn effect", "stats": { "damage": "+15%", "statusEffect": "BURN" } },
+          { "name": "Impact Punch", "effect": "+60% Damage", "stats": { "damage": "+60%" } },
+          { "name": "More Beams", "effect": "+1 Beam", "stats": { "beams": "+1" } }
+        ],
+        "unstable": [
+          { "name": "Even More Beams", "effect": "+3 Beams", "stats": { "beams": "+3" } },
+          { "name": "Spliced Emitter", "effect": "+75% Range, +75% Damage, +75% Potency", "stats": { "range": "+75%", "damage": "+75%", "potency": "+75%" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Rotating beam that slows enemies. Also accessible by Gunner (Heavy Gunner subclass). Frostburn OC makes cold damage trigger fire DoT — exceptional synergy with Interrogator subclass. Mastery in Azure Weald (Hazard 4+) grants +12% Weapon Range."
+    },
+    {
+      "id": "k1p-viper-drone",
+      "name": "K1-P Viper Drone",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 24",
+      "tags": ["ACID", "CONSTRUCT", "LASTING", "DRONE"],
+      "baseStats": {
+        "damage": 60,
+        "reloadTime": 4,
+        "range": 4,
+        "drones": 2,
+        "poolDuration": 2,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "Behaviour Chip: Defensive", "effect": "+2 Extra Drones, -10% Weapon Range; drones circle the player", "stats": { "drones": "+2", "range": "-10%", "behavior": "defensive circle" } },
+          { "name": "Disposable Tech", "effect": "+100% Lifetime, +40% Reload Speed; drones explode instead of returning; lifetime upgrades reverse to shorten drone duration and extend zone persistence", "stats": { "lifetime": "+100%", "reloadSpeed": "+40%", "specialMechanic": "explode on death with acid zones" } },
+          { "name": "More Drones", "effect": "+1 Extra Drone", "stats": { "drones": "+1" } },
+          { "name": "Potent Juice", "effect": "+30% Potency", "stats": { "potency": "+30%" } }
+        ],
+        "unstable": [
+          { "name": "Crisis Protocol", "effect": "+25% Damage, +25% Potency; drones rush to protect when damaged", "stats": { "damage": "+25%", "potency": "+25%", "behavior": "defensive rush on damage" } },
+          { "name": "More Drones", "effect": "+3 Extra Drones", "stats": { "drones": "+3" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Acid damage attack drones. Leaves acid pools on damage. Also accessible by Engineer (Maintenance Worker subclass)."
+    },
+    {
+      "id": "experimental-plasma-charger",
+      "name": "Experimental Plasma Charger",
+      "class": "Driller",
+      "unlockRank": "Driller Rank 27",
+      "tags": ["PLASMA", "LIGHT", "PRECISE", "PROJECTILE"],
+      "baseStats": {
+        "damage": 125,
+        "fireRate": 0.5,
+        "clipSize": 1,
+        "reloadTime": 4,
+        "range": 10,
+        "projectilesPerShot": 1,
+        "pierce": 20,
+        "knockback": false
+      },
+      "overclocks": {
+        "balanced": [
+          { "name": "A Little More Oomph!", "effect": "+15% Damage, +25% Reload Speed", "stats": { "damage": "+15%", "reloadSpeed": "+25%" } },
+          { "name": "Cold Plasma", "effect": "+15% Damage, adds Slow effect", "stats": { "damage": "+15%", "statusEffect": "SLOW" } },
+          { "name": "Hot Plasma", "effect": "+15% Damage, adds Burn effect", "stats": { "damage": "+15%", "statusEffect": "BURN" } },
+          { "name": "Vortex Core", "effect": "EPC projectiles pull enemies in a radius around them", "stats": { "specialMechanic": "gravitational pull aura on projectile" } }
+        ],
+        "unstable": [
+          { "name": "Drippin Balls", "effect": "Dripping hot plasma sets the ground on fire; damage trails scale with shot damage", "stats": { "specialMechanic": "fire ground trail scaled to shot damage" } },
+          { "name": "Experimental Cluster Projectiles", "effect": "Plasma balls split into smaller projectiles when expired", "stats": { "specialMechanic": "splits on expiry" } }
+        ],
+        "6": "choose one Balanced overclock",
+        "12": "choose one Balanced overclock",
+        "18": "choose one Unstable overclock"
+      },
+      "notes": "Large bouncing plasma ball. Also accessible by Gunner (Heavy Gunner subclass). Drippin Balls is extremely strong as trail damage scales with shot damage. Status OCs require Hot/Cold Plasma for potency upgrades. Mastery in Salt Pits (Hazard 4+) grants +12% Damage."
+    }
+  ]
+}

@@ -1,0 +1,327 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://www.pocketgamer.com/deep-rock-galactic-survivor/tier-list/",
+    "https://gamerblurb.com/articles/deep-rock-galactic-survivor-best-class-tier-list",
+    "https://steamcommunity.com/app/2321470/discussions/0/4304949407576365928/",
+    "https://gameplay.tips/guides/deep-rock-galactic-survivor-guide-to-artifacts-tier-lists.html",
+    "https://gamerant.com/best-artifacts-deep-rock-galactic-survivor/",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+    "https://www.dualshockers.com/deep-rock-galactic-survivor-best-artifacts/",
+    "https://vortexgaming.io/en/postdetail/602967",
+    "https://steamcommunity.com/games/2321470/announcements/detail/543353773096960444",
+    "https://www.yardbarker.com/video_games/articles/deep_rock_galactic_survivor_update_4_patch_notes_new_biome_modes_and_mutators/s1_17144_41136798",
+    "https://www.savingcontent.com/2024/10/28/go-into-the-blue-with-new-biome-and-mission-types-in-update-04-for-deep-rock-galactic-survivor/",
+    "https://fantasywarden.com/games/deep-rock-galactic-survivor-class-mod-tier-list",
+    "https://gamerant.com/deep-rock-galactic-survivor-beginner-mistakes-avoid/",
+    "https://www.thegamer.com/deep-rock-galactic-survivor-best-classes-ranked/",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Damage",
+    "https://steamcommunity.com/app/2321470/discussions/0/591783109130790187/",
+    "https://deeprockbuilds.vercel.app/"
+  ],
+  "metaAsOf": "Update 04 (Into the Blue)",
+  "tierListConsensus": {
+    "S": [
+      "thick-boy-sniper",
+      "interrogator-fire-dot",
+      "thunderhead-heavy-gunner"
+    ],
+    "A": [
+      "tinkerer-warthog",
+      "grenade-spam-demo",
+      "infiltrator-cryo-burst",
+      "enforcer-minigun",
+      "leadburster-bomb"
+    ],
+    "B": [
+      "survivalist-smg-rush",
+      "constructor-turret-army",
+      "acid-foreman",
+      "devastator-repulsor"
+    ],
+    "notes": "Community consensus (Hazard 4/5) consistently places Thick Boy Sniper and Interrogator Fire DoT as the two dominant win-condition builds — both have a clear lv18 overclock that transforms the run and hard-counters the late-game Dreadnought. Heavy Gunner Thunderhead is also consensus S-tier due to its simplicity and the absurd Tightly Wound Springs spike. Tinkerer Warthog and Grenade Spam Demo are agreed A-tier: highly reliable, forgiving to execute, and strong at all hazard levels, but lacking the ceiling of the S-tier builds. Infiltrator Cryo Burst and Enforcer Minigun both have high peaks but require more execution or setup, placing them in the lower end of A-tier. Leadburster Bomb is acknowledged as having the highest potential burst in the game but its rough stages 1–3 keep it out of S-tier. The B-tier builds are all functional on Hazard 3 but face notable weaknesses at Hazard 5: Survivalist SMG Rush lacks damage ceiling, Constructor Turret Army is too dependent on turret positioning, Acid Foreman is hamstrung by the Subata pre-lv12, and Devastator Repulsor requires specific room geometry to shine. Note: individual class mod preferences vary; some community members rate Enforcer above Tinkerer Warthog, and Grenade Spam Demo is sometimes called the 'easiest S-tier' due to its massive forgiveness margin."
+  },
+  "archetypes": [
+    {
+      "id": "crit",
+      "name": "Crit Build",
+      "description": "Stack Critical Hit Chance to above 75% (unlocking Squint-EE5), then leverage +100% Crit Damage for burst output that far exceeds what raw damage upgrades can provide. The Nitragenic Powder artifact is the premier enabler: 150 Nitra held alone reaches the 75% Squint-EE5 threshold. Overkill crits (Sharpshooter passive) chain-spawn shrapnel explosions, turning single high-damage shots into AoE events.",
+      "keyArtifacts": ["squint-ee5", "nitragenic-powder", "pickled-nitra", "divers-manual"],
+      "keyWeapons": ["M1000 Classic", "Nishanka Boltshark X-80", "Lead Storm Powered Minigun"],
+      "bestBuilds": ["thick-boy-sniper", "infiltrator-cryo-burst", "enforcer-minigun"],
+      "strength": "Highest single-hit ceiling in the game; overkill crits have chain AoE; DoT immunity to direct-damage penalties makes crit immune to the Interrogator anti-synergy problem",
+      "weakness": "Dead stats against DoT builds; Squint-EE5's -30% Direct Damage is a real penalty until Crit Chance is high enough; heavily RNG-dependent on Nitragenic Powder availability"
+    },
+    {
+      "id": "dot",
+      "name": "DoT / Status Effect Build",
+      "description": "Deal damage through persistent status effect ticks (fire, acid, electric) rather than direct hits. The Interrogator subclass's +100% Status Effect Damage is the premier multiplier — every tick of burn or acid is doubled. Cryo's Frost Burn overclock enables cold weapons to trigger fire DoT, creating simultaneous multi-element stacking. DoTs cannot crit, making Crit Chance cards dead draws. Chemist Kit and BLT Ration Pack are core artifact support.",
+      "keyArtifacts": ["chemist-kit", "energy-bars", "blt-ration-pack"],
+      "keyWeapons": ["Colette Wave Cooker", "CRSPR Flamethrower", "Cryo Cannon", "Corrosive Sludge Pump"],
+      "bestBuilds": ["interrogator-fire-dot", "acid-foreman"],
+      "strength": "Passive damage with no aim required once stacks are applied; Interrogator's flat doubler makes it the most efficient multiplier in the game for tick-based damage",
+      "weakness": "Completely gutted by Squint-EE5 (stacks additively with Interrogator's -30%); weak against fast enemies that die before DoT stacks ramp; crits never trigger on DoT ticks"
+    },
+    {
+      "id": "aoe-explosive",
+      "name": "AoE / Explosive Build",
+      "description": "Use grenades, explosive weapons, and area-of-effect tools to clear entire swarm lanes at once. The Demolitionist subclass applies +20% AoE size to every explosive weapon simultaneously, meaning a single Explosion Radius stat upgrade benefits four weapons at once. Gravitational Core Cryo Grenade is the enabler: pull enemies to a single point, freeze them, then detonate cluster grenades for maximum overlap.",
+      "keyArtifacts": ["energy-bars", "gold-tipped-bullets", "pay2win-console"],
+      "keyWeapons": ["Deepcore PGL", "Cryo Grenade", "High Explosive Grenade", "Tactical Leadburster"],
+      "bestBuilds": ["grenade-spam-demo", "leadburster-bomb", "devastator-repulsor"],
+      "strength": "Most forgiving build type: imprecise throws still kill; Explosion Radius upgrades multiply all weapons simultaneously; great at clearing dense swarms that punish single-target builds",
+      "weakness": "Ammo-hungry — frequent grenade use risks running dry; self-damage is a real threat at close range; mediocre elite/single-target DPS before the Gravitational Core combo is online"
+    },
+    {
+      "id": "tank-stationary",
+      "name": "Tank / Stationary Build",
+      "description": "Stand in chokepoints and let enemies come to you. The Heavy Gunner and Enforcer passives reward immobility with damage bonuses, and Popup Tripod stacks fire rate and reload speed while stationary. Tightly Wound Springs and Bullet Hell are the lv18 power-spikes that make standing still terrifying. CC tools (Cryo Cannon, Seismic Repulsor) prevent enemies from reaching you during the setup.",
+      "keyArtifacts": ["popup-tripod", "gold-tipped-bullets", "ammo-rig"],
+      "keyWeapons": ["Thunderhead Heavy Autocannon", "Lead Storm Powered Minigun", "Cryo Cannon", "Seismic Repulsor"],
+      "bestBuilds": ["thunderhead-heavy-gunner", "enforcer-minigun", "constructor-turret-army"],
+      "strength": "Simple to execute once online; Popup Tripod stacks to full in seconds when enemies are dying; passives apply regardless of player actions — difficulty floors are low",
+      "weakness": "Flanking without Repulsor charges available is often lethal; requires good chokepoint identification early; slow to kill elites before the lv18 power-spike"
+    },
+    {
+      "id": "burst-window",
+      "name": "Burst / Setup Window Build",
+      "description": "Create a temporary window (freeze CC, movement activation, specific overclock) in which damage output is massively amplified, then deal maximum damage in that window. Thick Boy Sniper's freeze-then-mega-shot, Infiltrator's 15m-dash burst window, and Embedded Detonators' reload-triggered explosion all follow this pattern. Requires setup but delivers the highest per-window damage of any archetype.",
+      "keyArtifacts": ["squint-ee5", "nitragenic-powder", "energy-bars"],
+      "keyWeapons": ["M1000 Classic", "Nishanka Boltshark X-80", "Zhukov Mk II", "Cryo Grenade"],
+      "bestBuilds": ["thick-boy-sniper", "infiltrator-cryo-burst", "survivalist-smg-rush"],
+      "strength": "Highest damage ceiling per trigger pull or per window; crits during windows multiply already-amplified damage; strong against Dreadnoughts where concentrated burst matters most",
+      "weakness": "Builds are completely offline before their lv18 overclock; window-based play punishes missed setups heavily; freeze or burst timing errors waste the entire window"
+    },
+    {
+      "id": "economy",
+      "name": "Economy / Resource Build",
+      "description": "Maximize gold, nitra, and XP generation to outpace the upgrade curve. Tinkerer's +10% XP allows lv18 overclocks on Stage 1. Foreman's mining speed stacks let him accumulate substantially more nitra than any other subclass, powering Nitragenic Powder and Gold-Tipped Bullets simultaneously. Pay2Win Console and 5 Leaf Clover convert reroll spending into permanent damage stacks.",
+      "keyArtifacts": ["pay2win-console", "5-leaf-clover", "nitragenic-powder", "gold-tipped-bullets"],
+      "keyWeapons": ["Warthog Auto 210", "Voltaic Shock Fence"],
+      "bestBuilds": ["tinkerer-warthog", "acid-foreman"],
+      "strength": "Reaches lv18 overclocks before any other build archetype; larger resource pool means more artifact rerolls and more stat upgrade purchases; Tinkerer's lv3 weapon start is a significant tempo advantage",
+      "weakness": "Advantage is front-loaded — poor execution on the XP routing in Stages 1–2 negates the entire early-game edge; gold-hoard strategies conflict with Pay2Win Console reroll strategies"
+    }
+  ],
+  "synergyMatrix": [
+    {
+      "id": "crit-stack-sniper",
+      "name": "Crit Stack Mega-Shot",
+      "archetype": "crit",
+      "components": {
+        "weapons": ["M1000 Classic"],
+        "artifacts": ["squint-ee5", "nitragenic-powder", "pickled-nitra"],
+        "overclocks": ["Bigger Mags (lv12)", "Thick Boy (lv18)", "Gravitational Core Cryo Grenade (lv18)"]
+      },
+      "description": "Hoard Nitra to push Nitragenic Powder to 75%+ Crit Chance, unlocking Squint-EE5's full bonus. Thick Boy fuses all 12 bullets into a single mega-shot that hits 18k–72k damage with crits. Squint-EE5's -30% Direct Damage is irrelevant because the mega-shot one-shots targets regardless. Overkill crits from the Sharpshooter passive spawn shrapnel explosions that chain-kill nearby frozen enemies. Gravitational Core clusters enemies before the freeze, maximizing overkill crit chain radius.",
+      "strength": "extreme",
+      "builds": ["thick-boy-sniper"],
+      "counterplay": "Build is completely offline before lv18; missing the mega-shot wastes the entire clip; struggles against fast single targets that cannot be frozen or clustered"
+    },
+    {
+      "id": "frost-burn-double-dot",
+      "name": "Frost Burn Double DoT",
+      "archetype": "dot",
+      "components": {
+        "weapons": ["Colette Wave Cooker", "Cryo Cannon"],
+        "artifacts": ["chemist-kit", "blt-ration-pack"],
+        "overclocks": ["Nano-Waves Wave Cooker (lv12)", "Frost Burn Cryo Cannon (lv12)"]
+      },
+      "description": "Frost Burn makes Cryo Cannon's cold damage trigger fire DoT on targets, effectively running two simultaneous DoT types from one weapon. Wave Cooker's Nano-Waves dramatically increases burn stacks per second. With Interrogator's +100% Status Effect Damage, every tick of both DoT types is doubled. Enemies can be burning from two independent fire sources (Wave Cooker + Cryo-Frost Burn) simultaneously, each amplified by the class multiplier.",
+      "strength": "extreme",
+      "builds": ["interrogator-fire-dot"],
+      "counterplay": "Squint-EE5 is a hard-counter (stacks -60% direct damage); weak against short-lived enemies that die before DoT stacks ramp; DoTs cannot crit so Crit Chance upgrades are dead draws"
+    },
+    {
+      "id": "gravitational-cluster-nuke",
+      "name": "Gravitational Cluster Nuke",
+      "archetype": "aoe-explosive",
+      "components": {
+        "weapons": ["Cryo Grenade", "Deepcore PGL"],
+        "artifacts": ["energy-bars", "gold-tipped-bullets"],
+        "overclocks": ["Gravitational Core Cryo Grenade (lv18)", "Cluster Grenades PGL (lv18)"]
+      },
+      "description": "Gravitational Core pulls all nearby enemies to the impact point before the freeze activates, creating a tight cluster of frozen targets. PGL Cluster Grenades then detonate multiple sub-grenades within the cluster, each triggering independently. Demolitionist's +20% AoE means every sub-grenade has a larger blast radius, maximizing overlap. Combined with True TNT on HE Grenade as a finisher, this combo one-shots entire waves simultaneously.",
+      "strength": "strong",
+      "builds": ["grenade-spam-demo", "leadburster-bomb"],
+      "counterplay": "Self-damage risk if thrown too close; ammo drain is severe; elites that cannot be clustered resist the combo; no crits means the burst ceiling is lower than crit builds"
+    },
+    {
+      "id": "freeze-spin-autocannon",
+      "name": "Freeze-Spin Autocannon",
+      "archetype": "tank-stationary",
+      "components": {
+        "weapons": ["Thunderhead Heavy Autocannon", "Cryo Cannon"],
+        "artifacts": ["gold-tipped-bullets", "squint-ee5"],
+        "overclocks": ["Tightly Wound Springs Thunderhead (lv18)", "Frost Burn Cryo Cannon (lv12)"]
+      },
+      "description": "Cryo Cannon freezes the incoming swarm while Thunderhead spins up to prevent the vulnerability window. Tightly Wound Springs triples fire rate — what was already solid autocannon DPS becomes absurd against frozen clusters. Heavy Gunner's passive applies +25% Range and Reload to the Thunderhead specifically, meaning every reload stat upgrade is amplified. Squint-EE5 is legitimate here: Thunderhead fires so fast that even modest Crit Chance results in near-constant crits.",
+      "strength": "extreme",
+      "builds": ["thunderhead-heavy-gunner"],
+      "counterplay": "Build is slow on elites before Tightly Wound Springs; Cryo Cannon is mandatory — without freeze the DPS window is lost; -10% move speed from Heavy Gunner makes flanking dangerous"
+    },
+    {
+      "id": "tinkerer-xp-tempo",
+      "name": "Tinkerer XP Tempo",
+      "archetype": "economy",
+      "components": {
+        "weapons": ["Warthog Auto 210", "Voltaic Shock Fence"],
+        "artifacts": ["popup-tripod", "pay2win-console"],
+        "overclocks": ["Magnetic Alloy Voltaic Fence (lv6)", "Akimbo Warthog (lv18)"]
+      },
+      "description": "Tinkerer's Level 3 weapon start means Warthog can reach lv18 on Stage 1 with good XP routing. Voltaic Fence's Magnetic Alloy vacuums XP orbs into the fence's pull radius, dramatically accelerating the sprint to lv18. Akimbo at lv18 fires both forward and backward simultaneously, eliminating the core weakness of all shotguns (flanking). Popup Tripod stacks to +30% Fire Rate and Reload while stationary — the intended playstyle fulfills the condition automatically.",
+      "strength": "strong",
+      "builds": ["tinkerer-warthog"],
+      "counterplay": "Sloppy XP routing in Stage 1 destroys the tempo advantage; standing still to stack Popup Tripod is a vulnerability; Warthog's short range is a weakness against enemies that avoid approaching"
+    },
+    {
+      "id": "infiltrator-bolt-volley-burst",
+      "name": "Infiltrator Bolt Volley Burst",
+      "archetype": "burst-window",
+      "components": {
+        "weapons": ["Nishanka Boltshark X-80", "Cryo Grenade"],
+        "artifacts": ["squint-ee5", "energy-bars"],
+        "overclocks": ["Cryo Bolt Boltshark (lv6)", "Bolt Volley Boltshark (lv18)", "Gravitational Core Cryo Grenade (lv18)"]
+      },
+      "description": "Infiltrator's passive grants +50% Damage for 3 seconds after moving 15m without stopping. Dash 15m to trigger the burst window, fire a Cryo Bolt to freeze a target without stopping, then fire Bolt Volley (which fires 3 bolts simultaneously) into the frozen target during the 3-second window. With Squint-EE5 crits, this single trigger is the highest per-activation spike in Scout's kit, exceeding even Thick Boy against non-elite swarms. Gravitational Core clusters targets so Bolt Volley hits multiple enemies in one activation.",
+      "strength": "strong",
+      "builds": ["infiltrator-cryo-burst"],
+      "counterplay": "Highest execution difficulty in Scout's kit; stopping to aim resets the burst window; Popup Tripod is actively destructive here; requires good movement awareness to maintain 100% burst uptime"
+    },
+    {
+      "id": "bullet-hell-ricochet-chain",
+      "name": "Bullet Hell Ricochet Chain",
+      "archetype": "tank-stationary",
+      "components": {
+        "weapons": ["Lead Storm Powered Minigun", "Cryo Cannon"],
+        "artifacts": ["pickled-nitra", "squint-ee5", "gold-tipped-bullets"],
+        "overclocks": ["Burning Hell Minigun (lv12)", "Bullet Hell Minigun (lv18)", "Frost Burn Cryo Cannon (lv12)"]
+      },
+      "description": "Bullet Hell makes every kill spawn ricocheting bullets that kill adjacent enemies, cascading through dense swarms. Enforcer's +15% damage applies to every ricochet — kills chain exponentially through waves. Pickled Nitra's -15% move speed penalty is completely irrelevant for Enforcer, making it pure +50% fire rate. Cryo Cannon pre-freezes swarms during minigun spinup, covering the vulnerability window. At max heat (Burning Hell), every shot deals bonus fire damage on top of the ricochet chain.",
+      "strength": "extreme",
+      "builds": ["enforcer-minigun"],
+      "counterplay": "Spinup time creates vulnerability; Dreadnoughts without escort swarms see roughly half the DPS (ricochets scale poorly against isolated targets); flanking without Repulsor charges is a death sentence"
+    },
+    {
+      "id": "leadburster-pierce-cluster",
+      "name": "Leadburster Pierce-Cluster",
+      "archetype": "aoe-explosive",
+      "components": {
+        "weapons": ["Tactical Leadburster", "Cryo Grenade"],
+        "artifacts": ["squint-ee5", "nitragenic-powder"],
+        "overclocks": ["Cluster Grenades Leadburster (lv6)", "Penetrating Projectiles Leadburster (lv12)", "Gravitational Core Cryo Grenade (lv18)"]
+      },
+      "description": "Gravitational Core pulls enemies together and freezes them. A single Leadburster throw, enhanced by Cluster Grenades (triples spawned mines), places three independent mine units inside the frozen cluster. Penetrating Projectiles makes each mine's shot pierce through multiple targets — inside a tight frozen cluster, every mine fires through the entire stack. Strong Armed's +20% range means Leadbursters can be thrown from safe distances while still landing inside the cluster.",
+      "strength": "strong",
+      "builds": ["leadburster-bomb"],
+      "counterplay": "Worst early game of any A-tier build (stages 1–3 before full combo); combo has multiple steps that fail if timing is off; Crit synergy requires gold and nitra investment during the weakest stages"
+    },
+    {
+      "id": "nitra-hoard-dual",
+      "name": "Nitra Hoard Dual Scaling",
+      "archetype": "crit",
+      "components": {
+        "weapons": [],
+        "artifacts": ["nitragenic-powder", "pickled-nitra"],
+        "overclocks": []
+      },
+      "description": "Holding a large Nitra reserve simultaneously grants bonus Crit Chance (Nitragenic Powder: +0.5% per Nitra, max 500) and bonus Damage (Pickled Nitra: +2% per Nitra, max 250 stacks). At 150 Nitra held, a player has +75% Crit Chance from Nitragenic Powder alone, which can single-handedly unlock Squint-EE5. The two artifacts stack independently and their combined value makes Nitra functionally a dual-stat currency. Builds with naturally high Nitra income (Foreman, Survivalist with mobility) benefit most.",
+      "strength": "strong",
+      "builds": ["thick-boy-sniper", "leadburster-bomb", "acid-foreman"],
+      "counterplay": "Conflicts directly with Pay2Win Console (spending Nitra on rerolls depletes stacks); Pickled Nitra's -0.5% Move Speed per Nitra is a stacking survival risk on mobile builds; must not aggressively spend Nitra"
+    },
+    {
+      "id": "embedded-detonators-burst",
+      "name": "Embedded Detonators Reload Burst",
+      "archetype": "burst-window",
+      "components": {
+        "weapons": ["Zhukov Mk II", "Cryo Grenade"],
+        "artifacts": ["blt-ration-pack", "energy-bars"],
+        "overclocks": ["Embedded Detonators Zhukov (lv18)", "Gravitational Core Cryo Grenade (lv18)"]
+      },
+      "description": "Embedded Detonators embeds micro-explosives in every bullet fired by the Zhukov Mk II. When you reload (not on a timer — specifically on manual reload), every embedded explosive detonates simultaneously. Emptying the full clip into a Gravitational Core frozen cluster then reloading detonates dozens of explosives on every frozen target at once. Survivalist's +20% move speed allows covering ground quickly to cluster enemies with Gravitational Core before committing to the dump-and-detonate window.",
+      "strength": "strong",
+      "builds": ["survivalist-smg-rush"],
+      "counterplay": "Reloading early out of habit ruins the entire DPS window — must consciously wait for full clip before reloading; no meaningful damage before lv18; weak ceiling compared to S-tier builds"
+    }
+  ],
+  "patchMeta": [
+    {
+      "patch": "Update 04 (Into the Blue)",
+      "date": "Late October 2024",
+      "significantChanges": [
+        "New biome: Azure Weald — glowing crystal formations that heal both player and enemies; no Red Sugar for healing; membrane launchers allow aerial traversal; more intensive wave rotations with calm periods instead of persistent trickle",
+        "New enemy: Glyphid Warden — buffs surrounding Glyphids and reduces damage they take; requires focused priority target elimination before clearing swarms",
+        "Two new enemy variants: Glyphid Mini Exploder and Big Praetorian",
+        "Mutators system introduced — run modifiers (positive and negative) that add chaos and choice; available in Lethal Ops and Vanguard Contracts mission types",
+        "Two new mission types: Lethal Ops and Vanguard Contracts, both featuring Mutators",
+        "Five new artifacts added: Jet Boots (emergency escape on taking damage), Tactical Cookie (restores 50% Max HP between stages), Huuli Bait, 5 Leaf Clover (+15 Luck / +20 Luck burst on reroll), and one additional artifact",
+        "Pay2Win Console rework: no longer drains gold on rerolls, removing its main downside",
+        "5 Leaf Clover added as a direct synergy artifact for Pay2Win Console reroll strategies"
+      ],
+      "metaImpact": "The Warden enemy meaningfully shifted Hazard 4/5 meta toward builds with reliable priority-target burst damage — builds like Thick Boy Sniper (which can one-shot the Warden with the mega-shot before its buff aura activates) and Interrogator Fire DoT (whose DoT stacks kill it passively) handle the Warden better than turret builds that lack target-switching. The Azure Weald biome's healing crystals create a new positioning consideration: stationary builds like Enforcer Minigun and Constructor Turret Army must account for enemy healing from crystal proximity. The new Mutators system opened up variable-difficulty modifiers that can either boost or kneecap specific archetypes — Mutators granting mining speed boost are disproportionately strong on Acid Foreman. Pay2Win Console losing its gold-drain downside significantly elevated economy-oriented builds and the Tinkerer Warthog's reroll-heavy strategy. 5 Leaf Clover + Pay2Win Console is now a recognized double-slot investment that pays dividends throughout a run."
+    },
+    {
+      "patch": "Patches 4.1 and 4.2",
+      "date": "Late 2024 into 2025",
+      "significantChanges": [
+        "Balance tuning to weapon scaling values based on community feedback post-Update 04",
+        "Glyphid Warden spawn rate adjustments",
+        "Community Q&A patch (4.2) addressing various quality-of-life concerns raised after the Into the Blue launch"
+      ],
+      "metaImpact": "Minor rebalancing that did not fundamentally shift the tier list. S-tier builds (Thick Boy Sniper, Interrogator Fire DoT, Thunderhead Heavy Gunner) retained their positions. Community consensus remained stable from Update 04 onward into early 2026."
+    }
+  ],
+  "commonMistakes": [
+    {
+      "mistake": "Splitting weapon XP evenly across multiple weapons instead of rushing the carry weapon to lv18",
+      "fix": "Identify your carry weapon immediately (e.g., M1000 for Thick Boy Sniper, Wave Cooker for Interrogator) and funnel all XP into it first. Secondary weapons can be leveled once the carry hits its lv18 overclock power-spike. The lv18 overclock is often the entire build.",
+      "affectedBuilds": ["thick-boy-sniper", "interrogator-fire-dot", "thunderhead-heavy-gunner", "infiltrator-cryo-burst", "enforcer-minigun", "survivalist-smg-rush"]
+    },
+    {
+      "mistake": "Picking Squint-EE5 on DoT builds (Interrogator Fire DoT, Acid Foreman)",
+      "fix": "Squint-EE5's -30% Direct Damage stacks additively with Interrogator's class passive -30%, leaving you at effectively zero direct DPS with no upside since DoTs cannot crit. Never pick up Squint-EE5 on any build that relies on status effect damage. Pass it unconditionally on Interrogator and Acid Foreman.",
+      "affectedBuilds": ["interrogator-fire-dot", "acid-foreman"]
+    },
+    {
+      "mistake": "Not mining enough — focusing on combat kills instead of resource collection in the early game",
+      "fix": "Mining is the primary XP and resource source in stages 1–2, not combat kills. Mine mineral nodes constantly between waves. Nitra funds artifact rerolls; gold funds weapon and overclock purchases. Builds like Acid Foreman and Leadburster Bomb depend entirely on early nitra income for Nitragenic Powder scaling.",
+      "affectedBuilds": ["acid-foreman", "leadburster-bomb", "thick-boy-sniper", "tinkerer-warthog"]
+    },
+    {
+      "mistake": "Using Popup Tripod on mobility-dependent builds",
+      "fix": "Popup Tripod requires standing completely still to stack its +30% Fire Rate / +30% Reload Speed bonus. On Infiltrator Cryo Burst (whose entire mechanic requires constant movement) and Survivalist SMG Rush (whose passive only activates while mobile and above 50% HP), Popup Tripod actively destroys the build's core loop. Never pick it on Scout mobility builds.",
+      "affectedBuilds": ["infiltrator-cryo-burst", "survivalist-smg-rush"]
+    },
+    {
+      "mistake": "Letting the Thunderhead barrel cool between waves instead of keeping it spinning",
+      "fix": "Thunderhead requires spin-up time before firing at full rate. Keep the barrel spinning at all times — fire short bursts at distant chaff between major waves so spin-up is near-zero when the real swarm arrives. The -10% move speed penalty is only dangerous if you need to reposition at the moment you're not spinning.",
+      "affectedBuilds": ["thunderhead-heavy-gunner", "devastator-repulsor"]
+    },
+    {
+      "mistake": "Reloading the Zhukov Mk II before emptying the full clip on Embedded Detonators builds",
+      "fix": "Embedded Detonators detonates on manual reload, not on a timer. Reloading before emptying the clip wastes all undetonated explosives embedded in targets. Deliberately empty the full clip into a target before reloading. This is a mechanical habit override — players who reload early by default destroy the build's DPS window repeatedly.",
+      "affectedBuilds": ["survivalist-smg-rush"]
+    },
+    {
+      "mistake": "Ignoring the Glyphid Warden — letting it buff surrounding swarms without priority-targeting it",
+      "fix": "The Glyphid Warden reduces damage taken by nearby Glyphids. If allowed to stay alive while you clear its escorts, the entire wave takes reduced damage throughout the encounter. Kill the Warden first, always. Builds with single-target burst (Thick Boy Sniper, Infiltrator Cryo Burst) handle this most naturally. Turret builds and DoT builds need to consciously redirect their damage source to the Warden.",
+      "affectedBuilds": ["constructor-turret-army", "interrogator-fire-dot", "acid-foreman", "devastator-repulsor"]
+    },
+    {
+      "mistake": "Taking the Subata 120's Sidearm overclock (lv6) in solo play on Acid Foreman",
+      "fix": "Sidearm gives +25% damage to teammates but -25% damage to yourself. In solo play this is a net negative with no upside. The correct action is to reroll for any alternative overclock, even a mediocre one, rather than accept -25% personal damage on an already weak weapon before Acid Dipped Tips at lv12 converts it to acid.",
+      "affectedBuilds": ["acid-foreman"]
+    },
+    {
+      "mistake": "Spending gold and nitra on shop rerolls or artifacts before the carry weapon hits its mandatory breakpoint overclock",
+      "fix": "Resource discipline in stages 1–2 is critical. Builds like Thick Boy Sniper need Bigger Mags at lv12 before spending on anything else. Spending resources early on non-essential artifacts or rerolls delays the power-spike and leaves you undersized during the critical lv12–lv18 transition. Hold 100g+ heading into Stage 3.",
+      "affectedBuilds": ["thick-boy-sniper", "leadburster-bomb", "devastator-repulsor"]
+    },
+    {
+      "mistake": "Buying Nitragenic Powder and then aggressively spending Nitra on artifact rerolls",
+      "fix": "Nitragenic Powder and Pickled Nitra both scale with Nitra held — not Nitra earned. Spending Nitra removes stacks. If you have either artifact, avoid nitra spending and treat your nitra total as a stat currency. This creates a direct conflict with aggressive artifact reroll strategies — decide early whether you are a Nitra-hoard build or a reroll-economy build and commit.",
+      "affectedBuilds": ["thick-boy-sniper", "leadburster-bomb", "acid-foreman", "enforcer-minigun"]
+    }
+  ]
+}

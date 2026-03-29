@@ -1,0 +1,383 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Mid-dive_Upgrades",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Resources",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Objectives",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Artifacts",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Meta_Upgrades",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Supply_Pod",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Nitra",
+    "https://steamcommunity.com/app/2321470/discussions/0/7004880749908295002/",
+    "https://steamcommunity.com/app/2321470/discussions/0/6292161380824347974/",
+    "https://steamcommunity.com/app/2321470/discussions/0/4342103279869114948/",
+    "https://steamcommunity.com/app/2321470/discussions/0/6292161380813001778/",
+    "https://steamcommunity.com/app/2321470/discussions/0/4342103279857582869/",
+    "https://steamcommunity.com/app/2321470/discussions/0/811335793676334584/",
+    "https://steamcommunity.com/app/2321470/discussions/0/4342103279864337177/"
+  ],
+  "shopMechanics": {
+    "overview": "Between each dive stage, the Drop Pod presents a shop offering mid-dive upgrade cards purchasable with Gold (stat and tag mastery upgrades) and Nitra (weapon upgrades). Each shop visit is a single pool of cards across three upgrade categories. During level-up events within a stage, players choose from 3 random upgrade cards.",
+    "shopSlots": {
+      "notes": "No confirmed per-stage slot count variation documented in the wiki. The shop presents a pool of available upgrade cards across three categories (weapon upgrades, tag mastery upgrades, player stat upgrades). Rerolling the shop refreshes all visible cards. Community sources suggest the base pool shows 3 cards per category, but this is unconfirmed — the shop UI displays all three upgrade types simultaneously at the drop pod."
+    },
+    "levelUpCards": 3,
+    "supplyPodArtifacts": 3,
+    "rerollCostsShop": [5, 7, 10, 14, 20, 28],
+    "rerollCostLevelUp": 15,
+    "rerollCostArtifact": {
+      "cost": 15,
+      "currency": "nitra",
+      "requiresMetaUpgrade": true,
+      "metaUpgradeName": "Artifact Rerolls",
+      "notes": "Artifact rerolling at the Supply Pod requires unlocking the 'Artifact Rerolls' meta upgrade using Umanite. Once unlocked, each reroll of the Supply Pod artifact selection costs 15 nitra. This is not available by default."
+    },
+    "rerollResetsEachStage": true,
+    "rerollCostNotes": "Shop rerolls reset their cost escalation at the start of each new stage — the first reroll after any stage transition costs 5g regardless of how many rerolls were used in prior stages. Level-up rerolls are a flat 15g per reroll and do not escalate. Artifact rerolls are a flat 15 nitra per reroll (once the meta upgrade is purchased).",
+    "legendaryItemDropRates": {
+      "early": "~1-3% (pre-rank 32)",
+      "stabilized": "~5% at rank 32+, up to ~15% with luck-increasing upgrades/artifacts",
+      "notes": "Legendary item appearance is NOT gated by stage number. Drop rarity is determined by player rank and luck stats. At rank 32 the distribution stabilizes to approximately: Uncommon 3%, Rare 51%, Epic 41%, Legendary 5%. Stage of the dive has no impact on rarity — a legendary can appear in stage 1 or stage 5 with equal probability. Luck-boosting artifacts and meta upgrades can push legendary chance to ~15%."
+    },
+    "healthHealCost": 30,
+    "healthHealAmount": "50% of max HP",
+    "notes": "The shop also offers a 50% health heal for 30g. Nitra rerolls for artifact selection require the 'Artifact Rerolls' meta upgrade (purchased with Umanite). Upgrade card bonuses stack additively: two 50% bonuses equal 100% total increase, not 225%."
+  },
+  "itemPricing": {
+    "weaponUpgrades": {
+      "currency": "nitra",
+      "uncommon": 14,
+      "rare": 18,
+      "epic": 24,
+      "legendary": 38,
+      "notes": "Weapon upgrade cards (Add Punch, Bigger Cogs, Loosen Bolts, etc.) increase weapon level by 1. Paint Job grants +2 or +3 levels. Purchased exclusively with Nitra at the between-stage shop."
+    },
+    "tagMasteryUpgrades": {
+      "currency": "gold",
+      "uncommon": 29,
+      "rare": 35,
+      "epic": 48,
+      "legendary": 77,
+      "notes": "Tag mastery upgrades apply to all weapons sharing a specific tag (e.g. Beam, Electrical, Kinetic). Only offered when carrying at least two weapons with a matching tag."
+    },
+    "playerStatUpgrades": {
+      "currency": "gold",
+      "uncommon": 23,
+      "rare": 29,
+      "epic": 40,
+      "legendary": 63,
+      "notes": "Player stat upgrades (Body Shots, Careful Aim, Extra Padding, etc.) are general damage and survivability bonuses purchasable with gold."
+    },
+    "levelUpCost": 15,
+    "levelUpCostCurrency": "gold",
+    "healthHeal": {
+      "cost": 30,
+      "currency": "gold",
+      "amount": "50% max HP"
+    },
+    "priceScalesByStage": false,
+    "notes": "Item pricing is fixed by rarity tier, not by stage number. A rare weapon upgrade always costs 18 nitra regardless of whether you are on stage 1 or stage 5. The only cost that scales is the shop reroll escalation, which resets each stage."
+  },
+  "goldIncome": {
+    "byStage": [
+      {
+        "stage": 1,
+        "mining": { "min": 40, "max": 70, "notes": "Gold veins are the primary source. Each vein yields approximately 5-8 gold. The Gold Scanner artifact allows plain rock to also drop gold." },
+        "enemies": { "min": 5, "max": 15, "notes": "Lootbugs and Huuli Hoarders drop gold. Regular enemy kills do not reliably drop gold. Enemy gold contribution is low and RNG-dependent." },
+        "secondary": { "min": 0, "max": 30, "notes": "Secondary objectives (collect 6 Apoca Blooms, 12 Boolo Caps, or 20 Morkite) award approximately 30 gold on completion. Requires 100 cumulative lifetime gold to unlock. Items themselves also grant small amounts of gold/XP when collected." },
+        "total": { "min": 45, "max": 115, "notes": "Lower end is minimal mining with no secondary completed. Upper end assumes full mine sweep plus secondary objective." }
+      },
+      {
+        "stage": 2,
+        "mining": { "min": 45, "max": 75 },
+        "enemies": { "min": 5, "max": 15 },
+        "secondary": { "min": 0, "max": 30 },
+        "total": { "min": 50, "max": 120 }
+      },
+      {
+        "stage": 3,
+        "mining": { "min": 50, "max": 80 },
+        "enemies": { "min": 5, "max": 15 },
+        "secondary": { "min": 0, "max": 30 },
+        "total": { "min": 55, "max": 125 }
+      },
+      {
+        "stage": 4,
+        "mining": { "min": 50, "max": 80 },
+        "enemies": { "min": 5, "max": 15 },
+        "secondary": { "min": 0, "max": 30 },
+        "total": { "min": 55, "max": 125 }
+      },
+      {
+        "stage": 5,
+        "mining": { "min": 50, "max": 80, "notes": "Stage 5 is the Dreadnought boss fight. No secondary objective. All collected gold/nitra converts to end-run credits (approximately 4 credits per resource unit). Gold can still be spent on level-up rerolls during the run." },
+        "enemies": { "min": 10, "max": 25, "notes": "Boss fight and associated waves may drop more enemy gold than earlier stages." },
+        "secondary": { "min": 0, "max": 0, "notes": "No secondary objective on stage 5." },
+        "total": { "min": 60, "max": 105 }
+      }
+    ],
+    "totalRunEstimate": {
+      "min": 265,
+      "max": 590,
+      "communityConsensus": "Community reports ~150g per stage with full mining and secondary objective completion, ~120g without secondary, for a total run average of 500-600g across a full 5-stage dive at higher hazard levels. Players reach character levels 60-70 per run and earn ~600g total across the run.",
+      "notes": "Gold income is highly variable based on map density, build, and thoroughness of mining. The Gold Scanner artifact (unlocked via supply pod) significantly boosts gold from plain rock. Gold-Tipped Bullets incentivizes accumulating gold rather than spending it."
+    },
+    "creditConversion": "At run end, unspent gold converts to credits at approximately 4 credits per gold.",
+    "notes": "Gold income does not scale by stage in a dramatic way — the main variance is secondary objective completion (+30g) and how thoroughly the map is mined. Enemy drops (Lootbugs, Huuli Hoarders) are a minor, unpredictable source. Secondary objectives are not available on stage 5."
+  },
+  "nitraIncome": {
+    "byStage": [
+      {
+        "stage": 1,
+        "mining": { "min": 25, "max": 45, "notes": "Nitra veins are distinct from gold veins. Nitra Scanner artifact allows plain rock to drop nitra." },
+        "enemies": { "min": 3, "max": 10, "notes": "Lootbugs and Huuli Hoarders drop nitra. Minor source." },
+        "total": { "min": 28, "max": 55 }
+      },
+      {
+        "stage": 2,
+        "mining": { "min": 30, "max": 50 },
+        "enemies": { "min": 3, "max": 10 },
+        "total": { "min": 33, "max": 60 }
+      },
+      {
+        "stage": 3,
+        "mining": { "min": 35, "max": 55 },
+        "enemies": { "min": 3, "max": 10 },
+        "total": { "min": 38, "max": 65 }
+      },
+      {
+        "stage": 4,
+        "mining": { "min": 35, "max": 55 },
+        "enemies": { "min": 3, "max": 10 },
+        "total": { "min": 38, "max": 65 }
+      },
+      {
+        "stage": 5,
+        "mining": { "min": 35, "max": 55, "notes": "Nitra converts to credits at end of run (~4 credits per nitra). Can still be used for artifact rerolls during stage 5 if that meta upgrade is owned." },
+        "enemies": { "min": 3, "max": 10 },
+        "total": { "min": 38, "max": 65 }
+      }
+    ],
+    "totalRunEstimate": {
+      "min": 175,
+      "max": 310,
+      "communityConsensus": "Community consensus places full-mine nitra per stage at approximately 50-60. A full run with thorough mining yields roughly 250-300 nitra total."
+    },
+    "supplyPodMechanics": {
+      "arrivesEachStage": true,
+      "landingZoneClearanceRequired": true,
+      "notes": "One Supply Pod arrives per stage. Mission Control marks a landing zone on the minimap. A circular clearance zone must be cleared of obstacles/terrain before the pod can land. The pod's impact deals heavy damage to enemies — on lower hazard levels it can kill an Elite from full health; this damage scales down on higher hazard levels.",
+      "artifactsOffered": 3,
+      "artifactRerollCost": 15,
+      "artifactRerollCurrency": "nitra",
+      "artifactRerollRequiresMetaUpgrade": true,
+      "healing": "None — the Supply Pod does not provide healing. Health restoration costs 30 gold at the between-stage shop, not via the supply pod."
+    },
+    "creditConversion": "At run end, unspent nitra converts to credits at approximately 4 credits per nitra.",
+    "economyRelevantArtifacts": {
+      "NitraganicPowder": "+0.5% Critical Chance per nitra held (max 500 stacks) — incentivizes hoarding nitra without spending it on upgrades",
+      "PickledNitra": "+2% damage and -0.5% move speed per nitra held — similar incentive to hoard nitra",
+      "notes": "Both nitra-scaling artifacts create tension between spending nitra on weapon upgrades and holding it for damage/crit scaling. These builds require deliberately avoiding nitra expenditure."
+    },
+    "notes": "Nitra is the exclusive currency for weapon upgrade cards at the between-stage shop. It is NOT used for gold purchases. Artifact rerolling requires nitra but is locked behind a meta upgrade. Secondary objectives do not reward nitra — only gold and XP."
+  },
+  "rerollMechanics": {
+    "shopRerolls": {
+      "costs": [5, 7, 10, 14, 20, 28],
+      "currency": "gold",
+      "escalationPattern": "Each successive shop reroll within a stage costs more. The sequence continues past 28 by roughly multiplying by ~1.4 each step.",
+      "resetsPerStage": true,
+      "notes": "The first shop reroll after each stage transition always costs 5g. The escalation resets. This makes the first reroll of each stage the best value."
+    },
+    "levelUpRerolls": {
+      "cost": 15,
+      "currency": "gold",
+      "escalates": false,
+      "notes": "Level-up card rerolls are a flat 15g regardless of how many times you reroll in a single level-up event. This is non-escalating. Community debate exists on whether this is too expensive: defenders note players earn ~100g per level on average across the run, making 15g per reroll reasonable for good rerolling at pivotal level thresholds (5, 15, 25)."
+    },
+    "artifactRerolls": {
+      "cost": 15,
+      "currency": "nitra",
+      "escalates": false,
+      "requiresMetaUpgrade": "Artifact Rerolls (costs Umanite)",
+      "notes": "Artifact rerolls at the Supply Pod cost a flat 15 nitra each. Not available until the meta upgrade is purchased. Given nitra costs 14-38 nitra per weapon upgrade card, spending 15 nitra on an artifact reroll is a meaningful trade-off — it is roughly equivalent to forgoing one uncommon weapon upgrade."
+    },
+    "overallStrategy": "The most impactful reroll investment is the first shop reroll (5g) when the opening offer has no relevant damage cards. Level-up rerolls are best saved for pivot levels (5, 15, 25 in the level-up progression) where overclock-synergy upgrades matter most. Spam all rerolls on final kills before the run ends — nothing carries over."
+  },
+  "spendingStrategies": {
+    "aggressive": {
+      "description": "Buy every relevant upgrade as it appears. Prioritize damage-type cards the moment they surface. Accept lower gold reserve entering later stages.",
+      "riskLevel": "high",
+      "bestFor": ["grenade-spam-demo", "thunderhead-heavy-gunner", "runs with strong early shop offers"],
+      "avoidFor": ["thick-boy-sniper", "artifact-scaling builds (Nitragenic Powder, Gold-Tipped Bullets)"],
+      "whenToUse": "When the early shop offers S-tier damage artifacts or your carry weapon's best upgrade. Also optimal when you have a DRG Coupon artifact (20% shop discount) active — the discount erodes the case for hoarding.",
+      "tradeoff": "Stronger stages 1-3, weaker late-run flexibility. Risks being broke entering stage 5 if unlucky shop offers forced over-spending on rerolls."
+    },
+    "conservative": {
+      "description": "Hoard gold and nitra. Only spend on S-tier artifacts or your carry weapon's key damage upgrades. Do not touch stat upgrades until stage 3+.",
+      "riskLevel": "low",
+      "bestFor": ["thick-boy-sniper", "Gold-Tipped Bullets builds (each 5g = 1% damage, max 250 stacks)", "Nitragenic Powder builds (hold nitra for crit scaling)", "Pickled Nitra builds"],
+      "avoidFor": ["builds that need early weapon level 6 overclock by stage 2 to function"],
+      "whenToUse": "When optimizing for specific artifact-dependent builds where holding the resource IS the damage multiplier. Also when shop offers have been poor and no spike opportunity has appeared.",
+      "tradeoff": "Safer but may fall behind in raw DPS during stages 1-2 if no spike window appears."
+    },
+    "levelUpFocus": {
+      "description": "Funnel all nitra immediately into weapon upgrade cards for the carry weapon. Accept thin gold reserves. Goal is to hit weapon level 6 (first overclock) as early as possible, then 12 and 18.",
+      "riskLevel": "medium",
+      "bestFor": ["all builds where carry overclock is the damage multiplier", "any build entering stage 3 with carry below level 15"],
+      "avoidFor": ["nitra-scaling artifact builds (Nitragenic Powder, Pickled Nitra)"],
+      "whenToUse": "Mandatory when carry weapon is below level 15 entering stage 3. Also optimal when your carry's overclocks at 6/12 are among the top-tier options for your build archetype.",
+      "tradeoff": "Strong single-weapon scaling but leaves secondary weapons underpowered and nitra reserves depleted for artifact rerolls."
+    },
+    "rerollHeavy": {
+      "description": "Accept higher shop reroll expenditure to find specific artifact combinations. Budget 20-30g per stage exclusively for rerolls.",
+      "riskLevel": "medium-high",
+      "bestFor": ["players hunting a specific 2-artifact synergy combo", "stage 5 final-spend where nothing carries over"],
+      "avoidFor": ["stage 1-2 on limited budgets", "builds without a specific artifact dependency"],
+      "whenToUse": "Stage 5 endgame (spend everything) or when you have a confirmed artifact synergy build and the missing piece would be transformative.",
+      "tradeoff": "Finding the combo unlocks outsized power; failing to find it wastes 15-30g per stage with no return."
+    },
+    "pay2WinConsoleStrategy": {
+      "description": "With Pay2Win Console artifact active, every reroll of anything grants +2.5% damage (up to 100 stacks). Deliberately spam rerolls to stack damage.",
+      "riskLevel": "medium",
+      "notes": "This inverts the normal reroll-cost calculus. If Pay2Win Console is active, rerolling is a direct damage investment, not just a search cost. Each 15g level-up reroll = +2.5% damage. Budget accordingly.",
+      "bestFor": ["any build that can acquire Pay2Win Console by stage 2"]
+    }
+  },
+  "levelUpEconomics": {
+    "currency": "nitra",
+    "costsByRarity": {
+      "uncommon": 14,
+      "rare": 18,
+      "epic": 24,
+      "legendary": 38
+    },
+    "levelBreakpoints": [
+      {
+        "level": 6,
+        "significance": "First Overclock unlocked — player chooses from 3 overclocks for the weapon. This is the first major power spike for any weapon.",
+        "targetStage": "Should reach by end of stage 1 for carry weapon on most builds."
+      },
+      {
+        "level": 12,
+        "significance": "Second Overclock unlocked — second choice of 3 overclocks. Significant multiplicative damage increase, especially for builds relying on multiple overclock interactions.",
+        "targetStage": "Should reach by end of stage 2 for carry weapon."
+      },
+      {
+        "level": 18,
+        "significance": "Third Overclock unlocked — maximum overclock power achieved. This is the 'max power' threshold for carry weapon damage potential.",
+        "targetStage": "Hard target: reach before stage 3 ends. If carry is below level 15 entering stage 3, funnel ALL nitra into weapon cards before anything else."
+      }
+    ],
+    "paintJobNote": "Paint Job upgrade grants +2 or +3 levels instead of 1 — it is the highest level-per-nitra-cost card available when it appears.",
+    "nitraCostToReachBreakpoints": {
+      "toLevel6FromZero": { "uncommonOnly": 70, "mixedRarity": "56-84", "notes": "5-6 uncommon weapon upgrades (14n each) or 4-5 rare/epic mix. Paint Job (if available) reduces this significantly." },
+      "toLevel12FromZero": { "uncommonOnly": 154, "mixedRarity": "112-168", "notes": "11 uncommon upgrades at 14n each. Expect 2 full stages of nitra income devoted to carry weapon." },
+      "toLevel18FromZero": { "uncommonOnly": 238, "mixedRarity": "168-252", "notes": "17 uncommon upgrades. Nearly a full run's nitra income if building from scratch — underscores why secondary weapons should be deprioritized early." }
+    },
+    "opportunityCostFramework": "Each nitra spent on an artifact reroll (15n) is roughly equivalent to one uncommon weapon upgrade. Each 15n reroll that finds a lower-tier artifact is a net loss vs. direct weapon investment. Reroll only when the known artifact pool has a transformative option for your build.",
+    "notes": "Weapon upgrade cards scale the specific weapon linearly — each level adds base stat increases until overclock selection points. Overclocks are the primary non-linear power spikes. After reaching level 18, further weapon upgrades continue to add incremental stats but no additional overclocks. Investing beyond level 18 in carry has diminishing returns relative to investing in secondaries or tag mastery upgrades."
+  },
+  "adviceByStage": [
+    {
+      "stage": 1,
+      "goldAdvice": "Hoard gold aggressively. The only gold worth spending in stage 1 is on S-tier damage artifacts from the shop (Epic/Legendary stat upgrades priced 40-63g) or a single first-reroll (5g) if your carry weapon card was not offered. Avoid the 30g health heal — you should not be in danger on stage 1. End stage 1 with a minimum 40g reserve entering stage 2.",
+      "nitraAdvice": "Spend all nitra on carry weapon upgrades. Target: reach weapon level 6 (first overclock) by end of stage 1. This costs approximately 5-6 uncommon weapon upgrade cards (70n total) or 4-5 rare/epic mix. Do NOT spend nitra on artifact rerolls in stage 1 unless your build is explicitly artifact-scaling and you have the meta upgrade unlocked.",
+      "rerollAdvice": "One shop reroll (5g) is acceptable if your carry weapon upgrade is absent from the opening offer. Do not reroll beyond the first — the cost jumps to 7g, 10g, etc. Level-up rerolls (15g each) are not worth it in stage 1; your gold reserve is too small to absorb them.",
+      "supplyPodAdvice": "Clear the supply pod landing zone promptly. Take the best of the 3 artifacts offered. Reroll only if you have the meta upgrade AND hold 30+ nitra surplus after buying your carry weapon cards AND the offered artifacts are all off-build.",
+      "commonMistakes": "Buying a 29g uncommon tag mastery upgrade when the carry weapon card wasn't offered. Paying 30g to heal when not in serious danger. Rerolling the shop more than once. Splitting nitra across multiple weapons instead of racing carry to level 6."
+    },
+    {
+      "stage": 2,
+      "goldAdvice": "Begin investing in Epic or Legendary stat upgrades (40-63g) that directly amplify your carry's damage type. If you ended stage 1 with 60g+, a single Epic stat upgrade is viable. Still avoid the health heal unless below 30% HP. Target ending stage 2 with 50g+ for stage 3 flexibility.",
+      "nitraAdvice": "Continue pushing carry weapon toward level 12 (second overclock). If carry is already at level 12, start allocating nitra to your secondary weapon. Do not spread nitra across all weapons simultaneously — pick a secondary priority after carry hits 12.",
+      "rerollAdvice": "Up to two shop rerolls are justified (5g + 7g = 12g total) if the opening offer has no damage artifacts or your carry weapon card. One level-up reroll (15g) is acceptable if all three level-up options are clearly off-build. Skip level-up rerolls if on a tight gold budget.",
+      "supplyPodAdvice": "This is your second supply pod. If the three artifact options include a build-defining piece (Gold-Tipped Bullets, Nitragenic Powder, DRG Coupon), take it regardless of how 'convenient' the others look. A defining artifact in stage 2 snowballs through stages 3-5.",
+      "commonMistakes": "Rerolling the shop 3+ times chasing a specific card. Buying a 35g rare tag mastery upgrade when you don't yet have two weapons sharing that tag. Treating all four weapons as equally worth upgrading — focus is mandatory."
+    },
+    {
+      "stage": 3,
+      "goldAdvice": "Full investment mode. If your carry has reached level 18 or is on track to by end of this stage, begin filling in Epic stat upgrades and tag mastery cards. If your carry is below level 15 entering stage 3, stop buying gold cards entirely and redirect all attention to weapon leveling. Use the 30g health heal if below 40% HP — you need survivability for stage 4-5.",
+      "nitraAdvice": "HARD TARGET: carry weapon to level 18 before this stage ends. At level 18 (third overclock), your carry is at maximum overclock power. If nitra is insufficient due to prior diversification, accept a weaker secondary to hit this target.",
+      "rerollAdvice": "Reroll aggressively on level-up cards (up to 3x at 15g each) if your carry is within 1-2 levels of an overclock breakpoint and the offered cards are off-weapon. One shop reroll is also justified if no damage artifacts appeared in the opening offer. Total reroll budget: up to 50-60g if the run gold income supports it.",
+      "supplyPodAdvice": "Stage 3 supply pod is critical. This is the midpoint of the run — an artifact acquired here has maximum impact on the remaining 2 stages. Use a nitra reroll if needed to find a build-completing piece.",
+      "commonMistakes": "Leaving stage 3 without carry at level 18. Spending gold on secondary weapon stat upgrades before carry is maxed. Not rerolling level-up cards when carry is one weapon card away from an overclock."
+    },
+    {
+      "stage": 4,
+      "goldAdvice": "Fill secondary weapon slots and round out support layers. Hold back 30-40g reserve for stage 5. If secondaries are at level 10+ and you have gold beyond the reserve, spend on support artifacts that complete the build (e.g., tag mastery epics for your secondary weapon's tag).",
+      "nitraAdvice": "Push secondaries toward level 6 (their first overclock) — this is the secondary weapon priority in stage 4. A secondary at level 6 with one overclock provides significantly more value than a secondary at level 3.",
+      "rerollAdvice": "One artifact shop reroll is justified if hunting a build-completing support piece. Avoid level-up rerolls — your stage 5 gold reserve is non-negotiable. Keep at least 30g for stage 5.",
+      "supplyPodAdvice": "Fourth supply pod. If you are missing a key synergy artifact, use a nitra reroll here. This is the last opportunity before stage 5 (where artifact selection continues but spending is fully liberated).",
+      "commonMistakes": "Overspending gold on rerolls and arriving in stage 5 with under 20g. Not pushing at least one secondary to its first overclock. Buying expensive (77g legendary tag mastery) when gold reserve is borderline."
+    },
+    {
+      "stage": 5,
+      "goldAdvice": "Spend everything. There is no next stage. Mine every gold deposit visible. Spam level-up rerolls after killing the Dreadnought — you level from the dropped XP on the way back to the pod, so reroll until gold is zero. Prioritize final damage breakpoint upgrades above all else.",
+      "nitraAdvice": "Spend all nitra on remaining weapon cards. If carrying Nitragenic Powder or Pickled Nitra, you face a final decision: hold nitra for damage scaling vs. spending it on weapon levels. In most cases, the weapon overclock from spending is worth more than marginal nitra scaling unless you are already sitting at 200+ nitra.",
+      "rerollAdvice": "Reroll freely — every remaining gold or nitra should be spent. After clearing the Dreadnought, spam rerolls on all level-up options from the XP drop. There is no next stage to budget for.",
+      "supplyPodAdvice": "Fifth and final supply pod. Clear the landing zone. Take whichever artifact rounds out the build best. Reroll with nitra freely since unspent nitra only converts to ~4 credits.",
+      "commonMistakes": "Leaving stage 5 with unspent gold or nitra (both just become low-value credits). Not rerolling level-up cards aggressively on the final Dreadnought XP dump. Forgetting to mine gold/nitra deposits because the boss fight is active — they still convert to credits and can fund final rerolls."
+    }
+  ],
+  "economyArtifactsSummary": [
+    {
+      "name": "Gold-Tipped Bullets",
+      "effect": "+1% damage per 5 gold held, max 250 stacks (max +250% damage at 1250 gold)",
+      "economyImpact": "Fundamentally changes spending calculus. With this artifact, holding gold IS damage. Completely reverses the default 'spend everything' advice for stages 1-4. Pairs poorly with aggressive spending.",
+      "strategy": "Never spend gold once this is active except for mandatory rerolls to find critical weapon cards."
+    },
+    {
+      "name": "Nitragenic Powder",
+      "effect": "+0.5% Critical Chance per nitra held, max 500 stacks (max +250% crit at 500 nitra)",
+      "economyImpact": "Makes nitra hoarding the primary objective. Do not purchase weapon upgrades — hold nitra for crit scaling.",
+      "strategy": "Avoid nitra expenditure entirely. Let secondaries stay at low levels. The crit scaling at high nitra stacks exceeds weapon overclock gains for crit-dependent builds."
+    },
+    {
+      "name": "Pickled Nitra",
+      "effect": "+2% damage and -0.5% move speed per nitra held",
+      "economyImpact": "Similar to Nitragenic Powder — hold nitra for damage scaling. The move speed penalty at high stacks is significant and must be accounted for in build.",
+      "strategy": "Same as Nitragenic Powder: hoard nitra, avoid weapon upgrade purchases."
+    },
+    {
+      "name": "Pay2Win Console",
+      "effect": "+2.5% damage per reroll of anything, up to 100 stacks (+250% max)",
+      "economyImpact": "Each 15g level-up reroll = +2.5% damage. Rerolling is now a direct damage investment, not just a search cost. Budget aggressively for rerolls.",
+      "strategy": "Prioritize acquiring this early. Once active, budget 30-45g per stage for level-up rerolls as a damage investment."
+    },
+    {
+      "name": "DRG Coupon",
+      "effect": "20% discount on all shop purchases",
+      "economyImpact": "Effectively multiplies your gold and nitra budget by 1.25x. Uncommon weapon cards drop from 14n to ~11n, rare from 18n to ~14n. Significantly accelerates level progression.",
+      "strategy": "High priority artifact for any build. Enables earlier overclock unlocks and more total upgrades per run."
+    }
+  ],
+  "dataConfidenceNotes": {
+    "confirmed": [
+      "Shop reroll cost sequence: [5, 7, 10, 14, 20, 28] gold, resets each stage — sourced from official wiki",
+      "Level-up reroll cost: 15 gold flat — sourced from wiki and multiple community discussions",
+      "Weapon upgrade costs by rarity: 14/18/24/38 nitra — sourced from official wiki pricing table",
+      "Tag mastery upgrade costs: 29/35/48/77 gold — sourced from official wiki",
+      "Player stat upgrade costs: 23/29/40/63 gold — sourced from official wiki",
+      "Health heal cost: 30 gold for 50% HP — sourced from wiki",
+      "Overclock breakpoints at levels 6, 12, 18 — sourced from wiki",
+      "Artifact reroll costs 15 nitra and requires meta upgrade unlock — sourced from wiki and community",
+      "Supply pod offers 3 artifact choices — sourced from wiki",
+      "Secondary objectives award ~30 gold on completion — sourced from community discussion",
+      "Gear rarity is NOT stage-dependent — sourced from community testing thread",
+      "Stage 5 has no secondary objective — sourced from wiki"
+    ],
+    "estimated": [
+      "Gold/nitra per-stage income ranges — community consensus, not official data; actual amounts vary by map density and play style",
+      "Number of shop slots visible simultaneously — wiki describes the shop but doesn't enumerate a specific slot count; community suggests 3 per category",
+      "Enemy gold drop amounts — minor source; no official numbers found",
+      "Artifact reroll cost of 15 nitra — confirmed from reroll cost discussion context but wiki doesn't state it explicitly in the fetched content"
+    ],
+    "unknown": [
+      "Whether the shop reroll escalation continues past [5,7,10,14,20,28] with a confirmed formula or caps",
+      "Exact number of gold/nitra veins per stage on a given map",
+      "Whether hazard level affects gold/nitra vein density",
+      "Exact supply pod artifact reroll cost — wiki confirms it costs nitra but the specific 15n figure comes from community discussion, not a wiki table"
+    ]
+  }
+}

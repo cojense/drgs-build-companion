@@ -1,0 +1,532 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Driller",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:CRSPR_Flamethrower",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Colette_Wave_Cooker",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Krakatoa_Sentinel",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Cryo_Cannon"
+  ],
+  "builds": [
+    {
+      "id": "driller-interrogator-fire-dot",
+      "name": "Driller Interrogator Fire DoT",
+      "class": "Driller",
+      "subclass": "Interrogator",
+      "tier": "A",
+      "difficulty": 2,
+      "passive": "+100% Status Effect Damage, -30% Direct Damage — every fire tick deals double; direct shots are weak by design",
+      "synopsis": "Interrogator doubles all DoT damage, making CRSPR Flamethrower and Colette Wave Cooker burn ticks the primary damage source. Sticky Fuel leaves persistent fire zones; Nano Waves stacks burn rapidly. The -30% direct damage penalty is invisible once fire is everywhere.",
+      "playstyle": "Spray fire ahead of the wave, then step back and let the ground do the work. Sticky Fuel turns the terrain into a kill corridor: apply fire to chokepoints, toss Incendiary Grenades into the cluster, then manage repositioning while enemies burn. Colette Wave Cooker supplements with rapid burn stack generation on anything the Flamethrower misses. Avoid toe-to-toe fighting — the -30% direct damage means you will lose trades if fire is not already ticking on the target. Pacing is deliberate: pre-burn the path, kite through the burning zone, reapply.",
+      "strengths": [
+        "Interrogator's +100% Status Effect Damage is always active — every burn tick from every source is doubled with no conditions or ramp time",
+        "Sticky Fuel creates persistent fire zones that damage enemies without requiring further player input, freeing you to reposition or apply more stacks elsewhere",
+        "Colette Wave Cooker with Nano Waves applies 28 burn stacks per second — the fastest stack generation in the Driller weapon pool, and all of it benefits from the Interrogator multiplier"
+      ],
+      "weaknesses": [
+        "The -30% direct damage penalty is permanent and punishing before your first fire weapon is active — Stage 1 combat with just a CRSPR and no OC yet is noticeably weaker than other builds",
+        "Fire DoT cannot crit, making Squint-EE5 and Crit Damage stat upgrades dead draws; roughly one card in five is wasted",
+        "Heavily punished by enemies with fire resistance or immunity on higher hazard levels — the entire damage model collapses against fire-immune targets"
+      ],
+      "tips": [
+        "Sticky Fuel puddles stack with Incendiary Grenade detonations — throw the grenade into an existing puddle to spike the burn stack count on every enemy standing in it simultaneously",
+        "Colette Wave Cooker's Nano Waves OC at lv12 reduces direct damage by 30% but doubles Potency — on Interrogator this tradeoff is irrelevant since direct damage is already penalized and Status Effect Damage is what you're scaling",
+        "Chemist Kit is the single highest-priority artifact for this build; pick it up immediately at any stage regardless of what else is offered",
+        "BRN Shield Belt's fire ring proc on taking damage applies burn stacks to surrounding enemies — on Interrogator, those burn ticks deal double damage, making a defensive proc function as an offensive one"
+      ],
+      "weapons": [
+        {
+          "name": "CRSPR Flamethrower",
+          "isCarry": true,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Bigger Tanks",
+              "verdict": "take",
+              "note": "+100% Lifetime extends your burn coverage window — longer spray time means more terrain on fire before you have to reposition"
+            },
+            {
+              "level": 12,
+              "name": "Sticky Fuel",
+              "verdict": "take",
+              "note": "MUST-TAKE — creates persistent ground fire that keeps burning without you. Pre-burn chokepoints and retreat through them."
+            },
+            {
+              "level": 18,
+              "name": "Even More Beams",
+              "verdict": "take",
+              "note": "+3 beams dramatically widens the fire cone — spray a corridor and everything in it is burning simultaneously"
+            }
+          ]
+        },
+        {
+          "name": "Colette Wave Cooker",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Crowd Cooker",
+              "verdict": "take",
+              "note": "+beam width means more enemies hit per sweep — more burn stacks applied per second across the wave"
+            },
+            {
+              "level": 12,
+              "name": "Nano Waves",
+              "verdict": "take",
+              "note": "Doubles Potency at -30% direct damage — on Interrogator, the direct damage loss is irrelevant; burn stack speed is everything"
+            },
+            {
+              "level": 18,
+              "name": "Thermal Oscillator",
+              "verdict": "situational",
+              "note": "+50% damage and Slow on hit; Slow helps you maintain distance while fire ticks but Centralized Reflector is competitive"
+            }
+          ]
+        },
+        {
+          "name": "Incendiary Grenade",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "A Little More Oomph!",
+              "verdict": "take",
+              "note": "+damage and reload speed — faster grenade cadence means more fire applications per wave"
+            },
+            {
+              "level": 12,
+              "name": "Cluster Grenades",
+              "verdict": "take",
+              "note": "Sub-grenades scatter burn across a wider area; perfect for pre-burning corridors before the wave arrives"
+            },
+            {
+              "level": 18,
+              "name": "Sticky Fuel",
+              "verdict": "take",
+              "note": "Grenade version of CRSPR Sticky Fuel — persistent fire field on detonation stacks with Flamethrower puddles"
+            }
+          ]
+        },
+        {
+          "name": "Firefly Hunter Drone",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "More Drones (+1)",
+              "verdict": "take",
+              "note": "Double drone count — more autonomous fire applicators working while you focus on repositioning"
+            },
+            {
+              "level": 12,
+              "name": "Bigger Payload",
+              "verdict": "take",
+              "note": "More damage per drone hit — each hit applies burn, which Interrogator doubles"
+            },
+            {
+              "level": 18,
+              "name": "Swarm Protocol",
+              "verdict": "take",
+              "note": "Drones coordinate burst attacks — spike burn stack generation on high-priority targets"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": [
+          "Status Effect Damage",
+          "Potency",
+          "Reload Speed",
+          "Damage"
+        ],
+        "avoid": [
+          "Crit Chance — fire DoT cannot crit",
+          "Crit Damage — same reason"
+        ]
+      },
+      "artifacts": {
+        "always": [
+          "Chemist Kit",
+          "Energy Bars",
+          "BRN Shield Belt"
+        ],
+        "good": [
+          "BLT Ration Pack",
+          "Diver's Manual",
+          "Turbo Encabulator"
+        ],
+        "never": [
+          "Squint-EE5",
+          "Nitragenic Powder",
+          "Pickled Nitra"
+        ]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "Establish Fire Coverage",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Start CRSPR Flamethrower immediately — it is your carry and the Interrogator's starting weapon. Add Incendiary Grenade as second pick. The -30% direct damage penalty stings early but Flamethrower burn ticks compensate quickly."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "CRSPR lv6: Bigger Tanks — the extended beam lifetime lets you spray a wider area before repositioning. Avoid Overheat (+100% damage, -35% Lifetime); losing beam time hurts coverage more than it helps burst."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Chemist Kit is the build-defining artifact — buy it the moment it appears even at the cost of skipping other purchases. First stat priority is Status Effect Damage. Keep 15–20g reserve for Stage 2 weapon buys."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "Sticky Fuel Online",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Colette Wave Cooker is the Stage 2 priority buy — it supplements burn stack generation while CRSPR reloads. Firefly Hunter Drone can wait until Stage 3. Push CRSPR to lv12 for Sticky Fuel."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "CRSPR lv12: Sticky Fuel — this is the build's hinge point. Once you have it, pre-burn every approach corridor before the wave. Colette lv6: Crowd Cooker for wider sweeps."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Second Chemist Kit stacks additively — double-Chemist Kit is a win condition for this build. Also prioritize Potency upgrades. BRN Shield Belt can appear here; take it."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "Burn Stack Engine",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Push Colette Wave Cooker to lv12 for Nano Waves — it becomes the fastest burn stack applier in the kit. CRSPR lv18: Even More Beams widens fire cone dramatically. Buy Firefly Hunter Drone."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Colette lv12: Nano Waves — doubles Potency, the -30% direct damage is irrelevant on Interrogator. CRSPR lv18: Even More Beams for wide area fire. Incendiary Grenade lv12: Cluster Grenades."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full Status Effect Damage spending. Energy Bars is excellent here — every level adds damage with no crit dependency. If Turbo Encabulator is available with 4+ OCs equipped, take it."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Autonomous Fire Network",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Firefly Hunter Drone with More Drones provides aerial burn application while you kite. Incendiary Grenade lv18 Sticky Fuel creates a third persistent fire source. The build now has three independent fire coverage systems."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Firefly Drone lv12: Bigger Payload — each drone strike applies burn at double Interrogator intensity. Colette lv18: Thermal Oscillator for slow + damage on stragglers. Incendiary lv18: Sticky Fuel."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Reserve 30g for Stage 5. Complete the Chemist Kit double-stack if still missing. BLT Ration Pack offsets any HP pressure. Dump remaining gold on Status Effect Damage and Potency."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Dreadnought Burn Loop",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Pre-burn the Dreadnought arena with Sticky Fuel puddles before engaging. Deploy Firefly Drones immediately on spawn. The Dreadnought will enter fire zones as it chases you — maintain distance and let the burn tick. Apply fresh stacks with Colette Wave Cooker sweeps when it closes."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "All Status Effect Damage and Potency upgrades are the priority. Reload Speed helps maintain CRSPR uptime during the boss chase. Avoid spending on Move Speed unless you are getting caught."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything on Status Effect Damage. Energy Bars peaks here — your accumulated level-up bonus is at maximum. Gold-Tipped Bullets is worth buying late if you have a strong gold reserve."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "krakatoa-turret-demo",
+      "name": "Krakatoa Turret Demo",
+      "class": "Driller",
+      "subclass": "Demolitions Expert",
+      "tier": "B",
+      "difficulty": 3,
+      "passive": "+20% Reload Speed & AoE Size for [EXPLOSIVE] weapons — Krakatoa turrets are [EXPLOSIVE], so their fire cones are wider and reload faster",
+      "synopsis": "Deploy Krakatoa Sentinel turrets enhanced by the Demolitions Expert AoE passive, then supplement with High Explosive Grenades and Neurotoxin Grenades. Turrets handle sustained fire output while you manage positioning and grenade cooldowns. Tank Tracks OC lets turrets follow you, making it a moving kill platform.",
+      "playstyle": "Place Krakatoa turrets at chokepoints or activate Tank Tracks so they follow you as a mobile escort. Your role is directional: herd enemies into the turret fire arcs with High Explosive Grenades, then let the turrets do the sustained damage. Neurotoxin Grenades slow and DoT enemies that survive the initial turret burst. Stay just behind or beside your turret line — Demolitions Expert AoE passive widens every explosion, so your own grenades can catch you if you get too close. Mid-range management build: not as passive as Constructor Turret Army since turrets must be manually repositioned, but more mobile.",
+      "strengths": [
+        "Demolitions Expert +20% AoE passive applies to Krakatoa Sentinel turret fire cones — each turret covers a wider area than it would on any other subclass, creating overlapping fire fields with just two turrets",
+        "Tank Tracks OC converts stationary turrets into following escorts, removing the deployment micromanagement that makes pure turret builds frustrating on mobile stages",
+        "High Explosive Grenade herds enemies into turret arcs — combining clustering with sustained fire output makes the build effective against both hordes and tough single targets"
+      ],
+      "weaknesses": [
+        "Turrets must be deployed (standing still) unless Tank Tracks is active — before that lv12 OC, repositioning turrets mid-wave is slow and dangerous",
+        "No strong carry weapon for the periods when turrets are reloading or not yet deployed; the build has gaps in output that other Driller builds do not experience",
+        "Krakatoa Protocol (turret explode on death) is unreliable — turrets die mid-wave and the explosion proc timing is uncontrolled, which can self-damage at a critical moment"
+      ],
+      "tips": [
+        "Place turrets slightly behind your grenade throwing position so enemies are already slowed or clustered by grenades when they enter the turret arc — this maximizes turrets' per-second damage output",
+        "Demolitions Expert AoE passive makes Krakatoa turret fire cones overlap significantly with just two turrets placed 90 degrees apart; a 90-degree V-formation covers most of a standard corridor",
+        "Mining Directive OC (lv6) is a trap on this build unless gold is your primary goal — the turrets lose combat time while mining; only take it if the run is starved for resources in Stage 1",
+        "Neurotoxin Grenade Hallucinogenic at lv18 causes confused enemies to attack each other in the turret arc — the turrets hit confused enemies that stand still, dramatically increasing per-enemy damage"
+      ],
+      "weapons": [
+        {
+          "name": "Krakatoa Sentinel",
+          "isCarry": true,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Extra Capacity",
+              "verdict": "take",
+              "note": "+1 turret and +10% range — two turrets with AoE passive creates wide overlapping fire fields; more deployments per wave"
+            },
+            {
+              "level": 12,
+              "name": "Tank Tracks",
+              "verdict": "take",
+              "note": "MUST-TAKE — turrets follow the player, removing deployment micromanagement and converting the build into a mobile fire platform"
+            },
+            {
+              "level": 18,
+              "name": "More Beams",
+              "verdict": "take",
+              "note": "+1 beam per turret; with Demolitions AoE passive the extra beam arc covers even more area — pairs with Extra Capacity for wide multi-beam coverage"
+            }
+          ]
+        },
+        {
+          "name": "High Explosive Grenade",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Compact Explosives",
+              "verdict": "take",
+              "note": "+radius stacks with Demolitions AoE passive — grenade blasts herd enemies into turret arcs"
+            },
+            {
+              "level": 12,
+              "name": "A Little More Oomph!",
+              "verdict": "take",
+              "note": "+damage on the primary burst grenade — kills survivors before they close to melee range"
+            },
+            {
+              "level": 18,
+              "name": "True TNT",
+              "verdict": "take",
+              "note": "Massive damage spike; one-shots clustered enemies that turrets have been softening with fire DoT"
+            }
+          ]
+        },
+        {
+          "name": "Neurotoxin Grenade",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Cluster Grenades",
+              "verdict": "take",
+              "note": "More toxin sub-grenades cover wider area — slows incoming wave while turrets reposition or reload"
+            },
+            {
+              "level": 12,
+              "name": "Tape Some Nails To It",
+              "verdict": "take",
+              "note": "Shrapnel burst on detonation adds direct damage on top of toxin DoT; punishes clustered enemies"
+            },
+            {
+              "level": 18,
+              "name": "Hallucinogenic",
+              "verdict": "take",
+              "note": "Confused enemies fight each other inside turret fire arcs — passive bonus damage without any additional actions"
+            }
+          ]
+        },
+        {
+          "name": "CRSPR Flamethrower",
+          "isCarry": false,
+          "overclocks": [
+            {
+              "level": 6,
+              "name": "Overheat",
+              "verdict": "situational",
+              "note": "+100% damage burst for emergencies when turrets are down; -35% Lifetime limits sustained use but the burst is useful as a gap-filler"
+            },
+            {
+              "level": 12,
+              "name": "Sticky Fuel",
+              "verdict": "take",
+              "note": "Pre-burn the approach lane before deploying turrets — enemies walk through fire on their way into turret arcs, stacking DoT before they arrive"
+            },
+            {
+              "level": 18,
+              "name": "Even More Beams",
+              "verdict": "situational",
+              "note": "Good if Sticky Fuel is not available; wide fire cone covers gaps in turret coverage during repositioning windows"
+            }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": [
+          "Explosion Radius",
+          "Damage",
+          "Reload Speed",
+          "Potency"
+        ],
+        "avoid": [
+          "Mining Speed — turrets need to fight, not mine",
+          "Move Speed — stationary turret deployment benefits from you staying near the placement"
+        ]
+      },
+      "artifacts": {
+        "always": [
+          "Energy Bars",
+          "Turbo Encabulator"
+        ],
+        "good": [
+          "Diver's Manual",
+          "BLT Ration Pack",
+          "Popup Tripod"
+        ],
+        "never": [
+          "Nitragenic Powder",
+          "Pickled Nitra"
+        ]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "First Turret Down",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Krakatoa Sentinel is the carry — deploy it immediately and learn the fire arc. Buy High Explosive Grenade as your second weapon for herding. The build is functional with just these two: turret fires, grenade clusters."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Krakatoa lv6: Extra Capacity for a second turret. Two turrets with AoE passive overlap creates good coverage from Stage 1. Avoid Mining Directive unless resource-starved."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Explosion Radius stat upgrades benefit all weapons simultaneously — buy them aggressively. Energy Bars is the first artifact priority. Keep 20g reserve for Stage 2 weapon purchase."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "Turret Mobility",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Push Krakatoa to lv12 for Tank Tracks — this is the build's quality-of-life breakthrough. Once turrets follow you, buy Neurotoxin Grenade to slow enemies into turret arcs. CRSPR Flamethrower is a good Stage 2 pickup for gap coverage."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Krakatoa lv12: Tank Tracks — mandatory. HE Grenade lv6: Compact Explosives for wider herding blasts. CRSPR lv6: Bigger Tanks if bought this stage."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Turbo Encabulator becomes excellent at Stage 2+ with 4+ OCs equipped — pick it up if available. Continue Explosion Radius and Damage upgrades. DRG Coupon can stretch budget if rerolls are needed."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "Multi-Beam Escort",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Krakatoa lv18: More Beams converts each turret into a multi-arc fire platform. HE Grenade lv18: True TNT for high-damage burst. Neurotoxin lv12: Tape Some Nails for direct damage supplement."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Krakatoa lv18: More Beams — with Tank Tracks already active, your two following turrets now each fire multiple fire arcs. HE Grenade lv12 and lv18 both take straightforward damage OCs."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full stat spend. Popup Tripod is strong here if playing a stationary-ish style near turrets — Reload Speed ramp helps the grenade loop. Gold-Tipped Bullets is viable if gold is high."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Confusion + Fire Loop",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "Neurotoxin lv18: Hallucinogenic — confused enemies standing in turret fire arcs take full sustained damage while attacking each other. CRSPR lv12: Sticky Fuel creates pre-burned terrain for the wave approach. Fully online."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Neurotoxin lv18: Hallucinogenic is the Stage 4 power spike. CRSPR lv12 Sticky Fuel is the second priority. If CRSPR lv18 is reachable, Even More Beams adds wide fire cone for the pre-burn lane."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 30g for Stage 5. Complete Turbo Encabulator value — by Stage 4 you should have 6–8 OCs, the bonus is substantial. Salty Pretzel and The MoCap are optional if you want to run a low-HP style near the turrets."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Escort the Dreadnought",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Priority",
+              "content": "With Tank Tracks active, deploy both turrets, engage the Dreadnought, and let the turrets follow you as you kite. Pre-burn the arena with CRSPR Sticky Fuel. Throw Hallucinogenic Neurotoxin on adds to create confused chaos around the boss. True TNT HE Grenade for burst damage windows."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Explosion Radius and Damage upgrades are the final priority. Reload Speed keeps grenade loop pressure on the boss. Avoid committing gold to Movement Speed unless turret following is causing distance issues."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything. Energy Bars damage peaks at your final level. Turbo Encabulator is at maximum stacks with all overclocks equipped. Gold-Tipped Bullets lands a high multiplier if you have not spent down your gold reserve."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

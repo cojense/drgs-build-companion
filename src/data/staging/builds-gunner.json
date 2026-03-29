@@ -1,0 +1,374 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Gunner",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Weapons",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Overclocks"
+  ],
+  "builds": [
+    {
+      "id": "hurricane-weapons-specialist",
+      "name": "Hurricane Weapons Specialist",
+      "class": "Gunner",
+      "subclass": "Weapons Specialist",
+      "tier": "A",
+      "difficulty": 3,
+      "passive": "After firing 100 [PROJECTILE] shots, automatically fire 8 high-damage projectiles in all directions — scales with Kinetic and Projectile Damage upgrades and can crit",
+      "synopsis": "Rush Hurricane to lv18 for The Favourite (+100% Damage, +100% Fire Rate). Pair with BRT7 Sidearm OC to passively buff Hurricane by 25%. The 100-shot passive proc fires constantly with Hurricane's spray fire, adding an omnidirectional burst every few seconds.",
+      "playstyle": "Hurricane's homing rockets handle AoE — aim loosely at swarm clusters and let the rockets self-guide. Your job is to stay mobile and keep the rocket drum spinning, not to aim precisely. Use BRT7 as a secondary proc-feeder: its Sidearm OC reduces its own damage but adds +25% to all other weapons including Hurricane. The Weapons Specialist passive fires automatically, so play toward the center of the arena to maximize the 8-projectile burst coverage. Stage 3's The Favourite overclock doubles Hurricane's already-strong output — from that point the build handles both swarms and elites comfortably without requiring a freeze setup.",
+      "strengths": [
+        "The Favourite at lv18 turns Hurricane into one of the highest-damage AREA weapons in the game — doubled damage and fire rate on homing rockets that already track targets is devastating",
+        "Weapons Specialist passive triggers constantly off Hurricane's high shot count, adding free omnidirectional bursts that handle flankers without any player input",
+        "BRT7 Sidearm OC is a passive +25% damage multiplier for Hurricane with no playstyle cost — equip it and forget it"
+      ],
+      "weaknesses": [
+        "The Favourite OC penalizes all non-Hurricane weapons by -30% Damage and -30% Fire Rate — BRT7 becomes even weaker, so commit fully to Hurricane as the sole damage source",
+        "Hurricane has significant reload time at base; without Spare Rockets at lv6 to buffer clip size, you will have long dead windows between drums in Stage 1",
+        "Homing rockets can be deceived by fast-moving single targets — Dreadnought mobility can cause rockets to spiral and miss; aim near its feet to compensate"
+      ],
+      "tips": [
+        "Incendiary Payload at lv6 is a strong alternative to Spare Rockets if you want fire DoT setup — fire-covered ground functions as a passive damage zone, letting Hurricane's rockets detonate into burning clusters",
+        "The Weapons Specialist passive projectiles have 100 piercing value and can crit — take Crit Chance upgrades and Squint-EE5 to make every passive burst a potential chain-kill event",
+        "BRT7 with Sidearm OC deals very little damage itself, so never pour XP into leveling it beyond lv6 where the OC unlocks; bank all weapon XP into Hurricane",
+        "Runic Warhead at lv12 (+50% Explosion Radius) converts Hurricane's homing rockets into large-radius blasts — against tight swarms each rocket can clip 6-8 enemies simultaneously",
+        "In Stage 5, aim Hurricane slightly above the Dreadnought's center mass — the homing arc causes rockets to dive into its hitbox rather than overshooting past it at close range"
+      ],
+      "weapons": [
+        {
+          "name": "\"Hurricane\" Guided Rocket System",
+          "isCarry": true,
+          "overclocks": [
+            { "level": 6, "name": "Spare Rockets", "verdict": "take", "note": "+3 clip size — eliminates the painful early reload dead window; Hurricane's base clip is tiny" },
+            { "level": 12, "name": "Runic Warhead", "verdict": "take", "note": "+50% Explosion Radius — each rocket hits a much wider area; devastating against dense swarms" },
+            { "level": 18, "name": "The Favourite", "verdict": "take", "note": "MUST-TAKE — +100% Damage, +100% Fire Rate on Hurricane; other weapons take -30% penalty but BRT7 is already a passive buffer" }
+          ]
+        },
+        {
+          "name": "BRT7 Burst Fire Gun",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Sidearm", "verdict": "take", "note": "MUST-TAKE — -20% BRT7 Damage but +25% Damage to all other weapons including Hurricane; pure passive buff" },
+            { "level": 12, "name": "Gas Rerouting", "verdict": "situational", "note": "+25% Fire Rate and Reload — helps proc the 100-shot Weapons Specialist passive faster if needed" },
+            { "level": 18, "name": "Omni Barrel", "verdict": "skip", "note": "+50% Damage but BRT7 is a passive buffer, not a damage carry after The Favourite OC; not worth the XP" }
+          ]
+        },
+        {
+          "name": "Seismic Repulsor",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Coolant Leak", "verdict": "take", "note": "Cryo on knockback — buys time during Hurricane reload windows" },
+            { "level": 12, "name": "Extra Capacity (+1)", "verdict": "take", "note": "More charges; CC uptime is the main survival tool when rockets are reloading" },
+            { "level": 18, "name": "Extra Capacity (+3)", "verdict": "take", "note": "Near-permanent knockback; Weapons Specialist passive handles anything that gets through" }
+          ]
+        },
+        {
+          "name": "Cryo Cannon",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "More Beams (+1)", "verdict": "take", "note": "Wider freeze for incoming swarms; Hurricane rockets hit frozen clusters for full AoE" },
+            { "level": 12, "name": "Frost Burn", "verdict": "take", "note": "Fire from cold — applies fire DoT after Incendiary Payload primes the ground" },
+            { "level": 18, "name": "Even More Beams (+3)", "verdict": "situational", "note": "Full-width freeze wall; take if Dreadnought tankiness becomes an issue" }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": ["Explosive Damage", "Kinetic Damage", "Explosion Radius", "Crit Chance", "Reload Speed"],
+        "avoid": ["Status Effect Damage — build is explosive/kinetic, not DoT", "Move Speed — Weapons Specialist doesn't require kiting"]
+      },
+      "artifacts": {
+        "always": ["Diver's Manual", "Energy Bars", "Gold-Tipped Bullets"],
+        "good": ["Squint-EE5", "Pay2Win Console", "Turbo Encabulator"],
+        "never": ["Ammo Rig — The Favourite already doubles fire rate; -15% Move Speed is pure cost here", "Popup Tripod — Hurricane is mobile; standing still negates its homing advantage"]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "Lock In Hurricane",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Priority: Hurricane > BRT7 > Seismic Repulsor. Hurricane is the entire build. If not offered at lv5, take the strongest available and bank XP — Hurricane should be your first pickup regardless of when it appears. BRT7 is your secondary proc-feeder, not a damage weapon."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Hurricane lv6: Spare Rockets. The base clip size is painfully small; Spare Rockets eliminates the constant reload dead time and lets you maintain damage pressure. BRT7 lv6: Sidearm — this is a passive +25% Hurricane damage boost, take it immediately."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 100g target. Buy Energy Bars immediately if available — at level 30+ it is +30% Damage on a weapon that already benefits from every Explosive Damage upgrade. Spend on Explosive Damage stat cards only; skip movement and HP until Stage 2."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "Runic Warhead Radius Spike",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Push Hurricane to lv12. Add Cryo Cannon as a third weapon for freeze support — Hurricane rockets detonating into frozen clusters deal full AoE to every frozen enemy simultaneously. Weapons Specialist passive is now firing regularly; position centrally to maximize burst coverage."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Hurricane lv12: Runic Warhead (+50% Explosion Radius). Each rocket now blasts a significantly wider zone — inside a frozen swarm this converts one rocket into a 6-8 enemy hit. Cryo Cannon lv6: More Beams for wide freeze coverage."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend 30g on Explosion Radius upgrades — they stack additively with Runic Warhead and amplify every rocket. Gold-Tipped Bullets is excellent here; Hurricane generates kills fast enough to build a high gold reserve. Look for Squint-EE5 if approaching 75% global Crit Chance."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "The Favourite Online",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "POWER SPIKE. Hurricane lv18: The Favourite. Doubled damage and fire rate on already-strong homing explosive rockets with Runic Warhead radius. Swarms vanish in seconds. BRT7's -30% penalty from The Favourite doesn't matter — it was already a passive buff, not a damage carry."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "The Favourite is non-negotiable. Seismic Repulsor lv6: Coolant Leak for cryo on knockback during reload windows. Cryo Cannon lv12: Frost Burn for fire-from-cold bonus damage. Stack Explosive Damage cards in every offered upgrade."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full spend. Complete Gold-Tipped Bullets + Energy Bars pair — The Favourite's doubled fire rate means kills and gold accumulate faster than any other stage. Diver's Manual gives +10% Damage with no downside; buy on sight. Reroll once for Squint-EE5 if missing."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Support Kit Completion",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Cryo Cannon to lv18: Even More Beams for full-width freeze wall. Seismic Repulsor to lv12: Extra Capacity for sustained CC. Hurricane handles everything — support weapons just need to control flow into its blast zones."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Seismic Repulsor Extra Capacity gives near-permanent knockback uptime. Cryo full beams ensures wide freeze coverage. Take any Explosion Radius or Kinetic Damage global upgrade immediately — these compound with Runic Warhead's radius and The Favourite's doubled damage."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 30g for Stage 5. Turbo Encabulator is valuable here if you have 4+ overclocks — at Stage 4 you likely have 5-6 and the +3% Damage per overclock is meaningful. Pay2Win Console is an excellent reroll companion for finding Squint-EE5 or Diver's Manual."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Boss — Homing Rockets Win",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Hurricane at full power handles the Dreadnought. Freeze with Cryo Cannon immediately on supply pod drop — frozen Dreadnought is a stationary target for homing rockets. Aim at feet to prevent overshooting. Seismic Repulsor handles escorts while Hurricane focuses the boss."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take every Explosive Damage, Kinetic Damage, and Explosion Radius upgrade. Crit Chance is valuable since Weapons Specialist passive projectiles can crit and at Stage 5 you may have 60-70% global Crit Chance — each passive burst becomes a chain-kill event."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything. Gold-Tipped Bullets: dump held gold at boss stage for maximum damage stack. Mine all available nitra. Pay2Win Console stacks persist — reroll aggressively if gold allows. The Favourite's fire rate means you generate kills and Weapons Specialist passive procs faster than any other Gunner build."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bulldog-juggernaut",
+      "name": "Bulldog Juggernaut",
+      "class": "Gunner",
+      "subclass": "Juggernaut",
+      "tier": "B",
+      "difficulty": 4,
+      "passive": "+10 Armor, +50 Max HP, -50% Weapon Range; gain up to +50% Damage (5 stacks of +10%) after taking damage — the more hits you absorb, the harder you hit back",
+      "synopsis": "Juggernaut trades range for tank stats and a retaliatory damage buff. Bulldog with Super Reload Shield OC becomes a short-range powerhouse: +75% Damage and +50% Fire Rate while reloading, plus +100% Armor. Rush Bulldog to lv18, brawl close, reload aggressively, and let Juggernaut's passive stack to full on every wave.",
+      "playstyle": "This is a point-blank brawler. Juggernaut's -50% Weapon Range means every gun is a close-quarters weapon by design — lean into it. Rush into swarms rather than kiting away, absorb hits to stack the +10% damage passive up to 5 times (+50% total), then unload Bulldog at full buff. The Super Reload Shield OC makes reloading during combat an offensive act: the +100% Armor window means you can reload in melee range without dying, while +75% Damage and +50% Fire Rate means the first shots after a reload hit hardest. Use Seismic Repulsor to knock enemies back briefly, immediately close distance again, and maintain all 5 damage stacks by staying in the fight.",
+      "strengths": [
+        "At full Juggernaut passive stacks (+50% Damage from 5 hits absorbed) combined with Super Reload Shield (+75% Damage while reloading), Bulldog lands at over +125% total damage — single-shot executions on standard enemies in late game",
+        "Super Reload Shield's +100% Armor during reload window lets you safely brawl in melee range; enemies that would kill other builds in one hit deal minimal damage while you cycle the chamber",
+        "+50 Max HP and +10 Armor from Juggernaut passive make this the tankiest Gunner subclass — survivability artifacts have much higher floors here than on Enforcer or Weapons Specialist"
+      ],
+      "weaknesses": [
+        "-50% Weapon Range makes every weapon a short-range tool; against enemies that attack from range (spitters, swarmer clusters at a distance) you must close distance aggressively or take damage without dealing any",
+        "Juggernaut damage stacks require taking hits to charge — Stage 1 the stacks are often not fully up, making early game feel underpowered until you develop survivability",
+        "Bulldog's low clip size and slow fire rate mean any gap in the Super Reload Shield window is a real damage dead zone; play cadence must be tightly managed"
+      ],
+      "tips": [
+        "Deliberately step into small hit opportunities early in each wave to pre-stack Juggernaut's passive before the swarm crests — absorbing one hit from a distant spitter charges two stacks without real danger",
+        "Super Reload Shield timing is an aggressive tool: reload mid-fight at point-blank range to gain +100% Armor, then fire the refreshed clip at full +75% Damage into the clustered enemies",
+        "Double Barrel! at lv18 is a strong alternative to Super Reload Shield if you prefer damage density over the brawl-reload loop — two parallel bullets at Bulldog's high base damage is enormous single-hit output",
+        "Salty Pretzel and The MoCap both excel on Juggernaut: the passive stacking design means you are frequently at moderate-to-low HP, triggering both artifacts' damage and armor bonuses simultaneously",
+        "BLT Ration Pack's +2 HP/s regen keeps you from dying between waves — Juggernaut's tankiness floors you at survivable HP but doesn't recover you; regen bridges the gap to the next wave where new hits re-stack the passive"
+      ],
+      "weapons": [
+        {
+          "name": "\"Bulldog\" Heavy Revolver",
+          "isCarry": true,
+          "overclocks": [
+            { "level": 6, "name": "A Little More Oomph!", "verdict": "take", "note": "+15% Damage, +25% Reload Speed — both stats directly improve Bulldog's slow fire cadence and point-blank burst" },
+            { "level": 12, "name": "Reload Shield", "verdict": "take", "note": "Doubles armor while reloading — early version of the Super Reload Shield brawl loop; keeps you alive reloading in melee range" },
+            { "level": 18, "name": "Super Reload Shield", "verdict": "take", "note": "MUST-TAKE — +75% Damage, +50% Fire Rate, +100% Armor while reloading; the entire brawl identity" }
+          ]
+        },
+        {
+          "name": "Seismic Repulsor",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Coolant Leak", "verdict": "take", "note": "Cryo on knockback — knockback then immediately close distance to re-stack Juggernaut passive via hits" },
+            { "level": 12, "name": "Extra Capacity (+1)", "verdict": "take", "note": "More charges; repulsor is a breathing space tool between reload windows, not a permanent CC solution" },
+            { "level": 18, "name": "Extra Capacity (+3)", "verdict": "situational", "note": "Near-permanent knockback — useful if swarms outpace your reload loop, but reduces the hits that stack Juggernaut passive" }
+          ]
+        },
+        {
+          "name": "ArmsKore Coil Gun",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "More Beams (+1)", "verdict": "take", "note": "Wider beam coverage for clearing ranged enemies you cannot safely close on during reload windows" },
+            { "level": 12, "name": "A Little More Oomph!", "verdict": "take", "note": "+15% Damage on a piercing weapon; handles elites that Bulldog struggles to kill through its low clip size" },
+            { "level": 18, "name": "Spliced Emitter", "verdict": "take", "note": "+75% Range, +75% Damage, +75% Lifetime — compensates for Juggernaut's -50% range penalty; lets you engage ranged threats" }
+          ]
+        },
+        {
+          "name": "High Explosive Grenade",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Compact Explosives", "verdict": "take", "note": "+radius; throw into approaching cluster to reduce swarm density before closing to melee range" },
+            { "level": 12, "name": "A Little More Oomph!", "verdict": "take", "note": "+damage; grenade + Super Reload Shield Bulldog follow-up is a devastating combo burst" },
+            { "level": 18, "name": "True TNT", "verdict": "take", "note": "Massive single grenade damage; throw at Dreadnought during Super Reload Shield window for stacked burst" }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": ["Kinetic Damage", "Reload Speed", "Armor", "Max HP", "Crit Chance"],
+        "avoid": ["Move Speed — you close distance intentionally; speed undermines the brawl loop", "Explosion Radius — secondary concern; Bulldog is the primary damage source"]
+      },
+      "artifacts": {
+        "always": ["BLT Ration Pack", "Salty Pretzel", "The MoCap"],
+        "good": ["Energy Bars", "Reflex Calibrator", "Diver's Manual"],
+        "never": ["Gold-Tipped Bullets — hoarding gold contradicts aggressive brawl playstyle; you spend constantly on survivability", "Ammo Rig — -15% Move Speed on a build that must close distance is dangerous"]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "Find Bulldog and Absorb Hits",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Priority: Bulldog > Seismic Repulsor > Coil Gun. Bulldog is the carry. Juggernaut starts with it as the subclass weapon so it should always be available. Do not rush into full swarms yet — absorb one or two hits per wave to begin stacking the passive, then pull back to reload safely."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Bulldog lv6: A Little More Oomph! for +15% Damage and +25% Reload Speed — the reload speed improvement reduces dead time between shots more than any other lv6 option. Seismic Repulsor lv6: Coolant Leak for cryo on knockback, giving breathing room while you reload."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Buy BLT Ration Pack immediately if available — Juggernaut's passive charges off taking hits, meaning passive HP regen is essential to recover between the intentional damage absorption. Save 60g. Spend on Kinetic Damage cards. Skip movement speed entirely."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "Reload Shield Brawl Loop",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Push Bulldog to lv12 for Reload Shield. Once online, practice the brawl loop: close → shoot clip → reload at melee range (doubled armor) → shoot fresh clip. Coil Gun handles ranged elites you cannot safely approach. Build Juggernaut passive stacks before engaging the main swarm."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Bulldog lv12: Reload Shield is mandatory — the early brawl loop is too dangerous without some armor on reload. Seismic Repulsor Extra Capacity lv12 for more CC charges. HE Grenade lv6: Compact Explosives to reduce swarm density before closing distance."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Salty Pretzel is excellent now — you are frequently at 70-80% HP from passive stacking absorption, putting you in the armor-bonus zone often. Spend ~30g on Kinetic Damage and Armor upgrades. Juggernaut's base +10 Armor means Armor stat cards have higher absolute value than on other subclasses."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "Super Reload Shield Online",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "POWER SPIKE. Bulldog lv18: Super Reload Shield. +75% Damage and +50% Fire Rate on the first shots after each reload, plus +100% Armor during the reload itself. At full Juggernaut passive stacks (+50% from 5 hits absorbed) you are firing at effectively +125% Damage. Brawl aggressively — this is when the build peaks."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Super Reload Shield is non-negotiable. Coil Gun lv12: A Little More Oomph! for elite cleanup. HE Grenade lv12 for cluster damage. Deploy all support weapons to manage the swarm flow while Bulldog handles burst execution."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full spend. Complete Salty Pretzel + The MoCap pair — at moderate HP with Super Reload Shield active you have high armor AND high damage simultaneously. Reflex Calibrator stacks dodge on taking damage, which compounds Juggernaut's natural hit-absorption playstyle."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Support Grid Complete",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Coil Gun to lv18: Spliced Emitter — +75% Range compensates for Juggernaut's penalty, letting Coil Gun engage ranged threats effectively. HE Grenade to lv18: True TNT for high-burst grenade finishers. Bulldog remains the primary kill weapon; support weapons handle overflow."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Coil Gun Spliced Emitter restores effective range for the whole kit, partially compensating for Juggernaut's range penalty. Seismic Repulsor Extra Capacity (+3) for near-permanent CC uptime. HE Grenade True TNT for boss-phase burst. Take every Kinetic Damage global upgrade."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 30g for Stage 5. Energy Bars is strong here — Juggernaut's extra +50 Max HP raises the base from which Energy Bars' HP-drain penalty operates, giving more headroom. Reflex Calibrator is excellent now; at Stage 4 you reliably stack it to 3-4 tiers every engagement."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Boss — Brawl and Reload",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Absorb early Dreadnought hits on purpose to stack Juggernaut passive to 5 before committing the Super Reload Shield burst sequence. Throw True TNT HE Grenade on supply pod drop, immediately close distance, shoot Bulldog clip, reload in melee range (Super Reload Shield active), fire fresh clip at full +125% damage. Repeat."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take every Kinetic Damage, Reload Speed, and Armor upgrade. Armor has outsized value on Juggernaut since base +10 Armor means each Armor card percentage is calculated from a higher floor. Crit Chance upgrades compound with The MoCap and Salty Pretzel's damage bonuses."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything on stat upgrades. Diver's Manual is an always-buy if not yet acquired. Energy Bars at Stage 5 adds significant flat damage from accumulated levels. Do not hoard gold — this build generates enough damage from passives and OCs; spend on survivability upgrades to ensure you survive long enough to execute the brawl loop."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

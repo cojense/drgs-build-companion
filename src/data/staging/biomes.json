@@ -1,0 +1,405 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Biomes",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Crystalline_Caverns",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Alien_Threat_Level",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Objectives",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Creatures"
+  ],
+  "researchNotes": "Azure Weald HP/damage modifier confirmed at +15% (same as Salt Pits) based on community research, though the wiki listed it as unknown at time of research. Hazard level within-biome HP/damage modifiers are additive — biome modifier applies first, then per-hazard mutators layer on top. Exact gold/XP multipliers per hazard level are not published by the developers and not datamined on the wiki. The Hazard level 'scalar' on individual creature data pages (haz1 = 1.0, haz5 = 0.95 or 1.3 depending on creature) applies to the creature's damage output; HP also scales but intermediate values (Haz 2, 3, 4) are not documented.",
+  "missionTypes": [
+    {
+      "id": "elimination",
+      "name": "Elimination",
+      "description": "The primary mission type. Available in all 5 biomes. Player survives waves of enemies while fulfilling objectives. Each of stages 1-4 ends with an Elite Creature that must be killed to progress. Stage 5 ends with a Dreadnought boss that must be drawn out by destroying 3 satellite cocoons. Completing Elite kills faster earns better loot crate quality (Legendary > Epic > Rare)."
+    },
+    {
+      "id": "escort-duty",
+      "name": "Escort Duty",
+      "description": "Available in all 5 biomes. The player escorts the Drilldozer Unit B0b-33. Stages 1-2: Collect Oil Shale fuel and deliver it to the dozer while staying within its radius to allow forward movement; ends by arming detonators. Stage 5 (final): The dozer attacks the Ommoran Shell boss; player must stay in the dozer's radius to power it, and must mine Ommoran Beamers (which periodically appear and disable the dozer) with their pickaxe to destroy them."
+    }
+  ],
+  "diveStructure": {
+    "stagesPerDive": 5,
+    "stageNotes": {
+      "stages1to4": "Each stage ends with an Elite Creature encounter. The Alien Threat Level timer activates when an Elite spawns — faster kills yield higher-tier loot crates.",
+      "stage5": "Final stage. In Elimination, player must destroy 3 satellite Elite Cocoons to draw the Dreadnought from its main cocoon, then defeat the Dreadnought boss. Boss drop: Gear."
+    }
+  },
+  "biomes": [
+    {
+      "id": "crystalline-caverns",
+      "name": "Crystalline Caverns",
+      "unlockRequirement": "Unlocked by default (starting biome)",
+      "biomePoints": "5 hazard levels available from the start",
+      "description": "Although many greenbeards begin their career here, don't be fooled by the beauty of this place. The Jewel of Hoxxes is as dangerous as it is breathtaking.",
+      "terrain": "Purple mineable terrain with crystalline structures. Standard mining speed.",
+      "enemyHpModifier": 1.0,
+      "enemyDamageModifier": 1.0,
+      "modifierNotes": "Baseline difficulty — no HP or damage modifier. All other biomes scale upward from this.",
+      "hazards": [
+        "No unique environmental hazards. Standard cave structures."
+      ],
+      "uniqueEnemies": [],
+      "commonEnemies": [
+        "brown-grunt",
+        "blue-grunt",
+        "red-grunt",
+        "fast-grunt",
+        "slasher",
+        "acid-spitter",
+        "exploder",
+        "praetorian",
+        "mactera",
+        "stabber-vine",
+        "spitball-infector"
+      ],
+      "missionTypes": ["elimination", "escort-duty"],
+      "hazardMutators": [
+        {
+          "level": 1,
+          "mutator": "None",
+          "description": "No mutator. Standard experience."
+        },
+        {
+          "level": 2,
+          "mutator": "Bug Nest",
+          "description": "Adds spawned cocoons to the map that hatch additional enemies when approached."
+        },
+        {
+          "level": 3,
+          "mutator": "Weak Signal",
+          "description": "The minimap becomes unreliable — signal interference causes map data to be inaccurate or missing."
+        },
+        {
+          "level": 4,
+          "mutator": "Hard Minerals",
+          "description": "Mining speed is reduced for most terrain."
+        },
+        {
+          "level": 5,
+          "mutator": "Deepstrain Dreadnought",
+          "description": "The Dreadnought boss receives boosted stats."
+        }
+      ],
+      "tips": "Best starting biome. No unique hazards to worry about. Learn enemy types and build fundamentals here. Weak Signal (H3) requires map memorization — pre-plan extraction routes before the minimap becomes unreliable.",
+      "resourceNotes": "Standard resource availability. Red Sugar provides healing. Nitra nodes for resupply. Gold deposits for credits. Baseline for all other biomes."
+    },
+    {
+      "id": "magma-core",
+      "name": "Magma Core",
+      "unlockRequirement": "Requires 2-39 Biome Points to unlock all 5 hazard levels",
+      "biomePoints": "Hazard 1 at 2 points, scaling to Hazard 5 at 39 points",
+      "description": "When you're this close to the core of Hoxxes, angry glyphids are the least of your worries. Between the hot rocks, exploding plants, and magma flows, you'll be lucky to extract without a singed beard!",
+      "terrain": "Dark rocky terrain with lava vents and volatile/explosive flora. Cracked ground near magma flows.",
+      "enemyHpModifier": 1.05,
+      "enemyDamageModifier": 1.05,
+      "modifierNotes": "Enemies have +5% HP and +5% damage compared to Crystalline Caverns baseline.",
+      "hazards": [
+        "Lava deals contact damage — avoid standing on or walking over lava flow surfaces",
+        "Explosive plants detonate when triggered — can chain-react with other flora and enemies",
+        "Cracked ground near magma vents is hazardous"
+      ],
+      "uniqueEnemies": [],
+      "commonEnemies": [
+        "brown-grunt",
+        "blue-grunt",
+        "red-grunt",
+        "fast-grunt",
+        "slasher",
+        "acid-spitter",
+        "exploder",
+        "praetorian",
+        "mactera",
+        "stabber-vine",
+        "spitball-infector"
+      ],
+      "missionTypes": ["elimination", "escort-duty"],
+      "hazardMutators": [
+        {
+          "level": 1,
+          "mutator": "None",
+          "description": "No mutator."
+        },
+        {
+          "level": 2,
+          "mutator": "The Floor is Lava",
+          "description": "Increased lava floor coverage — more of the ground surface deals contact damage."
+        },
+        {
+          "level": 3,
+          "mutator": "Mite Infestation",
+          "description": "Additional enemy type (mites) added to swarms."
+        },
+        {
+          "level": 4,
+          "mutator": "Deep Vibrations",
+          "description": "Environmental vibrations add a gameplay challenge; exact mechanics TBD."
+        },
+        {
+          "level": 5,
+          "mutator": "Bigger Bureaucracy",
+          "description": "Increased enemy count and/or spawn rates."
+        }
+      ],
+      "tips": "Map awareness is critical — memorize lava zones and avoid them during combat movement. Explosive plants can be used offensively to damage dense enemy clusters, but avoid standing near them. Bring fire resistance or sustain builds to counteract lava contact damage.",
+      "resourceNotes": "Standard resource nodes present. Lava zones may block optimal mining paths — plan routes around hazardous terrain."
+    },
+    {
+      "id": "hollow-bough",
+      "name": "Hollow Bough",
+      "unlockRequirement": "Requires 4-55 Biome Points to unlock all 5 hazard levels",
+      "biomePoints": "Hazard 1 at 4 points, scaling to Hazard 5 at 55 points",
+      "description": "A strange maze of regrowing vines and thorns that is a challenge to navigate for even the most experienced graybeards. If you want to make it to extraction you'd best keep digging.",
+      "terrain": "Green mineable terrain. Brown vines regenerate after being mined — tunnels close back up over time. Red vines deal contact damage and also regenerate.",
+      "enemyHpModifier": 1.1,
+      "enemyDamageModifier": 1.1,
+      "modifierNotes": "Enemies have +10% HP and +10% damage compared to Crystalline Caverns baseline.",
+      "hazards": [
+        "Brown vines respawn after mining — corridors are not permanently cleared, requiring constant re-digging",
+        "Red vines deal contact damage and also regenerate — avoid touching them",
+        "Mactera swarms are particularly prevalent in this biome, flying in clusters"
+      ],
+      "uniqueEnemies": [],
+      "commonEnemies": [
+        "brown-grunt",
+        "blue-grunt",
+        "red-grunt",
+        "fast-grunt",
+        "slasher",
+        "acid-spitter",
+        "exploder",
+        "praetorian",
+        "mactera",
+        "stabber-vine",
+        "spitball-infector"
+      ],
+      "missionTypes": ["elimination", "escort-duty"],
+      "hazardMutators": [
+        {
+          "level": 1,
+          "mutator": "None",
+          "description": "No mutator."
+        },
+        {
+          "level": 2,
+          "mutator": "Dark Caves",
+          "description": "Reduced visibility — caves are darker, limiting sight range."
+        },
+        {
+          "level": 3,
+          "mutator": "Clean Shaven",
+          "description": "Terrain modification mechanic; exact nature TBD."
+        },
+        {
+          "level": 4,
+          "mutator": "Increased Demand",
+          "description": "Increased enemy spawn density or frequency."
+        },
+        {
+          "level": 5,
+          "mutator": "Hardened Carapace III",
+          "description": "Enemies gain enhanced armor/damage reduction on top of standard modifiers."
+        }
+      ],
+      "tips": "Do not rely on mined tunnels as permanent safe corridors — vines regenerate. Keep track of red vine locations to avoid contact damage. Mactera clusters are common — ensure you have sufficient AoE or spread damage to handle aerial threats. Movement-heavy builds shine here due to vine terrain blocking standard paths.",
+      "resourceNotes": "Vine regeneration can obstruct resource node access. Mine resources promptly rather than returning later. Standard gold and nitra availability otherwise."
+    },
+    {
+      "id": "salt-pits",
+      "name": "Salt Pits",
+      "unlockRequirement": "Requires 6-60 Biome Points to unlock all 5 hazard levels",
+      "biomePoints": "Hazard 1 at 6 points, scaling to Hazard 5 at 60 points",
+      "description": "A lovely place where mining is a breeze and the rocks are tasty. If it weren't for the unstable stalactites and those pesky Q'ronar you might like it here.",
+      "terrain": "White rocky terrain on red dirt. Most terrain mines faster than other biomes. Dark gray strip terrain is the exception — harder to mine. Tall cave structures with stalactite formations.",
+      "enemyHpModifier": 1.15,
+      "enemyDamageModifier": 1.15,
+      "modifierNotes": "Enemies have +15% HP and +15% damage compared to Crystalline Caverns baseline.",
+      "hazards": [
+        "Mining pulsating red crystal clusters triggers falling stalactites from the ceiling — these deal significant damage but can also kill enemies",
+        "Stalactite timing can be used offensively to thin enemy clusters",
+        "Q'ronar Younglings — extremely fast, bouncing movement that is difficult to predict"
+      ],
+      "uniqueEnemies": [
+        "qronar-youngling",
+        "qronar-youngling-mini-elite",
+        "elite-qronar-shellback"
+      ],
+      "commonEnemies": [
+        "brown-grunt",
+        "blue-grunt",
+        "red-grunt",
+        "fast-grunt",
+        "slasher",
+        "acid-spitter",
+        "exploder",
+        "praetorian",
+        "mactera",
+        "qronar-youngling",
+        "stabber-vine",
+        "spitball-infector"
+      ],
+      "missionTypes": ["elimination", "escort-duty"],
+      "hazardMutators": [
+        {
+          "level": 1,
+          "mutator": "None",
+          "description": "No mutator."
+        },
+        {
+          "level": 2,
+          "mutator": "Poor Sugar",
+          "description": "Red Sugar (health restores) is less abundant or provides less healing."
+        },
+        {
+          "level": 3,
+          "mutator": "Omega Exploders",
+          "description": "Exploders are enhanced — larger explosion radius, more damage, or more frequent spawns."
+        },
+        {
+          "level": 4,
+          "mutator": "Low Supplies",
+          "description": "Reduced resource availability — fewer health and/or resupply options."
+        },
+        {
+          "level": 5,
+          "mutator": "Hell in a Shell",
+          "description": "The Elite Q'ronar Shellback receives significantly boosted stats."
+        }
+      ],
+      "tips": "Mine quickly — softer terrain is an advantage for creating escape routes. Use stalactite triggers deliberately: lure enemy groups under stalactite crystal clusters, then mine the cluster to drop them. Q'ronar Younglings are immune to Freeze — cold/slow builds lose effectiveness. Builds with high DPS area coverage perform well against the bouncing Q'ronar movement pattern.",
+      "resourceNotes": "Easier mining in most terrain means faster access to gold and nitra deposits. Poor Sugar mutator (H2) significantly impacts sustain — plan healing accordingly at higher difficulties."
+    },
+    {
+      "id": "azure-weald",
+      "name": "Azure Weald",
+      "unlockRequirement": "Requires 8-64 Biome Points to unlock all 5 hazard levels",
+      "biomePoints": "Hazard 1 at 8 points, scaling to Hazard 5 at 64 points",
+      "description": "Filled with brilliant bioluminescent light, the Weald can seem almost peaceful at times. However, to the greybeard it's clear that the law of the jungle still applies here.",
+      "terrain": "Wet, lush cave environment with trees, vines, and dense vegetation. Jump pads (mushroom trampolines) are scattered through the terrain.",
+      "enemyHpModifier": 1.15,
+      "enemyDamageModifier": 1.15,
+      "modifierNotes": "Community-confirmed +15% HP and +15% damage (same tier as Salt Pits). Wiki listed as unknown at time of research.",
+      "hazards": [
+        "No Red Sugar spawn — standard healing items are absent; replaced by healing crystal formations",
+        "Jump pads launch the player (and potentially enemies) significant distances — can disrupt positioning",
+        "Unique enemy roster includes Wardens (damage reduction aura), Mini Exploders (fast, numerous), and Big Praetorians (oversized tanks)",
+        "Spawn pattern is burst-based rather than steady trickle — quiet periods followed by intense waves"
+      ],
+      "uniqueEnemies": [
+        "warden",
+        "mini-exploder",
+        "big-praetorian"
+      ],
+      "commonEnemies": [
+        "brown-grunt",
+        "blue-grunt",
+        "red-grunt",
+        "fast-grunt",
+        "slasher",
+        "acid-spitter",
+        "exploder",
+        "mini-exploder",
+        "praetorian",
+        "big-praetorian",
+        "mactera",
+        "warden",
+        "stabber-vine",
+        "spitball-infector"
+      ],
+      "missionTypes": ["elimination", "escort-duty"],
+      "hazardMutators": [
+        {
+          "level": 1,
+          "mutator": "None",
+          "description": "No mutator."
+        },
+        {
+          "level": 2,
+          "mutator": "Shoddy Gold Deposit",
+          "description": "Gold deposits yield less gold — reduced credit income."
+        },
+        {
+          "level": 3,
+          "mutator": "Starved for Choice",
+          "description": "Fewer weapon upgrade options are available during the run."
+        },
+        {
+          "level": 4,
+          "mutator": "Swarm Guard",
+          "description": "Swarms are accompanied by additional guardian-type enemies or enhanced spawn rates."
+        },
+        {
+          "level": 5,
+          "mutator": "Hyper Mini Elites",
+          "description": "Mini Elite enemies receive significantly boosted stats — higher HP, damage, and speed."
+        }
+      ],
+      "tips": "Adapt to burst spawns — use quiet periods to reposition, heal at crystal formations, and prepare for the next wave. Do not rely on Red Sugar for healing; locate healing crystal formations early. Wardens are extreme priority targets — neutralize them first by entering their aura radius (disabling the damage reduction temporarily) then killing them. Multiple stacked Wardens require separating the pack before engaging. Treat jump pads as escape routes or repositioning tools. Mini Exploders require constant movement awareness — they are fast and numerous.",
+      "resourceNotes": "Healing crystals replace Red Sugar entirely — these are fixed location formations rather than random drops. Shoddy Gold Deposit mutator (H2) reduces credit income — factor this into meta progression planning."
+    }
+  ],
+  "hazardModifiers": [
+    {
+      "level": 1,
+      "hpMultiplier": 1.0,
+      "damageMultiplier": 1.0,
+      "goldMultiplier": 1.0,
+      "resourceNotes": "Baseline. Minimum creature scalar values apply (creature-specific, e.g., Brown Grunt damage scalar = 1.0 at Haz1).",
+      "notes": "No mutator active in any biome at Hazard 1. Starting difficulty."
+    },
+    {
+      "level": 2,
+      "hpMultiplier": null,
+      "damageMultiplier": null,
+      "goldMultiplier": null,
+      "resourceNotes": "Higher-level Gear becomes available. More meta progression minerals in veins. More credits and XP compared to Haz 1.",
+      "notes": "Biome-specific mutator activates (Bug Nest, The Floor is Lava, Dark Caves, Poor Sugar, Shoddy Gold Deposit). Exact scalar values not officially published or datamined."
+    },
+    {
+      "level": 3,
+      "hpMultiplier": null,
+      "damageMultiplier": null,
+      "goldMultiplier": null,
+      "resourceNotes": "Continued scaling of rewards vs Haz 2.",
+      "notes": "Second mutator tier activates per biome (Weak Signal, Mite Infestation, Clean Shaven, Omega Exploders, Starved for Choice). Exact scalar values not officially published."
+    },
+    {
+      "level": 4,
+      "hpMultiplier": null,
+      "damageMultiplier": null,
+      "goldMultiplier": null,
+      "resourceNotes": "Higher gear drops and mineral availability.",
+      "notes": "Third mutator tier activates per biome (Hard Minerals, Deep Vibrations, Increased Demand, Low Supplies, Swarm Guard). Exact scalar values not officially published."
+    },
+    {
+      "level": 5,
+      "hpMultiplier": null,
+      "damageMultiplier": null,
+      "goldMultiplier": null,
+      "resourceNotes": "Maximum reward tier. Steam Achievements available for Haz 5 Biome and Weapon Masteries.",
+      "notes": "Maximum difficulty mutator activates per biome (Deepstrain Dreadnought, Bigger Bureaucracy, Hardened Carapace III, Hell in a Shell, Hyper Mini Elites). Creature damage scalar at Haz5 is typically 0.95 (standard enemies) or 1.3-1.4 (elites/bosses) — see individual creature data. Exact across-the-board HP and damage multipliers are not officially published.",
+      "creatureScalarExamples": {
+        "brownGrunt": { "haz1": 1.0, "haz5": 0.95 },
+        "fastGrunt": { "haz1": 1.0, "haz5": 0.95 },
+        "slasher": { "haz1": 1.0, "haz5": 0.95 },
+        "acidSpitter": { "haz1": 1.0, "haz5": 0.95 },
+        "praetorian": { "haz1": 1.0, "haz5": 1.3 },
+        "qronarYoungling": { "haz1": 1.0, "haz5": 1.3 },
+        "eliteMactera": { "haz1": 1.0, "haz5": 1.3 },
+        "dreadnought": { "haz1": 1.0, "haz5": 1.4 }
+      }
+    }
+  ],
+  "biomeDifficultyProgression": {
+    "description": "Biomes are designed as a difficulty ladder. Enemy HP and damage modifiers increase with each biome, encouraging progression through meta upgrades before tackling harder environments.",
+    "progression": [
+      { "biome": "crystalline-caverns", "hpMod": "+0%", "damageMod": "+0%", "tier": 1 },
+      { "biome": "magma-core", "hpMod": "+5%", "damageMod": "+5%", "tier": 2 },
+      { "biome": "hollow-bough", "hpMod": "+10%", "damageMod": "+10%", "tier": 3 },
+      { "biome": "salt-pits", "hpMod": "+15%", "damageMod": "+15%", "tier": 4 },
+      { "biome": "azure-weald", "hpMod": "+15%", "damageMod": "+15%", "tier": 4, "notes": "Same base modifier as Salt Pits but unique enemy roster and mechanics make it distinctly challenging" }
+    ]
+  }
+}

@@ -1,0 +1,358 @@
+{
+  "researchDate": "2026-03-28",
+  "sourceUrls": [
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Engineer",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:LOK-1_Smart_Rifle",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Shard_Diffractor",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Plasma_Burster",
+    "https://deeprockgalactic.wiki.gg/wiki/Survivor:Breach_Cutter"
+  ],
+  "builds": [
+    {
+      "id": "tinkerer-lok1",
+      "name": "Tinkerer LOK-1 Carry",
+      "class": "Engineer",
+      "subclass": "Tinkerer",
+      "tier": "B",
+      "difficulty": 2,
+      "passive": "+10% XP Gain, all weapons start at Level 3 — LOK-1 can reach lv18 on Stage 1 with good XP routing",
+      "synopsis": "LOK-1's lock-on targeting eliminates aim skill, and 'The Favourite' at lv18 doubles both damage and fire rate. Tinkerer's lv3 start means the power spike arrives a full stage earlier than any other build.",
+      "playstyle": "Keep moving — unlike the Warthog build, LOK-1 rewards aggressive kiting. Lock targets while strafing, let the smart targeting system track. Deploy Voltaic Fence to cluster enemies and vacuum XP, then arc LOK-1 bursts into locked groups. Once 'The Favourite' is online, funnel all XP into LOK-1 and accept the penalty on support weapons — they exist only to buy you time between LOK-1 clips.",
+      "strengths": [
+        "Lock-on targeting makes LOK-1 effective even while moving at full speed, unlike all shotgun or heavy-weapon builds",
+        "The Favourite's +100% Damage and +100% Fire Rate at lv18 is among the highest single-weapon payoffs in the game; Tinkerer's lv3 start means this arrives in Stage 1 on a good run",
+        "Battery Bullets converts LOK-1 to electric damage, synergizing with Voltaic Fence's shock field for dual-source electric stacking"
+      ],
+      "weaknesses": [
+        "The Favourite's -30% Damage and -30% Fire Rate penalty to all other weapons makes support tools significantly weaker from lv18 onward — you become nearly one-weapon dependent",
+        "LOK-1 requires sustained target lock to deal full DPS; enemies that die before a full lock burst waste clip capacity and reduce effective damage output",
+        "Lower direct crowd-control than Warthog or turret builds — without a stagger or knockback tool, fast enemies that slip past the lock-on range can close quickly"
+      ],
+      "tips": [
+        "Lead Wrapped Ammo at lv12 (+150% damage, -20% fire rate and reload) is an excellent bridge before The Favourite unlocks at lv18 — take it if the run is strong and you need a mid-game spike",
+        "Voltaic Fence's Magnetic Alloy OC pulls XP orbs into its radius — position the fence at natural choke points to accelerate the lv18 sprint in Stage 1",
+        "After The Favourite is online, spend shop gold on LOK-1 damage upgrades exclusively; support weapon stats are already penalized and further investment there has poor return",
+        "High Caliber Rounds (+100% Piercing, +30% Damage, -30% Fire Rate) is a strong lv12 alt if you face armored targets — the piercing converts to multi-hit bonus on bunched enemies",
+        "Squint-EE5 is viable here: LOK-1's fire rate with The Favourite is high enough that crit checks fire rapidly, and Battery Bullets can push you toward the electric-proc threshold for status synergy"
+      ],
+      "weapons": [
+        {
+          "name": "LOK-1 Smart Rifle",
+          "isCarry": true,
+          "overclocks": [
+            { "level": 6, "name": "Battery Bullets (Electric) or Gas Rerouting", "verdict": "situational", "note": "Battery Bullets for electric synergy with Voltaic Fence; Gas Rerouting if you want pure fire rate and reload to accelerate XP farming toward lv18" },
+            { "level": 12, "name": "Lead Wrapped Ammo or High Caliber Rounds", "verdict": "situational", "note": "Lead Wrapped Ammo for raw damage spike before The Favourite; High Caliber Rounds for piercing into dense groups or armored targets" },
+            { "level": 18, "name": "The Favourite", "verdict": "take", "note": "MUST-TAKE — +100% Damage and +100% Fire Rate; accept the -30% penalty to all other weapons, they are now support tools only" }
+          ]
+        },
+        {
+          "name": "Voltaic Shock Fence",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Magnetic Alloy", "verdict": "take", "note": "XP vacuuming accelerates the lv18 sprint — most important early OC in this build" },
+            { "level": 12, "name": "Extra Capacity (+1)", "verdict": "take", "note": "More fence nodes for wider XP pull radius and better chokepoint coverage" },
+            { "level": 18, "name": "Conduit", "verdict": "take", "note": "Fence follows you — dynamic positioning without needing to redeploy after moving" }
+          ]
+        },
+        {
+          "name": "LOK-1 Smart Rifle (second slot) or Hi-Volt Thunderbird",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Gas Rerouting (Thunderbird)", "verdict": "take", "note": "If running Thunderbird as backup, fire rate and reload keep it functional even under The Favourite's penalty" },
+            { "level": 12, "name": "Battery Bullets (Thunderbird)", "verdict": "situational", "note": "Electric tag adds another status source alongside the fence; mediocre after The Favourite penalty but better than nothing" },
+            { "level": 18, "name": "Bigger Mags (LOK-1 second)", "verdict": "skip", "note": "If a second LOK-1 appeared, Bigger Mags just extends clip; The Favourite already covers damage — this slot is low priority" }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": ["Damage", "Fire Rate", "Reload Speed", "Crit Chance"],
+        "avoid": ["Move Speed upgrades are neutral — you want to move, not stand still, but the stat itself isn't priority; Construct stats are irrelevant in this build"]
+      },
+      "artifacts": {
+        "always": ["Diver's Manual", "Energy Bars", "Turbo Encabulator"],
+        "good": ["Squint-EE5", "5 Leaf Clover", "Pay2Win Console"],
+        "never": ["Popup Tripod — requires standing still; this build kites constantly"]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "Level 3 Head Start — Sprint to lv18",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "LOK-1 starts at lv3. Focus all XP on LOK-1 — lv18 on Stage 1 is the goal. Deploy Voltaic Fence with Magnetic Alloy to vacuum XP from kills near the fence."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "LOK-1 lv6: Battery Bullets for electric synergy with the fence, or Gas Rerouting for faster cycling if you need to spam bursts to stay alive. Either primes you for the lv18 spike."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Buy Voltaic Fence early for its Magnetic Alloy XP pull. Save gold for Diver's Manual or Turbo Encabulator. Avoid spending on support weapon upgrades — those stats will be penalized once The Favourite is online."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "The Favourite Online",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "If LOK-1 didn't hit lv18 in Stage 1, it will hit it very early Stage 2. Once The Favourite is equipped, all non-LOK-1 weapons are support tools. Level Voltaic Fence for Conduit so it follows you during kiting."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "LOK-1 lv18: The Favourite. This is the build. Fence lv12: Extra Capacity. Start Hi-Volt Thunderbird if you need a panic backup that fires under the penalty."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Turbo Encabulator is now excellent — you have at least 2 OCs equipped, and each new OC adds +3% Damage and +3% Reload Speed. Energy Bars stacks damage with every level. Prioritize both."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "Damage Compounding",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Push Fence to lv18 for Conduit. Add a fourth weapon if available — even under The Favourite's penalty, another tag for Multi Tool or another OC stack for Turbo Encabulator adds value."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take any global Damage or Fire Rate upgrade immediately. LOK-1 with The Favourite benefits from every Damage multiplier — the +100% Fire Rate means Damage upgrades apply faster than any other weapon in the pool."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full spend. Complete Turbo Encabulator stacking — target 6+ OCs total. If 5 Leaf Clover is available alongside Pay2Win Console, this stage is where that pair starts compounding Shop offer quality."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Crit Threshold Push",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "No new weapons needed. Confirm Voltaic Fence Conduit is online. If Squint-EE5 was picked up and you're close to 75% Crit Chance, buy any available Crit Chance upgrades aggressively."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take Crit Chance and Crit Damage upgrades if chasing Squint-EE5 threshold. Otherwise take raw Damage. Skip Reload Speed beyond what naturally appears — The Favourite's fire rate means magazine cycling is already fast."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 30g for Stage 5 supply pod. Pay2Win Console rerolls are worth continuing — each reroll permanently stacks damage. Gold-Tipped Bullets can work here if your gold reserve is high from efficient kiting play."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Boss — Lock and Dump",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "LOK-1 carries. Lock onto the Dreadnought, dump the full magazine, reload and repeat. Voltaic Fence placed at your feet shocks anything targeting you while you maintain lock-on focus on the boss."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take every Damage and Crit upgrade. The Favourite's doubled fire rate means each Damage% upgrade translates to more DPS than on any other weapon. Do not buy Reload Speed — redundant at this fire rate."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything on Damage. If Pay2Win Console is equipped, reroll aggressively — permanent stacks matter more than held gold unless Gold-Tipped Bullets is in the loadout."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "devastator-shard-diffractor",
+      "name": "Devastator Shard Diffractor",
+      "class": "Engineer",
+      "subclass": "Devastator",
+      "tier": "B",
+      "difficulty": 3,
+      "passive": "+30% Knockback Force, +15% Explosion Radius — terrain-bouncing plasma beams hit harder and Plasma Burster AoE covers more ground",
+      "synopsis": "Shard Diffractor's bouncing plasma beams compound with Devastator's +15% Explosion Radius on Plasma Burster, creating a room-clearing loop. Overcharged Fuelcells triples the beam damage at the cost of duration — fights are fast, decisive, and geometry-dependent.",
+      "playstyle": "Position in the center of rooms to maximize how many walls the Shard Diffractor beams bounce off of before expiring. Fire Plasma Burster into the same clustered area to layer explosive and beam damage simultaneously. Devastator's knockback force on the Seismic Repulsor creates breathing room when enemies close in — use it reactively, not proactively. This build is geometry-dependent: open arenas reduce bounce hits and drop effective DPS substantially, while tight corridors turn it into a beam wall that shreds entire waves in seconds.",
+      "strengths": [
+        "Shard Diffractor beams bounce off walls and re-hit the same enemies multiple times in tight corridors — Overcharged Fuelcells at lv18 means each bounce hit for +175% damage",
+        "Plasma Burster with More Bounce + Devastator's +15% Explosion Radius creates a wide-arc plasma grenade that can reach around corners and hit multiple waves simultaneously",
+        "Devastator's +30% Knockback Force on Seismic Repulsor covers the build's main weakness: anything that slips past the beam field gets pushed back before it can deal melee damage"
+      ],
+      "weaknesses": [
+        "Entirely geometry-dependent — Overcharged Fuelcells reduces beam lifetime by 40%, so in open rooms with no walls nearby, beams expire before bouncing enough times to justify the damage tradeoff",
+        "Slowest ramp-up of any Engineer build: both Shard Diffractor and Plasma Burster are unlocked at higher Engineer ranks, and neither reaches full potential until lv18 OCs",
+        "No sustained fire option — both the Diffractor and Burster have cooldowns; waves that outlast both cooldowns must be handled by Seismic Repulsor alone until charges reset"
+      ],
+      "tips": [
+        "Fight near walls intentionally: Shard Diffractor beams angle their bounces based on firing direction — aim at a wall to your left while facing the horde and let the bounce arc through the enemy cluster",
+        "Hot Plasma or Cold Plasma at lv6 adds an elemental status alongside beam damage — Cold Plasma slow synergizes beautifully with Seismic Repulsor by keeping knocked-back enemies slowed before they can recover",
+        "Plasma Burster More Bounce! OC extends how many times the grenade bounces before detonating — in a corridor, one grenade can trigger its explosion after hitting two or three wall angles, catching enemies on multiple sides",
+        "Ionized Plasma on Shard Diffractor at lv12 adds shock status — each bouncing beam hit applies a shock check, and with enough bounce hits per second this creates near-constant stun on any enemy in the beam path",
+        "The MoCap pairs exceptionally well: this build naturally takes damage during the slow ramp phase, and once you are at low HP the damage bonus activates precisely when Overcharged Fuelcells beam damage is at its highest"
+      ],
+      "weapons": [
+        {
+          "name": "Shard Diffractor",
+          "isCarry": true,
+          "overclocks": [
+            { "level": 6, "name": "Cold Plasma or Hot Plasma", "verdict": "situational", "note": "Cold Plasma for kite-friendly slow that synergizes with Repulsor pushback; Hot Plasma if Chemist Kit is in the loadout and you want burn stacks from every beam bounce" },
+            { "level": 12, "name": "Ionized Plasma or More Beams", "verdict": "situational", "note": "Ionized Plasma for stun-lock via repeated bounce shock procs; More Beams for wider coverage in open rooms where single-beam bounce paths are less reliable" },
+            { "level": 18, "name": "Overcharged Fuelcells", "verdict": "take", "note": "MUST-TAKE in good geometry — +175% Damage with -40% Lifetime is a massive net positive in tight corridors; skip only in the rare case of an entirely open final stage" }
+          ]
+        },
+        {
+          "name": "Plasma Burster",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "A Little More Oomph!", "verdict": "take", "note": "+15% Damage and +25% Reload Speed — Devastator passive adds +15% Explosion Radius on top, making this the best lv6 OC for raw coverage" },
+            { "level": 12, "name": "Ionized Plasma or Cold Plasma", "verdict": "situational", "note": "Match the Shard Diffractor's element — Cold/Cold creates a freeze loop; Electric/Electric creates dual shock sources" },
+            { "level": 18, "name": "More Bounce! or The Favourite", "verdict": "situational", "note": "More Bounce! in tight maps for extended grenade travel; The Favourite (+75% Damage, +30% Radius) is powerful but penalizes other weapons — only take if Plasma Burster is your primary clear tool" }
+          ]
+        },
+        {
+          "name": "Seismic Repulsor",
+          "isCarry": false,
+          "overclocks": [
+            { "level": 6, "name": "Coolant Leak", "verdict": "take", "note": "Cryo on knockback — frozen enemies remain in the beam field longer, taking more bounce hits from the Diffractor" },
+            { "level": 12, "name": "Extra Capacity (+1)", "verdict": "take", "note": "More charges means more emergency knockback; this is the build's panic button and running out of charges at the wrong moment is fatal" },
+            { "level": 18, "name": "Extra Capacity (+3) or Shockwave", "verdict": "situational", "note": "Extra Capacity (+3) for near-permanent knockback uptime; Shockwave if Devastator's +30% Force already gives enough pushback and you want wider pulse radius instead" }
+          ]
+        }
+      ],
+      "stats": {
+        "priority": ["Damage", "Potency", "Explosion Radius", "Reload Speed"],
+        "avoid": ["Move Speed — standing still to aim bouncing beams is ideal; Kinetic Damage only — plasma is not kinetic, do not prioritize kinetic-specific upgrades"]
+      },
+      "artifacts": {
+        "always": ["Diver's Manual", "Energy Bars", "Chemist Kit"],
+        "good": ["The MoCap", "BLT Ration Pack", "Turbo Encabulator"],
+        "never": ["Popup Tripod — you reposition between beam volleys and cannot stack it reliably", "Piercing Projectiles — Shard Diffractor beams are not standard projectiles and do not benefit from the piercing stat"]
+      },
+      "phases": [
+        {
+          "stage": 1,
+          "title": "Survive Without the Diffractor",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Shard Diffractor is unlocked at Engineer Rank 21 — it may not be available in early runs. Use Seismic Repulsor as primary CC and a standard Engineer weapon (Warthog or LOK-1) as interim carry. If the Diffractor is available, rush it immediately."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Seismic Repulsor lv6: Coolant Leak — freeze on knockback is your survival tool all game. Any available primary weapon to lv6 for its basic OC. Preserve XP for Diffractor if you have it."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "BLT Ration Pack is the priority buy — this build takes hits during Stage 1 without its carry weapon online. Save 80g. Do not buy Chemist Kit yet; status synergy only matters once the Diffractor is applying beam hits."
+            }
+          ]
+        },
+        {
+          "stage": 2,
+          "title": "Plasma Burster Deployed",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "If Plasma Burster is available, deploy it now. A Little More Oomph! at lv6 with Devastator's +15% Explosion Radius creates a wide-coverage grenade. Shard Diffractor should be leveling toward lv12 if online."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Plasma Burster lv6: A Little More Oomph! immediately. Shard Diffractor lv6: Cold or Hot Plasma — pick based on whether Cold (kite/slow) or Hot (burn stacks) fits your available artifact pool. Repulsor lv12: Extra Capacity."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Chemist Kit becomes valuable now that beams and grenades are both applying status. Energy Bars is excellent — you will level quickly from efficient wave clears. Explosion Radius upgrades benefit Plasma Burster directly."
+            }
+          ]
+        },
+        {
+          "stage": 3,
+          "title": "Overcharged Fuelcells Online",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "POWER SPIKE. Shard Diffractor lv18: Overcharged Fuelcells. Every beam hit is now 3x damage — fight in corridors and near walls exclusively. Plasma Burster lv12 for elemental synergy OC."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Overcharged Fuelcells is the build's defining moment. Plasma Burster lv12 elemental OC to match Diffractor element. Repulsor lv18: Extra Capacity (+3) for near-constant knockback availability."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Full spend. Complete Chemist Kit + Energy Bars pair. Stack Damage and Potency — both apply to beam and grenade hits. The MoCap is available here if you've been taking damage during ramp; low HP + Overcharged Fuelcells damage is a strong combo."
+            }
+          ]
+        },
+        {
+          "stage": 4,
+          "title": "Status Loop Established",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Plasma Burster to lv18 for More Bounce! or The Favourite. Turbo Encabulator now has 4+ OCs — it compounds all damage. No new weapons needed; maximize the three-weapon loop: Diffractor beams → Burster grenades → Repulsor pushback."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take Damage and Potency upgrades over everything. Skip Movement Speed and Kinetic-specific upgrades — plasma damage does not benefit from kinetic tags. Any Explosion Radius card is a direct Plasma Burster boost."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Save 30g for Stage 5. Consider Salty Pretzel if running The MoCap — the armor from missing HP creates a low-HP sustain package that lets you operate at the damage-bonus threshold safely."
+            }
+          ]
+        },
+        {
+          "stage": 5,
+          "title": "Boss — Bounce and Explode",
+          "decisions": [
+            {
+              "type": "weapon",
+              "label": "Weapon Pick",
+              "content": "Position near a wall. Fire Shard Diffractor beams at the wall angle so they bounce through the Dreadnought repeatedly. Drop Plasma Burster grenades immediately after each beam volley. Seismic Repulsor on cooldown for escorts."
+            },
+            {
+              "type": "overclock",
+              "label": "Overclock Choice",
+              "content": "Take every Damage, Potency, and Explosion Radius upgrade. Prioritize Potency if status effects are consistently applying from beam bounces — each shock or burn tick on the Dreadnought is amplified by Chemist Kit."
+            },
+            {
+              "type": "shop",
+              "label": "Shop Strategy",
+              "content": "Spend everything. Turbo Encabulator at full OC count delivers the highest final damage multiplier. If The MoCap is in the loadout, enter Stage 5 at low HP deliberately — the damage bonus activates from the first shot."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
