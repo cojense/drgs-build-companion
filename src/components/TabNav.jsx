@@ -1,6 +1,6 @@
 export default function TabNav({ tabs, activeTab, onTabChange }) {
   return (
-    <nav className="flex gap-0 -mb-px">
+    <nav className="flex gap-0 -mb-px overflow-x-auto scrollbar-none">
       {tabs.map(tab => (
         <button
           key={tab.id}

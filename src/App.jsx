@@ -3,11 +3,19 @@ import TabNav from './components/TabNav'
 import CheatSheets from './pages/CheatSheets'
 import StageGuide from './pages/StageGuide'
 import ShopOptimizer from './pages/ShopOptimizer'
+import ArtifactTiers from './pages/ArtifactTiers'
+import WeaponReference from './pages/WeaponReference'
+import Bestiary from './pages/Bestiary'
+import Synergies from './pages/Synergies'
 
 const TABS = [
-  { id: 'cheatsheets', label: 'Build Sheets' },
+  { id: 'cheatsheets', label: 'Builds' },
   { id: 'stageguide',  label: 'Stage Guide' },
   { id: 'shopopt',     label: 'Shop Calc' },
+  { id: 'artifacts',   label: 'Artifacts' },
+  { id: 'weapons',     label: 'Weapons' },
+  { id: 'bestiary',    label: 'Bestiary' },
+  { id: 'synergies',   label: 'Synergies' },
 ]
 
 export default function App() {
@@ -31,6 +39,10 @@ export default function App() {
         {activeTab === 'cheatsheets' && <CheatSheets />}
         {activeTab === 'stageguide'  && <StageGuide />}
         {activeTab === 'shopopt'     && <ShopOptimizer />}
+        {activeTab === 'artifacts'   && <ArtifactTiers />}
+        {activeTab === 'weapons'     && <WeaponReference />}
+        {activeTab === 'bestiary'    && <Bestiary />}
+        {activeTab === 'synergies'   && <Synergies />}
       </main>
     </div>
   )
