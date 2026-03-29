@@ -8,6 +8,24 @@ export const BUILDS = [
     difficulty: 3,
     passive: '+15% Crit Chance, +50% Crit Damage — overkill crits spawn shrapnel explosions',
     synopsis: 'Rush M1000 to lv18. Thick Boy fuses the entire clip into one mega-shot. With Bigger Mags doubling clip to 12, each shot can hit 18k–72k damage.',
+    playstyle: 'Play from mid-range, darting between cover to reload and re-aim. Pacing is deliberate — you charge up, line up one perfect shot, then fall back while the Cryo Grenade buys reload time. Risk profile is high: missing the mega-shot wastes the entire clip, but landing it on a frozen cluster is the highest single-hit output in the game.',
+    strengths: [
+      'Highest single-shot burst damage of any build — capable of deleting elites and Dreadnoughts in one hit',
+      'Scales extremely well with Crit stats; overkill crits spawn shrapnel that chain-kills nearby enemies',
+      'Cryo Grenade combo makes the mega-shot almost impossible to miss on frozen clusters',
+    ],
+    weaknesses: [
+      'Completely offline until lv18 — Stages 1–2 feel underpowered compared to faster-ramping builds',
+      'Missing the Thick Boy shot wastes the full clip and leaves you defenseless during the long reload',
+      'Struggles against fast single targets that refuse to be frozen or clustered',
+    ],
+    tips: [
+      'Throw Gravitational Core Cryo Grenade first — enemies cluster at the impact point before freezing, making the Thick Boy shot a guaranteed multi-kill even without precise aim',
+      'Pickled Nitra grants +50% fire rate on your secondary weapons during the Thick Boy reload window — cycle to Drak-25 or Boomstick immediately after firing',
+      'Squint-EE5\'s -30% damage penalty is completely irrelevant once Thick Boy is online; the mega-shot one-shots even with the penalty, and overkill crits still trigger shrapnel',
+      'At lv12, take Bigger Mags before anything else even if a more tempting card appears — without 12 rounds fused, Thick Boy\'s damage ceiling is halved',
+      'Against the Dreadnought, time the supply pod drop to coincide with a Cryo freeze: the pod deals 50% HP, and your Thick Boy shot covers the remaining armor phase cleanly',
+    ],
     weapons: [
       {
         name: 'M1000 Classic',
@@ -31,9 +49,9 @@ export const BUILDS = [
         name: 'Jury-Rigged Boomstick',
         isCarry: false,
         overclocks: [
-          { level: 6, name: 'Bigger Mags', verdict: 'take', note: 'More shells between reloads' },
-          { level: 12, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on a cleanup weapon' },
-          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Massive single pellet — great for tougher enemies' },
+          { level: 6, name: 'Bigger Mags', verdict: 'take', note: 'More shells between reloads; critical gap-filler during M1000\'s long Thick Boy reload window' },
+          { level: 12, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on a cleanup weapon; Boomstick handles anything that survived the mega-shot' },
+          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Massive single pellet for point-blank finishers — useful panic button when enemies breach melee range during reload' },
         ],
       },
       {
@@ -173,6 +191,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+100% Status Effect Damage, -30% Direct Damage — DoTs are everything; direct hits are just applicators',
     synopsis: 'Wave Cooker with Nano-Waves stacks burn fast, doubled by Interrogator\'s +100% Status Effect Damage. Frost Burn makes Cryo Cannon deal fire damage from cold. Easy once online.',
+    playstyle: 'Play aggressively close — beams need range to saturate, and the Wave Cooker\'s optimal zone is mid-melee. Pacing is continuous: keep beams on targets at all times, rotating between Wave Cooker and Cryo Cannon. Risk is moderate; the passive penalizes direct hits but your DoTs handle damage, so surviving long enough to apply stacks is the only real concern.',
+    strengths: [
+      'Interrogator\'s +100% Status Effect Damage is a flat doubler on every burn tick — easiest DoT multiplier in the game',
+      'Frost Burn synergy is absurd: Cryo Cannon applies cold that triggers fire DoT, effectively running two DoT types simultaneously from one weapon',
+      'Krakatoa Sentinel burns passively while you focus elsewhere — free damage without player input',
+    ],
+    weaknesses: [
+      'Completely gutted by Squint-EE5 — the -30% direct damage stacks additively with the class passive, dropping you to effectively 0 direct DPS',
+      'DoTs cannot crit, so Crit Chance cards are dead draws that other classes would value',
+      'Weak against short-lived enemies that die before burn stacks ramp; best on tanky targets that stay in beam range',
+    ],
+    tips: [
+      'Never pick up Squint-EE5 under any circumstances — the -30% direct damage stacks with Interrogator\'s existing -30%, leaving you near-zero on direct hits with no crit upside since DoTs cannot crit',
+      'Cryo Cannon opener before Wave Cooker is always correct: freeze applies Frost Burn fire DoT, and frozen enemies take the full burn stack before they can reposition',
+      'The MoCap artifact rewards aggressive low-HP play — at 30% HP it\'s essentially a +70% damage multiplier on your already-doubled DoTs, making risky play extremely high-reward',
+      'Krakatoa\'s Tank Tracks OC at lv12 means you can walk into melee range and the turret follows — both you and the turret burn the same target simultaneously for layered stacks',
+      'Potency stat upgrades extend burn duration as well as increasing stack size — prioritize them over raw Damage cards because they compound with the class multiplier',
+    ],
     weapons: [
       {
         name: 'Colette Wave Cooker',
@@ -338,6 +374,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+25% Range & Reload for [HEAVY] weapons, -10% Move Speed — plant your feet and shred',
     synopsis: 'Rush Thunderhead to lv18 for Tightly Wound Springs (+150% fire rate). Cryo Cannon freezes swarms so the autocannon can do the work. Simple, devastatingly effective.',
+    playstyle: 'Plant your feet at a chokepoint and let swarms run into a wall of autocannon fire. Pacing is reactive: freeze with Cryo Cannon when a wave crests, then unload Thunderhead into the frozen mass. The -10% move speed penalty is irrelevant because the loop never requires chasing anything — everything comes to you.',
+    strengths: [
+      'Tightly Wound Springs at lv18 triples the fire rate, converting already-solid autocannon DPS into something absurd against frozen clusters',
+      'Heavy Gunner passive applies to Thunderhead from the start — even a lv5 autocannon hits harder and reloads faster than other classes\' equivalent',
+      'Simple two-step loop (freeze → shoot) is nearly impossible to misplay and punishes dense swarms hardest, exactly when it matters most',
+    ],
+    weaknesses: [
+      '-10% move speed makes repositioning dangerous; getting flanked without Seismic Repulsor charges available is a death sentence',
+      'Thunderhead has poor single-target efficiency before Tightly Wound Springs — elites in Stages 1–2 are annoyingly tanky',
+      'Cryo Cannon is a mandatory pairing; without a freeze setup tool the build loses its DPS window entirely',
+    ],
+    tips: [
+      'Never let the Thunderhead barrel cool between waves — keep it spinning by firing short bursts at distant chaff so spin-up time is near-zero when the real swarm arrives',
+      'Seismic Repulsor with Coolant Leak applies cryo on knockback, which chains with Cryo Cannon freeze — two CC sources means you can layer freeze coverage and almost never run dry',
+      'Gold-Tipped Bullets scales with your current gold; since Heavy Gunner stands still and farms kills passively, you accumulate gold faster than mobile builds — hold it until the Dreadnought encounter for maximum payoff',
+      'Gas Rerouting at lv6 has outsized value because Heavy Gunner\'s passive amplifies every reload stat — the combined bonus is roughly equivalent to two full reload upgrades in one overclock slot',
+      'Squint-EE5 is legitimate here unlike DoT builds — Thunderhead fires so fast that even a modest Crit Chance results in crits nearly every second of sustained fire',
+    ],
     weapons: [
       {
         name: '"Thunderhead" Heavy Autocannon',
@@ -503,6 +557,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+10% XP Gain, all weapons start at Level 3 — can reach lv18 on Stage 1',
     synopsis: 'Tinkerer\'s Level 3 start means Warthog can hit lv18 on Stage 1 with good XP routing. Akimbo makes it fire both directions — solves flanking weakness completely.',
+    playstyle: 'Find a chokepoint, stand still, and let Popup Tripod stack to maximum while the Warthog shreds everything in a 360° arc. Pacing is defensive and methodical — deploy LMG turret and Voltaic Fence, then hold position. The build rewards players who resist the urge to reposition and instead funnel enemies into pre-set kill zones.',
+    strengths: [
+      'Akimbo at lv18 eliminates the core weakness of all shotguns — flanking — by firing both forward and backward simultaneously',
+      'Tinkerer\'s lv3 weapon start enables reaching lv18 on Stage 1 in a good run, giving an enormous tempo advantage over every other build',
+      'Popup Tripod stacks to +30% Fire Rate and +30% Reload while stationary — free sustained DPS that rewards the intended playstyle',
+    ],
+    weaknesses: [
+      'Completely immobile once committed to a position; getting pushed off a good spot by a flanking wave forces a disadvantageous repositioning that drops Popup Tripod stacks',
+      'Warthog\'s short range means the build struggles against enemies that camp at mid-range without approaching — the turret fills this gap but cannot fully compensate',
+      'XP routing to lv18 in Stage 1 requires deliberate pathing; a sloppy run that spreads XP across weapons loses the entire early-game timing advantage',
+    ],
+    tips: [
+      'Voltaic Fence\'s Magnetic Alloy OC vacuums XP orbs — position the fence at natural chokepoints and kills will drop XP directly into its pull radius, dramatically accelerating the lv18 sprint',
+      'Popup Tripod reaches max stacks in under 10 seconds when enemies are actively dying around you — the trick is finding a position before the wave crests, not after it arrives',
+      'Battery Bullets Warthog + LMG Plasma Coating creates overlapping electric damage fields; any target caught in both takes electric ticks from two independent sources scaled by the same stat upgrades',
+      'Akimbo\'s rear direction fires at a slight upward angle — position yourself so the rear arc catches the second wave coming from behind, not just the first wave you\'re already facing',
+      'Pay2Win Console\'s permanent +2.5% damage per reroll compounds all run — use leftover gold from Tinkerer\'s superior economy to reroll aggressively from Stage 3 onward',
+    ],
     weapons: [
       {
         name: '"Warthog" Auto 210',
@@ -668,6 +740,24 @@ export const BUILDS = [
     difficulty: 1,
     passive: '+20% Reload Speed & AoE Size for [EXPLOSIVE] weapons — every grenade is bigger and faster',
     synopsis: 'Easiest S-to-A-tier build. Every weapon is explosive. Cryo Grenade with Gravitational Core pulls enemies into a cluster, then HE Grenade or PGL finishes them in one explosion.',
+    playstyle: 'Lob grenades from mid-range and stay near the edge of your own blast radii — Demolitionist\'s +20% AoE size means your own grenades can hurt you if you\'re careless. Pacing is rhythmic: throw Cryo Grenade, wait for the pull-and-freeze, then detonate. Very forgiving to play since the AoE passive makes imprecise throws still land kills.',
+    strengths: [
+      'Demolitionist\'s AoE passive applies to every single weapon in the kit simultaneously — buying one Explosion Radius upgrade benefits all four grenades at once',
+      'Gravitational Core creates an on-demand clustering mechanic that turns scattered enemies into one-shot opportunities for any explosive follow-up',
+      'Easiest build to keep alive: the combination of strong self-peel, crowd control, and AoE means you rarely need to reload under pressure',
+    ],
+    weaknesses: [
+      'Self-damage is a real risk until you internalize your own blast radii — the same AoE bonus that kills swarms will kill you if you throw too close',
+      'Ammo-hungry: frequent grenade usage means running dry mid-wave is a genuine threat without active nitra management',
+      'Single-target DPS against elites before Gravitational Core is mediocre; elites that cannot be clustered tank through the grenade loop without issue',
+    ],
+    tips: [
+      'Gravitational Core pulls enemies to the impact point before the freeze activates — throw it slightly in front of the swarm, not into the center, so the pull catches the outer edges of the group',
+      'PGL Cluster Grenades on a Gravitational Core freeze is the highest-density explosion in the build: each sub-grenade detonates on its own, so the central cluster absorbs dozens of overlapping blasts',
+      'Demolitionist reload passive means the PGL reload gap is very short — don\'t switch to a secondary during reload, instead throw an HE Grenade manually to bridge the gap and keep the loop continuous',
+      'Explosion Radius stat upgrades are uniquely efficient here: a single +10% radius card affects four different weapons simultaneously, making each card worth more than in any other build',
+      'Acid Grenade\'s Corrosive Burst at lv18 leaves a persistent acid field on the frozen cluster — throw it before HE Grenade True TNT for a damage-over-time finisher on anything that survives the initial blast',
+    ],
     weapons: [
       {
         name: 'Deepcore PGL',
@@ -833,6 +923,24 @@ export const BUILDS = [
     difficulty: 3,
     passive: '+20% Range for [THROWABLE] weapons — Leadburster, Impact Axe, and grenades all benefit',
     synopsis: 'Rough stages 1–3 while building up. Freeze enemies with Cryo Grenades, then spawn Leadbursters inside the frozen group. Cluster Grenades triples throwable output. Devastating late-game.',
+    playstyle: 'Play defensively in Stages 1–3, relying on Impact Axe and Cryo Grenade crowd control while the Leadburster kit comes online. From Stage 4 onward, the rhythm becomes decisive: pull with Gravitational Core, freeze the cluster, then throw Leadbursters directly into the frozen group. The Strong Armed +20% range means you can plant throwables from safer distances than other builds.',
+    strengths: [
+      'Full combo in Stage 4 (Gravitational Core pull → freeze → Cluster Leadbursters with piercing) is one of the highest total-damage bursts per throw in the game',
+      'Strong Armed passive benefits every throwable simultaneously — Impact Axe, Leadburster, and grenades all get extended range, making the kit unusually safe to play from range',
+      'Hallucinogenic Neurotoxin creates passive chaos damage: confused enemies fight each other, generating free kills without player input during reload windows',
+    ],
+    weaknesses: [
+      'Worst early game of any A-tier build — Stages 1–3 without the full combo feel severely underpowered, requiring defensive play and careful resource management',
+      'Difficult to play well: the Gravitational Core → freeze → Leadburster combo has multiple steps that can fail if timing is off or enemies aren\'t clustered tightly',
+      'Crit synergy is mandatory (Squint-EE5 + Nitragenic Powder) but takes gold and nitra investment that is hard to afford during the rough early game',
+    ],
+    tips: [
+      'Throw Leadbursters into the frozen group rather than at it — the spawned Leadburster mines activate inside the cluster, so every individual projectile pierces multiple frozen enemies simultaneously',
+      'Cluster Grenades on the Leadburster at lv6 triples the spawned mine count: one throw becomes three independent Leadbursters, each firing their own piercing shot volley through the frozen pile',
+      'Hallucinogenic Neurotoxin is a passive kill generator — throw it before engaging a large wave and enemies will deal significant damage to each other before you fire a single Leadburster',
+      'During the early game, Impact Axe with Corrosive Coating is your primary damage tool; keep it leveled and use axes for single targets while Cryo Grenade handles groups',
+      'Nitragenic Powder has outsized value here because Strong Armed\'s throwable playstyle means you naturally mine aggressively to collect resources between throws — your nitra count tends to run high',
+    ],
     weapons: [
       {
         name: 'Tactical Leadburster',
@@ -998,6 +1106,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+10% Construct Damage, +10% Construct Reload Speed — turrets are stronger and fire faster',
     synopsis: 'Deploy turrets, collect XP, let them handle the swarms. Rush LMG to lv18 for LMG Overload. Popup Tripod is mandatory — standing still while turrets fight stacks it to max.',
+    playstyle: 'Find a corner or chokepoint, deploy all constructs, and stand still. Pacing is passive — your job is to direct turrets toward targets, maintain Popup Tripod stacks, and use Seismic Repulsor to push anything that slips through. Risk is low against swarms but spikes on single high-damage enemies that your constructs cannot kill fast enough before they reach you.',
+    strengths: [
+      'Maintenance Worker passive stacks with every Construct Reload and Damage upgrade, making turret investment multiplicatively efficient',
+      'LMG Overload at lv18 turns a mediocre turret into a minigun — combined with Tank Tracks, you have a mobile minigun companion that follows you through every room',
+      'Popup Tripod maxes in seconds when standing in a turret\'s kill zone — the stationary playstyle that hurts mobility completely fulfills the artifact\'s stacking condition',
+    ],
+    weaknesses: [
+      'Entirely dependent on turret positioning — a bad corner leaves your constructs firing into walls while enemies flank from uncovered angles',
+      'Weakest direct combat of any Engineer build; without turrets active you have almost no damage output and must rely on Seismic Repulsor CC to survive',
+      'Turrets have finite duration and can be destroyed — dense swarms that overwhelm constructs before cooldowns reset leave you temporarily defenseless',
+    ],
+    tips: [
+      'Deploy LMG turret facing the primary approach vector and Krakatoa Sentinel at 90 degrees covering the flank — two turrets covering different angles is far more effective than both aimed at the same direction',
+      'Popup Tripod stacks are lost immediately when you move; commit to your position before the wave arrives, not after — repositioning mid-wave drops you to 0 stacks at the worst possible moment',
+      'Seismic Repulsor with Coolant Leak plus Krakatoa beam damage creates a freeze-and-burn loop on any enemy that reaches your position — it is your last line of defense, not your CC opener',
+      'Gold-Tipped Bullets is uniquely strong here: you accumulate gold safely while turrets fight for you, so you reliably reach the gold-count thresholds that make the artifact scale without actively farming',
+      'Firefly Hunter Drones with Defensive Chip orbit you personally — they intercept enemies targeting you directly, which fills the gap when both turrets are engaged with the main swarm',
+    ],
     weapons: [
       {
         name: 'LMG Gun Platform',
@@ -1163,6 +1289,24 @@ export const BUILDS = [
     difficulty: 3,
     passive: '+2% Mining Speed per mine action (stacks 25×) — best material farming build in the game',
     synopsis: 'Subata fires backwards while you mine forward — unique playstyle. Best gold and nitra farming build. Acid Dipped Tips at lv12 converts Subata to acid damage. Double Barrel at lv18 doubles pellet count.',
+    playstyle: 'Mine aggressively and retreat constantly — the Foreman loop is: mine until enemies close in, spray Sludge Pump acid behind you as you retreat, fire Subata backward while walking away. The playstyle is uniquely backwards: your weapons face the threat you\'re fleeing, not the direction you\'re moving. Low risk if you respect maximum mining speed stacks; the faster you mine, the faster you move, the harder you are to catch.',
+    strengths: [
+      'Best resource economy in the game — Foreman\'s +2% mining speed per action stacks 25× and the unique backward-firing playstyle lets you mine and fight simultaneously',
+      'Corrosive Flood creates persistent acid puddles covering your retreat path, functioning as passive damage fields that hurt everything chasing you without requiring aim',
+      'Nitragenic Powder has extreme scaling here: a Foreman nitra stockpile is consistently 40–60% larger than equivalent builds, translating directly into Crit Chance far above the normal ceiling',
+    ],
+    weaknesses: [
+      'Subata is essentially useless before lv12 Acid Dipped Tips — the base pistol deals poor damage and the build has no strong primary until the conversion activates',
+      'The Sidearm OC at lv6 is a -25% damage trap in solo play; if you don\'t get a good reroll option you are stuck with a weak lv6 OC until lv12 Acid Dipped Tips rescues the weapon',
+      'Acid DoT cannot crit, making Squint-EE5 and Crit Damage worthless draws — roughly one card type in five is dead for this build',
+    ],
+    tips: [
+      'In solo play always reroll Sidearm at lv6 — the -25% personal damage is a net loss with zero upside; wait for any other option even if the replacement is mediocre',
+      'Keep your Foreman speed stacks active throughout every stage, not just during combat: every mine swing counts, so even mining decorative minerals between waves maintains the stack and your movement speed',
+      'Deploy K1-P Viper Drones before engaging: they apply acid DoT independently while you\'re focused on retreating, effectively doubling acid stack generation without requiring any additional player actions',
+      'Corrosive Flood puddles persist after you leave the area — deliberately retreat through corridors you\'ve already mined so every enemy chasing you runs through a pre-laid acid field',
+      'At Stage 5, continue mining nitra during the Dreadnought fight to maintain Foreman stacks and keep Nitragenic Powder scaling at its peak — the boss arena usually has mineable walls; use them',
+    ],
     weapons: [
       {
         name: 'Subata 120',
@@ -1327,6 +1471,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+20% Move Speed, +3 HP Regen/s when above 50% HP — stay mobile, stay alive',
     synopsis: 'Zhukov SMG pair with high fire rate and Survivalist mobility. Stay above 50% HP for free regen. Use movement speed advantage to kite and outpace swarms. Cryo Grenade buys time to reposition.',
+    playstyle: 'Keep moving at all times — Survivalist\'s regen only activates above 50% HP, so the goal is to never get chunked below that threshold rather than tanking hits. Pacing is fluid and reactive: kite the swarm, dump a Cryo Grenade when they bunch up, then reload and unload Embedded Detonators into the frozen cluster. Low risk for experienced players; punishing for players who stand still and trade hits.',
+    strengths: [
+      'Survivalist\'s +20% move speed is the largest base mobility bonus in the game, making kiting and resource collection dramatically more efficient than any other Scout subclass',
+      'Embedded Detonators turns the Zhukov\'s dump-and-reload pattern into a massive burst — emptying the clip into a frozen cluster then reloading detonates every embedded explosive simultaneously',
+      '+3 HP regen per second above 50% HP is effectively free sustain in most engagements, removing the need for healing artifacts that other builds waste a slot on',
+    ],
+    weaknesses: [
+      'Embedded Detonators requires completing the full clip before reloading to maximize the burst — reloading early on a force of habit ruins the entire DPS window',
+      'No meaningful damage output before lv18; Zhukov base DPS is respectable but not exceptional, making Stages 1–2 feel ordinary compared to the eventual payoff',
+      'Popup Tripod is actively counterproductive — the entire build revolves around constant movement, so a slot wasted on a stationary buff artifact is a significant opportunity cost',
+    ],
+    tips: [
+      'The Embedded Detonators detonation triggers on reload, not on timer — never reload early out of habit; deliberately empty the full Zhukov clip before reloading to maximize the explosion count',
+      'Cryo Gravitational Core pull clusters enemies before freezing them, meaning your Embedded Detonator reload detonation hits every enemy in the pile at once — the damage output on a tight cluster is dramatically higher than on spread targets',
+      'Survivalist\'s +20% move speed lets you collect XP orbs from distant kills that other builds would miss — actively run toward orbs after each engagement rather than waiting for the next wave to approach',
+      'Boomstick Thick Boy at lv18 fires during movement as a burst panic button; use it on any elite that survives the Embedded Detonator burst and closes to melee range while you\'re mid-reload',
+      'BLT Ration Pack\'s +70 HP raises your 50% HP regen threshold from ~150 to ~185 — a larger buffer makes regen activate in more situations and gives you more leeway before the passive shuts off',
+    ],
     weapons: [
       {
         name: 'Zhukov Mk II',
@@ -1432,6 +1594,24 @@ export const BUILDS = [
     difficulty: 3,
     passive: '+50% Damage for 3s after moving 15m without stopping — burst window rewards constant repositioning',
     synopsis: 'Dash constantly to maintain the 15m movement burst window, then dump Boltshark bolts or a Thick Boy shot during the +50% burst. Cryo Grenade freezes targets so you can fire in the burst window without enemies closing gap.',
+    playstyle: 'Never stop moving — the burst window only activates after traveling 15m without stopping, so constant repositioning is both offense and defense. The rhythm is: dash to trigger the +50% window, freeze with Cryo Bolt or Cryo Grenade to lock targets in place, fire Bolt Volley during the 3-second window, then dash again to reset. High execution ceiling but the payoff — tripled burst damage stacking with crits — is the highest peak DPS in Scout\'s kit.',
+    strengths: [
+      'Bolt Volley during the burst window fires three bolts at +50% damage simultaneously — with Squint-EE5 crits active this is a single-trigger spike that exceeds Thick Boy against non-elite targets',
+      'Cryo Bolt OC makes the Boltshark its own setup tool — fire a freeze bolt, dash to trigger the burst window, then fire into the frozen target for double-dipping CC and burst damage from one weapon',
+      'Infiltrator\'s passive has zero downside: the burst window activates through normal movement, so experienced players maintain nearly 100% uptime without changing their natural playstyle',
+    ],
+    weaknesses: [
+      'Highest execution difficulty of all Scout builds — maintaining the dash cycle, timing Cryo Bolt freeze, and landing Bolt Volley in a 3-second window while managing enemies requires simultaneous mechanical demands',
+      'Stopping to aim precisely or to pick up resources resets the burst window, creating a constant tension between accuracy and movement maintenance',
+      'Popup Tripod is a build-destroying artifact here — any temptation to stand still to stack it completely kills the passive that the entire build depends on',
+    ],
+    tips: [
+      'The burst window resets on any pause, not just a full stop — brief hesitation to aim also resets it; learn to fire while still moving by leading targets slightly rather than stopping to aim',
+      'Gravitational Core Cryo Grenade pull clusters all nearby enemies to one point before freezing them: one Bolt Volley during the burst window hits every enemy in the pile — the most efficient use of the 3-second window',
+      'Movement Speed upgrades are tier-1 priority for Infiltrator specifically because faster speed shortens the time to travel 15m, meaning more burst windows per minute — a 10% move speed increase translates directly to more DPS cycles',
+      'Cryo Bolt on the Boltshark lets you fire a freeze bolt mid-dash without stopping: throw the bolt, continue dashing, and when the freeze activates you\'re already in the burst window — a completely seamless setup from one weapon',
+      'M1000 Thick Boy during the burst window is a situational nuke for Dreadnoughts: dash 15m, fire the mega-shot at +50% damage — against a boss with a large hitbox you never need to stop moving to land it',
+    ],
     weapons: [
       {
         name: 'Nishanka Boltshark X-80',
@@ -1537,6 +1717,24 @@ export const BUILDS = [
     difficulty: 2,
     passive: '+15% Damage, -20% Move Speed — plant your feet and delete everything in front of you',
     synopsis: 'Lead Storm Minigun with Bullet Hell OC turns you into a stationary damage engine. Enforcer\'s +15% damage is always-on and stacks with all upgrades. Pair with Seismic Repulsor for CC — enemies can\'t reach you before dying.',
+    playstyle: 'Find a chokepoint, start spinning, never stop. Enforcer\'s -20% move speed is a non-issue because the optimal strategy is identical with or without it: stand still, freeze the incoming wave, and spin up before contact. Bullet Hell converts kills into ricochet chains that clear adjacent enemies without aiming — dense swarms are not a problem, they are the preferred target.',
+    strengths: [
+      'Enforcer\'s +15% damage is unconditional and applies to every bullet including Bullet Hell ricochets — the passive multiplies the already-absurd chain kill damage from ricochet chains',
+      'Bullet Hell turns any kill in a dense swarm into a cascade: one enemy death spawns ricochets that kill two more, each of those spawns more ricochets — a single sustained burst can clear an entire wave',
+      'Pickled Nitra\'s -15% move speed penalty is completely irrelevant for Enforcer — you were already standing still, so the artifact\'s +50% fire rate is pure gain',
+    ],
+    weaknesses: [
+      '-20% move speed makes escaping bad positions extremely difficult; if flanked without Seismic Repulsor charges the only option is to spin through the damage, which requires BLT or MoCap survivability',
+      'Minigun spinup time creates a vulnerability window — Bullet Hell is devastating once spinning but any surprise engagement before warmup means several seconds of suboptimal damage',
+      'Bullet Hell ricochets scale poorly against single isolated targets; Dreadnoughts without escort swarms see roughly half the effective DPS compared to a dense wave fight',
+    ],
+    tips: [
+      'Start the minigun spinning before enemies arrive, not when they arrive — the spinup window exists to be pre-loaded at a chokepoint; if you wait until contact the first few seconds of the engagement are wasted',
+      'Burning Hell at lv12 requires sustained fire to reach max heat; never let the barrel cool intentionally — maintain spin between wave peaks by firing at terrain corners or distant chaff to keep heat near maximum',
+      'Bullet Hell ricochets travel on the X-axis at roughly the same height as the kill — position yourself slightly elevated so ricochets angle down into the approaching swarm rather than flying over heads',
+      'Cryo Cannon freeze before spinup covers the vulnerability window completely: freeze the wave while minigun spins up, and by the time Bullet Hell is active the enemies are immobile targets lined up for chain-kill cascades',
+      'The MoCap\'s low-HP damage multiplier stacks multiplicatively with Enforcer\'s flat +15% passive — at 30% HP you are effectively running a +52% total damage multiplier, making intentional low-HP play viable if you have BLT regen as a floor',
+    ],
     weapons: [
       {
         name: 'Lead Storm Powered Minigun',
@@ -1642,6 +1840,24 @@ export const BUILDS = [
     difficulty: 3,
     passive: '+30% Knockback Force, +15% Explosion Radius — all weapons push harder and blast wider',
     synopsis: 'Seismic Repulsor with Devastating Shockwave becomes a CC engine. Extended range knockback into walls deals terrain damage. Autocannon or Thunderhead with high fire rate mops up knocked-back enemies. Rough early, excellent late.',
+    playstyle: 'Stand at the middle of the room rather than in a corner — Devastating Shockwave needs enemies to land against walls for maximum terrain damage, so positioning away from walls lets you push enemies into surfaces from any direction. Pacing is reactive and rhythmic: repulse on cooldown, spray Thunderhead at knocked-back clusters, freeze survivors. High risk early, low risk after Devastating Shockwave is online because the CC chain denies enemies ever reaching melee range.',
+    strengths: [
+      'Devastating Shockwave plus Devastator\'s +30% knockback force creates terrain damage that scales with room geometry — fighting in narrow corridors with walls close by multiplies effective damage without any stat investment',
+      'The knockback chain is self-sustaining: push → auto-explode → anything that survives gets hit by Thunderhead follow-up before recovery, meaning the loop has no dead time',
+      '+15% Explosion Radius from the passive applies to both Devastating Shockwave\'s explosion and HE Grenade simultaneously — AoE upgrades benefit two weapons at once',
+    ],
+    weaknesses: [
+      'Weakest Stages 1–2 of any Gunner build — Repulsor without Devastating Shockwave is a crowd control tool with mediocre damage, and Thunderhead before Tightly Wound Springs is slow to kill',
+      'Requires wall geometry to deal full damage — open arenas with no walls nearby drastically reduce the knockback chain\'s efficiency and can leave survivors that should have died',
+      'Repulsor cooldown creates gaps in the CC loop; without Cryo Cannon coverage during those gaps, fast enemies can close the distance before the next charge is ready',
+    ],
+    tips: [
+      'Stand in the center of rooms deliberately: Devastating Shockwave pushes radially outward, so central positioning means every knocked-back enemy travels the maximum distance and hits a wall from any direction',
+      'Devastator\'s +30% knockback force stacks with Shockwave OC at lv6, meaning even before Devastating Shockwave at lv18 the terrain damage from wall impacts is significantly higher than other classes\' identical OC — it\'s worth leveling Repulsor to lv6 even in Stages 1–2',
+      'HE Grenade True TNT thrown immediately after a Devastating Shockwave detonation catches the knocked-back cluster at their new position before they can spread — the grenade landing slightly behind the push direction maximizes overlap',
+      'Cryo Cannon covers the Repulsor cooldown window: freeze the surviving group immediately after a repulse so you have the full cooldown duration to spray Thunderhead without anything closing in',
+      'Extra Capacity (+3) at lv18 gives near-permanent Repulsor charges — once online you can chain repulse an entire wave into perpetual knockback, never allowing enemies to stabilize and close distance',
+    ],
     weapons: [
       {
         name: 'Seismic Repulsor',

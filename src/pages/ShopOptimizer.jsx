@@ -2,6 +2,7 @@ import { useState, useMemo } from 'react'
 import { BUILDS } from '../data/builds'
 import { STAGE_ECONOMY, REROLL_COSTS } from '../data/economy'
 import { ARTIFACTS, ARTIFACT_BY_NAME, ARTIFACT_CATEGORIES } from '../data/artifacts'
+import ArtifactTag from '../components/shared/ArtifactTag'
 
 function computeRecommendations({ stage, gold, nitra, heldArtifacts, buildId }) {
   const economy = STAGE_ECONOMY[stage - 1]
@@ -250,19 +251,27 @@ export default function ShopOptimizer() {
                 </p>
                 <div className="flex flex-wrap gap-2">
                   {arts.map(art => (
-                    <button
-                      key={art.id}
-                      onClick={() => toggleArtifact(art.id)}
-                      title={`[${art.tier}] ${art.effect}`}
-                      className={[
-                        'text-xs font-mono px-2.5 py-1.5 rounded border transition-colors min-h-[36px]',
+                    <div key={art.id} className="relative flex items-center">
+                      <button
+                        onClick={() => toggleArtifact(art.id)}
+                        className={[
+                          'text-xs font-mono px-2.5 py-1.5 rounded-l border-y border-l transition-colors min-h-[36px]',
+                          heldArtifacts.includes(art.id)
+                            ? 'bg-drg-amber/20 text-drg-amber border-drg-amber/50'
+                            : 'bg-dark-steel text-text-secondary border-border-subtle hover:text-text-primary',
+                        ].join(' ')}
+                      >
+                        {art.name}
+                      </button>
+                      <div className={[
+                        'flex items-center px-1.5 min-h-[36px] rounded-r border-y border-r transition-colors',
                         heldArtifacts.includes(art.id)
-                          ? 'bg-drg-amber/20 text-drg-amber border-drg-amber/50'
-                          : 'bg-dark-steel text-text-secondary border-border-subtle hover:text-text-primary',
-                      ].join(' ')}
-                    >
-                      {art.name}
-                    </button>
+                          ? 'bg-drg-amber/20 border-drg-amber/50'
+                          : 'bg-dark-steel border-border-subtle',
+                      ].join(' ')}>
+                        <ArtifactTag name={art.name} variant="toggle" />
+                      </div>
+                    </div>
                   ))}
                 </div>
               </div>

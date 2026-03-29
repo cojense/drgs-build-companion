@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { BUILDS } from '../data/builds'
 import PhaseCard from '../components/stageguide/PhaseCard'
+import EconomyPanel from '../components/stageguide/EconomyPanel'
 
 const TIER_COLORS = {
   S: 'text-drg-amber',
@@ -10,7 +11,7 @@ const TIER_COLORS = {
 
 export default function StageGuide() {
   const [selectedId, setSelectedId] = useState(BUILDS[0].id)
-  const [expandAll, setExpandAll] = useState(false)
+  const [activeStage, setActiveStage] = useState(1)
 
   const build = BUILDS.find(b => b.id === selectedId)
 
@@ -23,7 +24,7 @@ export default function StageGuide() {
         </label>
         <select
           value={selectedId}
-          onChange={e => setSelectedId(e.target.value)}
+          onChange={e => { setSelectedId(e.target.value); setActiveStage(1) }}
           className="w-full bg-dark-steel border border-border-subtle text-text-primary rounded-lg px-3 py-3 text-sm font-semibold appearance-none min-h-[44px] focus:outline-none focus:border-drg-amber"
         >
           {BUILDS.map(b => (
@@ -34,9 +35,9 @@ export default function StageGuide() {
         </select>
       </div>
 
-      {/* Build summary strip */}
       {build && (
         <>
+          {/* Build summary strip */}
           <div className="bg-dark-steel border border-border-subtle rounded-lg px-4 py-3 mb-4">
             <div className="flex items-start justify-between gap-3">
               <div>
@@ -49,22 +50,83 @@ export default function StageGuide() {
                   </span>
                 </div>
                 <p className="text-xs text-text-secondary leading-relaxed">{build.synopsis}</p>
+                {build.playstyle && (
+                  <p className="text-xs text-text-primary leading-relaxed mt-1.5">{build.playstyle}</p>
+                )}
               </div>
             </div>
             <p className="text-xs text-nitra-teal font-mono mt-2">{build.passive}</p>
+
+            {/* Strengths & Weaknesses */}
+            {(build.strengths || build.weaknesses) && (
+              <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-border-subtle">
+                {build.strengths && (
+                  <div>
+                    <p className="text-xs font-mono text-nitra-green uppercase tracking-wide mb-1">Strengths</p>
+                    <ul className="space-y-0.5">
+                      {build.strengths.map((s, i) => (
+                        <li key={i} className="text-xs text-text-secondary leading-snug">+ {s}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+                {build.weaknesses && (
+                  <div>
+                    <p className="text-xs font-mono text-lava-red uppercase tracking-wide mb-1">Weaknesses</p>
+                    <ul className="space-y-0.5">
+                      {build.weaknesses.map((w, i) => (
+                        <li key={i} className="text-xs text-text-secondary leading-snug">− {w}</li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+              </div>
+            )}
+
+            {/* Tips */}
+            {build.tips && build.tips.length > 0 && (
+              <div className="mt-3 pt-3 border-t border-border-subtle">
+                <p className="text-xs font-mono text-drg-amber uppercase tracking-wide mb-1.5">Tips</p>
+                <ol className="space-y-1">
+                  {build.tips.map((tip, i) => (
+                    <li key={i} className="text-xs text-text-secondary leading-snug">
+                      <span className="text-drg-gold font-mono mr-1">{i + 1}.</span>{tip}
+                    </li>
+                  ))}
+                </ol>
+              </div>
+            )}
+          </div>
+
+          {/* Stage selector pills */}
+          <div className="flex gap-2 mb-3">
+            {[1, 2, 3, 4, 5].map(s => (
+              <button
+                key={s}
+                onClick={() => setActiveStage(s)}
+                className={`flex-1 py-2 rounded text-xs font-mono font-bold border transition-colors ${
+                  activeStage === s
+                    ? 'bg-drg-amber text-cave-black border-drg-amber'
+                    : 'bg-dark-steel text-text-secondary border-border-subtle hover:border-drg-amber hover:text-text-primary'
+                }`}
+              >
+                S{s}
+              </button>
+            ))}
           </div>
 
           {/* Phase timeline */}
           <div className="relative">
-            {/* Vertical line */}
             <div className="absolute left-[28px] top-4 bottom-4 w-px bg-border-subtle z-0" />
-
             <div className="space-y-3 relative z-10">
               {build.phases.map(phase => (
                 <PhaseCard key={phase.stage} phase={phase} />
               ))}
             </div>
           </div>
+
+          {/* Economy panel for active stage */}
+          <EconomyPanel currentStage={activeStage} />
         </>
       )}
     </div>

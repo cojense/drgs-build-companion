@@ -57,10 +57,53 @@ export default function BuildCard({ build }) {
       <div className={`grid transition-all duration-200 ease-in-out ${open ? 'grid-rows-[1fr]' : 'grid-rows-[0fr]'}`}>
         <div className="min-h-0 overflow-hidden">
           <div className="border-t border-border-subtle">
-            {/* Synopsis */}
+            {/* Synopsis + playstyle */}
             <div className="px-4 py-3 bg-elevated-panel">
               <p className="text-xs text-text-secondary leading-relaxed">{build.synopsis}</p>
+              {build.playstyle && (
+                <p className="text-xs text-text-primary leading-relaxed mt-1.5">{build.playstyle}</p>
+              )}
               <p className="text-xs text-nitra-teal font-mono mt-1">{build.passive}</p>
+
+              {/* Strengths & Weaknesses */}
+              {(build.strengths || build.weaknesses) && (
+                <div className="grid grid-cols-2 gap-2 mt-3 pt-3 border-t border-border-subtle">
+                  {build.strengths && (
+                    <div>
+                      <p className="text-xs font-mono text-nitra-green uppercase tracking-wide mb-1">Strengths</p>
+                      <ul className="space-y-0.5">
+                        {build.strengths.map((s, i) => (
+                          <li key={i} className="text-xs text-text-secondary leading-snug">+ {s}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                  {build.weaknesses && (
+                    <div>
+                      <p className="text-xs font-mono text-lava-red uppercase tracking-wide mb-1">Weaknesses</p>
+                      <ul className="space-y-0.5">
+                        {build.weaknesses.map((w, i) => (
+                          <li key={i} className="text-xs text-text-secondary leading-snug">− {w}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  )}
+                </div>
+              )}
+
+              {/* Tips */}
+              {build.tips && build.tips.length > 0 && (
+                <div className="mt-3 pt-3 border-t border-border-subtle">
+                  <p className="text-xs font-mono text-drg-amber uppercase tracking-wide mb-1.5">Tips</p>
+                  <ol className="space-y-1">
+                    {build.tips.map((tip, i) => (
+                      <li key={i} className="text-xs text-text-secondary leading-snug">
+                        <span className="text-drg-gold font-mono mr-1">{i + 1}.</span>{tip}
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              )}
             </div>
 
             {/* Overclock table */}

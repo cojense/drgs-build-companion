@@ -1,3 +1,5 @@
+import ArtifactTag from '../shared/ArtifactTag'
+
 const COLUMNS = [
   { key: 'always', label: 'ALWAYS',  bg: 'bg-nitra-green/10', border: 'border-nitra-green/30', text: 'text-nitra-green' },
   { key: 'good',   label: 'GOOD',    bg: 'bg-cool-blue/10',   border: 'border-cool-blue/30',   text: 'text-cool-blue' },
@@ -15,7 +17,9 @@ export default function ArtifactPriority({ artifacts }) {
               <li className="text-xs text-text-secondary italic">—</li>
             ) : (
               artifacts[col.key].map(name => (
-                <li key={name} className="text-xs text-text-primary leading-snug">{name}</li>
+                <li key={name} className="text-xs leading-snug">
+                  <ArtifactTag name={name} />
+                </li>
               ))
             )}
           </ul>

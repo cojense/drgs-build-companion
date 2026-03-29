@@ -10,7 +10,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+30% Crit Chance, +100% Crit Damage, -30% Direct Damage',
     unlock: 'Reach 75% Global Crit Chance',
-    synergy: 'Core for crit builds (Sharpshooter). The direct damage penalty vanishes at high crit rates. Avoid on DoT builds — crits don\'t apply to damage-over-time.',
+    synergy: 'The defining artifact for the Thick Boy Sniper build, where high base Crit Chance makes the -30% Direct Damage penalty functionally invisible — once you\'re critting on nearly every shot, that penalty no longer applies to the bulk of your output. Pairs extremely well with Nitragenic Powder (which stacks Crit Chance per Nitra held) and any overclock that boosts Crit Chance, pushing you past the 75% threshold quickly. Skip entirely on Interrogator Fire DoT and Acid Foreman builds — crits do not trigger on damage-over-time ticks, so the bonus Crit Damage never fires and the -30% Direct Damage is a pure loss.',
+    strategy: 'Pick up early if you already have one Crit Chance source (an overclock or weapon passive) that gets you within reach of the 75% unlock threshold; the sooner you have it the more shots benefit from the +100% Crit Damage multiplier. In mid-game, pair with Nitragenic Powder and hold your Nitra to maintain a high Crit Chance floor. Pass on this artifact if your current run has committed to any DoT damage type — the math simply doesn\'t work in your favor.',
   },
   {
     id: 'energy-bars',
@@ -20,7 +21,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+1% Damage per player level, -3 Max HP per level',
     unlock: 'Accumulate 1,000 level-ups',
-    synergy: 'Scales massively with level. Pair with BLT Ration Pack to offset the HP penalty.',
+    synergy: 'Scales exponentially with player level, making it the strongest late-game damage multiplier in the entire artifact pool — by Stage 5 a level-50 character is carrying +50% Damage from this single item. The HP penalty compounds equally fast, so it is essentially a mandatory pairing with BLT Ration Pack (which adds +80 Max HP plus regen) or Tactical Cookie (which restores 50% Max HP between stages) to keep your health total viable. On the Survivalist SMG Rush build, where survival and constant movement are prioritized, consider whether you have enough healing infrastructure before committing, since the HP drain accelerates as you gain levels.',
+    strategy: 'Take it the moment you see it at any stage — even a modest level-30 character gets +30% Damage, making it stronger than most A-tier damage artifacts from the moment of pickup. Always immediately scout for BLT Ration Pack or Tactical Cookie on the next shop visit to offset the HP penalty before it becomes critical. Only pass if you are deep into a Thick Boy Sniper run and already capped on damage multipliers, or if you genuinely cannot find any HP recovery artifact and are already dangerously low on Max HP.',
   },
   {
     id: 'pay2win-console',
@@ -30,7 +32,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+2.5% Damage per reroll, max 100 stacks',
     unlock: 'Spend 100 Gold on rerolls',
-    synergy: 'Rewards aggressive rerolling. Best in later stages when you can afford multiple rerolls. Reworked in Update 04 — no longer drains gold.',
+    synergy: 'Transforms the reroll economy into a damage economy — every shop reroll you purchase also increments this artifact, so builds that aggressively cycle the shop (such as Tinkerer Warthog, which needs specific overclocks, or any run using 5 Leaf Clover) compound the value significantly. Post-Update-04 the artifact no longer drains gold on rerolls, removing the punishing downside it once had. Note that Gold-Tipped Bullets and Pickled Nitra both reward holding your resources rather than spending them, so running Pay2Win Console alongside either of those creates an internal tension — commit to one economic strategy.',
+    strategy: 'Best picked up mid-game (Stages 2–3) when you have enough gold income to afford frequent rerolls without bankrupting yourself before buying weapons or overclocks. Pairing it with 5 Leaf Clover is particularly efficient since every reroll simultaneously triggers the Luck bonus and increments the damage stack. Pass early in Stage 1 if you are already resource-constrained, since the artifact only pays dividends if you can actually afford to reroll.',
   },
   {
     id: 'divers-manual',
@@ -40,7 +43,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+10% Damage, +10% Reload Speed, +5% Crit Chance, +15% Crit Damage',
     unlock: 'Complete 10 dives',
-    synergy: 'No downside. Universally strong on every build — always take it.',
+    synergy: 'Universally strong on every build in the game — the Thick Boy Sniper benefits from all four stats simultaneously, the Interrogator Fire DoT benefits from the +10% Damage multiplier applying to DoT ticks, and the Enforcer Minigun loves the +10% Reload Speed which effectively increases uptime. The +5% Crit Chance edges you closer to the Squint-EE5 unlock threshold, making it a useful enabler for crit-oriented runs. There is no build in the roster that should skip this artifact; it has zero downside.',
+    strategy: 'Always take it regardless of stage, build, or current artifact loadout — it is the one artifact in the game with no opportunity cost. If you see it on Stage 1, it sets every subsequent scaling artifact up to be slightly stronger from the moment of pickup. The only notional reason to pass is if the shop slot contains something that specifically completes a build-defining combo you cannot get otherwise, but in practice Diver\'s Manual is the correct pick in virtually all scenarios.',
   },
   // ── A-Tier ──────────────────────────────────────────────────────────────
   {
@@ -51,7 +55,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+2% Damage and -0.5% Move Speed per Nitra held',
     unlock: 'Deal 1,337 or more damage in a single hit',
-    synergy: 'Rewards hoarding Nitra. Less effective if you spend Nitra on artifact rerolls constantly.',
+    synergy: 'Rewards the same Nitra-hoarding playstyle as Nitragenic Powder, and the two stack directly — holding a large Nitra reserve simultaneously grants bonus Crit Chance (from Nitragenic Powder) and bonus Damage (from Pickled Nitra), creating a compounding benefit for crit builds like Thick Boy Sniper. The -0.5% Move Speed per Nitra held is a real cost, and on Infiltrator Cryo Burst or Survivalist SMG Rush builds where kiting distance is a survival tool, letting your Move Speed drop too far can be lethal. Skip if you plan to spend Nitra aggressively on artifact rerolls — the damage bonus will be inconsistent.',
+    strategy: 'Pick up in the early-to-mid game if you already have a strategy for sustaining a large Nitra stockpile (i.e., you are not heavily rerolling artifacts). It pairs best alongside Nitragenic Powder when both are available, essentially turning Nitra into a dual stat currency. Pass if your current build depends on consistent movement speed — particularly Infiltrator Cryo Burst or Survivalist SMG Rush — where the stacking move speed penalty creates an escalating survival risk.',
   },
   {
     id: 'gold-tipped-bullets',
@@ -61,7 +66,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+1% Damage per 5 Gold held, max 250 stacks',
     unlock: 'Collect 2,000 Gold total',
-    synergy: 'Rewards gold hoarding. Avoid if spending gold aggressively on rerolls.',
+    synergy: 'At the 250-stack cap, this artifact delivers +50% Damage from a single item, making it one of the highest damage ceilings in the pool — the key is having a gold income high enough to approach that cap without spending it all. Builds like Leadburster Bomb or Grenade Spam Demo, which do not rely heavily on expensive overclocks to function, can afford to hoard gold more easily than Tinkerer Warthog, which needs specific overclock purchases. There is an inherent tension between this artifact and DRG Coupon, since spending gold on shop discounts depletes the stacks; commit to one resource-spending philosophy per run.',
+    strategy: 'Excellent pickup at any stage if your run has naturally accumulated a large gold reserve, but particularly strong in mid-game when gold income has ramped up and you still have multiple stages to benefit from the damage bonus. Avoid spending gold on rerolls or unnecessary shop purchases once you have this equipped — the opportunity cost of each reroll is measurable in lost damage percentage. Pass if you are on a build that requires frequent shop cycling (Pay2Win Console, Tinkerer Warthog) where consistent high gold reserves are unrealistic.',
   },
   {
     id: 'nitragenic-powder',
@@ -71,7 +77,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+0.5% Crit Chance per Nitra held, max 500 stacks',
     unlock: 'Collect 2,000 Nitra total',
-    synergy: 'Best with Squint-EE5 on crit builds. Hold your Nitra — don\'t reroll artifacts.',
+    synergy: 'The premier enabler for Squint-EE5 on crit-oriented builds like Thick Boy Sniper — at 150 Nitra held you are already at +75% Crit Chance from this artifact alone, which can single-handedly unlock Squint-EE5\'s -30% Direct Damage suppression. Stacks multiplicatively with Pickled Nitra, meaning a high Nitra reserve simultaneously generates Crit Chance and Damage bonuses; the two artifacts are a natural pairing on Nitra-hoard strategies. Do not take this on Interrogator Fire DoT, Acid Foreman, or any build that does not lean on Crit Chance — the Nitra has to be preserved, not spent.',
+    strategy: 'Prioritize picking this up on any run that includes or is targeting Squint-EE5, ideally before Stage 2 so that the Nitra you accumulate through combat contributes to the crit threshold from the outset. Pair with Pickled Nitra whenever both appear for a dominant Nitra-hoard package. Pass on heavy spender builds (Pay2Win Console runs, aggressive reroll strategies) where your Nitra will constantly fluctuate and the average stacks held will be too low to justify the artifact slot.',
   },
   {
     id: 'ammo-rig',
@@ -81,7 +88,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+50% Fire Rate, -15% Move Speed',
     unlock: 'Reach 75% Reload Speed',
-    synergy: 'Huge DPS increase. Movement penalty is manageable with Jet Boots or Armor Grease.',
+    synergy: 'The +50% Fire Rate is one of the largest single-stat boosts available and is transformative on high base-damage, low-fire-rate weapons like those used in Thick Boy Sniper and Enforcer Minigun — on the Minigun in particular, the fire rate increase compounds beautifully with the weapon\'s natural damage-per-bullet. The -15% Move Speed is punishing on kiting-dependent builds; Infiltrator Cryo Burst and Survivalist SMG Rush both rely on staying out of melee range, and losing 15% Move Speed is a genuine survival hazard without a mitigating source like Armor Grease or Jet Boots. Heavy Gunner Thunderhead benefits enormously here since the build typically stands and fires in concentrated bursts.',
+    strategy: 'Take early if you have already unlocked it by reaching 75% Reload Speed and you are playing a stationary or tank-adjacent build — Heavy Gunner Thunderhead and Enforcer Minigun are the ideal recipients. Pair with Armor Grease (+5% Move Speed, stacking) or Jet Boots (emergency escape on damage taken) to compensate for the movement penalty. Pass if you are playing Infiltrator Cryo Burst, Survivalist SMG Rush, or any run that relies on movement speed for survival and you have no movement-recovery artifact in the loadout.',
   },
   {
     id: '5-leaf-clover',
@@ -91,7 +99,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: '+15 Luck; +20 Luck for 5s when rerolling',
     unlock: 'Added in Update 04',
-    synergy: 'Excellent for builds that reroll frequently. Pairs with Pay2Win Console for double value per reroll.',
+    synergy: 'Directly amplifies the Pay2Win Console strategy — each reroll triggers the +20 Luck burst at the same moment it adds a damage stack, meaning rerolls are simultaneously improving your shop offer quality and incrementing your damage multiplier. On Tinkerer Warthog builds that depend on finding specific overclocks, the baseline +15 Luck meaningfully shifts which overclocks appear in the shop, improving build consistency. Less impactful on runs that have already found their core weapons and overclocks and have stopped rerolling.',
+    strategy: 'Pick up as early as possible if Pay2Win Console is already in your loadout, since the two artifacts are directly multiplicative in value — more rerolls mean more Luck bursts mean better offers mean more desired picks. On Tinkerer Warthog, prioritize this in Stage 1 or 2 to improve the consistency of finding Warthog-specific overclocks before Stage 3. Pass in late-game (Stage 4–5) if you have stopped rerolling entirely, since both the passive Luck and the triggered Luck are only valuable when you are actively buying rerolls.',
   },
   {
     id: 'chemist-kit',
@@ -101,7 +110,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+15% Potency, +15% Status Effect Damage',
     unlock: 'Apply 500 status effects',
-    synergy: 'Essential for DoT builds (Interrogator, Foreman). Useless on direct-damage builds.',
+    synergy: 'Essential for the Interrogator Fire DoT and Acid Foreman builds, which derive the majority of their damage from status effect ticks rather than direct hits — both the Potency bonus (which affects application chance and duration) and the Status Effect Damage bonus apply directly to every tick of fire or acid damage. On Interrogator specifically, pairing Chemist Kit with BRN Shield Belt creates a fire-synergy package where the belt\'s fire ring proc and the weapon\'s burn DoT both benefit from the status damage multiplier. Completely useless on Thick Boy Sniper, Enforcer Minigun, Heavy Gunner Thunderhead, or any build that deals only direct damage.',
+    strategy: 'Mandatory pickup on Interrogator Fire DoT and Acid Foreman at any stage — even early acquisition compounds over the entire run as every status tick you deal is amplified. Check whether you have at least one other status-effect source before buying; if your entire loadout deals direct damage and you have no plans to introduce a DoT weapon, pass without hesitation. In the mid-game, a second copy of Chemist Kit stacks additively with the first, making double-Chemist Kit a legitimate win condition for DoT-heavy runs.',
   },
   {
     id: 'multi-tool',
@@ -111,7 +121,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '-25% Reload Speed base, +5% Reload Speed per unique weapon tag equipped',
     unlock: 'Deal 5 different damage types',
-    synergy: 'Rewards running diverse weapon loadouts. Check your tag count — need 5+ tags to break even.',
+    synergy: 'Rewards diverse weapon loadouts — you need 5 unique weapon tags just to break even on the base reload penalty, and 10+ tags to see meaningful positive Reload Speed gains. Tinkerer Warthog naturally accumulates a broad tag set through its overclocks, and the Constructor Turret Army build benefits when its active weapon and turret weapons cover different damage types. Single-damage-type builds like a pure fire Interrogator or a pure cryo Infiltrator Cryo Burst should avoid this, since they are unlikely to hit the 5-tag threshold and will suffer the reload penalty.',
+    strategy: 'Count your current weapon tags before purchasing — open your weapon panel and tally every unique tag across all equipped weapons. Buy if you already have 5+ tags and are on a build like Tinkerer Warthog that naturally diversifies; the Reload Speed bonus compounds nicely with Ammo Rig. Pass if you have fewer than 4 unique tags and no plan to diversify your damage types, since the -25% base penalty is severe enough to reduce DPS even on fast-firing weapons.',
   },
   // ── B-Tier ──────────────────────────────────────────────────────────────
   {
@@ -122,7 +133,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+80 Max HP, +2 HP Regen per second',
     unlock: 'Reach 300 Max HP',
-    synergy: 'Best early when HP is low. Counteracts Energy Bars HP penalty. Less impactful late game.',
+    synergy: 'The primary counterweight to Energy Bars\' HP penalty — the flat +80 Max HP and +2/s regeneration directly offset the HP drain that comes from leveling with Energy Bars equipped. On the Survivalist SMG Rush build, the passive regen keeps you topped up between engagements without requiring red sugar pickups. Less impactful on fully tanky builds like Heavy Gunner Thunderhead or Devastator Repulsor Chain, where base HP is already high enough that 80 more points is a marginal percentage increase; in those cases the artifact slot may be better used for a damage multiplier.',
+    strategy: 'Prioritize immediately after picking up Energy Bars — the longer you wait, the more HP you have already drained. On Survivalist SMG Rush and Infiltrator Cryo Burst, where staying alive through constant movement is the win condition, this artifact is worth taking even without Energy Bars present to provide a buffer against chip damage. Pass in mid-to-late game if your HP is comfortably above 200 and you have no HP-draining artifact in your loadout, particularly when a higher-tier damage artifact is available in the same shop rotation.',
   },
   {
     id: 'the-mocap',
@@ -132,7 +144,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+1% Damage per 1% missing HP',
     unlock: 'Kill a Dreadnought with 30 HP or less remaining',
-    synergy: 'High risk, high reward. Best on tanky builds that can safely sustain at low HP.',
+    synergy: 'High-variance artifact that becomes a damage powerhouse only when you can consistently sustain at low HP — Devastator Repulsor Chain builds, which generate shields and knockback that allow controlled HP management, can exploit this more reliably than most. On Thick Boy Sniper, the long-range playstyle means you can sometimes maintain a low-HP state without taking lethal hits, making the bonus meaningful. Avoid on any build without reliable self-sustain or shields, such as the Leadburster Bomb or Grenade Spam Demo, where the radius damage you deal to yourself can quickly become fatal when already operating at low HP.',
+    strategy: 'Only buy if your build has a hard answer to the low-HP condition — Salty Pretzel (armor scaling from missing HP) and The MoCap together create a complementary package where being at low HP simultaneously increases your damage and your armor. In mid-game, assess whether your survivability tools (regen, dodge, shields) are robust enough to keep you alive while benefiting from the damage bonus; if you are dying frequently, this artifact makes the problem worse. Pass early in Stage 1 when HP pools are small and the margin for error at low HP is nearly nonexistent.',
   },
   {
     id: 'turbo-encabulator',
@@ -142,7 +155,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+3% Damage, +3% Reload Speed, -5% Mining Speed per Overclock equipped',
     unlock: 'Equip 10 Overclocks total',
-    synergy: 'Scales with overclock count. Best in builds that naturally stack many overclocks by Stage 5.',
+    synergy: 'Scales directly with the number of overclocks you have equipped across all weapons — a Stage-5 run with 8 overclocks is getting +24% Damage and +24% Reload Speed from this single artifact. Tinkerer Warthog benefits the most since it explicitly pursues a high overclock count and the bonus compounds naturally. The mining speed penalty is essentially irrelevant in combat-heavy runs. On Constructor Turret Army, turrets also contribute overclock counts if the build supports it, giving this artifact above-average value.',
+    strategy: 'Pick up at Stage 2 or later when you have 4+ overclocks already equipped — at fewer overclocks the bonus is mediocre and the artifact slot is better used. By Stage 3 or 4 on a Tinkerer Warthog run, this is nearly a must-buy since you will likely have 6–8 overclocks. Pass in Stage 1 unless you somehow already have 3 overclocks, as the immediate payoff is too small compared to flat damage multipliers like Diver\'s Manual or Energy Bars.',
   },
   {
     id: 'popup-tripod',
@@ -152,7 +166,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: '+2% Fire Rate and Reload Speed while stationary, 3s ramp, stacks 15x',
     unlock: 'Kill 15,000 aliens while standing still',
-    synergy: 'Rewards stationary playstyle. Anti-synergy with builds that reward constant movement.',
+    synergy: 'At full stacks (+30% Fire Rate and +30% Reload Speed) this is a strong DPS artifact, but only for builds that naturally plant their feet and fire — Heavy Gunner Thunderhead and Constructor Turret Army both play that way. Enforcer Minigun benefits significantly since the minigun\'s sustained-fire design already encourages holding position and the additional fire rate compounds the weapon\'s per-second damage substantially. Diametrically opposed to Armor Grease, which rewards constant movement; running both artifacts creates counterproductive play incentives.',
+    strategy: 'Ideal for Heavy Gunner Thunderhead or Enforcer Minigun in any stage — pick it up whenever available because the playstyle required to get value from it costs you nothing if you\'re already playing those builds. On Survivalist SMG Rush, Infiltrator Cryo Burst, or any movement-dependent build, pass immediately since the 3-second ramp resets every time you move and you will almost never reach full stacks. Avoid taking both this and Armor Grease in the same loadout.',
   },
   {
     id: 'ancient-knowledge',
@@ -162,7 +177,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: 'Gain 3 levels instantly',
     unlock: 'Reach level 50 in a single dive',
-    synergy: 'Front-loads leveling for faster overclock access. Strong for early-game spike strategies.',
+    synergy: 'Front-loads the leveling curve, accelerating access to overclocks and weapon upgrades that are gated behind level thresholds — on Tinkerer Warthog, getting 3 free levels early means your Warthog-specific overclocks become available sooner. Also has direct synergy with Energy Bars (more levels = more damage stacks immediately at the moment of purchase) and Turbo Encabulator (if those 3 levels unlock new overclock slots). Less impactful on builds that are not overclock-dependent, like Survivalist SMG Rush, where the main benefit is just slightly better stats.',
+    strategy: 'Best value when taken in Stage 1 or early Stage 2, where 3 free levels represent a significant percentage of your total progress and can push you into weapon upgrade tiers faster. On any run with Energy Bars, picking up Ancient Knowledge is a small free burst of damage since those 3 levels immediately add +3% Damage. Deprioritize in late-game (Stage 4–5) when level gains have diminishing returns and those 3 levels represent less than 10% improvement on an already high level.',
   },
   {
     id: 'piercing-projectiles',
@@ -172,7 +188,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+50% Piercing',
     unlock: 'Fire 150,000 projectiles',
-    synergy: 'Excellent for horde-clearing. Best on weapons with inherent piercing tags.',
+    synergy: 'Powerful on any weapon that already has the Piercing damage tag or fires in linear trajectories that can hit multiple enemies — Thick Boy Sniper in particular benefits massively since a high-damage shot that pierces through a horde column multiplies the effective damage-per-shot dramatically. Grenade Spam Demo and Leadburster Bomb deal area damage rather than piercing projectile damage, so this artifact provides little value there. On Survivalist SMG Rush, the rapid-fire nature means more piercing checks per second, but the per-bullet damage is low enough that the total gain is modest.',
+    strategy: 'Take early on Thick Boy Sniper — piercing on a sniper rifle is one of the highest effective-damage combinations in the game and the artifact pays for itself in the first dense horde engagement. On multi-projectile weapons like shotguns or burst weapons, the 50% piercing bonus is meaningful enough to justify a mid-game purchase. Pass on pure AoE builds (Grenade Spam Demo, Leadburster Bomb) where the projectile never reaches a second target, making this a dead stat.',
   },
   {
     id: 'salty-pretzel',
@@ -182,7 +199,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+1 Armor per 2% missing HP',
     unlock: 'Reach 50 Armor',
-    synergy: 'Scaling defense. Ideal for Juggernaut builds that stack armor passively.',
+    synergy: 'Synergizes directly with The MoCap in a low-HP playstyle: being at 50% HP simultaneously grants +25 Armor from Salty Pretzel and +50% Damage from The MoCap, creating a high-risk high-reward defensive-offensive combo. On Devastator Repulsor Chain, where the shield and knockback mechanics create natural breathing room at low HP, this armor scaling is particularly effective since it triggers before the enemy closes distance again. Less relevant on builds with active HP regen like BLT Ration Pack, where you are rarely at low HP long enough to benefit from the armor.',
+    strategy: 'Best paired alongside The MoCap as a deliberate low-HP playstyle package — if you already have The MoCap, Salty Pretzel becomes a near-mandatory follow-up purchase to make the low-HP condition survivable. On Devastator Repulsor Chain, pick up at any stage since the build naturally creates distance from enemies when at low HP, giving the armor time to be meaningful. Pass on regeneration-heavy builds (BLT Ration Pack + Tactical Cookie) where you rarely dip below 50% HP and the artifact rarely triggers.',
   },
   {
     id: 'drg-coupon',
@@ -192,7 +210,8 @@ export const ARTIFACTS = [
     category: 'economy',
     effect: '20% shop discount on all purchases',
     unlock: 'Spend 2,500 Gold total',
-    synergy: 'Stretches gold further. Best early when shop prices are steep relative to gold income.',
+    synergy: 'Maximizes gold efficiency and allows you to buy more shop items per stage — on Tinkerer Warthog, where buying specific overclocks is the build-defining objective, the 20% discount means more overclock purchases per stage and faster build completion. There is a tension with Gold-Tipped Bullets and Pickled Nitra: spending more freely depletes the gold and Nitra reserves that those artifacts depend on. Works best in a run that does not rely on resource hoarding.',
+    strategy: 'Pick up early (Stage 1–2) to maximize the total gold saved over the run — a 20% discount compounding across five stages of purchases is substantially more valuable than the same discount applied in Stage 4 alone. Pair with Pay2Win Console if you plan to reroll frequently, since discounted rerolls mean more stacks per gold spent. Pass if you are running Gold-Tipped Bullets or Pickled Nitra, as spending more freely counteracts the economic strategy those artifacts require.',
   },
   {
     id: 'armor-grease',
@@ -202,7 +221,8 @@ export const ARTIFACTS = [
     category: 'movement',
     effect: '+5% Move Speed; +2% Dodge Chance while moving, 3s ramp, stacks 5x',
     unlock: 'Dodge 100 attacks',
-    synergy: 'Rewards constant movement. Good synergy with Recon Scout passive (+35% Move Speed on dodge).',
+    synergy: 'Rewards constant movement with stacking Dodge Chance — at full stacks (+5% base Move Speed, +10% Dodge Chance) this becomes a significant survivability upgrade for mobile builds. Infiltrator Cryo Burst and Survivalist SMG Rush both play at constant movement and reach full stacks naturally in every engagement. Also acts as a counter to the -15% Move Speed penalty from Ammo Rig, effectively mitigating that cost if you are building toward the fire-rate bonus. Directly counter-synergizes with Popup Tripod, which requires standing still.',
+    strategy: 'Take it on any mobile build in Stage 1 or 2 — the earlier you have it, the more dodge attempts accumulate toward the unlock threshold and the more it contributes to survivability. On Ammo Rig builds, buy Armor Grease as soon as possible after equipping Ammo Rig to recover the lost Move Speed. Pass on Heavy Gunner Thunderhead, Constructor Turret Army, or any build where you are stationary for long periods, since the movement requirement means you will frequently be at zero stacks when you need the dodge most.',
   },
   {
     id: 'reflex-calibrator',
@@ -212,7 +232,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+5% Armor; +5% Dodge Chance on taking damage, 10s duration, stacks 5x',
     unlock: 'Take 2,000 damage total',
-    synergy: 'Reactive defense — gets stronger as you take hits. Good on tank-style builds.',
+    synergy: 'Reactive defense that gets stronger the more you are hit — on tank-oriented builds like Heavy Gunner Thunderhead and Devastator Repulsor Chain, absorbing hits is part of the playstyle and this artifact rewards you with stacking Dodge Chance as the fight progresses. The base +5% Armor is useful regardless of stacks. Interacts well with Salty Pretzel on low-HP builds, since taking enough damage to stack Reflex Calibrator also triggers Salty Pretzel\'s armor scaling. Avoid on glass-cannon builds (Thick Boy Sniper, Infiltrator Cryo Burst) where taking any hit is a sign of positioning failure.',
+    strategy: 'Pick up on any build that expects to absorb moderate damage regularly — Heavy Gunner Thunderhead and Devastator Repulsor Chain use this artifact best. In the mid-game, it pairs naturally with Salty Pretzel for a compounding defense package at low HP. Pass on long-range builds like Thick Boy Sniper where the goal is to never take damage, since you will never reliably stack this artifact and the base +5% Armor alone is not worth an artifact slot.',
   },
   {
     id: 'tactical-cookie',
@@ -222,7 +243,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+5% Max HP; heal 50% Max HP when entering the Drop Pod',
     unlock: 'Added in Update 04',
-    synergy: 'Between-stage healing is valuable when you exit a stage low. Pairs with BLT Ration Pack.',
+    synergy: 'The between-stage heal is uniquely valuable because it is one of the only sources of large HP restoration that does not require in-combat resource gathering — on Survivalist SMG Rush and Infiltrator Cryo Burst, exiting a difficult stage at 20% HP and entering the next at 70% is a meaningful swing in survival probability. Pairs with BLT Ration Pack: the +5% Max HP bonus is additive with BLT\'s +80 flat HP, and both contribute to the total pool that the 50% heal restores. Less impactful on Heavy Gunner Thunderhead, where the high base HP means 50% restoration is an enormous absolute value anyway.',
+    strategy: 'Priority purchase after a difficult stage where you exited at low HP — the between-stage heal activates the moment you enter the Drop Pod, so buying it mid-run still benefits you immediately on the next stage transition. Excellent pairing with Energy Bars to offset the HP drain from leveling, since the 50% heal restores HP relative to your current max (which Energy Bars is also reducing). Pass in the final stage (Stage 5) since there is no subsequent Drop Pod entry and the between-stage heal never fires, leaving only the minor +5% Max HP bonus.',
   },
   {
     id: 'jet-boots',
@@ -232,7 +254,8 @@ export const ARTIFACTS = [
     category: 'movement',
     effect: 'Dash away quickly on taking damage (20s cooldown)',
     unlock: 'Added in Update 04',
-    synergy: 'Emergency escape tool. Best for squishy builds that need one bail-out option per fight.',
+    synergy: 'Emergency escape tool that fires automatically on taking damage, making it a passive safety net for builds that occasionally get caught in melee range — Thick Boy Sniper and Infiltrator Cryo Burst both benefit from the automatic repositioning when a fast enemy closes the gap. On builds running Ammo Rig (with its -15% Move Speed penalty), Jet Boots provides the mobility burst needed to create space when the reduced movement speed would otherwise allow an enemy to chase you down. Redundant on Survivalist SMG Rush and Armor Grease builds that already have strong active movement options.',
+    strategy: 'Excellent pickup for any squishy, long-range build in Stage 2 or beyond — the 20-second cooldown is short enough that it fires multiple times per stage and effectively prevents the most common cause of death (melee ambush) on builds not built to tank hits. Pair with Ammo Rig to cover the movement speed penalty — the combination of high fire rate and emergency dash creates a strong offensive-defensive package. Pass on Heavy Gunner Thunderhead or Devastator Repulsor Chain, where the build has sufficient armor and HP to absorb hits rather than escape them, making the dash cooldown an underused resource.',
   },
   // ── C-Tier ──────────────────────────────────────────────────────────────
   {
@@ -243,7 +266,8 @@ export const ARTIFACTS = [
     category: 'movement',
     effect: '+5% Move Speed when standing still, 3s ramp, stacks 5x',
     unlock: 'Reach 50% Move Speed',
-    synergy: 'Contradictory conditions — speed for standing still. Rarely useful in practice.',
+    synergy: 'The conditions are internally contradictory — Move Speed bonuses are only useful when you are moving, but the stacks require standing still for 3 seconds to accumulate. In practice, this artifact almost never contributes meaningfully to a fight because the bonus evaporates the moment you begin to move. On Constructor Turret Army where you occasionally plant and fire, the Move Speed burst when you start repositioning is a minor benefit, but it is not worth an artifact slot. No build in the roster is specifically designed to exploit this.',
+    strategy: 'Generally pass at any stage — the conditions are too contradictory for this to provide consistent value. If your only other option in a shop rotation is a D-tier artifact or something with an active negative effect, this is an acceptable fallback since the +5% Move Speed burst when transitioning from cover is at least not harmful. Do not plan your artifact strategy around this artifact; treat it as a last resort pick only.',
   },
   {
     id: 'weapon-box',
@@ -253,7 +277,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: 'Equip an additional level 6 weapon with a random Overclock',
     unlock: 'Acquire 10 Mastery Points',
-    synergy: 'Extra weapon can be powerful but is random. Best if you need AoE or damage-type coverage.',
+    synergy: 'The value is entirely determined by what weapon and overclock the box randomly contains — a Grenade Spam Demo run that gets an extra grenade launcher with a damage overclock is dramatically stronger, while the same run getting a melee weapon with a mining overclock is effectively a dead slot. Turbo Encabulator gains a free overclock stack regardless of weapon type, which is one consistent piece of value. Constructor Turret Army can sometimes use the extra weapon to cover a damage type it was missing, enabling Multi Tool.',
+    strategy: 'Consider buying if you need AoE coverage or a specific damage type to complete a Multi Tool tag count, or if you are on a Turbo Encabulator build and the free overclock stack is meaningful. In mid-game, evaluate the current weapon pool — if the weapon archetypes available can plausibly complement your build, the gamble may be worth it. Pass if you already have a complete and synergistic weapon loadout, as a random level 6 weapon is unlikely to improve a well-constructed build and an off-synergy weapon may dilute your overclock focus.',
   },
   {
     id: 'brn-shield-belt',
@@ -263,7 +288,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+15% Fire Damage; exploding fire ring on taking damage (15s cooldown)',
     unlock: 'Deal 250,000 Fire Damage',
-    synergy: 'Only valuable on fire-damage builds (Interrogator, CRSPR Flamethrower). Skip otherwise.',
+    synergy: 'Purpose-built for fire-damage builds — Interrogator Fire DoT benefits from the +15% Fire Damage multiplier stacking on top of Chemist Kit\'s status effect bonuses, and the fire ring proc on taking damage adds a small AoE component to an otherwise single-target DoT build. The fire ring can help clear small enemies that swarm you during a DoT application sequence. Completely dead weight on every other build: Thick Boy Sniper, Heavy Gunner Thunderhead, Survivalist SMG Rush, and all builds without a fire damage source gain nothing from either part of this artifact.',
+    strategy: 'Situationally take on Interrogator Fire DoT if you need additional fire damage amplification and Chemist Kit is not available — the +15% Fire Damage is modest but real. On any other build, do not purchase this regardless of stage; the conditional fire ring proc is not valuable enough to justify the slot even as a late-game "filler" pick. Check your weapon tags before buying — if you have zero fire damage sources, this is a guaranteed dead slot.',
   },
   {
     id: 'frz-shield-belt',
@@ -273,7 +299,8 @@ export const ARTIFACTS = [
     category: 'damage',
     effect: '+15% Cryo Damage; knockback + slow ring on taking damage (15s cooldown)',
     unlock: 'Deal 250,000 Cryo Damage',
-    synergy: 'Only valuable on cryo-damage builds (Cryo Cannon, Cryo Grenade loadouts). Skip otherwise.',
+    synergy: 'Niche artifact for cryo-damage builds, primarily Infiltrator Cryo Burst — the +15% Cryo Damage amplifies every chill and freeze tick, and the knockback ring on taking damage creates breathing room that synergizes with the build\'s kiting philosophy. The slow component of the ring proc can extend the effective range at which enemies are neutralized, giving Infiltrator Cryo Burst additional time to deal cryo damage before the enemy closes. On all other builds, this provides zero value; the 15-second cooldown means the proc is infrequent even in the one build that benefits.',
+    strategy: 'Pick up on Infiltrator Cryo Burst when available and you already have a cryo damage source — the +15% damage bonus and the defensive ring proc both align with the build\'s win condition. Do not purchase on any non-cryo build at any stage; unlike Chemist Kit, which has broad DoT applicability, FRZ Shield Belt is locked entirely to cryo builds. Pass even on Infiltrator Cryo Burst if you already have Chemist Kit and a strong status effect package, since the marginal +15% Cryo Damage is less impactful than another defensive or damage multiplier artifact.',
   },
   {
     id: 'clipboard-of-grudges',
@@ -283,7 +310,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: '+10% XP Gain; gain XP from dealing damage (min 8, max 14 XP, 0.5s cooldown)',
     unlock: 'Kill 1,000 aliens',
-    synergy: 'XP gain speeds leveling but isn\'t impactful enough to justify over damage artifacts.',
+    synergy: 'Speeds leveling, which benefits Energy Bars (more damage stacks) and Turbo Encabulator (faster access to overclock level gates) indirectly. The passive XP gain from dealing damage is capped at 14 XP per 0.5 seconds, which is not large enough to meaningfully outpace normal kill-based XP on most builds. On Ancient Knowledge synergy, a small bonus — if you take both, you level faster and gain slightly more power from the levels themselves. Generally outclassed by any damage artifact in the same tier.',
+    strategy: 'Only consider picking up if you are specifically trying to reach a level threshold before a difficult stage transition and your current XP rate is falling short. On Tinkerer Warthog, faster leveling opens overclock slots sooner, making this marginally useful in Stages 1–2. Pass in favor of any combat-effective artifact in mid-to-late game — the XP gain is too slow to change stage outcomes meaningfully, and the +10% XP Gain multiplier is too small to justify the artifact slot.',
   },
   {
     id: 'company-issued-magnet',
@@ -293,7 +321,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: '+10% XP Gain; magnet collects 50% of remaining XP at stage end',
     unlock: 'Collect 25 XP Magnets',
-    synergy: 'Prevents XP waste at end of stage. Situationally useful if you frequently miss XP pickups.',
+    synergy: 'Prevents XP loss at the end of a chaotic stage where you could not collect all dropped XP — this is its primary use case. On Constructor Turret Army and other builds where you are stationary and fighting in a fixed area, you may miss XP dropped by enemies that die far from your position, making the end-of-stage magnet moderately useful. The +10% XP Gain is the same as Clipboard of Grudges and similarly modest. No build is specifically designed around this artifact.',
+    strategy: 'A reasonable pickup in Stage 1 or 2 if you frequently miss XP pickups due to chaotic combat — the end-of-stage collection ensures that missed XP is recovered. On Constructor Turret Army, where large enemy masses are killed far from your position and XP is scattered across the map, the magnet effect has above-average value. Pass in late game when you are already leveled well above the content difficulty and additional XP gain provides diminishing returns.',
   },
   {
     id: 'huuli-bait',
@@ -303,7 +332,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: 'Lures Huuli Hoarders to your location',
     unlock: 'Added in Update 04',
-    synergy: 'Useful for farming Huuli gold drops if you can survive the ambush.',
+    synergy: 'Creates an on-demand gold income spike by attracting Huuli Hoarders, which drop substantial gold on death. On Gold-Tipped Bullets runs, the extra gold from Huuli kills can meaningfully increase your damage bonus by bumping up your held gold total. On Pay2Win Console runs, the gold income supports more frequent rerolls without depleting your gold reserve. The catch is that Huuli Hoarders must be killed quickly — they are elusive enemies, and on builds with lower AoE coverage like Thick Boy Sniper, landing the kill before they escape requires accurate timing.',
+    strategy: 'Consider picking up on Gold-Tipped Bullets or Pay2Win Console runs where additional gold income directly translates into more damage or better shop quality. Avoid on any build that struggles with fast single-target damage against small, moving enemies — if you cannot reliably kill Huulis before they run, the bait is just a distraction. In late game (Stages 4–5), Huuli gold drops have diminishing value since you are unlikely to spend all your gold anyway; pass in favor of a combat-multiplier artifact.',
   },
   // ── D-Tier ──────────────────────────────────────────────────────────────
   {
@@ -314,7 +344,8 @@ export const ARTIFACTS = [
     category: 'economy',
     effect: 'Chance to find Gold deposits when mining',
     unlock: 'Collect 250 Gold',
-    synergy: 'Passive gold income, but combat-based gold is usually more efficient.',
+    synergy: 'Provides a passive gold income stream through mining, but the amount of gold generated this way is typically far less than what is earned through combat kills and boss drops — on every build in the roster, spending time mining for gold is an inefficient use of stage time compared to fighting enemies. Gold-Tipped Bullets and Pay2Win Console both benefit from more gold in theory, but the rate of gold gain from this scanner is too low to meaningfully move the needle on either artifact\'s stacks.',
+    strategy: 'Pass at virtually every stage in favor of any combat-effective artifact. The only scenario where Gold Scanner is worth considering is a very early Stage 1 pickup when no other artifacts are available and you have both Gold-Tipped Bullets and Pay2Win Console already equipped — in that narrow case, the marginal gold income might matter. Otherwise, treat this as a last-resort pick only when the alternative is a negative-effect artifact.',
   },
   {
     id: 'nitra-scanner',
@@ -324,7 +355,8 @@ export const ARTIFACTS = [
     category: 'economy',
     effect: 'Chance to find Nitra deposits when mining',
     unlock: 'Collect 250 Nitra',
-    synergy: 'Nitra income rarely a bottleneck. Generally outclassed by combat artifacts.',
+    synergy: 'In theory, more Nitra benefits Pickled Nitra and Nitragenic Powder, but the quantity of Nitra gained through this scanner is too small and too inconsistent to maintain the large reserves those artifacts require. Combat-based Nitra income (from killing enemies that drop Nitra) is already sufficient for most runs, making the scanner redundant. No build in the roster has Nitra income as a bottleneck that this artifact meaningfully addresses.',
+    strategy: 'Pass at every stage; this artifact has no competitive use case. The only scenario where you might take it is if you are running both Pickled Nitra and Nitragenic Powder and your Nitra income from kills has been unusually low — even then, the expected gain from the scanner is not large enough to justify the slot. Treat it as strictly worse than any combat artifact in any tier.',
   },
   {
     id: 'xp-scanner',
@@ -334,7 +366,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: 'Chance to find XP Crystals when mining',
     unlock: 'Collect 100 XP Crystals',
-    synergy: 'Marginal XP gain. Very rarely worth taking over combat artifacts.',
+    synergy: 'Similar problem to Gold Scanner and Nitra Scanner — the XP gain from mining is marginal relative to combat XP, and the time spent mining for XP crystals is time not spent killing enemies and leveling through kills. Energy Bars and Turbo Encabulator both benefit from faster leveling, but Company-Issued Magnet and Clipboard of Grudges already provide better XP-boosting options than this scanner. This artifact provides no competitive advantage for any named build.',
+    strategy: 'Pass in favor of any other artifact at any stage. The XP rate from mining is too slow to meaningfully accelerate your leveling curve, and the artifact slot opportunity cost is too high to justify it. If you see this in a shop rotation, it is a clear signal to reroll if you have gold available — even D-tier combat artifacts like Red Sugar Cube provide more tangible in-combat benefit.',
   },
   {
     id: 'red-sugar-cube',
@@ -344,7 +377,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+3 Max HP per Red Sugar collected',
     unlock: 'Default unlock',
-    synergy: 'Too slow to be meaningful. Outpaced quickly by BLT Ration Pack.',
+    synergy: 'Scales with red sugar pickups, which are infrequent enough that this artifact rarely accumulates more than 15–30 Max HP over a full run — BLT Ration Pack provides +80 Max HP instantly and outperforms this artifact from the moment of purchase. On Energy Bars builds, the HP gain is welcome in principle but the rate is simply too slow to offset the leveling HP drain. No named build benefits significantly from this artifact; it is a default unlock for new players before better options are available.',
+    strategy: 'Pass whenever any other survivability or damage artifact is available. The only time Red Sugar Cube is an acceptable pick is in Stage 1 when your artifact pool is genuinely empty of better options and you need some baseline HP growth. In mid-to-late game, this artifact is strictly a waste of a slot — the max HP gain will be outpaced by a single purchase of BLT Ration Pack or Tactical Cookie within one stage.',
   },
   {
     id: 'vita-miner-pills',
@@ -354,7 +388,8 @@ export const ARTIFACTS = [
     category: 'survivability',
     effect: '+5% Max HP; increases HP restored on level-up',
     unlock: 'Default unlock',
-    synergy: 'Early-game only. Quickly outpaced by direct HP or damage artifacts.',
+    synergy: 'Provides a small percentage Max HP bonus and amplified level-up healing, which in the early game can keep you alive through a rough Stage 1 — on any build, the HP restored on level-up is a meaningful sustain tool when you are between Stages 1 and 2 and lack other healing sources. The value drops rapidly as your Max HP grows and level-up frequency decreases in later stages. Not synergistic with any specific named build as a combat multiplier.',
+    strategy: 'Acceptable Stage 1 pickup if your only alternative is a strictly worse artifact (scanner artifacts, Barley Bulb Juice) and you are struggling with survivability. Once you have access to BLT Ration Pack, Tactical Cookie, or any higher-tier survivability artifact, replace or ignore this — the +5% Max HP and level-up healing are both outscaled quickly. Do not carry this artifact beyond Stage 2 if an upgrade is available.',
   },
   {
     id: 'pick-axtender',
@@ -364,7 +399,8 @@ export const ARTIFACTS = [
     category: 'utility',
     effect: '-10% Mining Speed; increases mining reach and range',
     unlock: 'Added in Update 04',
-    synergy: 'Quality-of-life for mining but the mining speed penalty makes this a net negative.',
+    synergy: 'Quality-of-life improvement for mining that actively hurts your efficiency — the -10% Mining Speed means you mine slower while the extended reach only saves you the time spent repositioning. In runs where mining is largely irrelevant (every combat-focused build: Thick Boy Sniper, Enforcer Minigun, Grenade Spam Demo, etc.) the artifact provides zero combat value and the mining speed penalty is a net negative. On gold-scanner or nitra-scanner adjacent strategies, the extended reach is a minor convenience that does not justify the penalty.',
+    strategy: 'Pass at every stage regardless of build. The mining reach improvement has no combat application and the -10% Mining Speed makes even the mining-quality-of-life argument weak. This artifact is a trap — the epic rarity implies significant power, but the actual effect is a minor convenience with an active downside. The only defensible use case would be a dedicated mining run variant that the game does not currently support in Survivor mode.',
   },
 ]
 
