@@ -1953,4 +1953,966 @@ export const BUILDS = [
       },
     ],
   },
+
+  {
+    id: 'sharpshooter-gk2-crit',
+    name: 'Sharpshooter GK2 Crit Spray',
+    class: 'Scout',
+    subclass: 'Sharpshooter',
+    tier: 'A',
+    difficulty: 2,
+    passive: '+15% Crit Chance, +50% Crit Damage — overkill crits spawn shrapnel; now applied to a fast-firing rifle instead of a sniper',
+    synopsis: 'Uses the Sharpshooter passive on the Deepcore GK2 with Hipster overclock to turn a high-fire-rate rifle into a crit-per-second machine. Easier to play than Thick Boy but lower peak damage.',
+    playstyle: 'Mid-range sustained fire — hold down GK2 and let crits roll continuously. Hipster halves the damage per bullet but fires so fast that crits land multiple times per second, and each overkill crit spawns shrapnel that chains into nearby enemies. Cryo Grenade handles clusters and buys reload time. Lower skill ceiling than M1000 Thick Boy but far more consistent damage across all encounter types.',
+    strengths: [
+      'Consistent mid-range DPS — no charge time, no single missed shot catastrophe; just aim and fire',
+      'Overkill shrapnel from rapid crits chains freely into tightly packed swarms, giving soft AoE on a single-target weapon',
+      'Online from lv6 — Hipster is the only mandatory overclock and arrives at the first level gate',
+    ],
+    weaknesses: [
+      'Lower peak burst than M1000 Thick Boy — cannot one-tap elites or delete a frozen cluster in one shot',
+      'Ammo hungry; Hipster\'s high fire rate drains the clip quickly and reload windows leave you briefly exposed',
+      'Sharpshooter\'s Crit Damage bonus is slightly wasted on low-per-bullet damage — the passive rewards high base damage more than fire rate',
+    ],
+    tips: [
+      'Stack Crit Chance early and hard — at 75% Crit Chance with Squint-EE5 equipped, GK2\'s rapid fire turns every second of fire into a shrapnel chain that kills entire packs',
+      'Cryo Grenade before firing: frozen targets cannot dodge, and shrapnel from the first crit kill bounces into every adjacent frozen enemy simultaneously',
+      'Reload before the clip is fully empty if you need to reposition — partial clip with Hipster still delivers meaningful DPS since Crit Chance applies per bullet, not per clip',
+      'Nitragenic Powder + Squint-EE5 combo works identically here as on M1000 Thick Boy; hoard Nitra to maintain Crit Chance above the 75% unlock threshold',
+    ],
+    weapons: [
+      {
+        name: 'Deepcore GK2',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Hipster', verdict: 'take', note: 'MUST-TAKE — doubles fire rate at the cost of damage per bullet; crits per second skyrocket' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage per bullet; partially offsets Hipster\'s per-bullet penalty and raises crit hit value' },
+          { level: 18, name: 'Supercooling Chamber', verdict: 'situational', note: 'Cryo debuff extends Cryo Grenade freeze duration — useful if you\'re running freeze combo loop; skip if running Boomstick as secondary' },
+        ],
+      },
+      {
+        name: 'Jury-Rigged Boomstick',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Bigger Mags', verdict: 'take', note: 'More shells; critical gap-filler during GK2 reloads' },
+          { level: 12, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on a cleanup weapon for anything that survived the crit chain' },
+          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Panic button for elites at melee range during reload window' },
+        ],
+      },
+      {
+        name: 'Cryo Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius; wider freeze coverage to set up shrapnel chain kills' },
+          { level: 12, name: 'Frost Nova', verdict: 'take', note: 'Larger burst; stops incoming swarms cold so you can safely reload and re-engage' },
+          { level: 18, name: 'Gravitational Core', verdict: 'situational', note: 'Clusters enemies before freeze — excellent for maximizing shrapnel chain kills; take if build is otherwise complete' },
+        ],
+      },
+      {
+        name: 'Drak-25 Plasma Carbine',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Overcharged PCF', verdict: 'take', note: '+damage, no downside; reliable supplemental damage between GK2 reloads' },
+          { level: 12, name: 'Plasma Burst', verdict: 'take', note: 'AoE plasma clears stragglers shrapnel missed' },
+          { level: 18, name: 'Volatile Impact Mixture', verdict: 'skip', note: 'Fire DoT doesn\'t benefit from Sharpshooter passive; skip in favor of another damage card' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Crit Chance', 'Crit Damage', 'Reload Speed', 'Damage', 'Piercing'],
+      avoid: ['Potency', 'Status Effect Damage', 'HP/Armor stacking'],
+    },
+    artifacts: {
+      always: ['Squint-EE5', 'Nitragenic Powder', 'Energy Bars'],
+      good: ['Pickled Nitra', "Diver's Manual", 'Pay2Win Console'],
+      never: ['Popup Tripod — GK2 Hipster requires you to keep moving and repositioning between clips'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Lock In GK2 & Hipster',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: GK2 > Boomstick > Drak-25. Lock GK2 immediately. Unlike M1000, this build is playable from the first wave — Sharpshooter crit passive applies from lv1 even before Hipster arrives.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'GK2 lv6: Hipster without hesitation. This is the entire build identity. Fire rate doubles, crits per second skyrocket, and overkill shrapnel starts chaining immediately.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy Squint-EE5 the moment it appears — Sharpshooter\'s 15% base Crit Chance plus any Crit stat cards gets you to the 75% unlock threshold faster than most classes. Save 100g target.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Crit Chance Stacking',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push GK2 to lv12 (High Caliber Rounds). Deploy Cryo Grenade — freeze incoming waves, fire GK2 into the frozen cluster, and let shrapnel chain kills handle the rest. Add Boomstick for melee pressure relief.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'GK2 lv12: High Caliber Rounds for the per-bullet damage boost. Boomstick lv6: Bigger Mags. Cryo Grenade lv6: Compact Explosives for wider freeze setup.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy Nitragenic Powder if it appears — hold Nitra, maintain 75%+ Crit Chance, and Squint-EE5\'s -30% damage penalty stays suppressed. Spend ~30g on Crit Chance stat upgrades. Target 120g saved for Stage 3.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Shrapnel Chain Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'GK2 reaches lv18 this stage. Supercooling Chamber or cap out at High Caliber if a better secondary investment exists. Cryo Grenade + GK2 Hipster crits should be chaining kills through entire swarms by now.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'GK2 lv18: Supercooling Chamber if running freeze combo, otherwise hold for flex. Boomstick lv12: High Velocity Bullets. Add Crit Damage global stat cards over raw Damage — multiplies on every crit.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Squint-EE5 + Nitragenic Powder combo. Pickled Nitra stacks damage on top of Crit — holding a large Nitra reserve gives both Crit Chance and bonus Damage simultaneously.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Fill Secondary Slots',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Boomstick to lv18 (Thick Boy panic button). Drak-25 for AoE plasma between GK2 reloads. Cryo Grenade to lv18 if Gravitational Core is available — cluster pull before freeze maximizes shrapnel chains.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Cryo lv12–18: Frost Nova then Gravitational Core. Drak-25 lv6–12: Overcharged PCF then Plasma Burst. All Crit Damage and Reload Speed global upgrades are priority buys.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Energy Bars is worth picking up now — per-level damage bonus compounds even if HP cost is a concern; pair with BLT Ration Pack for buffer.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Crit Chain the Boss',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Against Dreadnought: Cryo Grenade freezes the boss, then GK2 Hipster fires crits continuously. Each crit contributes to shrapnel on escort kills, clearing adds while you stay focused on the boss.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Crit Chance, Crit Damage, and Reload Speed upgrade. Piercing on GK2 is excellent — each bullet can hit multiple enemies in a line, generating more crit opportunities per shot.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Mine aggressively to stack Nitragenic Powder Crit Chance. Dump gold on rerolls for Pay2Win Console stacks if not already held. Keep Nitra reserve high for maximum Crit Chance floor.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'survivalist-boltshark-pinner',
+    name: 'Survivalist Boltshark Pinner',
+    class: 'Scout',
+    subclass: 'Survivalist',
+    tier: 'B',
+    difficulty: 2,
+    passive: '+20% Move Speed, +3 HP Regen/s above 50% HP — use speed to kite after pinning enemies in place',
+    synopsis: 'Boltshark with Bolt Volley pins three enemies simultaneously, then Survivalist speed lets you kite away while they\'re immobilized. GK2 cleans up staggered packs at a safe distance.',
+    playstyle: 'Fire a Cryo Bolt to freeze a target, then immediately fire Bolt Volley to pin three enemies at once. Survivalist\'s movement speed lets you dash clear before anything closes the gap, and HP regen above 50% keeps you topped up between engagements. The loop is low-risk: pin, dash, clean up with GK2, regen, repeat. Unlike Infiltrator Cryo Burst, you don\'t need precision timing — just pin and retreat.',
+    strengths: [
+      'Boltshark with Bolt Volley pins three targets simultaneously — effective crowd control that Survivalist\'s speed turns into safe kill windows',
+      '+20% Move Speed makes retreating after a Bolt Volley trivial, and the regen kicks in immediately once distance is established',
+      'No mandatory lv18 breakpoint — the build delivers solid CC and damage from lv12 Bolt Volley onward',
+    ],
+    weaknesses: [
+      'Lower single-target burst than Boltshark on Infiltrator — no +50% burst window means each bolt deals baseline damage only',
+      'Bolt Volley\'s three simultaneous bolts can miss on widely spread or fast-moving enemies if you don\'t set up with Cryo Bolt first',
+      'Ammunition management: Boltshark has a small clip and Bolt Volley consumes three bolts at once — reload timing matters more than on GK2 or Zhukov builds',
+    ],
+    tips: [
+      'Always lead with Cryo Bolt to freeze the primary target before firing Bolt Volley — frozen enemies cannot dodge, and the three bolts from Bolt Volley all land reliably on a stationary target',
+      'Survivalist\'s +20% Move Speed makes collecting XP orbs from distant kills much easier — actively chase orbs between waves instead of waiting for enemies to come to you',
+      'GK2 Hipster as secondary turns the build into a hybrid: Bolt Volley handles elite pinning while GK2 handles rapid trash clear, playing to both the Survivalist passive and Boltshark\'s precision',
+      'BLT Ration Pack raises your 50% HP regen threshold — with more Max HP, the regen activates more reliably after minor chip damage during a Bolt Volley setup',
+    ],
+    weapons: [
+      {
+        name: 'Nishanka Boltshark X-80',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Cryo Bolt', verdict: 'take', note: 'Freeze target before Bolt Volley — ensures all three bolts land on an immobile enemy' },
+          { level: 12, name: 'Gas Rerouting', verdict: 'take', note: '+reload; faster turnaround between Bolt Volley volleys; critical for the pin-retreat-reload loop' },
+          { level: 18, name: 'Bolt Volley', verdict: 'take', note: 'MUST-TAKE — fires 3 bolts simultaneously; the CC + damage spike that defines this build' },
+        ],
+      },
+      {
+        name: 'Deepcore GK2',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Hipster', verdict: 'take', note: 'High fire rate secondary for trash clear between Boltshark volleys; Survivalist speed keeps you out of retaliation range' },
+          { level: 12, name: 'High Caliber Rounds', verdict: 'take', note: '+damage per bullet; useful against anything Bolt Volley didn\'t finish' },
+          { level: 18, name: 'Supercooling Chamber', verdict: 'situational', note: 'Cryo debuff on GK2 extends Cryo Bolt freeze durations — take if you want longer pin windows' },
+        ],
+      },
+      {
+        name: 'Cryo Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius; wider freeze while you\'re repositioning post-Bolt Volley' },
+          { level: 12, name: 'Frost Nova', verdict: 'take', note: 'Larger burst; emergency CC when a wave catches up despite Survivalist speed' },
+          { level: 18, name: 'Gravitational Core', verdict: 'situational', note: 'Pull cluster before freeze — Bolt Volley into a tight frozen group hits more enemies; strong in dense waves' },
+        ],
+      },
+      {
+        name: 'Jury-Rigged Boomstick',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Bigger Mags', verdict: 'take', note: 'More shells for melee panic situations when enemies close faster than expected' },
+          { level: 12, name: 'High Velocity Bullets', verdict: 'take', note: '+damage on point-blank cleanup after a Bolt Volley that didn\'t one-tap' },
+          { level: 18, name: 'Thick Boy', verdict: 'take', note: 'Emergency burst for elite that survived full Bolt Volley — fires while moving' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Reload Speed', 'Movement Speed', 'Crit Chance', 'Crit Damage'],
+      avoid: ['Potency — no DoT in this build', 'Popup Tripod — movement is the entire survival strategy'],
+    },
+    artifacts: {
+      always: ['BLT Ration Pack', 'Energy Bars', 'Gold-Tipped Bullets'],
+      good: ['Squint-EE5', 'Armor Grease', "Diver's Manual"],
+      never: ['Popup Tripod — Survivalist must stay mobile; standing still to stack fire rate kills the regen passive and invites melee'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Find Boltshark, Learn the Pin Loop',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Boltshark > GK2 > Cryo Grenade. Boltshark with Cryo Bolt is the carry — freeze one target with Cryo Bolt, then fire a regular bolt for practice before Bolt Volley arrives at lv18. GK2 handles trash in the meantime.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Boltshark lv6: Cryo Bolt immediately. Even without Bolt Volley, a freeze shot followed by a high-damage bolt is a solid early-game pattern. GK2 lv6: Hipster for rapid trash clear.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy BLT Ration Pack early — raising Max HP makes the 50% regen threshold more forgiving and extends the window where Survivalist passive is active. Save 100g. Prioritize Damage stat cards.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Gas Rerouting Breakpoint',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Boltshark to lv12 (Gas Rerouting). Faster reload between volleys is critical for the pin-dash-regen-reload loop. Deploy Cryo Grenade as area CC backup when multiple swarms converge.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Boltshark lv12: Gas Rerouting. GK2 lv12: High Caliber Rounds for better trash clear. Cryo Grenade lv6: Compact Explosives for wider emergency freeze.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Energy Bars is excellent here — Survivalist doesn\'t stack HP, so the per-level damage bonus is a clean gain. Spend ~30g on Damage upgrades. Save 120g for Stage 3 power spike.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Bolt Volley Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Boltshark lv18: Bolt Volley fires 3 bolts simultaneously. The loop is now: Cryo Bolt to freeze → Bolt Volley triple-hit into frozen target → GK2 Hipster cleans up surrounding trash → dash to regen → repeat.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Bolt Volley is the build. Cryo Grenade lv12: Frost Nova for larger emergency freeze. GK2 lv18: Supercooling Chamber if available — extends Cryo Bolt freeze window so Bolt Volley always hits frozen targets.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Gold-Tipped Bullets scales with accumulated gold — Survivalist speed means you mine faster per stage and accumulate gold quickly. Look for Squint-EE5 — Boltshark bolts crit, and the bonus applies per bolt in the Volt Volley.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Fill Secondaries',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Boomstick to lv18 (Thick Boy panic button). Cryo Grenade toward lv18: Gravitational Core clusters enemies before the Bolt Volley for maximum multi-hit. All kits mostly complete by end of Stage 4.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Cryo lv18: Gravitational Core is the final combo piece. Boomstick lv18: Thick Boy for mobile burst panic. Any global Crit Damage or Reload Speed upgrades are priority insta-buys.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Complete BLT Ration Pack + Energy Bars core. Armor Grease is worth buying for the stacking Dodge Chance while moving — Survivalist always moves, so it reaches max stacks naturally.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Pin the Boss, Stay Fast',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Against Dreadnought: Gravitational Core Cryo Grenade clusters escorts, then Cryo Bolt freezes Dreadnought, then Bolt Volley triple-hit during the freeze window. GK2 Hipster handles escort trash while Boltshark reloads.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take all Damage, Reload Speed, and Movement Speed upgrades. Movement Speed for Survivalist directly increases how often regen activates — faster you establish distance after a Bolt Volley, the more HP you regen before re-engaging.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Gold-Tipped Bullets: hold gold through the run for maximum boss damage. Mine aggressively using Survivalist speed advantage. Dump nitra on rerolls for Squint-EE5 if still missing.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'hurricane-weapons-specialist',
+    name: 'Hurricane Weapons Specialist',
+    class: 'Gunner',
+    subclass: 'Weapons Specialist',
+    tier: 'A',
+    difficulty: 3,
+    passive: 'After firing 100 [PROJECTILE] shots, automatically fire 8 high-damage projectiles in all directions — scales with Kinetic and Projectile Damage upgrades and can crit',
+    synopsis: 'Rush Hurricane to lv18 for The Favourite (+100% Damage, +100% Fire Rate). Pair with BRT7 Sidearm OC to passively buff Hurricane by 25%. The 100-shot passive proc fires constantly with Hurricane\'s spray fire, adding an omnidirectional burst every few seconds.',
+    playstyle: 'Hurricane\'s homing rockets handle AoE — aim loosely at swarm clusters and let the rockets self-guide. Your job is to stay mobile and keep the rocket drum spinning, not to aim precisely. Use BRT7 as a secondary proc-feeder: its Sidearm OC reduces its own damage but adds +25% to all other weapons including Hurricane. The Weapons Specialist passive fires automatically, so play toward the center of the arena to maximize the 8-projectile burst coverage. Stage 3\'s The Favourite overclock doubles Hurricane\'s already-strong output — from that point the build handles both swarms and elites comfortably without requiring a freeze setup.',
+    strengths: [
+      'The Favourite at lv18 turns Hurricane into one of the highest-damage AREA weapons in the game — doubled damage and fire rate on homing rockets that already track targets is devastating',
+      'Weapons Specialist passive triggers constantly off Hurricane\'s high shot count, adding free omnidirectional bursts that handle flankers without any player input',
+      'BRT7 Sidearm OC is a passive +25% damage multiplier for Hurricane with no playstyle cost — equip it and forget it',
+    ],
+    weaknesses: [
+      'The Favourite OC penalizes all non-Hurricane weapons by -30% Damage and -30% Fire Rate — BRT7 becomes even weaker, so commit fully to Hurricane as the sole damage source',
+      'Hurricane has significant reload time at base; without Spare Rockets at lv6 to buffer clip size, you will have long dead windows between drums in Stage 1',
+      'Homing rockets can be deceived by fast-moving single targets — Dreadnought mobility can cause rockets to spiral and miss; aim near its feet to compensate',
+    ],
+    tips: [
+      'Incendiary Payload at lv6 is a strong alternative to Spare Rockets if you want fire DoT setup — fire-covered ground functions as a passive damage zone, letting Hurricane\'s rockets detonate into burning clusters',
+      'The Weapons Specialist passive projectiles have 100 piercing value and can crit — take Crit Chance upgrades and Squint-EE5 to make every passive burst a potential chain-kill event',
+      'BRT7 with Sidearm OC deals very little damage itself, so never pour XP into leveling it beyond lv6 where the OC unlocks; bank all weapon XP into Hurricane',
+      'Runic Warhead at lv12 (+50% Explosion Radius) converts Hurricane\'s homing rockets into large-radius blasts — against tight swarms each rocket can clip 6-8 enemies simultaneously',
+      'In Stage 5, aim Hurricane slightly above the Dreadnought\'s center mass — the homing arc causes rockets to dive into its hitbox rather than overshooting past it at close range',
+    ],
+    weapons: [
+      {
+        name: '"Hurricane" Guided Rocket System',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Spare Rockets', verdict: 'take', note: '+3 clip size — eliminates the painful early reload dead window; Hurricane\'s base clip is tiny' },
+          { level: 12, name: 'Runic Warhead', verdict: 'take', note: '+50% Explosion Radius — each rocket hits a much wider area; devastating against dense swarms' },
+          { level: 18, name: 'The Favourite', verdict: 'take', note: 'MUST-TAKE — +100% Damage, +100% Fire Rate on Hurricane; other weapons take -30% penalty but BRT7 is already a passive buffer' },
+        ],
+      },
+      {
+        name: 'BRT7 Burst Fire Gun',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Sidearm', verdict: 'take', note: 'MUST-TAKE — -20% BRT7 Damage but +25% Damage to all other weapons including Hurricane; pure passive buff' },
+          { level: 12, name: 'Gas Rerouting', verdict: 'situational', note: '+25% Fire Rate and Reload — helps proc the 100-shot Weapons Specialist passive faster if needed' },
+          { level: 18, name: 'Omni Barrel', verdict: 'skip', note: '+50% Damage but BRT7 is a passive buffer, not a damage carry after The Favourite OC; not worth the XP' },
+        ],
+      },
+      {
+        name: 'Seismic Repulsor',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Coolant Leak', verdict: 'take', note: 'Cryo on knockback — buys time during Hurricane reload windows' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More charges; CC uptime is the main survival tool when rockets are reloading' },
+          { level: 18, name: 'Extra Capacity (+3)', verdict: 'take', note: 'Near-permanent knockback; Weapons Specialist passive handles anything that gets through' },
+        ],
+      },
+      {
+        name: 'Cryo Cannon',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'Wider freeze for incoming swarms; Hurricane rockets hit frozen clusters for full AoE' },
+          { level: 12, name: 'Frost Burn', verdict: 'take', note: 'Fire from cold — applies fire DoT after Incendiary Payload primes the ground' },
+          { level: 18, name: 'Even More Beams (+3)', verdict: 'situational', note: 'Full-width freeze wall; take if Dreadnought tankiness becomes an issue' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Explosive Damage', 'Kinetic Damage', 'Explosion Radius', 'Crit Chance', 'Reload Speed'],
+      avoid: ['Status Effect Damage — build is explosive/kinetic, not DoT', 'Move Speed — Weapons Specialist doesn\'t require kiting'],
+    },
+    artifacts: {
+      always: ["Diver's Manual", 'Energy Bars', 'Gold-Tipped Bullets'],
+      good: ['Squint-EE5', 'Pay2Win Console', 'Turbo Encabulator'],
+      never: ['Ammo Rig — The Favourite already doubles fire rate; -15% Move Speed is pure cost here', 'Popup Tripod — Hurricane is mobile; standing still negates its homing advantage'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Lock In Hurricane',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Hurricane > BRT7 > Seismic Repulsor. Hurricane is the entire build. If not offered at lv5, take the strongest available and bank XP — Hurricane should be your first pickup regardless of when it appears. BRT7 is your secondary proc-feeder, not a damage weapon.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Hurricane lv6: Spare Rockets. The base clip size is painfully small; Spare Rockets eliminates the constant reload dead time and lets you maintain damage pressure. BRT7 lv6: Sidearm — this is a passive +25% Hurricane damage boost, take it immediately.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 100g target. Buy Energy Bars immediately if available — at level 30+ it is +30% Damage on a weapon that already benefits from every Explosive Damage upgrade. Spend on Explosive Damage stat cards only; skip movement and HP until Stage 2.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Runic Warhead Radius Spike',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Hurricane to lv12. Add Cryo Cannon as a third weapon for freeze support — Hurricane rockets detonating into frozen clusters deal full AoE to every frozen enemy simultaneously. Weapons Specialist passive is now firing regularly; position centrally to maximize burst coverage.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Hurricane lv12: Runic Warhead (+50% Explosion Radius). Each rocket now blasts a significantly wider zone — inside a frozen swarm this converts one rocket into a 6-8 enemy hit. Cryo Cannon lv6: More Beams for wide freeze coverage.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend 30g on Explosion Radius upgrades — they stack additively with Runic Warhead and amplify every rocket. Gold-Tipped Bullets is excellent here; Hurricane generates kills fast enough to build a high gold reserve. Look for Squint-EE5 if approaching 75% global Crit Chance.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'The Favourite Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Hurricane lv18: The Favourite. Doubled damage and fire rate on already-strong homing explosive rockets with Runic Warhead radius. Swarms vanish in seconds. BRT7\'s -30% penalty from The Favourite doesn\'t matter — it was already a passive buff, not a damage carry.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'The Favourite is non-negotiable. Seismic Repulsor lv6: Coolant Leak for cryo on knockback during reload windows. Cryo Cannon lv12: Frost Burn for fire-from-cold bonus damage. Stack Explosive Damage cards in every offered upgrade.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Gold-Tipped Bullets + Energy Bars pair — The Favourite\'s doubled fire rate means kills and gold accumulate faster than any other stage. Diver\'s Manual gives +10% Damage with no downside; buy on sight. Reroll once for Squint-EE5 if missing.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Support Kit Completion',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Cryo Cannon to lv18: Even More Beams for full-width freeze wall. Seismic Repulsor to lv12: Extra Capacity for sustained CC. Hurricane handles everything — support weapons just need to control flow into its blast zones.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Seismic Repulsor Extra Capacity gives near-permanent knockback uptime. Cryo full beams ensures wide freeze coverage. Take any Explosion Radius or Kinetic Damage global upgrade immediately — these compound with Runic Warhead\'s radius and The Favourite\'s doubled damage.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Turbo Encabulator is valuable here if you have 4+ overclocks — at Stage 4 you likely have 5-6 and the +3% Damage per overclock is meaningful. Pay2Win Console is an excellent reroll companion for finding Squint-EE5 or Diver\'s Manual.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Homing Rockets Win',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Hurricane at full power handles the Dreadnought. Freeze with Cryo Cannon immediately on supply pod drop — frozen Dreadnought is a stationary target for homing rockets. Aim at feet to prevent overshooting. Seismic Repulsor handles escorts while Hurricane focuses the boss.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Explosive Damage, Kinetic Damage, and Explosion Radius upgrade. Crit Chance is valuable since Weapons Specialist passive projectiles can crit and at Stage 5 you may have 60-70% global Crit Chance — each passive burst becomes a chain-kill event.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Gold-Tipped Bullets: dump held gold at boss stage for maximum damage stack. Mine all available nitra. Pay2Win Console stacks persist — reroll aggressively if gold allows. The Favourite\'s fire rate means you generate kills and Weapons Specialist passive procs faster than any other Gunner build.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'bulldog-juggernaut',
+    name: 'Bulldog Juggernaut',
+    class: 'Gunner',
+    subclass: 'Juggernaut',
+    tier: 'B',
+    difficulty: 4,
+    passive: '+10 Armor, +50 Max HP, -50% Weapon Range; gain up to +50% Damage (5 stacks of +10%) after taking damage — the more hits you absorb, the harder you hit back',
+    synopsis: 'Juggernaut trades range for tank stats and a retaliatory damage buff. Bulldog with Super Reload Shield OC becomes a short-range powerhouse: +75% Damage and +50% Fire Rate while reloading, plus +100% Armor. Rush Bulldog to lv18, brawl close, reload aggressively, and let Juggernaut\'s passive stack to full on every wave.',
+    playstyle: 'This is a point-blank brawler. Juggernaut\'s -50% Weapon Range means every gun is a close-quarters weapon by design — lean into it. Rush into swarms rather than kiting away, absorb hits to stack the +10% damage passive up to 5 times (+50% total), then unload Bulldog at full buff. The Super Reload Shield OC makes reloading during combat an offensive act: the +100% Armor window means you can reload in melee range without dying, while +75% Damage and +50% Fire Rate means the first shots after a reload hit hardest. Use Seismic Repulsor to knock enemies back briefly, immediately close distance again, and maintain all 5 damage stacks by staying in the fight.',
+    strengths: [
+      'At full Juggernaut passive stacks (+50% Damage from 5 hits absorbed) combined with Super Reload Shield (+75% Damage while reloading), Bulldog lands at over +125% total damage — single-shot executions on standard enemies in late game',
+      'Super Reload Shield\'s +100% Armor during reload window lets you safely brawl in melee range; enemies that would kill other builds in one hit deal minimal damage while you cycle the chamber',
+      '+50 Max HP and +10 Armor from Juggernaut passive make this the tankiest Gunner subclass — survivability artifacts have much higher floors here than on Enforcer or Weapons Specialist',
+    ],
+    weaknesses: [
+      '-50% Weapon Range makes every weapon a short-range tool; against enemies that attack from range (spitters, swarmer clusters at a distance) you must close distance aggressively or take damage without dealing any',
+      'Juggernaut damage stacks require taking hits to charge — Stage 1 the stacks are often not fully up, making early game feel underpowered until you develop survivability',
+      'Bulldog\'s low clip size and slow fire rate mean any gap in the Super Reload Shield window is a real damage dead zone; play cadence must be tightly managed',
+    ],
+    tips: [
+      'Deliberately step into small hit opportunities early in each wave to pre-stack Juggernaut\'s passive before the swarm crests — absorbing one hit from a distant spitter charges two stacks without real danger',
+      'Super Reload Shield timing is an aggressive tool: reload mid-fight at point-blank range to gain +100% Armor, then fire the refreshed clip at full +75% Damage into the clustered enemies',
+      'Double Barrel! at lv18 is a strong alternative to Super Reload Shield if you prefer damage density over the brawl-reload loop — two parallel bullets at Bulldog\'s high base damage is enormous single-hit output',
+      'Salty Pretzel and The MoCap both excel on Juggernaut: the passive stacking design means you are frequently at moderate-to-low HP, triggering both artifacts\' damage and armor bonuses simultaneously',
+      'BLT Ration Pack\'s +2 HP/s regen keeps you from dying between waves — Juggernaut\'s tankiness floors you at survivable HP but doesn\'t recover you; regen bridges the gap to the next wave where new hits re-stack the passive',
+    ],
+    weapons: [
+      {
+        name: '"Bulldog" Heavy Revolver',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: '+15% Damage, +25% Reload Speed — both stats directly improve Bulldog\'s slow fire cadence and point-blank burst' },
+          { level: 12, name: 'Reload Shield', verdict: 'take', note: 'Doubles armor while reloading — early version of the Super Reload Shield brawl loop; keeps you alive reloading in melee range' },
+          { level: 18, name: 'Super Reload Shield', verdict: 'take', note: 'MUST-TAKE — +75% Damage, +50% Fire Rate, +100% Armor while reloading; the entire brawl identity' },
+        ],
+      },
+      {
+        name: 'Seismic Repulsor',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Coolant Leak', verdict: 'take', note: 'Cryo on knockback — knockback then immediately close distance to re-stack Juggernaut passive via hits' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More charges; repulsor is a breathing space tool between reload windows, not a permanent CC solution' },
+          { level: 18, name: 'Extra Capacity (+3)', verdict: 'situational', note: 'Near-permanent knockback — useful if swarms outpace your reload loop, but reduces the hits that stack Juggernaut passive' },
+        ],
+      },
+      {
+        name: 'ArmsKore Coil Gun',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'More Beams (+1)', verdict: 'take', note: 'Wider beam coverage for clearing ranged enemies you cannot safely close on during reload windows' },
+          { level: 12, name: 'A Little More Oomph!', verdict: 'take', note: '+15% Damage on a piercing weapon; handles elites that Bulldog struggles to kill through its low clip size' },
+          { level: 18, name: 'Spliced Emitter', verdict: 'take', note: '+75% Range, +75% Damage, +75% Lifetime — compensates for Juggernaut\'s -50% range penalty; lets you engage ranged threats' },
+        ],
+      },
+      {
+        name: 'High Explosive Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius; throw into approaching cluster to reduce swarm density before closing to melee range' },
+          { level: 12, name: 'A Little More Oomph!', verdict: 'take', note: '+damage; grenade + Super Reload Shield Bulldog follow-up is a devastating combo burst' },
+          { level: 18, name: 'True TNT', verdict: 'take', note: 'Massive single grenade damage; throw at Dreadnought during Super Reload Shield window for stacked burst' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Kinetic Damage', 'Reload Speed', 'Armor', 'Max HP', 'Crit Chance'],
+      avoid: ['Move Speed — you close distance intentionally; speed undermines the brawl loop', 'Explosion Radius — secondary concern; Bulldog is the primary damage source'],
+    },
+    artifacts: {
+      always: ['BLT Ration Pack', 'Salty Pretzel', 'The MoCap'],
+      good: ['Energy Bars', 'Reflex Calibrator', "Diver's Manual"],
+      never: ['Gold-Tipped Bullets — hoarding gold contradicts aggressive brawl playstyle; you spend constantly on survivability', 'Ammo Rig — -15% Move Speed on a build that must close distance is dangerous'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Find Bulldog and Absorb Hits',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Priority: Bulldog > Seismic Repulsor > Coil Gun. Bulldog is the carry. Juggernaut starts with it as the subclass weapon so it should always be available. Do not rush into full swarms yet — absorb one or two hits per wave to begin stacking the passive, then pull back to reload safely.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Bulldog lv6: A Little More Oomph! for +15% Damage and +25% Reload Speed — the reload speed improvement reduces dead time between shots more than any other lv6 option. Seismic Repulsor lv6: Coolant Leak for cryo on knockback, giving breathing room while you reload.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy BLT Ration Pack immediately if available — Juggernaut\'s passive charges off taking hits, meaning passive HP regen is essential to recover between the intentional damage absorption. Save 60g. Spend on Kinetic Damage cards. Skip movement speed entirely.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Reload Shield Brawl Loop',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Bulldog to lv12 for Reload Shield. Once online, practice the brawl loop: close → shoot clip → reload at melee range (doubled armor) → shoot fresh clip. Coil Gun handles ranged elites you cannot safely approach. Build Juggernaut passive stacks before engaging the main swarm.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Bulldog lv12: Reload Shield is mandatory — the early brawl loop is too dangerous without some armor on reload. Seismic Repulsor Extra Capacity lv12 for more CC charges. HE Grenade lv6: Compact Explosives to reduce swarm density before closing distance.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Salty Pretzel is excellent now — you are frequently at 70-80% HP from passive stacking absorption, putting you in the armor-bonus zone often. Spend ~30g on Kinetic Damage and Armor upgrades. Juggernaut\'s base +10 Armor means Armor stat cards have higher absolute value than on other subclasses.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Super Reload Shield Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Bulldog lv18: Super Reload Shield. +75% Damage and +50% Fire Rate on the first shots after each reload, plus +100% Armor during the reload itself. At full Juggernaut passive stacks (+50% from 5 hits absorbed) you are firing at effectively +125% Damage. Brawl aggressively — this is when the build peaks.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Super Reload Shield is non-negotiable. Coil Gun lv12: A Little More Oomph! for elite cleanup. HE Grenade lv12 for cluster damage. Deploy all support weapons to manage the swarm flow while Bulldog handles burst execution.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Salty Pretzel + The MoCap pair — at moderate HP with Super Reload Shield active you have high armor AND high damage simultaneously. Reflex Calibrator stacks dodge on taking damage, which compounds Juggernaut\'s natural hit-absorption playstyle.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Support Grid Complete',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Coil Gun to lv18: Spliced Emitter — +75% Range compensates for Juggernaut\'s penalty, letting Coil Gun engage ranged threats effectively. HE Grenade to lv18: True TNT for high-burst grenade finishers. Bulldog remains the primary kill weapon; support weapons handle overflow.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Coil Gun Spliced Emitter restores effective range for the whole kit, partially compensating for Juggernaut\'s range penalty. Seismic Repulsor Extra Capacity (+3) for near-permanent CC uptime. HE Grenade True TNT for boss-phase burst. Take every Kinetic Damage global upgrade.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Energy Bars is strong here — Juggernaut\'s extra +50 Max HP raises the base from which Energy Bars\' HP-drain penalty operates, giving more headroom. Reflex Calibrator is excellent now; at Stage 4 you reliably stack it to 3-4 tiers every engagement.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Brawl and Reload',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Absorb early Dreadnought hits on purpose to stack Juggernaut passive to 5 before committing the Super Reload Shield burst sequence. Throw True TNT HE Grenade on supply pod drop, immediately close distance, shoot Bulldog clip, reload in melee range (Super Reload Shield active), fire fresh clip at full +125% damage. Repeat.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Kinetic Damage, Reload Speed, and Armor upgrade. Armor has outsized value on Juggernaut since base +10 Armor means each Armor card percentage is calculated from a higher floor. Crit Chance upgrades compound with The MoCap and Salty Pretzel\'s damage bonuses.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything on stat upgrades. Diver\'s Manual is an always-buy if not yet acquired. Energy Bars at Stage 5 adds significant flat damage from accumulated levels. Do not hoard gold — this build generates enough damage from passives and OCs; spend on survivability upgrades to ensure you survive long enough to execute the brawl loop.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'tinkerer-lok1',
+    name: 'Tinkerer LOK-1 Carry',
+    class: 'Engineer',
+    subclass: 'Tinkerer',
+    tier: 'B',
+    difficulty: 2,
+    passive: '+10% XP Gain, all weapons start at Level 3 — LOK-1 can reach lv18 on Stage 1 with good XP routing',
+    synopsis: 'LOK-1\'s lock-on targeting eliminates aim skill, and \'The Favourite\' at lv18 doubles both damage and fire rate. Tinkerer\'s lv3 start means the power spike arrives a full stage earlier than any other build.',
+    playstyle: 'Keep moving — unlike the Warthog build, LOK-1 rewards aggressive kiting. Lock targets while strafing, let the smart targeting system track. Deploy Voltaic Fence to cluster enemies and vacuum XP, then arc LOK-1 bursts into locked groups. Once \'The Favourite\' is online, funnel all XP into LOK-1 and accept the penalty on support weapons — they exist only to buy you time between LOK-1 clips.',
+    strengths: [
+      'Lock-on targeting makes LOK-1 effective even while moving at full speed, unlike all shotgun or heavy-weapon builds',
+      'The Favourite\'s +100% Damage and +100% Fire Rate at lv18 is among the highest single-weapon payoffs in the game; Tinkerer\'s lv3 start means this arrives in Stage 1 on a good run',
+      'Battery Bullets converts LOK-1 to electric damage, synergizing with Voltaic Fence\'s shock field for dual-source electric stacking',
+    ],
+    weaknesses: [
+      'The Favourite\'s -30% Damage and -30% Fire Rate penalty to all other weapons makes support tools significantly weaker from lv18 onward — you become nearly one-weapon dependent',
+      'LOK-1 requires sustained target lock to deal full DPS; enemies that die before a full lock burst waste clip capacity and reduce effective damage output',
+      'Lower direct crowd-control than Warthog or turret builds — without a stagger or knockback tool, fast enemies that slip past the lock-on range can close quickly',
+    ],
+    tips: [
+      'Lead Wrapped Ammo at lv12 (+150% damage, -20% fire rate and reload) is an excellent bridge before The Favourite unlocks at lv18 — take it if the run is strong and you need a mid-game spike',
+      'Voltaic Fence\'s Magnetic Alloy OC pulls XP orbs into its radius — position the fence at natural choke points to accelerate the lv18 sprint in Stage 1',
+      'After The Favourite is online, spend shop gold on LOK-1 damage upgrades exclusively; support weapon stats are already penalized and further investment there has poor return',
+      'High Caliber Rounds (+100% Piercing, +30% Damage, -30% Fire Rate) is a strong lv12 alt if you face armored targets — the piercing converts to multi-hit bonus on bunched enemies',
+      'Squint-EE5 is viable here: LOK-1\'s fire rate with The Favourite is high enough that crit checks fire rapidly, and Battery Bullets can push you toward the electric-proc threshold for status synergy',
+    ],
+    weapons: [
+      {
+        name: 'LOK-1 Smart Rifle',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Battery Bullets (Electric) or Gas Rerouting', verdict: 'situational', note: 'Battery Bullets for electric synergy with Voltaic Fence; Gas Rerouting if you want pure fire rate and reload to accelerate XP farming toward lv18' },
+          { level: 12, name: 'Lead Wrapped Ammo or High Caliber Rounds', verdict: 'situational', note: 'Lead Wrapped Ammo for raw damage spike before The Favourite; High Caliber Rounds for piercing into dense groups or armored targets' },
+          { level: 18, name: 'The Favourite', verdict: 'take', note: 'MUST-TAKE — +100% Damage and +100% Fire Rate; accept the -30% penalty to all other weapons, they are now support tools only' },
+        ],
+      },
+      {
+        name: 'Voltaic Shock Fence',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Magnetic Alloy', verdict: 'take', note: 'XP vacuuming accelerates the lv18 sprint — most important early OC in this build' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More fence nodes for wider XP pull radius and better chokepoint coverage' },
+          { level: 18, name: 'Conduit', verdict: 'take', note: 'Fence follows you — dynamic positioning without needing to redeploy after moving' },
+        ],
+      },
+      {
+        name: 'LOK-1 Smart Rifle (second slot) or Hi-Volt Thunderbird',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Gas Rerouting (Thunderbird)', verdict: 'take', note: 'If running Thunderbird as backup, fire rate and reload keep it functional even under The Favourite\'s penalty' },
+          { level: 12, name: 'Battery Bullets (Thunderbird)', verdict: 'situational', note: 'Electric tag adds another status source alongside the fence; mediocre after The Favourite penalty but better than nothing' },
+          { level: 18, name: 'Bigger Mags (LOK-1 second)', verdict: 'skip', note: 'If a second LOK-1 appeared, Bigger Mags just extends clip; The Favourite already covers damage — this slot is low priority' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Fire Rate', 'Reload Speed', 'Crit Chance'],
+      avoid: ['Move Speed upgrades are neutral — you want to move, not stand still, but the stat itself isn\'t priority; Construct stats are irrelevant in this build'],
+    },
+    artifacts: {
+      always: ["Diver's Manual", 'Energy Bars', 'Turbo Encabulator'],
+      good: ['Squint-EE5', '5 Leaf Clover', 'Pay2Win Console'],
+      never: ['Popup Tripod — requires standing still; this build kites constantly'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Level 3 Head Start — Sprint to lv18',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'LOK-1 starts at lv3. Focus all XP on LOK-1 — lv18 on Stage 1 is the goal. Deploy Voltaic Fence with Magnetic Alloy to vacuum XP from kills near the fence.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'LOK-1 lv6: Battery Bullets for electric synergy with the fence, or Gas Rerouting for faster cycling if you need to spam bursts to stay alive. Either primes you for the lv18 spike.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Buy Voltaic Fence early for its Magnetic Alloy XP pull. Save gold for Diver\'s Manual or Turbo Encabulator. Avoid spending on support weapon upgrades — those stats will be penalized once The Favourite is online.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'The Favourite Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'If LOK-1 didn\'t hit lv18 in Stage 1, it will hit it very early Stage 2. Once The Favourite is equipped, all non-LOK-1 weapons are support tools. Level Voltaic Fence for Conduit so it follows you during kiting.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'LOK-1 lv18: The Favourite. This is the build. Fence lv12: Extra Capacity. Start Hi-Volt Thunderbird if you need a panic backup that fires under the penalty.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Turbo Encabulator is now excellent — you have at least 2 OCs equipped, and each new OC adds +3% Damage and +3% Reload Speed. Energy Bars stacks damage with every level. Prioritize both.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Damage Compounding',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Push Fence to lv18 for Conduit. Add a fourth weapon if available — even under The Favourite\'s penalty, another tag for Multi Tool or another OC stack for Turbo Encabulator adds value.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take any global Damage or Fire Rate upgrade immediately. LOK-1 with The Favourite benefits from every Damage multiplier — the +100% Fire Rate means Damage upgrades apply faster than any other weapon in the pool.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Turbo Encabulator stacking — target 6+ OCs total. If 5 Leaf Clover is available alongside Pay2Win Console, this stage is where that pair starts compounding Shop offer quality.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Crit Threshold Push',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'No new weapons needed. Confirm Voltaic Fence Conduit is online. If Squint-EE5 was picked up and you\'re close to 75% Crit Chance, buy any available Crit Chance upgrades aggressively.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take Crit Chance and Crit Damage upgrades if chasing Squint-EE5 threshold. Otherwise take raw Damage. Skip Reload Speed beyond what naturally appears — The Favourite\'s fire rate means magazine cycling is already fast.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5 supply pod. Pay2Win Console rerolls are worth continuing — each reroll permanently stacks damage. Gold-Tipped Bullets can work here if your gold reserve is high from efficient kiting play.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Lock and Dump',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'LOK-1 carries. Lock onto the Dreadnought, dump the full magazine, reload and repeat. Voltaic Fence placed at your feet shocks anything targeting you while you maintain lock-on focus on the boss.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Damage and Crit upgrade. The Favourite\'s doubled fire rate means each Damage% upgrade translates to more DPS than on any other weapon. Do not buy Reload Speed — redundant at this fire rate.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything on Damage. If Pay2Win Console is equipped, reroll aggressively — permanent stacks matter more than held gold unless Gold-Tipped Bullets is in the loadout.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'devastator-shard-diffractor',
+    name: 'Devastator Shard Diffractor',
+    class: 'Engineer',
+    subclass: 'Devastator',
+    tier: 'B',
+    difficulty: 3,
+    passive: '+30% Knockback Force, +15% Explosion Radius — terrain-bouncing plasma beams hit harder and Plasma Burster AoE covers more ground',
+    synopsis: 'Shard Diffractor\'s bouncing plasma beams compound with Devastator\'s +15% Explosion Radius on Plasma Burster, creating a room-clearing loop. Overcharged Fuelcells triples the beam damage at the cost of duration — fights are fast, decisive, and geometry-dependent.',
+    playstyle: 'Position in the center of rooms to maximize how many walls the Shard Diffractor beams bounce off of before expiring. Fire Plasma Burster into the same clustered area to layer explosive and beam damage simultaneously. Devastator\'s knockback force on the Seismic Repulsor creates breathing room when enemies close in — use it reactively, not proactively. This build is geometry-dependent: open arenas reduce bounce hits and drop effective DPS substantially, while tight corridors turn it into a beam wall that shreds entire waves in seconds.',
+    strengths: [
+      'Shard Diffractor beams bounce off walls and re-hit the same enemies multiple times in tight corridors — Overcharged Fuelcells at lv18 means each bounce hit for +175% damage',
+      'Plasma Burster with More Bounce + Devastator\'s +15% Explosion Radius creates a wide-arc plasma grenade that can reach around corners and hit multiple waves simultaneously',
+      'Devastator\'s +30% Knockback Force on Seismic Repulsor covers the build\'s main weakness: anything that slips past the beam field gets pushed back before it can deal melee damage',
+    ],
+    weaknesses: [
+      'Entirely geometry-dependent — Overcharged Fuelcells reduces beam lifetime by 40%, so in open rooms with no walls nearby, beams expire before bouncing enough times to justify the damage tradeoff',
+      'Slowest ramp-up of any Engineer build: both Shard Diffractor and Plasma Burster are unlocked at higher Engineer ranks, and neither reaches full potential until lv18 OCs',
+      'No sustained fire option — both the Diffractor and Burster have cooldowns; waves that outlast both cooldowns must be handled by Seismic Repulsor alone until charges reset',
+    ],
+    tips: [
+      'Fight near walls intentionally: Shard Diffractor beams angle their bounces based on firing direction — aim at a wall to your left while facing the horde and let the bounce arc through the enemy cluster',
+      'Hot Plasma or Cold Plasma at lv6 adds an elemental status alongside beam damage — Cold Plasma slow synergizes beautifully with Seismic Repulsor by keeping knocked-back enemies slowed before they can recover',
+      'Plasma Burster More Bounce! OC extends how many times the grenade bounces before detonating — in a corridor, one grenade can trigger its explosion after hitting two or three wall angles, catching enemies on multiple sides',
+      'Ionized Plasma on Shard Diffractor at lv12 adds shock status — each bouncing beam hit applies a shock check, and with enough bounce hits per second this creates near-constant stun on any enemy in the beam path',
+      'The MoCap pairs exceptionally well: this build naturally takes damage during the slow ramp phase, and once you are at low HP the damage bonus activates precisely when Overcharged Fuelcells beam damage is at its highest',
+    ],
+    weapons: [
+      {
+        name: 'Shard Diffractor',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Cold Plasma or Hot Plasma', verdict: 'situational', note: 'Cold Plasma for kite-friendly slow that synergizes with Repulsor pushback; Hot Plasma if Chemist Kit is in the loadout and you want burn stacks from every beam bounce' },
+          { level: 12, name: 'Ionized Plasma or More Beams', verdict: 'situational', note: 'Ionized Plasma for stun-lock via repeated bounce shock procs; More Beams for wider coverage in open rooms where single-beam bounce paths are less reliable' },
+          { level: 18, name: 'Overcharged Fuelcells', verdict: 'take', note: 'MUST-TAKE in good geometry — +175% Damage with -40% Lifetime is a massive net positive in tight corridors; skip only in the rare case of an entirely open final stage' },
+        ],
+      },
+      {
+        name: 'Plasma Burster',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: '+15% Damage and +25% Reload Speed — Devastator passive adds +15% Explosion Radius on top, making this the best lv6 OC for raw coverage' },
+          { level: 12, name: 'Ionized Plasma or Cold Plasma', verdict: 'situational', note: 'Match the Shard Diffractor\'s element — Cold/Cold creates a freeze loop; Electric/Electric creates dual shock sources' },
+          { level: 18, name: 'More Bounce! or The Favourite', verdict: 'situational', note: 'More Bounce! in tight maps for extended grenade travel; The Favourite (+75% Damage, +30% Radius) is powerful but penalizes other weapons — only take if Plasma Burster is your primary clear tool' },
+        ],
+      },
+      {
+        name: 'Seismic Repulsor',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Coolant Leak', verdict: 'take', note: 'Cryo on knockback — frozen enemies remain in the beam field longer, taking more bounce hits from the Diffractor' },
+          { level: 12, name: 'Extra Capacity (+1)', verdict: 'take', note: 'More charges means more emergency knockback; this is the build\'s panic button and running out of charges at the wrong moment is fatal' },
+          { level: 18, name: 'Extra Capacity (+3) or Shockwave', verdict: 'situational', note: 'Extra Capacity (+3) for near-permanent knockback uptime; Shockwave if Devastator\'s +30% Force already gives enough pushback and you want wider pulse radius instead' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Damage', 'Potency', 'Explosion Radius', 'Reload Speed'],
+      avoid: ['Move Speed — standing still to aim bouncing beams is ideal; Kinetic Damage only — plasma is not kinetic, do not prioritize kinetic-specific upgrades'],
+    },
+    artifacts: {
+      always: ["Diver's Manual", 'Energy Bars', 'Chemist Kit'],
+      good: ['The MoCap', 'BLT Ration Pack', 'Turbo Encabulator'],
+      never: ['Popup Tripod — you reposition between beam volleys and cannot stack it reliably', 'Piercing Projectiles — Shard Diffractor beams are not standard projectiles and do not benefit from the piercing stat'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Survive Without the Diffractor',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Shard Diffractor is unlocked at Engineer Rank 21 — it may not be available in early runs. Use Seismic Repulsor as primary CC and a standard Engineer weapon (Warthog or LOK-1) as interim carry. If the Diffractor is available, rush it immediately.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Seismic Repulsor lv6: Coolant Leak — freeze on knockback is your survival tool all game. Any available primary weapon to lv6 for its basic OC. Preserve XP for Diffractor if you have it.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'BLT Ration Pack is the priority buy — this build takes hits during Stage 1 without its carry weapon online. Save 80g. Do not buy Chemist Kit yet; status synergy only matters once the Diffractor is applying beam hits.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Plasma Burster Deployed',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'If Plasma Burster is available, deploy it now. A Little More Oomph! at lv6 with Devastator\'s +15% Explosion Radius creates a wide-coverage grenade. Shard Diffractor should be leveling toward lv12 if online.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Plasma Burster lv6: A Little More Oomph! immediately. Shard Diffractor lv6: Cold or Hot Plasma — pick based on whether Cold (kite/slow) or Hot (burn stacks) fits your available artifact pool. Repulsor lv12: Extra Capacity.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Chemist Kit becomes valuable now that beams and grenades are both applying status. Energy Bars is excellent — you will level quickly from efficient wave clears. Explosion Radius upgrades benefit Plasma Burster directly.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Overcharged Fuelcells Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'POWER SPIKE. Shard Diffractor lv18: Overcharged Fuelcells. Every beam hit is now 3x damage — fight in corridors and near walls exclusively. Plasma Burster lv12 for elemental synergy OC.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Overcharged Fuelcells is the build\'s defining moment. Plasma Burster lv12 elemental OC to match Diffractor element. Repulsor lv18: Extra Capacity (+3) for near-constant knockback availability.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full spend. Complete Chemist Kit + Energy Bars pair. Stack Damage and Potency — both apply to beam and grenade hits. The MoCap is available here if you\'ve been taking damage during ramp; low HP + Overcharged Fuelcells damage is a strong combo.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Status Loop Established',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Plasma Burster to lv18 for More Bounce! or The Favourite. Turbo Encabulator now has 4+ OCs — it compounds all damage. No new weapons needed; maximize the three-weapon loop: Diffractor beams → Burster grenades → Repulsor pushback.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take Damage and Potency upgrades over everything. Skip Movement Speed and Kinetic-specific upgrades — plasma damage does not benefit from kinetic tags. Any Explosion Radius card is a direct Plasma Burster boost.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Consider Salty Pretzel if running The MoCap — the armor from missing HP creates a low-HP sustain package that lets you operate at the damage-bonus threshold safely.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Boss — Bounce and Explode',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Pick', content: 'Position near a wall. Fire Shard Diffractor beams at the wall angle so they bounce through the Dreadnought repeatedly. Drop Plasma Burster grenades immediately after each beam volley. Seismic Repulsor on cooldown for escorts.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Take every Damage, Potency, and Explosion Radius upgrade. Prioritize Potency if status effects are consistently applying from beam bounces — each shock or burn tick on the Dreadnought is amplified by Chemist Kit.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Turbo Encabulator at full OC count delivers the highest final damage multiplier. If The MoCap is in the loadout, enter Stage 5 at low HP deliberately — the damage bonus activates from the first shot.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'driller-interrogator-fire-dot',
+    name: 'Driller Interrogator Fire DoT',
+    class: 'Driller',
+    subclass: 'Interrogator',
+    tier: 'A',
+    difficulty: 2,
+    passive: '+100% Status Effect Damage, -30% Direct Damage — every fire tick deals double; direct shots are weak by design',
+    synopsis: 'Interrogator doubles all DoT damage, making CRSPR Flamethrower and Colette Wave Cooker burn ticks the primary damage source. Sticky Fuel leaves persistent fire zones; Nano Waves stacks burn rapidly. The -30% direct damage penalty is invisible once fire is everywhere.',
+    playstyle: 'Spray fire ahead of the wave, then step back and let the ground do the work. Sticky Fuel turns the terrain into a kill corridor: apply fire to chokepoints, toss Incendiary Grenades into the cluster, then manage repositioning while enemies burn. Colette Wave Cooker supplements with rapid burn stack generation on anything the Flamethrower misses. Avoid toe-to-toe fighting — the -30% direct damage means you will lose trades if fire is not already ticking on the target. Pacing is deliberate: pre-burn the path, kite through the burning zone, reapply.',
+    strengths: [
+      'Interrogator\'s +100% Status Effect Damage is always active — every burn tick from every source is doubled with no conditions or ramp time',
+      'Sticky Fuel creates persistent fire zones that damage enemies without requiring further player input, freeing you to reposition or apply more stacks elsewhere',
+      'Colette Wave Cooker with Nano Waves applies 28 burn stacks per second — the fastest stack generation in the Driller weapon pool, and all of it benefits from the Interrogator multiplier',
+    ],
+    weaknesses: [
+      'The -30% direct damage penalty is permanent and punishing before your first fire weapon is active — Stage 1 combat with just a CRSPR and no OC yet is noticeably weaker than other builds',
+      'Fire DoT cannot crit, making Squint-EE5 and Crit Damage stat upgrades dead draws; roughly one card in five is wasted',
+      'Heavily punished by enemies with fire resistance or immunity on higher hazard levels — the entire damage model collapses against fire-immune targets',
+    ],
+    tips: [
+      'Sticky Fuel puddles stack with Incendiary Grenade detonations — throw the grenade into an existing puddle to spike the burn stack count on every enemy standing in it simultaneously',
+      'Colette Wave Cooker\'s Nano Waves OC at lv12 reduces direct damage by 30% but doubles Potency — on Interrogator this tradeoff is irrelevant since direct damage is already penalized and Status Effect Damage is what you\'re scaling',
+      'Chemist Kit is the single highest-priority artifact for this build; pick it up immediately at any stage regardless of what else is offered',
+      'BRN Shield Belt\'s fire ring proc on taking damage applies burn stacks to surrounding enemies — on Interrogator, those burn ticks deal double damage, making a defensive proc function as an offensive one',
+    ],
+    weapons: [
+      {
+        name: 'CRSPR Flamethrower',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Bigger Tanks', verdict: 'take', note: '+100% Lifetime extends your burn coverage window — longer spray time means more terrain on fire before you have to reposition' },
+          { level: 12, name: 'Sticky Fuel', verdict: 'take', note: 'MUST-TAKE — creates persistent ground fire that keeps burning without you. Pre-burn chokepoints and retreat through them.' },
+          { level: 18, name: 'Even More Beams', verdict: 'take', note: '+3 beams dramatically widens the fire cone — spray a corridor and everything in it is burning simultaneously' },
+        ],
+      },
+      {
+        name: 'Colette Wave Cooker',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Crowd Cooker', verdict: 'take', note: '+beam width means more enemies hit per sweep — more burn stacks applied per second across the wave' },
+          { level: 12, name: 'Nano Waves', verdict: 'take', note: 'Doubles Potency at -30% direct damage — on Interrogator, the direct damage loss is irrelevant; burn stack speed is everything' },
+          { level: 18, name: 'Thermal Oscillator', verdict: 'situational', note: '+50% damage and Slow on hit; Slow helps you maintain distance while fire ticks but Centralized Reflector is competitive' },
+        ],
+      },
+      {
+        name: 'Incendiary Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'A Little More Oomph!', verdict: 'take', note: '+damage and reload speed — faster grenade cadence means more fire applications per wave' },
+          { level: 12, name: 'Cluster Grenades', verdict: 'take', note: 'Sub-grenades scatter burn across a wider area; perfect for pre-burning corridors before the wave arrives' },
+          { level: 18, name: 'Sticky Fuel', verdict: 'take', note: 'Grenade version of CRSPR Sticky Fuel — persistent fire field on detonation stacks with Flamethrower puddles' },
+        ],
+      },
+      {
+        name: 'Firefly Hunter Drone',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'More Drones (+1)', verdict: 'take', note: 'Double drone count — more autonomous fire applicators working while you focus on repositioning' },
+          { level: 12, name: 'Bigger Payload', verdict: 'take', note: 'More damage per drone hit — each hit applies burn, which Interrogator doubles' },
+          { level: 18, name: 'Swarm Protocol', verdict: 'take', note: 'Drones coordinate burst attacks — spike burn stack generation on high-priority targets' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Status Effect Damage', 'Potency', 'Reload Speed', 'Damage'],
+      avoid: ['Crit Chance — fire DoT cannot crit', 'Crit Damage — same reason'],
+    },
+    artifacts: {
+      always: ['Chemist Kit', 'Energy Bars', 'BRN Shield Belt'],
+      good: ['BLT Ration Pack', "Diver's Manual", 'Turbo Encabulator'],
+      never: ['Squint-EE5', 'Nitragenic Powder', 'Pickled Nitra'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'Establish Fire Coverage',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Start CRSPR Flamethrower immediately — it is your carry and the Interrogator\'s starting weapon. Add Incendiary Grenade as second pick. The -30% direct damage penalty stings early but Flamethrower burn ticks compensate quickly.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'CRSPR lv6: Bigger Tanks — the extended beam lifetime lets you spray a wider area before repositioning. Avoid Overheat (+100% damage, -35% Lifetime); losing beam time hurts coverage more than it helps burst.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Chemist Kit is the build-defining artifact — buy it the moment it appears even at the cost of skipping other purchases. First stat priority is Status Effect Damage. Keep 15–20g reserve for Stage 2 weapon buys.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Sticky Fuel Online',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Colette Wave Cooker is the Stage 2 priority buy — it supplements burn stack generation while CRSPR reloads. Firefly Hunter Drone can wait until Stage 3. Push CRSPR to lv12 for Sticky Fuel.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'CRSPR lv12: Sticky Fuel — this is the build\'s hinge point. Once you have it, pre-burn every approach corridor before the wave. Colette lv6: Crowd Cooker for wider sweeps.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Second Chemist Kit stacks additively — double-Chemist Kit is a win condition for this build. Also prioritize Potency upgrades. BRN Shield Belt can appear here; take it.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Burn Stack Engine',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Push Colette Wave Cooker to lv12 for Nano Waves — it becomes the fastest burn stack applier in the kit. CRSPR lv18: Even More Beams widens fire cone dramatically. Buy Firefly Hunter Drone.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Colette lv12: Nano Waves — doubles Potency, the -30% direct damage is irrelevant on Interrogator. CRSPR lv18: Even More Beams for wide area fire. Incendiary Grenade lv12: Cluster Grenades.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full Status Effect Damage spending. Energy Bars is excellent here — every level adds damage with no crit dependency. If Turbo Encabulator is available with 4+ OCs equipped, take it.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Autonomous Fire Network',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Firefly Hunter Drone with More Drones provides aerial burn application while you kite. Incendiary Grenade lv18 Sticky Fuel creates a third persistent fire source. The build now has three independent fire coverage systems.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Firefly Drone lv12: Bigger Payload — each drone strike applies burn at double Interrogator intensity. Colette lv18: Thermal Oscillator for slow + damage on stragglers. Incendiary lv18: Sticky Fuel.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Reserve 30g for Stage 5. Complete the Chemist Kit double-stack if still missing. BLT Ration Pack offsets any HP pressure. Dump remaining gold on Status Effect Damage and Potency.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Dreadnought Burn Loop',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Pre-burn the Dreadnought arena with Sticky Fuel puddles before engaging. Deploy Firefly Drones immediately on spawn. The Dreadnought will enter fire zones as it chases you — maintain distance and let the burn tick. Apply fresh stacks with Colette Wave Cooker sweeps when it closes.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'All Status Effect Damage and Potency upgrades are the priority. Reload Speed helps maintain CRSPR uptime during the boss chase. Avoid spending on Move Speed unless you are getting caught.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything on Status Effect Damage. Energy Bars peaks here — your accumulated level-up bonus is at maximum. Gold-Tipped Bullets is worth buying late if you have a strong gold reserve.' },
+        ],
+      },
+    ],
+  },
+
+  {
+    id: 'krakatoa-turret-demo',
+    name: 'Krakatoa Turret Demo',
+    class: 'Driller',
+    subclass: 'Demolitions Expert',
+    tier: 'B',
+    difficulty: 3,
+    passive: '+20% Reload Speed & AoE Size for [EXPLOSIVE] weapons — Krakatoa turrets are [EXPLOSIVE], so their fire cones are wider and reload faster',
+    synopsis: 'Deploy Krakatoa Sentinel turrets enhanced by the Demolitions Expert AoE passive, then supplement with High Explosive Grenades and Neurotoxin Grenades. Turrets handle sustained fire output while you manage positioning and grenade cooldowns. Tank Tracks OC lets turrets follow you, making it a moving kill platform.',
+    playstyle: 'Place Krakatoa turrets at chokepoints or activate Tank Tracks so they follow you as a mobile escort. Your role is directional: herd enemies into the turret fire arcs with High Explosive Grenades, then let the turrets do the sustained damage. Neurotoxin Grenades slow and DoT enemies that survive the initial turret burst. Stay just behind or beside your turret line — Demolitions Expert AoE passive widens every explosion, so your own grenades can catch you if you get too close. Mid-range management build: not as passive as Constructor Turret Army since turrets must be manually repositioned, but more mobile.',
+    strengths: [
+      'Demolitions Expert +20% AoE passive applies to Krakatoa Sentinel turret fire cones — each turret covers a wider area than it would on any other subclass, creating overlapping fire fields with just two turrets',
+      'Tank Tracks OC converts stationary turrets into following escorts, removing the deployment micromanagement that makes pure turret builds frustrating on mobile stages',
+      'High Explosive Grenade herds enemies into turret arcs — combining clustering with sustained fire output makes the build effective against both hordes and tough single targets',
+    ],
+    weaknesses: [
+      'Turrets must be deployed (standing still) unless Tank Tracks is active — before that lv12 OC, repositioning turrets mid-wave is slow and dangerous',
+      'No strong carry weapon for the periods when turrets are reloading or not yet deployed; the build has gaps in output that other Driller builds do not experience',
+      'Krakatoa Protocol (turret explode on death) is unreliable — turrets die mid-wave and the explosion proc timing is uncontrolled, which can self-damage at a critical moment',
+    ],
+    tips: [
+      'Place turrets slightly behind your grenade throwing position so enemies are already slowed or clustered by grenades when they enter the turret arc — this maximizes turrets\' per-second damage output',
+      'Demolitions Expert AoE passive makes Krakatoa turret fire cones overlap significantly with just two turrets placed 90 degrees apart; a 90-degree V-formation covers most of a standard corridor',
+      'Mining Directive OC (lv6) is a trap on this build unless gold is your primary goal — the turrets lose combat time while mining; only take it if the run is starved for resources in Stage 1',
+      'Neurotoxin Grenade Hallucinogenic at lv18 causes confused enemies to attack each other in the turret arc — the turrets hit confused enemies that stand still, dramatically increasing per-enemy damage',
+    ],
+    weapons: [
+      {
+        name: 'Krakatoa Sentinel',
+        isCarry: true,
+        overclocks: [
+          { level: 6, name: 'Extra Capacity', verdict: 'take', note: '+1 turret and +10% range — two turrets with AoE passive creates wide overlapping fire fields; more deployments per wave' },
+          { level: 12, name: 'Tank Tracks', verdict: 'take', note: 'MUST-TAKE — turrets follow the player, removing deployment micromanagement and converting the build into a mobile fire platform' },
+          { level: 18, name: 'More Beams', verdict: 'take', note: '+1 beam per turret; with Demolitions AoE passive the extra beam arc covers even more area — pairs with Extra Capacity for wide multi-beam coverage' },
+        ],
+      },
+      {
+        name: 'High Explosive Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Compact Explosives', verdict: 'take', note: '+radius stacks with Demolitions AoE passive — grenade blasts herd enemies into turret arcs' },
+          { level: 12, name: 'A Little More Oomph!', verdict: 'take', note: '+damage on the primary burst grenade — kills survivors before they close to melee range' },
+          { level: 18, name: 'True TNT', verdict: 'take', note: 'Massive damage spike; one-shots clustered enemies that turrets have been softening with fire DoT' },
+        ],
+      },
+      {
+        name: 'Neurotoxin Grenade',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Cluster Grenades', verdict: 'take', note: 'More toxin sub-grenades cover wider area — slows incoming wave while turrets reposition or reload' },
+          { level: 12, name: 'Tape Some Nails To It', verdict: 'take', note: 'Shrapnel burst on detonation adds direct damage on top of toxin DoT; punishes clustered enemies' },
+          { level: 18, name: 'Hallucinogenic', verdict: 'take', note: 'Confused enemies fight each other inside turret fire arcs — passive bonus damage without any additional actions' },
+        ],
+      },
+      {
+        name: 'CRSPR Flamethrower',
+        isCarry: false,
+        overclocks: [
+          { level: 6, name: 'Overheat', verdict: 'situational', note: '+100% damage burst for emergencies when turrets are down; -35% Lifetime limits sustained use but the burst is useful as a gap-filler' },
+          { level: 12, name: 'Sticky Fuel', verdict: 'take', note: 'Pre-burn the approach lane before deploying turrets — enemies walk through fire on their way into turret arcs, stacking DoT before they arrive' },
+          { level: 18, name: 'Even More Beams', verdict: 'situational', note: 'Good if Sticky Fuel is not available; wide fire cone covers gaps in turret coverage during repositioning windows' },
+        ],
+      },
+    ],
+    stats: {
+      priority: ['Explosion Radius', 'Damage', 'Reload Speed', 'Potency'],
+      avoid: ['Mining Speed — turrets need to fight, not mine', 'Move Speed — stationary turret deployment benefits from you staying near the placement'],
+    },
+    artifacts: {
+      always: ['Energy Bars', 'Turbo Encabulator'],
+      good: ["Diver's Manual", 'BLT Ration Pack', 'Popup Tripod'],
+      never: ['Nitragenic Powder', 'Pickled Nitra'],
+    },
+    phases: [
+      {
+        stage: 1,
+        title: 'First Turret Down',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Krakatoa Sentinel is the carry — deploy it immediately and learn the fire arc. Buy High Explosive Grenade as your second weapon for herding. The build is functional with just these two: turret fires, grenade clusters.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Krakatoa lv6: Extra Capacity for a second turret. Two turrets with AoE passive overlap creates good coverage from Stage 1. Avoid Mining Directive unless resource-starved.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Explosion Radius stat upgrades benefit all weapons simultaneously — buy them aggressively. Energy Bars is the first artifact priority. Keep 20g reserve for Stage 2 weapon purchase.' },
+        ],
+      },
+      {
+        stage: 2,
+        title: 'Turret Mobility',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Push Krakatoa to lv12 for Tank Tracks — this is the build\'s quality-of-life breakthrough. Once turrets follow you, buy Neurotoxin Grenade to slow enemies into turret arcs. CRSPR Flamethrower is a good Stage 2 pickup for gap coverage.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Krakatoa lv12: Tank Tracks — mandatory. HE Grenade lv6: Compact Explosives for wider herding blasts. CRSPR lv6: Bigger Tanks if bought this stage.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Turbo Encabulator becomes excellent at Stage 2+ with 4+ OCs equipped — pick it up if available. Continue Explosion Radius and Damage upgrades. DRG Coupon can stretch budget if rerolls are needed.' },
+        ],
+      },
+      {
+        stage: 3,
+        title: 'Multi-Beam Escort',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Krakatoa lv18: More Beams converts each turret into a multi-arc fire platform. HE Grenade lv18: True TNT for high-damage burst. Neurotoxin lv12: Tape Some Nails for direct damage supplement.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Krakatoa lv18: More Beams — with Tank Tracks already active, your two following turrets now each fire multiple fire arcs. HE Grenade lv12 and lv18 both take straightforward damage OCs.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Full stat spend. Popup Tripod is strong here if playing a stationary-ish style near turrets — Reload Speed ramp helps the grenade loop. Gold-Tipped Bullets is viable if gold is high.' },
+        ],
+      },
+      {
+        stage: 4,
+        title: 'Confusion + Fire Loop',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'Neurotoxin lv18: Hallucinogenic — confused enemies standing in turret fire arcs take full sustained damage while attacking each other. CRSPR lv12: Sticky Fuel creates pre-burned terrain for the wave approach. Fully online.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Neurotoxin lv18: Hallucinogenic is the Stage 4 power spike. CRSPR lv12 Sticky Fuel is the second priority. If CRSPR lv18 is reachable, Even More Beams adds wide fire cone for the pre-burn lane.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Save 30g for Stage 5. Complete Turbo Encabulator value — by Stage 4 you should have 6–8 OCs, the bonus is substantial. Salty Pretzel and The MoCap are optional if you want to run a low-HP style near the turrets.' },
+        ],
+      },
+      {
+        stage: 5,
+        title: 'Escort the Dreadnought',
+        decisions: [
+          { type: 'weapon', label: 'Weapon Priority', content: 'With Tank Tracks active, deploy both turrets, engage the Dreadnought, and let the turrets follow you as you kite. Pre-burn the arena with CRSPR Sticky Fuel. Throw Hallucinogenic Neurotoxin on adds to create confused chaos around the boss. True TNT HE Grenade for burst damage windows.' },
+          { type: 'overclock', label: 'Overclock Choice', content: 'Explosion Radius and Damage upgrades are the final priority. Reload Speed keeps grenade loop pressure on the boss. Avoid committing gold to Movement Speed unless turret following is causing distance issues.' },
+          { type: 'shop', label: 'Shop Strategy', content: 'Spend everything. Energy Bars damage peaks at your final level. Turbo Encabulator is at maximum stacks with all overclocks equipped. Gold-Tipped Bullets lands a high multiplier if you have not spent down your gold reserve.' },
+        ],
+      },
+    ],
+  },
 ]
